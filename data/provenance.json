@@ -13,7 +13,16 @@
     "source": "https://github.com/aourednik/historical-basemaps",
     "license": "GPL-3.0",
     "files": "assets/map/",
-    "note": "Schematic around 1700; simplified dates/borders. Independent from style and origin filters."
+    "note": "Schematic around 1700; simplified dates/borders. Independent from style and origin filters.",
+    "display_label_corrections": [
+      {
+        "upstream_label": "Austrian Empire",
+        "display_label": "Habsburg lands",
+        "reason": "The Austrian Empire dates from 1804, so its name is anachronistic on the c.1700 schematic. Habsburg lands is a deliberately broad display label, not an assertion of precise borders or uniform sovereignty.",
+        "reference": "https://www.britannica.com/place/Austria/From-the-accession-of-Maria-Theresa-to-the-Congress-of-Vienna",
+        "geometry": "Unchanged. The original compressed source retains upstream properties for audit; the compiler applies the documented display correction."
+      }
+    ]
   },
   "music": {
     "source": "https://github.com/MutopiaProject/MutopiaProject",
@@ -23,7 +32,11 @@
   "assets": [
     {
       "path": "assets/map/europe-1700.svg",
-      "sha256": "c07a6f77a36936747e881a435d749554930ea7e9d71c13fcaf7f0fa3ef78237d"
+      "sha256": "981004204c29dfea334e5b9e1ea9fa293aebba429d1a89e9ef9a3693a919c383"
+    },
+    {
+      "path": "assets/map/historical-labels.mjs",
+      "sha256": "bfbe357eb4833482f153423d85955be4c9027a96ed1b6f390bbb98f961c0f64b"
     },
     {
       "path": "assets/map/historical-license.txt",
@@ -31,7 +44,7 @@
     },
     {
       "path": "assets/map/historical-map-build.mjs",
-      "sha256": "acc022db776f0ccd057c2f609d3fad5dba139f9c4cf560b43a0b1ab2ec6e7730"
+      "sha256": "92903e9d8397fa9df2c8abdfad4d70b1756a02b2d7cee5573566ec0a4e4db104"
     },
     {
       "path": "assets/map/historical-source.json.gz",

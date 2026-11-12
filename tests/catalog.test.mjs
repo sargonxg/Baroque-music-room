@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {readFile,stat} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {historicalName} from '../assets/map/historical-labels.mjs';
 import {VOICE_COLORS,projectCity,filterComposers,validateStudy,activeNotes,formatTime,safeURL} from '../src/engine.mjs';
 const json=async file=>JSON.parse(await readFile(file,'utf8'));
 const composers=await json('data/composers.json'),works=await json('data/works.json'),catalogue=await json('data/catalogue.json'),rights=await json('data/rights.json'),study=await json('data/study.json');
@@ -48,4 +49,13 @@ test('unsafe links and invalid playback data fail closed',()=>{
 });
 test('every retained external asset still matches the provenance receipt',async()=>{
  const provenance=await json('data/provenance.json');for(const asset of provenance.assets)assert.equal(createHash('sha256').update(await readFile(asset.path)).digest('hex'),asset.sha256,asset.path);
+});
+
+test('c.1700 display uses Habsburg lands while documenting the unchanged upstream label',async()=>{
+ const svg=await readFile('assets/map/europe-1700.svg','utf8');
+ assert(svg.includes('<title>Habsburg lands</title>'));
+ assert(![...svg.matchAll(/<title>(.*?)<\/title>/gs)].some(m=>m[1].includes('Austrian Empire')));
+ assert.equal(historicalName('Austrian Empire'),'Habsburg lands');
+ assert.equal(historicalName('France'),'France');
+ const p=await json('data/provenance.json');assert.equal(p.map.display_label_corrections[0].upstream_label,'Austrian Empire');assert.equal(p.map.display_label_corrections[0].display_label,'Habsburg lands');
 });

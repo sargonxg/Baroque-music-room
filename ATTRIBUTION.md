@@ -32,9 +32,13 @@ have no connection to the composer's musical style.
 
 To regenerate the map, install `d3-geo@3` separately and follow the comments in
 `assets/map/historical-map-build.mjs`. The generated map is retained under
-GPL-3.0. Modifications in this application are presentation-only (CSS opacity and
-font/color changes); no geographic source geometry was changed. Source files and
-license remain available beside the rendered map.
+GPL-3.0. The upstream title “Austrian Empire” is displayed as **Habsburg lands**: the
+Austrian Empire was established in 1804, so that label is anachronistic for this
+c.1700 map. The deliberately broad replacement does not assert precise borders
+or uniform sovereignty. The original compressed source properties are retained
+for audit; `historical-labels.mjs` applies the same correction during regeneration.
+No geographic source geometry was changed. CSS also adjusts opacity and fonts.
+Source files, the documented label correction and license remain beside the map.
 
 ## Music editions
 

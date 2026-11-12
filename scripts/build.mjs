@@ -6,6 +6,7 @@ const json=async name=>JSON.parse(await readFile(`data/${name}.json`,'utf8'));
 const data={composers:await json('composers'),works:await json('works'),catalogue:await json('catalogue'),rights:await json('rights'),study:validateStudy(await json('study')),scoreMap:await json('partita-score-map'),studyScore:await readFile('assets/music/partita-voices.svg','utf8')};
 if(data.composers.length!==102||data.works.entries.reduce((n,c)=>n+c.works.length,0)!==510)throw Error('Catalog counts changed');
 const map=(await readFile('assets/map/europe-1700.svg','utf8')).replace(/^<svg[^>]+>/,'').replace(/<\/svg>\s*$/,'');
+if(map.includes('<title>Austrian Empire</title>'))throw Error('Anachronistic c.1700 map display title');
 const scripts=(await Promise.all(['engine.mjs','audio.mjs','app.mjs'].map(n=>readFile('src/'+n,'utf8')))).map(source=>source.replace(/^import .*?;\s*$/gm,'').replace(/^export /gm,'')).join('\n');
 let html=await readFile('src/index.html','utf8');html=html.replace('/*STYLE*/',await readFile('src/style.css','utf8')).replace('/*DATA*/',JSON.stringify(data).replaceAll('<','\\u003c')).replace('/*SCRIPT*/',scripts.replaceAll('</script','<\\/script')).replace('<!--MAP-->',map);
 await rm('dist',{recursive:true,force:true});await mkdir('dist');await writeFile('dist/index.html',html);await cp('assets','dist/assets',{recursive:true});await cp('data','dist/data',{recursive:true});for(const f of ['README.md','ATTRIBUTION.md','LICENSE'])await cp(f,join('dist',f));
