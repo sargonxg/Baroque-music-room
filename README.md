@@ -1,5 +1,9 @@
 # Baroque · A listening atlas
 
+![App screenshot](screenshots/desktop.webp)
+
+[Mobile view](screenshots/mobile.webp)
+
 A browser app for exploring European Baroque music and listening to its structure.
 **102 composers, 510 source-linked works, 45 complete source-MIDI movements and a
 three-voice, six-bar Bach study.** It runs locally without an account or backend.

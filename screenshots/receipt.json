@@ -1,0 +1,21 @@
+{
+  "format": "app-screenshot-receipt/1",
+  "captured": "2026-11-12",
+  "method": "Cloudflare Browser Rendering snapshot of the actual self-contained dist/index.html, not a mockup.",
+  "source_note": "Baroque label-only Habsburg correction followed the layout capture; layout and behavior unchanged.",
+  "browser_audio_tested": false,
+  "viewports": {
+    "desktop": "1440x1000",
+    "mobile": "390x844"
+  },
+  "files": [
+    {
+      "path": "screenshots/desktop.webp",
+      "sha256": "a5f20fdf73ef4e08252e26f7348d4bee1755ab712d66ed50e7205268ad3bf75d"
+    },
+    {
+      "path": "screenshots/mobile.webp",
+      "sha256": "4b93a727ce0ba8d20d4915461c5a1ddc7e7c42439a3d16f81582021cbf23649e"
+    }
+  ]
+}
