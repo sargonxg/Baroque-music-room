@@ -78,3 +78,12 @@ rearticulates its remaining duration. Loop endpoints clip newly scheduled notes;
 changing speed preserves the musical position. `dispose` releases the context.
 Browser audio still needs a user gesture. Test results cover lifecycle and data
 bounds; they do not certify perceptual fidelity or replace audible-device testing.
+
+## Static Content Security Policy
+
+The public static build hashes its single executable script and page stylesheet.
+`PLAYBACK_SCORE_STYLE`, exported from `src/notation.mjs`, is the one fixed runtime
+SVG stylesheet and has a separate exact hash in `_headers`. Hosts that externalize
+page JS/CSS should retain that runtime-style hash alongside `self`. Voice colors
+use fixed classes, so inline style attributes are not required. The generated
+policy disallows inline script/style attributes and never uses `unsafe-inline`.

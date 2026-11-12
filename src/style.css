@@ -17,3 +17,6 @@ button,a{transition:color .12s ease,background-color .12s ease}button:hover{filt
 @media(prefers-reduced-motion:reduce){button,a{transition:none!important}}
 .mix-levels{font-size:11px;margin:0 0 18px}.mix-levels summary{min-height:32px;cursor:pointer}.mix-levels #track-levels{display:flex;flex-wrap:wrap;gap:12px 28px;padding:8px 0}.mix-levels label{display:flex;gap:10px;align-items:center}.mix-levels input{width:110px;accent-color:var(--green)}
 #markers .map-marker[aria-pressed=true] .pulse{animation:none}
+
+/* CSP-safe fixed voice colors; no inline style attributes are required. */
+.voice-0{--voice:#b74131}.voice-1{--voice:#246a74}.voice-2{--voice:#966311}.voice-3{--voice:#8b6d26}.voice-4{--voice:#436f94}.voice-5{--voice:#9c4a69}

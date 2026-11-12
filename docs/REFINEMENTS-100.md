@@ -117,7 +117,8 @@ added. The 102/510/45 counts are unchanged source-dataset counts.
 ## Verification and remaining limits
 
 - Local tests cover catalog/source preservation, transport lifecycle and all 46
-  playback notation selections. The current run contains 23 passing tests.
+  playback notation selections. The core run contains 23 passing tests, with five additional exact-CSP
+  security regressions added before publication.
 - Source MIDI, source engraving previews and historical-map geometry remain
   unchanged. New derived notation and metadata have explicit provenance.
 - **Unresolved:** complete critical-edition score transcription for all 45
@@ -137,3 +138,13 @@ added. The 102/510/45 counts are unchanged source-dataset counts.
   ranked or embedded. The user chooses an external performance.
 - No new API, model service, paid subscription or hosted resource was activated.
   Publication and final screenshots belong to the owning parent task.
+
+## Final static-CSP hardening
+
+The built `_headers` now permits only the exact SHA-256 hashes of the reviewed
+inline executable, page stylesheet and fixed runtime SVG score stylesheet.
+`script-src-attr` and `style-src-attr` are both `none`; no `unsafe-inline` or
+`unsafe-eval` is present. Fixed voice colors use shared CSS classes with identical
+values, so the visual UI is unchanged. `tests/security.test.mjs` checks rejected
+unknown code/CSS, exact runtime score-style coverage and the source-count guard.
+The one-hundred-row implementation audit above is unchanged.

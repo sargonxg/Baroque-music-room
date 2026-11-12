@@ -2,6 +2,8 @@ import {readFile,writeFile,mkdir,cp,rm} from 'node:fs/promises';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
 import {validateStudy} from '../src/engine.mjs';
+import {PLAYBACK_SCORE_STYLE} from '../src/notation.mjs';
+import {staticContentPolicy} from './security-policy.mjs';
 const json=async name=>JSON.parse(await readFile(`data/${name}.json`,'utf8'));
 const data={composers:await json('composers'),works:await json('works'),catalogue:await json('catalogue'),rights:await json('rights'),study:validateStudy(await json('study')),scoreMap:await json('partita-score-map'),studyScore:await readFile('assets/music/partita-voices.svg','utf8'),notationMetadata:await json('notation-metadata'),education:await json('education'),portraits:await json('portraits'),biographies:await json('biographies')};
 if(data.composers.length!==102||data.works.entries.reduce((n,c)=>n+c.works.length,0)!==510)throw Error('Catalog counts changed');
@@ -11,5 +13,6 @@ const scripts=(await Promise.all(['engine.mjs','glyphs.mjs','notation.mjs','audi
 let html=await readFile('src/index.html','utf8');html=html.replace('/*STYLE*/',await readFile('src/style.css','utf8')).replace('/*DATA*/',JSON.stringify(data).replaceAll('<','\\u003c')).replace('/*SCRIPT*/',scripts.replaceAll('</script','<\\/script')).replace('<!--MAP-->',map);
 await rm('dist',{recursive:true,force:true});await mkdir('dist');await writeFile('dist/index.html',html);await cp('assets','dist/assets',{recursive:true});await cp('data','dist/data',{recursive:true});await cp('docs','dist/docs',{recursive:true});for(const f of ['README.md','ATTRIBUTION.md','LICENSE'])await cp(f,join('dist',f));
 await writeFile('dist/404.html','<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Page not found</title><body><h1>Page not found</h1><a href="/">Return to the atlas</a></body></html>');
-await writeFile('dist/_headers',`/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'\n`);
+const contentPolicy=staticContentPolicy(html,[PLAYBACK_SCORE_STYLE]);
+await writeFile('dist/_headers',`/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: ${contentPolicy}\n`);
 await mkdir('artifacts',{recursive:true});await writeFile('artifacts/build.json',JSON.stringify({composers:102,catalogWorks:510,fullSourceMovements:45,sourceSeparatedStudy:{bars:6,voices:3},initialHTMLBytes:Buffer.byteLength(html),sha256:createHash('sha256').update(html).digest('hex'),selfContainedInitialUI:true},null,2)+'\n');console.log('Built dist/index.html: 102 composers, 510 linked works, 45 full source movements and a three-voice Bach study.');

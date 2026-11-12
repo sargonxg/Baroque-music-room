@@ -4,6 +4,7 @@
  * Spelling, note values, clefs and rests are inferred. Track != independent voice.
  */
 import {MUSIC_GLYPHS} from './glyphs.mjs';
+export const PLAYBACK_SCORE_STYLE='.score-note-active .score-note-hit{fill:#edc965;fill-opacity:.42}.score-note-muted{opacity:.18}[data-score-note]:focus .score-note-hit{fill:#edc965;fill-opacity:.5}[data-score-note]{cursor:pointer}';
 const DEFAULT_COLORS=['#b74131','#246a74','#966311','#704b86','#365f8d','#8d435b'];
 const ESCAPE=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 const finite=(value,fallback)=>Number.isFinite(Number(value))?Number(value):fallback;
@@ -107,7 +108,7 @@ export function renderPlaybackScore(study,options={}){
  const playX=xAt(clamp(position,start,end));
  body+=`<path class="score-playhead" d="M${n(playX)} 28V${height-20}" fill="none" stroke="#20251f" stroke-width="1" opacity=".65"/>`;
  const caption='MIDI-derived playback notation. Enharmonic spelling, clefs, rests and rhythmic symbols are inferred. Note onsets and durations follow the source timing; colors identify source tracks, not necessarily independent voices.';
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="group" aria-label="${ESCAPE(caption)}" data-window-start="${start}" data-window-end="${end}" data-plot-left="${left}" data-plot-width="${plotWidth}"><style>.score-note-active .score-note-hit{fill:#edc965;fill-opacity:.42}.score-note-muted{opacity:.18}[data-score-note]:focus .score-note-hit{fill:#edc965;fill-opacity:.5}[data-score-note]{cursor:pointer}</style>${body}</svg>`;
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="group" aria-label="${ESCAPE(caption)}" data-window-start="${start}" data-window-end="${end}" data-plot-left="${left}" data-plot-width="${plotWidth}"><style>${PLAYBACK_SCORE_STYLE}</style>${body}</svg>`;
  return {svg,notes,windowStart:start,windowEnd:end,inferred:true,caption};
 }
 /** Update a rendered score without reconstructing its staves on every frame. */
