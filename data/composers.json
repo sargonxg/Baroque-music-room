@@ -1,0 +1,2987 @@
+[
+  {
+    "id": "bach",
+    "name": "Johann Sebastian Bach",
+    "dates": "1685–1750",
+    "city": "Leipzig",
+    "coordinates": [
+      12.374,
+      51.34
+    ],
+    "note": "Independent lines that form a larger architecture.",
+    "source": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "italian",
+      "french"
+    ],
+    "forms": [
+      "cantata",
+      "concerto",
+      "fugue",
+      "partita",
+      "suite"
+    ],
+    "listen": "Follow a short figure as another voice takes it up; keep listening to the bass when the upper part becomes busy.",
+    "work": {
+      "title": "Partita No. 1, BWV 825",
+      "url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach"
+    },
+    "imslpCategory": "Bach, Johann Sebastian",
+    "indexSource": "https://imslp.org/wiki/Category:Bach,_Johann_Sebastian",
+    "affiliation": "German-speaking traditions / Italian / French",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "handel",
+    "name": "George Frideric Handel",
+    "dates": "1685–1759",
+    "city": "London",
+    "coordinates": [
+      -0.1276,
+      51.507
+    ],
+    "note": "Opera, oratorio and keyboard music across languages and borders.",
+    "source": "https://en.wikipedia.org/wiki/George_Frideric_Handel",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/HandelGF",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "british",
+      "italian",
+      "german"
+    ],
+    "forms": [
+      "concerto-grosso",
+      "fugue",
+      "opera",
+      "oratorio",
+      "suite"
+    ],
+    "listen": "Listen for a melody that could be sung, then notice how rhythm and harmony give the phrase direction.",
+    "work": {
+      "title": "Messiah, HWV 56",
+      "url": "https://en.wikipedia.org/wiki/George_Frideric_Handel"
+    },
+    "imslpCategory": "Handel, George Frideric",
+    "indexSource": "https://imslp.org/wiki/Category:Handel,_George_Frideric",
+    "affiliation": "British / Italian / German-speaking traditions",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "vivaldi",
+    "name": "Antonio Vivaldi",
+    "dates": "1678–1741",
+    "city": "Venice",
+    "coordinates": [
+      12.3155,
+      45.4408
+    ],
+    "note": "Ritornello, contrast and the energy of the concerto.",
+    "source": "https://en.wikipedia.org/wiki/Antonio_Vivaldi",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/VivaldiA",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "cantata",
+      "concerto",
+      "opera",
+      "sonata"
+    ],
+    "listen": "Notice the recurring orchestral material between the soloist’s episodes. Each return helps you find your place.",
+    "work": {
+      "title": "The Four Seasons, Op. 8",
+      "url": "https://en.wikipedia.org/wiki/Antonio_Vivaldi"
+    },
+    "imslpCategory": "Vivaldi, Antonio",
+    "indexSource": "https://imslp.org/wiki/Category:Vivaldi,_Antonio",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "corelli",
+    "name": "Arcangelo Corelli",
+    "dates": "1653–1713",
+    "city": "Rome",
+    "coordinates": [
+      12.496,
+      41.903
+    ],
+    "note": "The trio sonata and concerto grosso as models of balance.",
+    "source": "https://en.wikipedia.org/wiki/Arcangelo_Corelli",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/CorelliA",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "concerto-grosso",
+      "sonata"
+    ],
+    "listen": "Hear the two upper parts trade phrases above a moving bass; in the concertos, compare the small and larger groups.",
+    "work": {
+      "title": "Concerti grossi, Op. 6",
+      "url": "https://en.wikipedia.org/wiki/Arcangelo_Corelli"
+    },
+    "imslpCategory": "Corelli, Arcangelo",
+    "indexSource": "https://imslp.org/wiki/Category:Corelli,_Arcangelo",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "monteverdi",
+    "name": "Claudio Monteverdi",
+    "dates": "1567–1643",
+    "city": "Mantua",
+    "coordinates": [
+      10.791,
+      45.156
+    ],
+    "note": "A turning point between Renaissance polyphony and Baroque drama.",
+    "source": "https://en.wikipedia.org/wiki/Claudio_Monteverdi",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/MonteverdiC",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "madrigal",
+      "opera"
+    ],
+    "listen": "Hear how a change in the words can alter the pace, harmony or number of voices.",
+    "work": {
+      "title": "L’Orfeo",
+      "url": "https://en.wikipedia.org/wiki/Claudio_Monteverdi"
+    },
+    "imslpCategory": "Monteverdi, Claudio",
+    "indexSource": "https://imslp.org/wiki/Category:Monteverdi,_Claudio",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "purcell",
+    "name": "Henry Purcell",
+    "dates": "1659–1695",
+    "city": "London",
+    "coordinates": [
+      -0.1276,
+      51.507
+    ],
+    "note": "English theatre, song and the expressive force of a ground bass.",
+    "source": "https://en.wikipedia.org/wiki/Henry_Purcell",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/PurcellH",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "british",
+      "french",
+      "italian"
+    ],
+    "forms": [
+      "opera",
+      "passacaglia",
+      "sonata",
+      "suite"
+    ],
+    "listen": "Follow a repeating bass and listen to how the melody changes its meaning above it.",
+    "work": {
+      "title": "Dido and Aeneas",
+      "url": "https://en.wikipedia.org/wiki/Henry_Purcell"
+    },
+    "imslpCategory": "Purcell, Henry",
+    "indexSource": "https://imslp.org/wiki/Category:Purcell,_Henry",
+    "affiliation": "British / French / Italian",
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "telemann",
+    "name": "Georg Philipp Telemann",
+    "dates": "1681–1767",
+    "city": "Hamburg",
+    "coordinates": [
+      9.994,
+      53.551
+    ],
+    "note": "An unusually wide musical world: chamber music, church and opera.",
+    "source": "https://en.wikipedia.org/wiki/Georg_Philipp_Telemann",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/TelemannGP",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "french",
+      "italian"
+    ],
+    "forms": [
+      "cantata",
+      "concerto",
+      "fugue",
+      "sonata",
+      "suite"
+    ],
+    "listen": "Listen for changes in instrumental colour and the different dance characters within a suite.",
+    "work": {
+      "title": "Tafelmusik",
+      "url": "https://en.wikipedia.org/wiki/Georg_Philipp_Telemann"
+    },
+    "imslpCategory": "Telemann, Georg Philipp",
+    "indexSource": "https://imslp.org/wiki/Category:Telemann,_Georg_Philipp",
+    "affiliation": "German-speaking traditions / French / Italian",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "scarlatti",
+    "name": "Domenico Scarlatti",
+    "dates": "1685–1757",
+    "city": "Madrid",
+    "coordinates": [
+      -3.704,
+      40.417
+    ],
+    "note": "Keyboard sonatas full of crossings, leaps and unexpected turns.",
+    "source": "https://en.wikipedia.org/wiki/Domenico_Scarlatti",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/ScarlattiD",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian",
+      "iberian"
+    ],
+    "forms": [
+      "sonata"
+    ],
+    "listen": "Hear repeated notes, sudden changes of register and exchanges between the hands within a compact keyboard sonata.",
+    "work": {
+      "title": "Sonata in C minor, K. 11",
+      "url": "https://en.wikipedia.org/wiki/Domenico_Scarlatti"
+    },
+    "imslpCategory": "Scarlatti, Domenico",
+    "indexSource": "https://imslp.org/wiki/Category:Scarlatti,_Domenico",
+    "affiliation": "Italian / Iberian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "alessandro-scarlatti",
+    "name": "Alessandro Scarlatti",
+    "dates": "1660–1725",
+    "city": "Naples",
+    "coordinates": [
+      14.268,
+      40.852
+    ],
+    "note": "Cantata and opera in the Neapolitan tradition.",
+    "source": "https://en.wikipedia.org/wiki/Alessandro_Scarlatti",
+    "scores": null,
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "cantata",
+      "fugue",
+      "opera",
+      "oratorio",
+      "toccata"
+    ],
+    "listen": "Compare a speech-like recitative with the more settled pace and returning material of an aria.",
+    "work": {
+      "title": "Griselda",
+      "url": "https://en.wikipedia.org/wiki/Alessandro_Scarlatti"
+    },
+    "imslpCategory": "Scarlatti, Alessandro",
+    "indexSource": "https://imslp.org/wiki/Category:Scarlatti,_Alessandro",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "couperin",
+    "name": "François Couperin",
+    "dates": "1668–1733",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "Character pieces, ornament and the meeting of French and Italian tastes.",
+    "source": "https://en.wikipedia.org/wiki/François_Couperin",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/CouperinF",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "motet",
+      "suite"
+    ],
+    "listen": "Listen for ornaments within the melodic line and the contrasting characters of successive keyboard pieces.",
+    "work": {
+      "title": "Les Barricades mystérieuses",
+      "url": "https://en.wikipedia.org/wiki/François_Couperin"
+    },
+    "imslpCategory": "Couperin, François",
+    "indexSource": "https://imslp.org/wiki/Category:Couperin,_François",
+    "affiliation": "French",
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "louis-couperin",
+    "name": "Louis Couperin",
+    "dates": "c. 1626–1661",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "Unmeasured preludes and the freedom of a musical gesture.",
+    "source": "https://en.wikipedia.org/wiki/Louis_Couperin",
+    "scores": null,
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "suite"
+    ],
+    "listen": "In an unmeasured prelude, follow the harmony and gestures without expecting a regular dance beat.",
+    "work": {
+      "title": "Unmeasured harpsichord preludes",
+      "url": "https://en.wikipedia.org/wiki/Louis_Couperin"
+    },
+    "imslpCategory": "Couperin, Louis",
+    "indexSource": "https://imslp.org/wiki/Category:Couperin,_Louis",
+    "affiliation": "French",
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "rameau",
+    "name": "Jean-Philippe Rameau",
+    "dates": "1683–1764",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "Harmony as both a theoretical subject and a theatrical force.",
+    "source": "https://en.wikipedia.org/wiki/Jean-Philippe_Rameau",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/RameauJP",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "opera",
+      "suite"
+    ],
+    "listen": "Notice how a repeated dance figure changes through harmony, register and ornament.",
+    "work": {
+      "title": "Nouvelles suites de pièces de clavecin",
+      "url": "https://en.wikipedia.org/wiki/Jean-Philippe_Rameau"
+    },
+    "imslpCategory": "Rameau, Jean-Philippe",
+    "indexSource": "https://imslp.org/wiki/Category:Rameau,_Jean-Philippe",
+    "affiliation": "French",
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "lully",
+    "name": "Jean-Baptiste Lully",
+    "dates": "1632–1687",
+    "city": "Versailles",
+    "coordinates": [
+      2.12,
+      48.804
+    ],
+    "note": "Dance, court spectacle and French musical tragedy.",
+    "source": "https://en.wikipedia.org/wiki/Jean-Baptiste_Lully",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/LullyJB",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "french",
+      "italian"
+    ],
+    "forms": [
+      "opera",
+      "suite"
+    ],
+    "listen": "Compare the dotted rhythms of an overture’s opening with the quicker imitative passage that follows.",
+    "work": {
+      "title": "Armide",
+      "url": "https://en.wikipedia.org/wiki/Jean-Baptiste_Lully"
+    },
+    "imslpCategory": "Lully, Jean-Baptiste",
+    "indexSource": "https://imslp.org/wiki/Category:Lully,_Jean-Baptiste",
+    "affiliation": "French / Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "buxtehude",
+    "name": "Dieterich Buxtehude",
+    "dates": "c. 1637–1707",
+    "city": "Lübeck",
+    "coordinates": [
+      10.687,
+      53.866
+    ],
+    "note": "Organ improvisation, sacred music and the Abendmusiken.",
+    "source": "https://en.wikipedia.org/wiki/Dieterich_Buxtehude",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BuxtehudeD",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "cantata",
+      "fugue",
+      "passacaglia",
+      "sonata",
+      "toccata"
+    ],
+    "listen": "Follow the bass pattern in a passacaglia; in a prelude, hear the shifts between free passages and imitation.",
+    "work": {
+      "title": "Passacaglia in D minor, BuxWV 161",
+      "url": "https://en.wikipedia.org/wiki/Dieterich_Buxtehude"
+    },
+    "imslpCategory": "Buxtehude, Dietrich",
+    "indexSource": "https://imslp.org/wiki/Category:Buxtehude,_Dietrich",
+    "affiliation": "German-speaking traditions",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "pachelbel",
+    "name": "Johann Pachelbel",
+    "dates": "1653–1706",
+    "city": "Nuremberg",
+    "coordinates": [
+      11.077,
+      49.452
+    ],
+    "note": "Chorale variation and a much wider keyboard world beyond the Canon.",
+    "source": "https://en.wikipedia.org/wiki/Johann_Pachelbel",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/PachelbelJ",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "canon",
+      "fugue"
+    ],
+    "listen": "Keep the repeating bass in mind while the upper voices enter at different times.",
+    "work": {
+      "title": "Canon in D",
+      "url": "https://en.wikipedia.org/wiki/Johann_Pachelbel"
+    },
+    "imslpCategory": "Pachelbel, Johann",
+    "indexSource": "https://imslp.org/wiki/Category:Pachelbel,_Johann",
+    "affiliation": "German-speaking traditions",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "frescobaldi",
+    "name": "Girolamo Frescobaldi",
+    "dates": "1583–1643",
+    "city": "Rome",
+    "coordinates": [
+      12.496,
+      41.903
+    ],
+    "note": "Toccatas that turn time and keyboard touch into an expressive art.",
+    "source": "https://en.wikipedia.org/wiki/Girolamo_Frescobaldi",
+    "scores": null,
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "passacaglia",
+      "toccata"
+    ],
+    "listen": "Listen to changes of pace and figuration as a keyboard gesture leads into another.",
+    "work": {
+      "title": "Fiori musicali",
+      "url": "https://en.wikipedia.org/wiki/Girolamo_Frescobaldi"
+    },
+    "imslpCategory": "Frescobaldi, Girolamo",
+    "indexSource": "https://imslp.org/wiki/Category:Frescobaldi,_Girolamo",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "schutz",
+    "name": "Heinrich Schütz",
+    "dates": "1585–1672",
+    "city": "Dresden",
+    "coordinates": [
+      13.737,
+      51.05
+    ],
+    "note": "The German sacred tradition shaped through encounters with Venice.",
+    "source": "https://en.wikipedia.org/wiki/Heinrich_Schütz",
+    "scores": null,
+    "eras": [
+      "early",
+      "middle"
+    ],
+    "traditions": [
+      "german",
+      "italian"
+    ],
+    "forms": [
+      "madrigal",
+      "motet"
+    ],
+    "listen": "Follow the text through overlapping vocal entries and contrasts between small and larger groups.",
+    "work": {
+      "title": "Musikalische Exequien",
+      "url": "https://en.wikipedia.org/wiki/Heinrich_Schütz"
+    },
+    "imslpCategory": "Schütz, Heinrich",
+    "indexSource": "https://imslp.org/wiki/Category:Schütz,_Heinrich",
+    "affiliation": "German-speaking traditions / Italian",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "froberger",
+    "name": "Johann Jakob Froberger",
+    "dates": "1616–1667",
+    "city": "Vienna",
+    "coordinates": [
+      16.373,
+      48.208
+    ],
+    "note": "Keyboard suites, travel and a meeting of European styles.",
+    "source": "https://en.wikipedia.org/wiki/Johann_Jakob_Froberger",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/FrobergerJJ",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "german",
+      "italian",
+      "french"
+    ],
+    "forms": [
+      "suite",
+      "toccata"
+    ],
+    "listen": "Compare the freedom of a toccata with the rhythmic character of a suite’s dances.",
+    "work": {
+      "title": "Keyboard suites",
+      "url": "https://en.wikipedia.org/wiki/Johann_Jakob_Froberger"
+    },
+    "imslpCategory": "Froberger, Johann Jacob",
+    "indexSource": "https://imslp.org/wiki/Category:Froberger,_Johann_Jacob",
+    "affiliation": "German-speaking traditions / Italian / French",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "fux",
+    "name": "Johann Joseph Fux",
+    "dates": "c. 1660–1741",
+    "city": "Vienna",
+    "coordinates": [
+      16.373,
+      48.208
+    ],
+    "note": "Court music and a lasting language for teaching counterpoint.",
+    "source": "https://en.wikipedia.org/wiki/Johann_Joseph_Fux",
+    "scores": null,
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "italian"
+    ],
+    "forms": [
+      "mass",
+      "opera"
+    ],
+    "listen": "Listen to the independence of the vocal lines and to the ways one part answers another.",
+    "work": {
+      "title": "Missa canonica",
+      "url": "https://en.wikipedia.org/wiki/Johann_Joseph_Fux"
+    },
+    "imslpCategory": "Fux, Johann Joseph",
+    "indexSource": "https://imslp.org/wiki/Category:Fux,_Johann_Joseph",
+    "affiliation": "German-speaking traditions / Italian",
+    "origin": "Austrian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "biber",
+    "name": "Heinrich Ignaz Franz Biber",
+    "dates": "1644–1704",
+    "city": "Salzburg",
+    "coordinates": [
+      13.055,
+      47.81
+    ],
+    "note": "Violin writing, resonance and scordatura.",
+    "source": "https://en.wikipedia.org/wiki/Heinrich_Ignaz_Franz_Biber",
+    "scores": null,
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "german",
+      "italian"
+    ],
+    "forms": [
+      "passacaglia",
+      "sonata"
+    ],
+    "listen": "Listen for chords and multiple lines within a violin part; some sonatas require altered string tuning.",
+    "work": {
+      "title": "Rosary Sonatas",
+      "url": "https://en.wikipedia.org/wiki/Heinrich_Ignaz_Franz_Biber"
+    },
+    "imslpCategory": "Biber, Heinrich Ignaz Franz von",
+    "indexSource": "https://imslp.org/wiki/Category:Biber,_Heinrich_Ignaz_Franz_von",
+    "affiliation": "German-speaking traditions / Italian",
+    "origin": "Austrian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "marais",
+    "name": "Marin Marais",
+    "dates": "1656–1728",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "The viola da gamba as an intimate, speaking instrument.",
+    "source": "https://en.wikipedia.org/wiki/Marin_Marais",
+    "scores": null,
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "opera",
+      "suite"
+    ],
+    "listen": "Hear the bass viol move between melody, ornament and chordal writing.",
+    "work": {
+      "title": "Pièces de viole",
+      "url": "https://en.wikipedia.org/wiki/Marin_Marais"
+    },
+    "imslpCategory": "Marais, Marin",
+    "indexSource": "https://imslp.org/wiki/Category:Marais,_Marin",
+    "affiliation": "French",
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "charpentier",
+    "name": "Marc-Antoine Charpentier",
+    "dates": "1643–1704",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "Sacred and dramatic music between French and Italian traditions.",
+    "source": "https://en.wikipedia.org/wiki/Marc-Antoine_Charpentier",
+    "scores": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/CharpentierMA",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "french",
+      "italian"
+    ],
+    "forms": [
+      "cantata",
+      "motet",
+      "opera",
+      "oratorio"
+    ],
+    "listen": "Notice the contrast between solo voices and ensemble, and how dissonance gives weight to a word.",
+    "work": {
+      "title": "Te Deum, H. 146",
+      "url": "https://en.wikipedia.org/wiki/Marc-Antoine_Charpentier"
+    },
+    "imslpCategory": "Charpentier, Marc-Antoine",
+    "indexSource": "https://imslp.org/wiki/Category:Charpentier,_Marc-Antoine",
+    "affiliation": "French / Italian",
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "jacquet",
+    "name": "Élisabeth Jacquet de La Guerre",
+    "dates": "1665–1729",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "Harpsichord suites, sonatas and opera from a composer at the French court.",
+    "source": "https://en.wikipedia.org/wiki/Élisabeth_Jacquet_de_La_Guerre",
+    "scores": null,
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "opera",
+      "sonata",
+      "suite"
+    ],
+    "listen": "Follow the dance pulse beneath the harpsichord ornaments; compare it with the dialogue of the sonatas.",
+    "work": {
+      "title": "Pièces de clavecin (1687)",
+      "url": "https://en.wikipedia.org/wiki/Élisabeth_Jacquet_de_La_Guerre"
+    },
+    "imslpCategory": "Jacquet de La Guerre, Elisabeth",
+    "indexSource": "https://imslp.org/wiki/Category:Jacquet_de_La_Guerre,_Elisabeth",
+    "affiliation": "French",
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "strozzi",
+    "name": "Barbara Strozzi",
+    "dates": "1619–1677",
+    "city": "Venice",
+    "coordinates": [
+      12.3155,
+      45.4408
+    ],
+    "note": "Cantatas and song built around the expressive possibilities of a solo voice.",
+    "source": "https://en.wikipedia.org/wiki/Barbara_Strozzi",
+    "scores": null,
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "cantata",
+      "madrigal"
+    ],
+    "listen": "Follow the singer’s declamation and the bass beneath it; expressive words often receive harmonic emphasis.",
+    "work": {
+      "title": "Lagrime mie",
+      "url": "https://en.wikipedia.org/wiki/Barbara_Strozzi"
+    },
+    "imslpCategory": "Strozzi, Barbara",
+    "indexSource": "https://imslp.org/wiki/Category:Strozzi,_Barbara",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "caccini",
+    "name": "Francesca Caccini",
+    "dates": "1587–after 1641",
+    "city": "Florence",
+    "coordinates": [
+      11.255,
+      43.77
+    ],
+    "note": "Song, court performance and early opera at the Medici court.",
+    "source": "https://en.wikipedia.org/wiki/Francesca_Caccini",
+    "scores": null,
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "motet",
+      "opera"
+    ],
+    "listen": "Listen for speech-shaped melody and the exchanges between solo singing and ensemble.",
+    "work": {
+      "title": "La liberazione di Ruggiero",
+      "url": "https://en.wikipedia.org/wiki/Francesca_Caccini"
+    },
+    "imslpCategory": "Caccini, Francesca",
+    "indexSource": "https://imslp.org/wiki/Category:Caccini,_Francesca",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "leonarda",
+    "name": "Isabella Leonarda",
+    "dates": "1620–1704",
+    "city": "Novara",
+    "coordinates": [
+      8.621,
+      45.447
+    ],
+    "note": "Sacred vocal music and instrumental sonatas from convent life.",
+    "source": "https://en.wikipedia.org/wiki/Isabella_Leonarda",
+    "scores": null,
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "motet",
+      "sonata"
+    ],
+    "listen": "Hear how short melodic ideas pass between instruments and how sections change pace.",
+    "work": {
+      "title": "Sonate, Op. 16",
+      "url": "https://en.wikipedia.org/wiki/Isabella_Leonarda"
+    },
+    "imslpCategory": "Leonarda, Isabella",
+    "indexSource": "https://imslp.org/wiki/Category:Leonarda,_Isabella",
+    "affiliation": "Italian",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "zelenka",
+    "name": "Jan Dismas Zelenka",
+    "dates": "1679–1745",
+    "city": "Dresden",
+    "coordinates": [
+      13.737,
+      51.05
+    ],
+    "note": "Sacred counterpoint with striking rhythmic and harmonic turns.",
+    "source": "https://en.wikipedia.org/wiki/Jan_Dismas_Zelenka",
+    "scores": null,
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "italian"
+    ],
+    "forms": [
+      "canon",
+      "mass",
+      "sonata"
+    ],
+    "listen": "Follow an active bass against the upper lines; listen for unexpected harmonic turns.",
+    "work": {
+      "title": "Six Trio Sonatas, ZWV 181",
+      "url": "https://en.wikipedia.org/wiki/Jan_Dismas_Zelenka"
+    },
+    "imslpCategory": "Zelenka, Jan Dismas",
+    "indexSource": "https://imslp.org/wiki/Category:Zelenka,_Jan_Dismas",
+    "affiliation": "German-speaking traditions / Italian",
+    "origin": "Czech",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "geminiani",
+    "name": "Francesco Geminiani",
+    "dates": "1687–1762",
+    "city": "London",
+    "coordinates": [
+      -0.1276,
+      51.507
+    ],
+    "note": "Italian violin writing and the concerto grosso abroad.",
+    "source": "https://en.wikipedia.org/wiki/Francesco_Geminiani",
+    "scores": null,
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian",
+      "british"
+    ],
+    "forms": [
+      "concerto-grosso",
+      "sonata"
+    ],
+    "listen": "Compare the solo group with the larger ensemble and hear the ornaments within the melodic line.",
+    "work": {
+      "title": "Concerti grossi after Corelli, Op. 5",
+      "url": "https://en.wikipedia.org/wiki/Francesco_Geminiani"
+    },
+    "imslpCategory": "Geminiani, Francesco",
+    "indexSource": "https://imslp.org/wiki/Category:Geminiani,_Francesco",
+    "affiliation": "Italian / British",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "seixas",
+    "name": "Carlos Seixas",
+    "dates": "1704–1742",
+    "city": "Lisbon",
+    "coordinates": [
+      -9.139,
+      38.722
+    ],
+    "note": "Portuguese keyboard sonatas at the edge of Baroque and galant styles.",
+    "source": "https://en.wikipedia.org/wiki/Carlos_Seixas",
+    "scores": null,
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "iberian",
+      "italian"
+    ],
+    "forms": [
+      "sonata",
+      "toccata"
+    ],
+    "listen": "Listen for the rhythmic character of the keyboard figures and the contrast between their registers.",
+    "work": {
+      "title": "Keyboard sonatas",
+      "url": "https://en.wikipedia.org/wiki/Carlos_Seixas"
+    },
+    "imslpCategory": "Seixas, Carlos",
+    "indexSource": "https://imslp.org/wiki/Category:Seixas,_Carlos",
+    "affiliation": "Iberian / Italian",
+    "origin": "Portuguese",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "cabanilles",
+    "name": "Juan Cabanilles",
+    "dates": "1644–1712",
+    "city": "Valencia",
+    "coordinates": [
+      -0.376,
+      39.47
+    ],
+    "note": "A Spanish organ tradition of tientos and contrapuntal invention.",
+    "source": "https://en.wikipedia.org/wiki/Juan_Cabanilles",
+    "scores": null,
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "iberian"
+    ],
+    "forms": [
+      "passacaglia",
+      "tiento"
+    ],
+    "listen": "Follow the imitative entries of a tiento, then compare the repeated patterns of a pasacalles.",
+    "work": {
+      "title": "Tientos for organ",
+      "url": "https://en.wikipedia.org/wiki/Juan_Cabanilles"
+    },
+    "imslpCategory": "Cabanilles, Juan",
+    "indexSource": "https://imslp.org/wiki/Category:Cabanilles,_Juan",
+    "affiliation": "Iberian",
+    "origin": "Spanish",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "sweelinck",
+    "name": "Jan Pieterszoon Sweelinck",
+    "dates": "1562–1621",
+    "city": "Amsterdam",
+    "coordinates": [
+      4.895,
+      52.368
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Sweelinck,_Jan_Pieterszoon",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "dutch"
+    ],
+    "forms": [],
+    "affiliation": "Netherlandish",
+    "imslpCategory": "Sweelinck, Jan Pieterszoon",
+    "indexSource": "https://imslp.org/wiki/Category:Sweelinck,_Jan_Pieterszoon",
+    "edge": "Renaissance-to-Baroque transition",
+    "origin": "Dutch",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "byrd",
+    "name": "William Byrd",
+    "dates": "c. 1540–1623",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Byrd,_William",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [],
+    "affiliation": "British",
+    "imslpCategory": "Byrd, William",
+    "indexSource": "https://imslp.org/wiki/Category:Byrd,_William",
+    "edge": "Renaissance-to-Baroque transition",
+    "origin": "English",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "bull",
+    "name": "John Bull",
+    "dates": "c. 1562–1628",
+    "city": "Antwerp",
+    "coordinates": [
+      4.403,
+      51.219
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Bull,_John",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "british",
+      "dutch"
+    ],
+    "forms": [],
+    "affiliation": "British / Netherlandish",
+    "imslpCategory": "Bull, John",
+    "indexSource": "https://imslp.org/wiki/Category:Bull,_John",
+    "edge": "Renaissance-to-Baroque transition",
+    "origin": "English",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "orlando-gibbons",
+    "name": "Orlando Gibbons",
+    "dates": "1583–1625",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Gibbons,_Orlando",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [],
+    "affiliation": "British",
+    "imslpCategory": "Gibbons, Orlando",
+    "indexSource": "https://imslp.org/wiki/Category:Gibbons,_Orlando",
+    "edge": null,
+    "origin": "English",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "farnaby",
+    "name": "Giles Farnaby",
+    "dates": "c. 1563–1640",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Farnaby,_Giles",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [],
+    "affiliation": "British",
+    "imslpCategory": "Farnaby, Giles",
+    "indexSource": "https://imslp.org/wiki/Category:Farnaby,_Giles",
+    "edge": null,
+    "origin": "English",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "tomkins",
+    "name": "Thomas Tomkins",
+    "dates": "1572–1656",
+    "city": "Worcester",
+    "coordinates": [
+      -2.222,
+      52.192
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Tomkins,_Thomas",
+    "eras": [
+      "early",
+      "middle"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [],
+    "affiliation": "British",
+    "imslpCategory": "Tomkins, Thomas",
+    "indexSource": "https://imslp.org/wiki/Category:Tomkins,_Thomas",
+    "edge": null,
+    "origin": "Welsh",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "philips",
+    "name": "Peter Philips",
+    "dates": "c. 1560–1628",
+    "city": "Brussels",
+    "coordinates": [
+      4.352,
+      50.85
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Philips,_Peter",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "british",
+      "dutch"
+    ],
+    "forms": [],
+    "affiliation": "British / Netherlandish",
+    "imslpCategory": "Philips, Peter",
+    "indexSource": "https://imslp.org/wiki/Category:Philips,_Peter",
+    "edge": "Renaissance-to-Baroque transition",
+    "origin": "English",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "praetorius",
+    "name": "Michael Praetorius",
+    "dates": "1571–1621",
+    "city": "Wolfenbüttel",
+    "coordinates": [
+      10.535,
+      52.163
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Praetorius,_Michael",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Praetorius, Michael",
+    "indexSource": "https://imslp.org/wiki/Category:Praetorius,_Michael",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "scheidt",
+    "name": "Samuel Scheidt",
+    "dates": "1587–1654",
+    "city": "Halle",
+    "coordinates": [
+      11.969,
+      51.483
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Scheidt,_Samuel",
+    "eras": [
+      "early",
+      "middle"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Scheidt, Samuel",
+    "indexSource": "https://imslp.org/wiki/Category:Scheidt,_Samuel",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "scheidemann",
+    "name": "Heinrich Scheidemann",
+    "dates": "c. 1595–1663",
+    "city": "Hamburg",
+    "coordinates": [
+      9.993,
+      53.551
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Scheidemann,_Heinrich",
+    "eras": [
+      "early",
+      "middle"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Scheidemann, Heinrich",
+    "indexSource": "https://imslp.org/wiki/Category:Scheidemann,_Heinrich",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "weckmann",
+    "name": "Matthias Weckmann",
+    "dates": "c. 1616–1674",
+    "city": "Hamburg",
+    "coordinates": [
+      9.993,
+      53.551
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Weckmann,_Matthias",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "cantata"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Weckmann, Matthias",
+    "indexSource": "https://imslp.org/wiki/Category:Weckmann,_Matthias",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "tunder",
+    "name": "Franz Tunder",
+    "dates": "1614–1667",
+    "city": "Lübeck",
+    "coordinates": [
+      10.687,
+      53.866
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Tunder,_Franz",
+    "eras": [
+      "early",
+      "middle"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue",
+      "partita"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Tunder, Franz",
+    "indexSource": "https://imslp.org/wiki/Category:Tunder,_Franz",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "reincken",
+    "name": "Johann Adam Reincken",
+    "dates": "1643–1722",
+    "city": "Hamburg",
+    "coordinates": [
+      9.993,
+      53.551
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Reincken,_Johann_Adam",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "dutch"
+    ],
+    "forms": [
+      "fugue",
+      "suite"
+    ],
+    "affiliation": "German-speaking traditions / Netherlandish",
+    "imslpCategory": "Reincken, Johann Adam",
+    "indexSource": "https://imslp.org/wiki/Category:Reincken,_Johann_Adam",
+    "edge": null,
+    "origin": "Dutch",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "vincent-lubeck",
+    "name": "Vincent Lübeck",
+    "dates": "1654–1740",
+    "city": "Hamburg",
+    "coordinates": [
+      9.993,
+      53.551
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Lübeck,_Vincent",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Lübeck, Vincent",
+    "indexSource": "https://imslp.org/wiki/Category:Lübeck,_Vincent",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "bruhns",
+    "name": "Nicolaus Bruhns",
+    "dates": "1665–1697",
+    "city": "Husum",
+    "coordinates": [
+      9.052,
+      54.485
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Bruhns,_Nicolaus",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Bruhns, Nicolaus",
+    "indexSource": "https://imslp.org/wiki/Category:Bruhns,_Nicolaus",
+    "edge": null,
+    "origin": "Danish",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "bohm",
+    "name": "Georg Böhm",
+    "dates": "1661–1733",
+    "city": "Lüneburg",
+    "coordinates": [
+      10.412,
+      53.247
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Böhm,_Georg",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "partita"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Böhm, Georg",
+    "indexSource": "https://imslp.org/wiki/Category:Böhm,_Georg",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "walther",
+    "name": "Johann Gottfried Walther",
+    "dates": "1684–1748",
+    "city": "Weimar",
+    "coordinates": [
+      11.329,
+      50.98
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Walther,_Johann_Gottfried",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Walther, Johann Gottfried",
+    "indexSource": "https://imslp.org/wiki/Category:Walther,_Johann_Gottfried",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "krebs",
+    "name": "Johann Ludwig Krebs",
+    "dates": "1713–1780",
+    "city": "Altenburg",
+    "coordinates": [
+      12.436,
+      50.985
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Krebs,_Johann_Ludwig",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "concerto",
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Krebs, Johann Ludwig",
+    "indexSource": "https://imslp.org/wiki/Category:Krebs,_Johann_Ludwig",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "German",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "kuhnau",
+    "name": "Johann Kuhnau",
+    "dates": "1660–1722",
+    "city": "Leipzig",
+    "coordinates": [
+      12.374,
+      51.34
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Kuhnau,_Johann",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue",
+      "sonata",
+      "toccata"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Kuhnau, Johann",
+    "indexSource": "https://imslp.org/wiki/Category:Kuhnau,_Johann",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "fischer",
+    "name": "Johann Caspar Ferdinand Fischer",
+    "dates": "c. 1656–1746",
+    "city": "Rastatt",
+    "coordinates": [
+      8.205,
+      48.857
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Fischer,_Johann_Caspar_Ferdinand",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "french"
+    ],
+    "forms": [
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions / French",
+    "imslpCategory": "Fischer, Johann Caspar Ferdinand",
+    "indexSource": "https://imslp.org/wiki/Category:Fischer,_Johann_Caspar_Ferdinand",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "georg-muffat",
+    "name": "Georg Muffat",
+    "dates": "1653–1704",
+    "city": "Passau",
+    "coordinates": [
+      13.463,
+      48.566
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Muffat,_Georg",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "french",
+      "italian"
+    ],
+    "forms": [
+      "passacaglia"
+    ],
+    "affiliation": "German-speaking traditions / French / Italian",
+    "imslpCategory": "Muffat, Georg",
+    "indexSource": "https://imslp.org/wiki/Category:Muffat,_Georg",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "kerll",
+    "name": "Johann Caspar Kerll",
+    "dates": "1627–1693",
+    "city": "Munich",
+    "coordinates": [
+      11.582,
+      48.135
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Kerll,_Johann_Caspar",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "german",
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions / Italian",
+    "imslpCategory": "Kerll, Johann Caspar",
+    "indexSource": "https://imslp.org/wiki/Category:Kerll,_Johann_Caspar",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "sorge",
+    "name": "Georg Andreas Sorge",
+    "dates": "1703–1778",
+    "city": "Lobenstein",
+    "coordinates": [
+      11.64,
+      50.451
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Sorge,_Georg_Andreas",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue",
+      "toccata"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Sorge, Georg Andreas",
+    "indexSource": "https://imslp.org/wiki/Category:Sorge,_Georg_Andreas",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "German",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "steigleder",
+    "name": "Johann Ulrich Steigleder",
+    "dates": "1593–1635",
+    "city": "Stuttgart",
+    "coordinates": [
+      9.182,
+      48.775
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Steigleder,_Johann_Ulrich",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Steigleder, Johann Ulrich",
+    "indexSource": "https://imslp.org/wiki/Category:Steigleder,_Johann_Ulrich",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "erbach",
+    "name": "Christian Erbach",
+    "dates": "c. 1570–1635",
+    "city": "Augsburg",
+    "coordinates": [
+      10.898,
+      48.37
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Erbach,_Christian",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Erbach, Christian",
+    "indexSource": "https://imslp.org/wiki/Category:Erbach,_Christian",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "eberlin",
+    "name": "Johann Ernst Eberlin",
+    "dates": "1702–1762",
+    "city": "Salzburg",
+    "coordinates": [
+      13.055,
+      47.809
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Eberlin,_Johann_Ernst",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue",
+      "sonata",
+      "toccata"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Eberlin, Johann Ernst",
+    "indexSource": "https://imslp.org/wiki/Category:Eberlin,_Johann_Ernst",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "gottlieb-muffat",
+    "name": "Gottlieb Muffat",
+    "dates": "1690–1770",
+    "city": "Vienna",
+    "coordinates": [
+      16.373,
+      48.208
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Muffat,_Gottlieb",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german",
+      "italian"
+    ],
+    "forms": [
+      "fugue",
+      "toccata"
+    ],
+    "affiliation": "German-speaking traditions / Italian",
+    "imslpCategory": "Muffat, Gottlieb",
+    "indexSource": "https://imslp.org/wiki/Category:Muffat,_Gottlieb",
+    "edge": null,
+    "origin": "Austrian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "wh-pachelbel",
+    "name": "Wilhelm Hieronymus Pachelbel",
+    "dates": "1686–1764",
+    "city": "Nuremberg",
+    "coordinates": [
+      11.077,
+      49.453
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Pachelbel,_Wilhelm_Hieronymus",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Pachelbel, Wilhelm Hieronymus",
+    "indexSource": "https://imslp.org/wiki/Category:Pachelbel,_Wilhelm_Hieronymus",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "pasquini",
+    "name": "Bernardo Pasquini",
+    "dates": "1637–1710",
+    "city": "Rome",
+    "coordinates": [
+      12.496,
+      41.903
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Pasquini,_Bernardo",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "fugue",
+      "partita",
+      "sonata"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Pasquini, Bernardo",
+    "indexSource": "https://imslp.org/wiki/Category:Pasquini,_Bernardo",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "storace",
+    "name": "Bernardo Storace",
+    "dates": "fl. 1664",
+    "city": "Messina",
+    "coordinates": [
+      15.555,
+      38.193
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Storace,_Bernardo",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Storace, Bernardo",
+    "indexSource": "https://imslp.org/wiki/Category:Storace,_Bernardo",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "zipoli",
+    "name": "Domenico Zipoli",
+    "dates": "1688–1726",
+    "city": "Rome",
+    "coordinates": [
+      12.496,
+      41.903
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Zipoli,_Domenico",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Zipoli, Domenico",
+    "indexSource": "https://imslp.org/wiki/Category:Zipoli,_Domenico",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "salvatore",
+    "name": "Giovanni Salvatore",
+    "dates": "c. 1611–1688",
+    "city": "Naples",
+    "coordinates": [
+      14.268,
+      40.852
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Salvatore,_Giovanni",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Salvatore, Giovanni",
+    "indexSource": "https://imslp.org/wiki/Category:Salvatore,_Giovanni",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "michelangelo-rossi",
+    "name": "Michelangelo Rossi",
+    "dates": "c. 1601–1656",
+    "city": "Rome",
+    "coordinates": [
+      12.496,
+      41.903
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Rossi,_Michelangelo",
+    "eras": [
+      "early",
+      "middle"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "partita"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Rossi, Michelangelo",
+    "indexSource": "https://imslp.org/wiki/Category:Rossi,_Michelangelo",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "diruta",
+    "name": "Girolamo Diruta",
+    "dates": "c. 1554–after 1610",
+    "city": "Venice",
+    "coordinates": [
+      12.315,
+      45.44
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Diruta,_Girolamo",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Diruta, Girolamo",
+    "indexSource": "https://imslp.org/wiki/Category:Diruta,_Girolamo",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "banchieri",
+    "name": "Adriano Banchieri",
+    "dates": "1568–1634",
+    "city": "Bologna",
+    "coordinates": [
+      11.343,
+      44.494
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Banchieri,_Adriano",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "madrigal"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Banchieri, Adriano",
+    "indexSource": "https://imslp.org/wiki/Category:Banchieri,_Adriano",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "trabaci",
+    "name": "Giovanni Maria Trabaci",
+    "dates": "1575–1647",
+    "city": "Naples",
+    "coordinates": [
+      14.268,
+      40.852
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Trabaci,_Giovanni_Maria",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "madrigal",
+      "toccata"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Trabaci, Giovanni Maria",
+    "indexSource": "https://imslp.org/wiki/Category:Trabaci,_Giovanni_Maria",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "mayone",
+    "name": "Ascanio Mayone",
+    "dates": "c. 1565–1627",
+    "city": "Naples",
+    "coordinates": [
+      14.268,
+      40.852
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Mayone,_Ascanio",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Mayone, Ascanio",
+    "indexSource": "https://imslp.org/wiki/Category:Mayone,_Ascanio",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "merula",
+    "name": "Tarquinio Merula",
+    "dates": "1595–1665",
+    "city": "Cremona",
+    "coordinates": [
+      10.022,
+      45.133
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Merula,_Tarquinio",
+    "eras": [
+      "early",
+      "middle"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Merula, Tarquinio",
+    "indexSource": "https://imslp.org/wiki/Category:Merula,_Tarquinio",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "martini",
+    "name": "Giovanni Battista Martini",
+    "dates": "1706–1784",
+    "city": "Bologna",
+    "coordinates": [
+      11.343,
+      44.494
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Martini,_Giovanni_Battista",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "fugue",
+      "sonata"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Martini, Giovanni Battista",
+    "indexSource": "https://imslp.org/wiki/Category:Martini,_Giovanni_Battista",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "Italian",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "galuppi",
+    "name": "Baldassare Galuppi",
+    "dates": "1706–1785",
+    "city": "Venice",
+    "coordinates": [
+      12.315,
+      45.44
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Galuppi,_Baldassare",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "sonata"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Galuppi, Baldassare",
+    "indexSource": "https://imslp.org/wiki/Category:Galuppi,_Baldassare",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "alberti",
+    "name": "Domenico Alberti",
+    "dates": "c. 1710–1740",
+    "city": "Venice",
+    "coordinates": [
+      12.315,
+      45.44
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Alberti,_Domenico",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "sonata"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Alberti, Domenico",
+    "indexSource": "https://imslp.org/wiki/Category:Alberti,_Domenico",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "platti",
+    "name": "Giovanni Benedetto Platti",
+    "dates": "1697–1763",
+    "city": "Würzburg",
+    "coordinates": [
+      9.953,
+      49.791
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Platti,_Giovanni_Benedetto",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian",
+      "german"
+    ],
+    "forms": [
+      "concerto",
+      "sonata"
+    ],
+    "affiliation": "Italian / German-speaking traditions",
+    "imslpCategory": "Platti, Giovanni Benedetto",
+    "indexSource": "https://imslp.org/wiki/Category:Platti,_Giovanni_Benedetto",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "durante",
+    "name": "Francesco Durante",
+    "dates": "1684–1755",
+    "city": "Naples",
+    "coordinates": [
+      14.268,
+      40.852
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Durante,_Francesco",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "partita",
+      "sonata",
+      "toccata"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Durante, Francesco",
+    "indexSource": "https://imslp.org/wiki/Category:Durante,_Francesco",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "lebegue",
+    "name": "Nicolas Lebègue",
+    "dates": "1631–1702",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Lebègue,_Nicolas",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "mass"
+    ],
+    "affiliation": "French",
+    "imslpCategory": "Lebègue, Nicolas",
+    "indexSource": "https://imslp.org/wiki/Category:Lebègue,_Nicolas",
+    "edge": null,
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "grigny",
+    "name": "Nicolas de Grigny",
+    "dates": "1672–1703",
+    "city": "Reims",
+    "coordinates": [
+      4.031,
+      49.258
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Grigny,_Nicolas_de",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "mass"
+    ],
+    "affiliation": "French",
+    "imslpCategory": "Grigny, Nicolas de",
+    "indexSource": "https://imslp.org/wiki/Category:Grigny,_Nicolas_de",
+    "edge": null,
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "clerambault",
+    "name": "Louis-Nicolas Clérambault",
+    "dates": "1676–1749",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Clérambault,_Louis-Nicolas",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "motet",
+      "suite"
+    ],
+    "affiliation": "French",
+    "imslpCategory": "Clérambault, Louis-Nicolas",
+    "indexSource": "https://imslp.org/wiki/Category:Clérambault,_Louis-Nicolas",
+    "edge": null,
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "dandrieu",
+    "name": "Jean-François Dandrieu",
+    "dates": "1682–1738",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Dandrieu,_Jean-François",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [
+      "suite"
+    ],
+    "affiliation": "French",
+    "imslpCategory": "Dandrieu, Jean-François",
+    "indexSource": "https://imslp.org/wiki/Category:Dandrieu,_Jean-François",
+    "edge": null,
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "pierre-dandrieu",
+    "name": "Pierre Dandrieu",
+    "dates": "1664–1733",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Dandrieu,_Pierre",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [],
+    "affiliation": "French",
+    "imslpCategory": "Dandrieu, Pierre",
+    "indexSource": "https://imslp.org/wiki/Category:Dandrieu,_Pierre",
+    "edge": null,
+    "origin": "French",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "balbastre",
+    "name": "Claude Balbastre",
+    "dates": "1724–1799",
+    "city": "Paris",
+    "coordinates": [
+      2.352,
+      48.857
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Balbastre,_Claude",
+    "eras": [
+      "transition"
+    ],
+    "traditions": [
+      "french"
+    ],
+    "forms": [],
+    "affiliation": "French",
+    "imslpCategory": "Balbastre, Claude",
+    "indexSource": "https://imslp.org/wiki/Category:Balbastre,_Claude",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "French",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "croft",
+    "name": "William Croft",
+    "dates": "1678–1727",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Croft,_William",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [
+      "suite"
+    ],
+    "affiliation": "British",
+    "imslpCategory": "Croft, William",
+    "indexSource": "https://imslp.org/wiki/Category:Croft,_William",
+    "edge": null,
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "clarke",
+    "name": "Jeremiah Clarke",
+    "dates": "c. 1674–1707",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Clarke,_Jeremiah",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [
+      "suite"
+    ],
+    "affiliation": "British",
+    "imslpCategory": "Clarke, Jeremiah",
+    "indexSource": "https://imslp.org/wiki/Category:Clarke,_Jeremiah",
+    "edge": null,
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "blow",
+    "name": "John Blow",
+    "dates": "1649–1708",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Blow,_John",
+    "eras": [
+      "middle",
+      "late"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [],
+    "affiliation": "British",
+    "imslpCategory": "Blow, John",
+    "indexSource": "https://imslp.org/wiki/Category:Blow,_John",
+    "edge": null,
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "boyce",
+    "name": "William Boyce",
+    "dates": "1711–1779",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Boyce,_William",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [],
+    "affiliation": "British",
+    "imslpCategory": "Boyce, William",
+    "indexSource": "https://imslp.org/wiki/Category:Boyce,_William",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "stanley",
+    "name": "John Stanley",
+    "dates": "1712–1786",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Stanley,_John",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [
+      "sonata"
+    ],
+    "affiliation": "British",
+    "imslpCategory": "Stanley, John",
+    "indexSource": "https://imslp.org/wiki/Category:Stanley,_John",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "roseingrave",
+    "name": "Thomas Roseingrave",
+    "dates": "c. 1690–1766",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Roseingrave,_Thomas",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [
+      "concerto",
+      "suite"
+    ],
+    "affiliation": "British",
+    "imslpCategory": "Roseingrave, Thomas",
+    "indexSource": "https://imslp.org/wiki/Category:Roseingrave,_Thomas",
+    "edge": null,
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "arne",
+    "name": "Thomas Arne",
+    "dates": "1710–1778",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Arne,_Thomas",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "british"
+    ],
+    "forms": [
+      "opera"
+    ],
+    "affiliation": "British",
+    "imslpCategory": "Arne, Thomas",
+    "indexSource": "https://imslp.org/wiki/Category:Arne,_Thomas",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "English",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "johann-bernhard-bach",
+    "name": "Johann Bernhard Bach",
+    "dates": "1676–1749",
+    "city": "Eisenach",
+    "coordinates": [
+      10.315,
+      50.98
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Bach,_Johann_Bernhard",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Bach, Johann Bernhard",
+    "indexSource": "https://imslp.org/wiki/Category:Bach,_Johann_Bernhard",
+    "edge": null,
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "cpe-bach",
+    "name": "Carl Philipp Emanuel Bach",
+    "dates": "1714–1788",
+    "city": "Hamburg",
+    "coordinates": [
+      9.993,
+      53.551
+    ],
+    "note": "Expressive pauses, sudden changes and the intimate sound of the clavichord.",
+    "source": "https://imslp.org/wiki/Category:Bach,_Carl_Philipp_Emanuel",
+    "eras": [
+      "transition"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Bach, Carl Philipp Emanuel",
+    "indexSource": "https://imslp.org/wiki/Category:Bach,_Carl_Philipp_Emanuel",
+    "edge": "Bach family · Baroque to Classical",
+    "origin": "German",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "wf-bach",
+    "name": "Wilhelm Friedemann Bach",
+    "dates": "1710–1784",
+    "city": "Dresden",
+    "coordinates": [
+      13.737,
+      51.05
+    ],
+    "note": "Learned counterpoint beside unusually free fantasias and dances.",
+    "source": "https://imslp.org/wiki/Category:Bach,_Wilhelm_Friedemann",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [
+      "fugue"
+    ],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Bach, Wilhelm Friedemann",
+    "indexSource": "https://imslp.org/wiki/Category:Bach,_Wilhelm_Friedemann",
+    "edge": "Bach family · Baroque to Classical",
+    "origin": "German",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "jc-bach",
+    "name": "Johann Christian Bach",
+    "dates": "1735–1782",
+    "city": "London",
+    "coordinates": [
+      -0.128,
+      51.507
+    ],
+    "note": "The London Bach: a younger generation’s clear melody and lighter textures.",
+    "source": "https://imslp.org/wiki/Category:Bach,_Johann_Christian",
+    "eras": [
+      "transition"
+    ],
+    "traditions": [
+      "german",
+      "italian",
+      "british"
+    ],
+    "forms": [
+      "fugue",
+      "sonata"
+    ],
+    "affiliation": "German-speaking traditions / Italian / British",
+    "imslpCategory": "Bach, Johann Christian",
+    "indexSource": "https://imslp.org/wiki/Category:Bach,_Johann_Christian",
+    "edge": "Bach family · Baroque to Classical",
+    "origin": "German",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "jcf-bach",
+    "name": "Johann Christoph Friedrich Bach",
+    "dates": "1732–1795",
+    "city": "Bückeburg",
+    "coordinates": [
+      9.049,
+      52.26
+    ],
+    "note": "The Bückeburg Bach: keyboard miniatures alongside court music and larger vocal works.",
+    "source": "https://imslp.org/wiki/Category:Bach,_Johann_Christoph_Friedrich",
+    "eras": [
+      "transition"
+    ],
+    "traditions": [
+      "german"
+    ],
+    "forms": [],
+    "affiliation": "German-speaking traditions",
+    "imslpCategory": "Bach, Johann Christoph Friedrich",
+    "indexSource": "https://imslp.org/wiki/Category:Bach,_Johann_Christoph_Friedrich",
+    "edge": "Bach family · Baroque to Classical",
+    "origin": "German",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "aguilera",
+    "name": "Sebastián Aguilera de Heredia",
+    "dates": "1561–1627",
+    "city": "Zaragoza",
+    "coordinates": [
+      -0.889,
+      41.649
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Aguilera_de_Heredia,_Sebastián",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "iberian"
+    ],
+    "forms": [
+      "tiento"
+    ],
+    "affiliation": "Iberian",
+    "imslpCategory": "Aguilera de Heredia, Sebastián",
+    "indexSource": "https://imslp.org/wiki/Category:Aguilera_de_Heredia,_Sebastián",
+    "edge": null,
+    "origin": "Spanish",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "bruna",
+    "name": "Pablo Bruna",
+    "dates": "1611–1679",
+    "city": "Daroca",
+    "coordinates": [
+      -1.413,
+      41.115
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Bruna,_Pablo",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "iberian"
+    ],
+    "forms": [
+      "tiento"
+    ],
+    "affiliation": "Iberian",
+    "imslpCategory": "Bruna, Pablo",
+    "indexSource": "https://imslp.org/wiki/Category:Bruna,_Pablo",
+    "edge": null,
+    "origin": "Spanish",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "elias",
+    "name": "José Elías",
+    "dates": "c. 1690–c. 1779",
+    "city": "Barcelona",
+    "coordinates": [
+      2.173,
+      41.385
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Elías,_José",
+    "eras": [
+      "late",
+      "transition"
+    ],
+    "traditions": [
+      "iberian"
+    ],
+    "forms": [
+      "passacaglia",
+      "tiento"
+    ],
+    "affiliation": "Iberian",
+    "imslpCategory": "Elías, José",
+    "indexSource": "https://imslp.org/wiki/Category:Elías,_José",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "Spanish",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "coelho",
+    "name": "Manuel Rodrigues Coelho",
+    "dates": "c. 1555–c. 1635",
+    "city": "Lisbon",
+    "coordinates": [
+      -9.139,
+      38.722
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Coelho,_Manuel_Rodrigues",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "iberian"
+    ],
+    "forms": [],
+    "affiliation": "Iberian",
+    "imslpCategory": "Coelho, Manuel Rodrigues",
+    "indexSource": "https://imslp.org/wiki/Category:Coelho,_Manuel_Rodrigues",
+    "edge": null,
+    "origin": "Portuguese",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "araujo",
+    "name": "Pedro de Araújo",
+    "dates": "c. 1610–1684",
+    "city": "Braga",
+    "coordinates": [
+      -8.426,
+      41.545
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Araújo,_Pedro_de",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "iberian"
+    ],
+    "forms": [
+      "tiento"
+    ],
+    "affiliation": "Iberian",
+    "imslpCategory": "Araújo, Pedro de",
+    "indexSource": "https://imslp.org/wiki/Category:Araújo,_Pedro_de",
+    "edge": null,
+    "origin": "Portuguese",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "soler",
+    "name": "Antonio Soler",
+    "dates": "1729–1783",
+    "city": "El Escorial",
+    "coordinates": [
+      -4.126,
+      40.593
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Soler,_Antonio",
+    "eras": [
+      "transition"
+    ],
+    "traditions": [
+      "iberian"
+    ],
+    "forms": [
+      "tiento"
+    ],
+    "affiliation": "Iberian",
+    "imslpCategory": "Soler, Antonio",
+    "indexSource": "https://imslp.org/wiki/Category:Soler,_Antonio",
+    "edge": "Baroque-to-Classical transition",
+    "origin": "Catalan",
+    "cataloguePeriod": "Classical"
+  },
+  {
+    "id": "merulo",
+    "name": "Claudio Merulo",
+    "dates": "1533–1604",
+    "city": "Parma",
+    "coordinates": [
+      10.327,
+      44.802
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Merulo,_Claudio",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Merulo, Claudio",
+    "indexSource": "https://imslp.org/wiki/Category:Merulo,_Claudio",
+    "edge": "Renaissance-to-Baroque transition",
+    "origin": "Italian",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "gabrieli",
+    "name": "Giovanni Gabrieli",
+    "dates": "c. 1554–1612",
+    "city": "Venice",
+    "coordinates": [
+      12.315,
+      45.44
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Gabrieli,_Giovanni",
+    "eras": [
+      "early"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "madrigal",
+      "motet",
+      "toccata"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Gabrieli, Giovanni",
+    "indexSource": "https://imslp.org/wiki/Category:Gabrieli,_Giovanni",
+    "edge": "Renaissance-to-Baroque transition",
+    "origin": "Italian",
+    "cataloguePeriod": "Renaissance"
+  },
+  {
+    "id": "carissimi",
+    "name": "Giacomo Carissimi",
+    "dates": "1605–1674",
+    "city": "Rome",
+    "coordinates": [
+      12.496,
+      41.903
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Carissimi,_Giacomo",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "motet"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Carissimi, Giacomo",
+    "indexSource": "https://imslp.org/wiki/Category:Carissimi,_Giacomo",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "lotti",
+    "name": "Antonio Lotti",
+    "dates": "1667–1740",
+    "city": "Venice",
+    "coordinates": [
+      12.315,
+      45.44
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Lotti,_Antonio",
+    "eras": [
+      "late"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [
+      "opera"
+    ],
+    "affiliation": "Italian",
+    "imslpCategory": "Lotti, Antonio",
+    "indexSource": "https://imslp.org/wiki/Category:Lotti,_Antonio",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  },
+  {
+    "id": "stradella",
+    "name": "Alessandro Stradella",
+    "dates": "1639–1682",
+    "city": "Genoa",
+    "coordinates": [
+      8.946,
+      44.405
+    ],
+    "note": "",
+    "source": "https://imslp.org/wiki/Category:Stradella,_Alessandro",
+    "eras": [
+      "middle"
+    ],
+    "traditions": [
+      "italian"
+    ],
+    "forms": [],
+    "affiliation": "Italian",
+    "imslpCategory": "Stradella, Alessandro",
+    "indexSource": "https://imslp.org/wiki/Category:Stradella,_Alessandro",
+    "edge": null,
+    "origin": "Italian",
+    "cataloguePeriod": "Baroque"
+  }
+]

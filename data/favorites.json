@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bwv825-01",
+    "title": "Partita No. 1 \u00b7 Praeludium",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV825/1-Partita",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, Partita No. 1, BWV 825, Praeludium. Typeset by Carl Bolstad; Mutopia-2006/08/21-474. Source edition: Bach-Gesellschaft. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv825-01.mid",
+    "noteData": "assets/music/bwv825-01.json"
+  },
+  {
+    "id": "bwv825-02",
+    "title": "Partita No. 1 \u00b7 Allemande",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV825/1-Partita",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, Partita No. 1, BWV 825, Allemande. Typeset by Carl Bolstad; Mutopia-2006/08/21-474. Source edition: Bach-Gesellschaft. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv825-02.mid",
+    "noteData": "assets/music/bwv825-02.json"
+  },
+  {
+    "id": "bwv825-03",
+    "title": "Partita No. 1 \u00b7 Corrente",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV825/1-Partita",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, Partita No. 1, BWV 825, Corrente. Typeset by Carl Bolstad; Mutopia-2006/08/21-474. Source edition: Bach-Gesellschaft. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv825-03.mid",
+    "noteData": "assets/music/bwv825-03.json"
+  },
+  {
+    "id": "bwv825-04",
+    "title": "Partita No. 1 \u00b7 Sarabande",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV825/1-Partita",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, Partita No. 1, BWV 825, Sarabande. Typeset by Carl Bolstad; Mutopia-2006/08/21-474. Source edition: Bach-Gesellschaft. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv825-04.mid",
+    "noteData": "assets/music/bwv825-04.json"
+  },
+  {
+    "id": "bwv825-05",
+    "title": "Partita No. 1 \u00b7 Menuets I & II",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV825/1-Partita",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, Partita No. 1, BWV 825, Menuets I & II. Typeset by Carl Bolstad; Mutopia-2006/08/21-474. Source edition: Bach-Gesellschaft. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv825-05.mid",
+    "noteData": "assets/music/bwv825-05.json"
+  },
+  {
+    "id": "bwv825-06",
+    "title": "Partita No. 1 \u00b7 Giga",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV825/1-Partita",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, Partita No. 1, BWV 825, Giga. Typeset by Carl Bolstad; Mutopia-2006/08/21-474. Source edition: Bach-Gesellschaft. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv825-06.mid",
+    "noteData": "assets/music/bwv825-06.json"
+  },
+  {
+    "id": "bwv828-01",
+    "title": "Partita No. 4 \u00b7 Ouverture",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV828/4-Partita",
+    "license": "CC BY-SA 4.0 International",
+    "attribution": "J. S. Bach, Partita No. 4, BWV 828, Ouverture. Typeset by Urs Metzger; Mutopia-2016/04/20-2114. Source edition: First edition by J. S. Bach, 'In Verlegung des Autoris'. CC BY-SA 4.0 International. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv828-01.mid",
+    "noteData": "assets/music/bwv828-01.json"
+  },
+  {
+    "id": "bwv829-01",
+    "title": "Partita No. 5 \u00b7 Praeambulum",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV829/5-Partita",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, Partita No. 5, BWV 829, Praeambulum. Typeset by Carl Bolstad; Mutopia-2006/08/21-421. Source edition: Bach-Gesellschaft. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv829-01.mid",
+    "noteData": "assets/music/bwv829-01.json"
+  },
+  {
+    "id": "bwv814-01",
+    "title": "French Suite No. 3 \u00b7 Allemande",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV814/french-suite-3",
+    "license": "CC BY-SA 4.0 International",
+    "attribution": "J. S. Bach, French Suite No. 3, BWV 814, Allemande. Typeset by Joel Mayes; Mutopia-2018/03/10-100. Source edition: Bach-Gesellschaft, 1863. CC BY-SA 4.0 International. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv814-01.mid",
+    "noteData": "assets/music/bwv814-01.json"
+  },
+  {
+    "id": "bwv814-04",
+    "title": "French Suite No. 3 \u00b7 Menuet",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV814/french-suite-3",
+    "license": "CC BY-SA 4.0 International",
+    "attribution": "J. S. Bach, French Suite No. 3, BWV 814, Menuet. Typeset by Knute Snortum; Mutopia-2018/03/10-100. Source edition: Bach-Gesellschaft, 1863. CC BY-SA 4.0 International. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv814-04.mid",
+    "noteData": "assets/music/bwv814-04.json"
+  },
+  {
+    "id": "bwv816-01",
+    "title": "French Suite No. 5 \u00b7 Allemande",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV816/french-suite-5",
+    "license": "Public Domain",
+    "attribution": "J. S. Bach, French Suite No. 5, BWV 816, Allemande. Typeset by Joel Mayes; Mutopia-2008/06/17-99. Source edition: Unknown / unspecified in the source edition. Public Domain. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv816-01.mid",
+    "noteData": "assets/music/bwv816-01.json"
+  },
+  {
+    "id": "bwv817-01",
+    "title": "French Suite No. 6 \u00b7 Allemande",
+    "composer": "Johann Sebastian Bach",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/BachJS/BWV817/french-suite-6",
+    "license": "CC BY-SA 4.0 International",
+    "attribution": "J. S. Bach, French Suite No. 6, BWV 817, Allemande. Typeset by Knute Snortum; Mutopia-2014/04/27-1935. Source edition: Bach-Gesellschaft, 1863. CC BY-SA 4.0 International. Source MIDI and score supplied unchanged.",
+    "midi": "assets/music/bwv817-01.mid",
+    "noteData": "assets/music/bwv817-01.json"
+  },
+  {
+    "id": "handel-overture",
+    "title": "Ouvert\u00fcre",
+    "composer": "George Frideric Handel",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/HandelGF/Aylesford/01-overture",
+    "license": "Public Domain",
+    "attribution": "Ouvert\u00fcre. Typeset by Bas Wassink, Mutopia-2002/01/05-149. Public-domain digital edition.",
+    "midi": "assets/music/handel-overture.mid",
+    "noteData": "assets/music/handel-overture.json"
+  },
+  {
+    "id": "scarlatti-k11",
+    "title": "Sonata K. 11",
+    "composer": "Domenico Scarlatti",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/ScarlattiD/K11/sonatensatz",
+    "license": "Public Domain",
+    "attribution": "Sonata K. 11. Typeset by Bas Wassink, Mutopia-2001/12/27-141. Public-domain digital edition.",
+    "midi": "assets/music/scarlatti-k11.mid",
+    "noteData": "assets/music/scarlatti-k11.json"
+  },
+  {
+    "id": "purcell-fairest-isle",
+    "title": "Fairest Isle \u00b7 SATB arrangement",
+    "composer": "Henry Purcell",
+    "source": "https://github.com/MutopiaProject/MutopiaProject/tree/master/ftp/PurcellH/FairestIsle",
+    "license": "Public Domain",
+    "attribution": "Fairest Isle \u00b7 SATB arrangement. Typeset by Sebastian Brosig, Mutopia-2002/09/30-268. Public-domain digital edition.",
+    "midi": "assets/music/purcell-fairest-isle.mid",
+    "noteData": "assets/music/purcell-fairest-isle.json"
+  }
+]

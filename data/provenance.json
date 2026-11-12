@@ -1,0 +1,433 @@
+{
+  "schema": "baroque-atlas-provenance/1",
+  "catalogue": {
+    "source": "https://imslp.org/",
+    "captured": "2026-11-08",
+    "content": "Bibliographic facts; no score PDFs or recordings mirrored."
+  },
+  "composer_facts": {
+    "sources": "Each record links its biographical and score catalog sources. Coordinates identify one associated working city, not nationality or birthplace.",
+    "origin_note": "Modern descriptive labels are not historic citizenship."
+  },
+  "map": {
+    "source": "https://github.com/aourednik/historical-basemaps",
+    "license": "GPL-3.0",
+    "files": "assets/map/",
+    "note": "Schematic around 1700; simplified dates/borders. Independent from style and origin filters."
+  },
+  "music": {
+    "source": "https://github.com/MutopiaProject/MutopiaProject",
+    "rights": "data/rights.json",
+    "changes": "Source MIDI unchanged; timing arrays derived. Bach 6-bar study explicitly separates voices from source LilyPond. Other source tracks are not claimed to equal contrapuntal voices."
+  },
+  "assets": [
+    {
+      "path": "assets/map/europe-1700.svg",
+      "sha256": "c07a6f77a36936747e881a435d749554930ea7e9d71c13fcaf7f0fa3ef78237d"
+    },
+    {
+      "path": "assets/map/historical-license.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "assets/map/historical-map-build.mjs",
+      "sha256": "acc022db776f0ccd057c2f609d3fad5dba139f9c4cf560b43a0b1ab2ec6e7730"
+    },
+    {
+      "path": "assets/map/historical-source.json.gz",
+      "sha256": "6fac6b8780097058b7f2edd1f74edcf43cdb2701d852b1e561a99590dde854a1"
+    },
+    {
+      "path": "assets/music/bwv814-01.json",
+      "sha256": "01631bfd2c6b075be2358fc5a3d022e8f080853f363927e0c5fdd72a3308f272"
+    },
+    {
+      "path": "assets/music/bwv814-01.mid",
+      "sha256": "cc7c18ba0beafdde1f7cc403ac86b22f612c378af880f780e4317026a7e836ac"
+    },
+    {
+      "path": "assets/music/bwv814-01.webp",
+      "sha256": "8a02fd74b16190e6f8e5bec458845cd39467182eb58568eb4cd217d41507ba9a"
+    },
+    {
+      "path": "assets/music/bwv814-02.json",
+      "sha256": "d3d1e29453eab1dc69bf9cec2c973722d499a3f1c43bee44959f28ac43256b0e"
+    },
+    {
+      "path": "assets/music/bwv814-02.mid",
+      "sha256": "294cdbcd09076be2c0ca08f18948bc66c5abdce6e591d2e1d90098c82d4f9544"
+    },
+    {
+      "path": "assets/music/bwv814-03.json",
+      "sha256": "ecf16afc39289c7aa2b1ec062cb9d476d14c8e8b9659d6a4c530bca0c3f6b79a"
+    },
+    {
+      "path": "assets/music/bwv814-03.mid",
+      "sha256": "43bd393eb9ffbb48a7481e0ad56f81bc59aac93ebbbb5621a64e16c5c2d67e08"
+    },
+    {
+      "path": "assets/music/bwv814-04.json",
+      "sha256": "df617b7bab2cc07d8391542d8fe51d64fc9d9b60c000d97c71305c0a050f716c"
+    },
+    {
+      "path": "assets/music/bwv814-04.mid",
+      "sha256": "dbc456cb46a3abb4f971e18f2adf286c7ac8ea24cc970733cff0c06bb8d7659e"
+    },
+    {
+      "path": "assets/music/bwv814-05.json",
+      "sha256": "75d1eca80832765c5cdbd1cbf8e95eac27426095e2e0a08219a33b29613f4bac"
+    },
+    {
+      "path": "assets/music/bwv814-05.mid",
+      "sha256": "9710c215b4bd30b4a71b8dcc29c03459e3de6c117b53b384b59830bc07efb071"
+    },
+    {
+      "path": "assets/music/bwv814-06.json",
+      "sha256": "f6f29d0e30e88e51a54c0c6e209f81b7663a263d60ddfe9c6419505211cedfda"
+    },
+    {
+      "path": "assets/music/bwv814-06.mid",
+      "sha256": "b68c72a1d61cefc3bbc41e4320973418ef3dde2b1dde406de5ddb1a4f6230331"
+    },
+    {
+      "path": "assets/music/bwv814-07.json",
+      "sha256": "e2aec0c2064f666c8e2aeea9878fcbdf29308b362dcb238a27057cf31780c4d5"
+    },
+    {
+      "path": "assets/music/bwv814-07.mid",
+      "sha256": "379cb366a61ecb9983aaa71e174824876fda038f58ba5b21d567aeaab9269dfe"
+    },
+    {
+      "path": "assets/music/bwv816-01.json",
+      "sha256": "cc7f2f2944a0de7756bd9f67912481eb371e215f0923eb82919d7cb2aeeb5966"
+    },
+    {
+      "path": "assets/music/bwv816-01.mid",
+      "sha256": "9af0d4b6a310422e26a477efe2c81bfc12b23ba411c8fd1f66992c4aef204b23"
+    },
+    {
+      "path": "assets/music/bwv816-01.webp",
+      "sha256": "cd79f88e9fddb4777c8675a1ffb1c6d1cc9495fee9757b44f2bcc504e1898ffa"
+    },
+    {
+      "path": "assets/music/bwv816-02.json",
+      "sha256": "e4e05dacd966dc5a43de442f43f882d4f01dcd418b892d19023a3150200edf53"
+    },
+    {
+      "path": "assets/music/bwv816-02.mid",
+      "sha256": "8c71ccd44c1018b1b16bd098bc98896d53c324e2005a1a04d54a5aef53ff05f4"
+    },
+    {
+      "path": "assets/music/bwv816-03.json",
+      "sha256": "cef6d4ea52081069a1e961928d048f29765c583aa43e14e1fb41e9e1930c7b2d"
+    },
+    {
+      "path": "assets/music/bwv816-03.mid",
+      "sha256": "0e1d7214685d1db562d2c215b576155f6cb92932509df457e33043210a5b742c"
+    },
+    {
+      "path": "assets/music/bwv816-04.json",
+      "sha256": "be2aca7553edaf39163e3bdfe5dc9bbc322fbcbce946529965a8afa3eebc344e"
+    },
+    {
+      "path": "assets/music/bwv816-04.mid",
+      "sha256": "211859d2eaea6746e43a2937b1921faebe4fbc34ad58124f8a8411c97fd3e586"
+    },
+    {
+      "path": "assets/music/bwv816-05.json",
+      "sha256": "e930fe0cfec443a18df64abc93b00b64c99f971b684884cda1a8730042cf47f5"
+    },
+    {
+      "path": "assets/music/bwv816-05.mid",
+      "sha256": "e842e54091801bc97c1d9a19f2a69ea282eda55afe7b41e24f56a34a80d15a8a"
+    },
+    {
+      "path": "assets/music/bwv816-06.json",
+      "sha256": "4e3a66a1e746405fa634f16897e757a15d2c4bf6422924bef97d81205f162407"
+    },
+    {
+      "path": "assets/music/bwv816-06.mid",
+      "sha256": "543aca214393f1a649cd37bc06f167ffbfa421fd23cc059d9fc8f736cbbbbfc7"
+    },
+    {
+      "path": "assets/music/bwv816-07.json",
+      "sha256": "a3c256a70c1177bdac43ac58e01d8a81d5a5d56b0936fe940f6135f45e5dd63b"
+    },
+    {
+      "path": "assets/music/bwv816-07.mid",
+      "sha256": "8f765942949a57d66235749f549705a0ef65bca904139d7a8935e2165dcb9c59"
+    },
+    {
+      "path": "assets/music/bwv817-01.json",
+      "sha256": "137fdb7986f511a15073d69ad0549cf2969193147af646c6673d89b73800c781"
+    },
+    {
+      "path": "assets/music/bwv817-01.mid",
+      "sha256": "9d92a1980b3a12d00be2c1d2ccf7c865287f496133c2f5eacca9956c130cda6d"
+    },
+    {
+      "path": "assets/music/bwv817-01.webp",
+      "sha256": "9b2fb105c5fc815540876ad8ba9c3428544a953f9df490f9a67a5a7a00922e3f"
+    },
+    {
+      "path": "assets/music/bwv817-02.json",
+      "sha256": "af5c0cf635b2fcf1155ef400b83318c82ce23aebb7e3b9fe0eeb930713389787"
+    },
+    {
+      "path": "assets/music/bwv817-02.mid",
+      "sha256": "b495fe5ea33e13ccc2b508c360a1d9b6de9f0443ae3c00346be910629c60c2ef"
+    },
+    {
+      "path": "assets/music/bwv817-03.json",
+      "sha256": "1d673a8f511ecd2e76750e53b185046faaf4074e9fa48f9b0fd8715f25c0701a"
+    },
+    {
+      "path": "assets/music/bwv817-03.mid",
+      "sha256": "9db69c9cf1ab4d0310192e825e0d50c9e62212f5c5680dad773a69799ce6ca2d"
+    },
+    {
+      "path": "assets/music/bwv817-04.json",
+      "sha256": "f6d734d57d5cc203425a61849e0f7450584c1a0b1c34f801922e64010c8f3392"
+    },
+    {
+      "path": "assets/music/bwv817-04.mid",
+      "sha256": "e95ba9cba8ff6a794b0d12ebc657f95f6233430fa76412a570df9669efe35adb"
+    },
+    {
+      "path": "assets/music/bwv817-05.json",
+      "sha256": "23d2de190b2e1a2b3dd8a346da62292d2ff012077b581b25c27941a69f60cca0"
+    },
+    {
+      "path": "assets/music/bwv817-05.mid",
+      "sha256": "f05f503524aab1bbb0d2b8bbc9eeba535b6c7ea6fc5b92de0cd1c51a0111ad26"
+    },
+    {
+      "path": "assets/music/bwv817-06.json",
+      "sha256": "d32634540093ce615c549362bbab46ec119bdb626706a60658bb0f66fafc34fc"
+    },
+    {
+      "path": "assets/music/bwv817-06.mid",
+      "sha256": "52b5abcbfb3a65a8e9ade54e2e7513a75f7182c9810af4ad7283fc4dc345ae0f"
+    },
+    {
+      "path": "assets/music/bwv817-07.json",
+      "sha256": "57b31b6c43d7d487502006172a7b8b69a5dcdf0b0ffd7daff34dc28a36f557e5"
+    },
+    {
+      "path": "assets/music/bwv817-07.mid",
+      "sha256": "907d4666e94c686c6df42dcc65c472c179fb055b47e73694bc22e1f3a303d000"
+    },
+    {
+      "path": "assets/music/bwv817-08.json",
+      "sha256": "92034882dc16a052fd5266c3a75438f2323aa67cfd052756c179561874faf3f3"
+    },
+    {
+      "path": "assets/music/bwv817-08.mid",
+      "sha256": "4116ac0763688133e896b2ee418a4d88a3bface23af6f0cfb47e4ba4981149d5"
+    },
+    {
+      "path": "assets/music/bwv825-01.json",
+      "sha256": "87bfe57769efc4e4e08a09c69d7d960a05183b16f95412fe4c7f27c2d89109bf"
+    },
+    {
+      "path": "assets/music/bwv825-01.mid",
+      "sha256": "b1708ead95c4c72e4ea100bf899640a684f83eadf68833994404a42933112d97"
+    },
+    {
+      "path": "assets/music/bwv825-01.webp",
+      "sha256": "b7fad2669225502562cf39f17bd9f121d4fba4142f56b5f00ff6e44f17e2b3cf"
+    },
+    {
+      "path": "assets/music/bwv825-02.json",
+      "sha256": "909b99052b4f702732cd6a6268bd17d48ebf98de735cbc30150bf539736c9c44"
+    },
+    {
+      "path": "assets/music/bwv825-02.mid",
+      "sha256": "9aa8e8d39e35de4970513bc96fe7fd0f00dbc6f96f3533bb2588cedcfcf1e7b5"
+    },
+    {
+      "path": "assets/music/bwv825-03.json",
+      "sha256": "e0a9d5194de55207f07ae41d890052a36ccc01b23cd206c986c521469e42cf1f"
+    },
+    {
+      "path": "assets/music/bwv825-03.mid",
+      "sha256": "8b19035650d5f049307093120aaa8f365df9eaffdc65a3db64a448b4bd355e99"
+    },
+    {
+      "path": "assets/music/bwv825-04.json",
+      "sha256": "9d72f85dcc4db13b289cb610a127b981116cb975699618b7ec28f732d28927d7"
+    },
+    {
+      "path": "assets/music/bwv825-04.mid",
+      "sha256": "b769c9a80e2d9fc8963e172856e1f2e6730dd75468d1612ae5234ef54f47c62b"
+    },
+    {
+      "path": "assets/music/bwv825-05.json",
+      "sha256": "465c532597a0ff96c577c79d0207ddc7e9e894964d08df3b517fad73ed8ee5ec"
+    },
+    {
+      "path": "assets/music/bwv825-05.mid",
+      "sha256": "ee3b188158c35b6caf50e0c012a6541094369d1b1bf0f225563a83e937031501"
+    },
+    {
+      "path": "assets/music/bwv825-06.json",
+      "sha256": "cf61402a26147b420a887876267e6dd648b990798d9d067d9c17a910ed79b4e3"
+    },
+    {
+      "path": "assets/music/bwv825-06.mid",
+      "sha256": "e18babcc7b3292a07ab3d90a8c35c0e56b0bd19f68607c1c038da89561187cf3"
+    },
+    {
+      "path": "assets/music/bwv828-01.json",
+      "sha256": "9b059200ad60c5e771f8752508b01e8f1dae2effecdba4ebcacb032b982f1cb5"
+    },
+    {
+      "path": "assets/music/bwv828-01.mid",
+      "sha256": "75cf8db927a01d7fcaa51c21165491e70b98d05dfb8104a00947db72df497303"
+    },
+    {
+      "path": "assets/music/bwv828-01.webp",
+      "sha256": "63c8b8e51be8927a47c5c14c98d09f39359f845391d04c0beef2c1f5eda91ca4"
+    },
+    {
+      "path": "assets/music/bwv828-02.json",
+      "sha256": "7e340ef6a1e867b60a334e46a3c548013c80897e00b1d4078c422c6b331a0e8d"
+    },
+    {
+      "path": "assets/music/bwv828-02.mid",
+      "sha256": "87033aa3f1f7b436580fe49ceee691868b9ea05cfd15bb7cf8cdb91154ec0628"
+    },
+    {
+      "path": "assets/music/bwv828-03.json",
+      "sha256": "54c2083ab5d3d65789768cc10d3e1f64a1fc3603e007214a5a2d56746ed16592"
+    },
+    {
+      "path": "assets/music/bwv828-03.mid",
+      "sha256": "814a0562a328ac583ad40437310abb922730f0162483b29951fcb6cfd0249d94"
+    },
+    {
+      "path": "assets/music/bwv828-04.json",
+      "sha256": "edb00b40f5dea900e65bb5cbb4269d2a1ab596cca36d91b8992a1a37f1db3dae"
+    },
+    {
+      "path": "assets/music/bwv828-04.mid",
+      "sha256": "4aef6b05aae0a9d5aff8af76c7e35ba919d6c9392f025e0cf4193744fad81f78"
+    },
+    {
+      "path": "assets/music/bwv828-05.json",
+      "sha256": "2a14e4fc7d15d1d384db82359f8d652a1fd93c05032a0c87c29cb37e3c643255"
+    },
+    {
+      "path": "assets/music/bwv828-05.mid",
+      "sha256": "704d3393cced5a2318bf1c5adbb4f23e38d50ac65d89f96c7987ddbdfe20063f"
+    },
+    {
+      "path": "assets/music/bwv828-06.json",
+      "sha256": "ab1b6f7418b2835ee06cd00d416603d6ac163aec928430a65810802456448ae2"
+    },
+    {
+      "path": "assets/music/bwv828-06.mid",
+      "sha256": "730c6a3629d83b864c5600e029e7612636b3422507ad2fbc1fae6be7b95ec06e"
+    },
+    {
+      "path": "assets/music/bwv828-07.json",
+      "sha256": "3094079e8e8f21ef320341e4c31fc0a97b4e24ed384a99ff423771e535402bd3"
+    },
+    {
+      "path": "assets/music/bwv828-07.mid",
+      "sha256": "a5f69f046574df35b5188a5e23e0ddf4283b1a724b4a8484ff9621e02d381e81"
+    },
+    {
+      "path": "assets/music/bwv829-01.json",
+      "sha256": "2b23daf931cd3743720aa53afa08be18609f0aa771debeb9cdd410cdb6e4e3d2"
+    },
+    {
+      "path": "assets/music/bwv829-01.mid",
+      "sha256": "d9f4a0429c1213304db7d64900a85629b992408451e5090bdf74ae8834fd3d1d"
+    },
+    {
+      "path": "assets/music/bwv829-01.webp",
+      "sha256": "9f18f23454ddad1d20a544f1dd7888e546aff0a9fed4aab988dc6283523e5172"
+    },
+    {
+      "path": "assets/music/bwv829-02.json",
+      "sha256": "abb394a7b1eba1b8e9d2cdeb0487d164c142ee23d559cc2df838c4f550a6c843"
+    },
+    {
+      "path": "assets/music/bwv829-02.mid",
+      "sha256": "dc0f2b38c013c1cd27f6cb46c64f6a53ec03ef4ccf3ffc639b63b4b8203b9bc2"
+    },
+    {
+      "path": "assets/music/bwv829-03.json",
+      "sha256": "5a6264698f5fcf2840ceae4763389f61bac5b0d23b83fb3f4295a8709fcf849b"
+    },
+    {
+      "path": "assets/music/bwv829-03.mid",
+      "sha256": "b4f57684ea15a1d7ce5644ba2045a7307fa385d4b1c21f3414daa1ecdad3db69"
+    },
+    {
+      "path": "assets/music/bwv829-04.json",
+      "sha256": "080b7a806be7382ca6a8f247df9819f828cd3648367aaddee61ad27733faeb05"
+    },
+    {
+      "path": "assets/music/bwv829-04.mid",
+      "sha256": "d32b5b14903c02d937ca5eb75869e1c1f4fdef207dc21df69ed0b7e64688141a"
+    },
+    {
+      "path": "assets/music/bwv829-05.json",
+      "sha256": "0fffd8acf4c937b7602e68956da8ad501c52d2fa61891c942124518c259db16f"
+    },
+    {
+      "path": "assets/music/bwv829-05.mid",
+      "sha256": "5165e7f36d3386d943eb4f74d5ba874744a4b86201f631a06551f0932cbab5b9"
+    },
+    {
+      "path": "assets/music/bwv829-06.json",
+      "sha256": "0323c9d7900adafd5dc83720ed1367e5ef15ca56a70b6cec12bd845cdd720178"
+    },
+    {
+      "path": "assets/music/bwv829-06.mid",
+      "sha256": "1659ed3c18962e6d7d489f933507b43c85c968677d2a6c522ab6e0ee56b870ed"
+    },
+    {
+      "path": "assets/music/bwv829-07.json",
+      "sha256": "f13a58b288d8b9918b15f7312eb50ad237e588842e981e4cbeaba32edc65551b"
+    },
+    {
+      "path": "assets/music/bwv829-07.mid",
+      "sha256": "7296c70636cba570ed71c134153c64e842bdff5ba1a5c01e9ab72c54af9563b2"
+    },
+    {
+      "path": "assets/music/handel-overture.json",
+      "sha256": "969412eb9e3c91971aefdd7d03ab1ff38a411957cc2d5054435be98ae7a46548"
+    },
+    {
+      "path": "assets/music/handel-overture.mid",
+      "sha256": "6c651aaaf538ce3369de3c525d56df0a6246306d35bbf3b396deb8c6d04e421c"
+    },
+    {
+      "path": "assets/music/partita-study.mid",
+      "sha256": "03feea7988b0cbcb52534feaca3dbb98144bfab16c81e565e6fed5dbb93e0146"
+    },
+    {
+      "path": "assets/music/partita-voices.svg",
+      "sha256": "c98d40439f78a284735f7125d2c6cd099cece9de144389cfcac9e2b69e2bd282"
+    },
+    {
+      "path": "assets/music/purcell-fairest-isle.json",
+      "sha256": "435a53f0d6534d3c231626d49cd6f1f7049e18ea9e598ef8f8798f966f24e030"
+    },
+    {
+      "path": "assets/music/purcell-fairest-isle.mid",
+      "sha256": "4b20b020efa3b075840ec30d9408ddb5252dda3432e75393975ed6a63cce10c9"
+    },
+    {
+      "path": "assets/music/scarlatti-k11.json",
+      "sha256": "54f561f6e239e0e5f364b4ecc08a5c186135bfd5458d520cfa8cdb03b254ae0c"
+    },
+    {
+      "path": "assets/music/scarlatti-k11.mid",
+      "sha256": "c0201d4c677983e21bd9a0904392334ce6bebdc691e30a40d1a5184c0a24ce93"
+    }
+  ]
+}
