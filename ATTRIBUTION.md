@@ -98,3 +98,16 @@ change the independent PD or CC BY-SA rights of the MIDI editions.
 The playback renderer uses original note timing but infers note spelling,
 clefs, rests and rhythm symbols. It is not the source editor's full engraving.
 Source engraving previews remain unchanged and clearly separated in the UI.
+
+## Fifty source-derived study editions
+
+The additional curated collection retains per-piece source editions and
+respective Public Domain, CC BY 2.5, CC BY-SA 3.0 or CC BY-SA 4.0 terms in
+`data/curated-fifty.json`. Converted MusicXML, MIDI and timed study data retain
+those terms, not the runtime code's MIT licence. Source typesetter credit is
+displayed with each selection. See `data/curated-README.md`.
+
+OpenSheetMusicDisplay 2.3.0 is the lazy, local BSD-3-Clause score renderer;
+its retained licence ships in `assets/score-renderer/OSMD-LICENSE.txt`.
+The optional source importer uses python-ly and music21 and is supplied under
+GPL-3.0-or-later. It is not part of the browser runtime.

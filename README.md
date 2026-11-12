@@ -1,109 +1,92 @@
 # Baroque · A listening atlas
 
-![App screenshot](screenshots/desktop.webp)
+Explore 102 composers on a historical European map, then listen to a complete
+keyboard selection with its score. The curated desk has **50 pieces or named
+movements: 30 Bach Inventions/Sinfonias and 20 selections across seven other
+composers**. The catalog also keeps 510 linked works and 45 additional local
+MIDI movements, including Bach's six Partitas.
 
-[Mobile view](screenshots/mobile.webp)
+## Run locally
 
-[100 implemented refinements](docs/REFINEMENTS-100.md) · [Browser review](docs/BROWSER-REVIEW-20261112.json)
-
-[Colored score view](screenshots/score-desktop-20261112.webp) · [Score on mobile](screenshots/score-mobile-20261112.webp)
-
-A browser app for exploring European Baroque music and listening to its structure.
-**102 composers, 510 source-linked works, 45 complete source-MIDI movements and a
-three-voice, six-bar Bach study.** It runs locally without an account or backend.
-
-## Try it
-
-Requires Node.js 20 or newer. No npm packages need to be installed.
+Node.js 20 or later:
 
 ```sh
 git clone https://github.com/sargonxg/Baroque-music-room.git
 cd Baroque-music-room
+npm ci
 npm test
 npm run dev
 ```
 
-Open **http://127.0.0.1:8000**. Choose a composer on the map or in the directory.
-Filter by origin, musical tradition, period or name/city. The right panel offers
-five starting points, source scores and recording searches.
+Open http://127.0.0.1:8000. `npm run build` creates `dist/` for any static host.
+No account, API key, database, model service or recording subscription is needed.
+Normal builds and playback are offline; external edition and recording links
+require an internet connection. Serve over HTTP for separately loaded scores.
 
-At the listening desk, press **Listen**. Isolate the colored voices in the Bach
-study, adjust speed, seek or switch to a full source movement. Every local selection shows colored staff notation that follows playback,
-including during seeks and pauses. Click a note to seek to its onset. The
-notation is derived from MIDI: spelling, clefs, rests and rhythm symbols are
-inferred. A separate disclosure retains the source engraving or opening preview
-where available. The six-bar Bach study has source-defined independent voices;
-full movements retain source tracks, which may combine voices.
-Download MIDI or open the source edition to go further. Choose harpsichord, clavichord, piano-study or organ synthesis; adjust the room,
-tuning, speed and voice controls. Solo a line or set an A-B loop to study a
-passage. Playback is a local keyboard approximation, not a recording. The exact-
-title YouTube link searches for a recording without loading an embedded player.
+## Try a listening study
 
-The initial map, catalog and six-bar study are self-contained in `dist/index.html`.
-They also work when that file is opened directly. Serve `dist/` over HTTP to load
-other movements. A complete offline HTTP copy needs no remote connection for
-local playback; external source and recording links naturally require internet.
+Choose a composer on the map or in the directory. Filter by origin, musical
+tradition or period. At the listening desk, choose a complete piece, press
+Listen, and follow its coloured source-derived score. Click a note to seek;
+mute or solo a line, slow a passage or set an A–B loop. Try harpsichord or piano.
+The exact-title YouTube search link opens recorded performances separately.
 
-## Build and deploy
+The 50 curated selections use complete MusicXML study editions from pinned
+Mutopia authored sources. OpenSheetMusicDisplay 2.3.0 engraves the score locally
+and loads only at the listening desk. The free renderer is used with this
+project's own local Web Audio transport, not its sponsored audio service.
+
+Bach colours identify two or three **source-defined independent voices**.
+Other selections distinguish source staves, which may contain multiple voices.
+The additional 45 MIDI movements keep explicitly labelled MIDI-derived notation;
+source tracks are not silently promoted to musical voices. The six-bar BWV 825
+study remains available as a separate short example.
+
+Source spelling, meter, rests, pickups and written-out repeats are retained in
+the curated study scores. Layout and automatic beaming are modern. Editorial
+marks are not all reproduced; grace notes remain visible but are unsounded,
+and ornament signs are not realised by synthesis. This is a keyboard study,
+not a concert recording or a historically authentic instrument simulation.
+
+## Data and reproducibility
+
+- `data/curated-fifty.json`: 50 pieces, edition links, sources, rights and hashes.
+- `assets/curated/`: complete compressed MusicXML, study MIDI and timed note data.
+- `data/curated-source-validation.json`: independent authored-source coverage checks.
+- `data/composers.json` and `data/works.json`: the 102-composer/510-work atlas.
+- `data/catalogue.json`: the 45 earlier source-MIDI movements.
+
+The new assets contain 31,293 source score noteheads. Compact timing rows retain
+stable note IDs, quarter offsets, measure boundaries and voice attribution;
+only the selected piece is expanded in the browser. All 150 generated assets
+rebuild byte-for-byte from the pinned authored sources. An ordinary build makes
+no source downloads. See [data/curated-README.md](data/curated-README.md) for the
+optional Python importer's reproduction commands and exact limitations.
+
+The c. 1700 territory map is schematic. A dot identifies one working city, not
+a modern nationality or birthplace. Shared-city composers remain accessible
+through the directory; transitional figures, including Bach's sons, are labelled.
+
+## Deploy a static copy
 
 ```sh
+npm ci
 npm run build
 ```
 
-Upload **only `dist/`** to a static host. Relative asset paths work from a
-subdirectory. The build emits a self-contained initial page and local supporting
-music/source assets. There are no secrets, databases, background tasks, analytics,
-model calls or streaming audio subscriptions.
+Upload only `dist/`. The included Workers Static Assets configuration disables
+workers.dev and version previews until you configure your own route. Whole-host
+Cloudflare Access is separate from the app's security headers. Nothing here
+provisions a database, activates a paid service or establishes a spending cap.
 
-For Cloudflare Workers with static assets, `wrangler.jsonc` is included. The
-configuration deliberately disables `workers.dev` and version previews. Configure
-an approved custom-domain route or owner-only Access deployment before deploying;
-the repository does not turn on a public service automatically. An example local
-CLI sequence, once you have configured the route and account securely:
+## Rights and checks
 
-```sh
-npm run build
-npx wrangler deploy
-```
+Original runtime code is MIT; the historical map retains GPL-3.0. The optional
+Python importer is GPL-3.0-or-later. Each converted music asset retains its
+edition's PD, CC BY or CC BY-SA terms and named typesetter credit. The retained
+OSMD licence travels with its pinned local bundle. See ATTRIBUTION.md.
 
-Cloudflare Access is configured separately at the account level. The static
-security headers are not authentication. Nothing in this repo sets a billing
-limit or guarantees a host's included allowance.
-
-## Data and limits
-
-- `data/composers.json`: biographical references, working-city coordinates,
-  descriptive origin, periods, forms, affinities and listening notes.
-- `data/works.json`: five bibliographic starting points per composer, with IMSLP
-  evidence, edition links and explicit recording **search** links.
-- `data/catalogue.json`: the 45 source movements playable locally.
-- `data/rights.json`: per-edition provenance and rights, including CC BY-SA assets.
-- `data/favorites.json`: 15 curated local listening selections; matching 30-second
-  source-track previews are in `data/favorite-previews.json` for reuse.
-- `data/provenance.json`: source descriptions and asset hashes.
-
-The historical map is schematic, not a current border map. Dots identify one
-working city and can overlap. The name directory exposes all composers at a
-shared location. National/style labels are descriptive and nonexclusive; Bach's
-sons and transitional figures are marked. Five works are starting points, not a
-claim of the "top" five. Most catalog works link outward and are not locally
-playable; local studies are clearly labeled.
-
-## Development
-
-`src/engine.mjs` contains catalog filtering/projection/validation. `src/audio.mjs`
-implements scheduled WebAudio playback with bounded lookahead, muted-track gains,
-seek/speed controls and cleanup. `src/app.mjs` is the accessible UI. The build
-inlines the initial UI resources; supporting source editions remain separate.
-
-`npm test` checks catalog/source completeness, music boundaries, geographic
-projection, filters, safe links, source MIDI hashes and the three-voice study's
-note/score correspondence. Browser layout screenshots are evidence of rendered
-layout, not audible synthesis or human screen-reader verification.
-
-See [the notation/audio contract](docs/NOTATION-AND-AUDIO.md) for the reusable
-renderer and transport, and [the 100-point refinement record](docs/REFINEMENTS-100.md)
-for implementation evidence and remaining limits.
-
-Original code is MIT. The historical map is GPL-3.0; music editions retain their
-individual PD or CC BY-SA terms. Read [ATTRIBUTION.md](ATTRIBUTION.md) before reuse.
+`npm test` checks all 50 source/score/MIDI hashes, safe compressed-score entries,
+source-note coverage, timing bounds, catalog filters, audio lifecycle, looping,
+source notation and the emitted CSP. Browser captures and score alignment are
+recorded separately; structural tests do not certify audible fidelity.

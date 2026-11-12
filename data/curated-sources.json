@@ -1,0 +1,438 @@
+{
+  "format": "baroque-curated-inputs/1",
+  "sourceCommit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+  "files": [
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly",
+      "id": "bwv772",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly",
+      "sha256": "3c01302f70efd1dd6f43becaf19b9b2aac49e25b3e89666e3e55bc576c6cd55d",
+      "bytes": 4931
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV773/bach-invention-02/bach-invention-02.ly",
+      "id": "bwv773",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV773/bach-invention-02/bach-invention-02.ly",
+      "sha256": "e0620dcc2b529283b7e84e60fe12e19e940f95e690ca252d7e70b656b737e003",
+      "bytes": 6408
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV774/bach-invention-03/bach-invention-03.ly",
+      "id": "bwv774",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV774/bach-invention-03/bach-invention-03.ly",
+      "sha256": "812b4c29b122cc9a20ebba96305072f378bb1a177cb1adaee3f74cb53d455551",
+      "bytes": 5602
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV775/bach-invention-04/bach-invention-04.ly",
+      "id": "bwv775",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV775/bach-invention-04/bach-invention-04.ly",
+      "sha256": "69d93bdf27f257b2699f352c582e1b004a0a0d48f60b95065dad6cedc4a0538b",
+      "bytes": 5880
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV776/bach-invention-05/bach-invention-05.ly",
+      "id": "bwv776",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV776/bach-invention-05/bach-invention-05.ly",
+      "sha256": "c3487a5f27cad0b03903ec6087ad5ad60df31bddf5d3300b4d0370937d9e743c",
+      "bytes": 6929
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV777/bach-invention-06/bach-invention-06.ly",
+      "id": "bwv777",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV777/bach-invention-06/bach-invention-06.ly",
+      "sha256": "3c974260a4f38c98bffe9a7e0db49cf215123a24e496d4cf4901d5afc5466651",
+      "bytes": 11955
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV778/bach-invention-07/bach-invention-07.ly",
+      "id": "bwv778",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV778/bach-invention-07/bach-invention-07.ly",
+      "sha256": "87b3a05f14adba1d7113d00b06f7634043e00fb2f660c7b1e698d49c73476248",
+      "bytes": 4375
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV779/bach-invention-08/bach-invention-08.ly",
+      "id": "bwv779",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV779/bach-invention-08/bach-invention-08.ly",
+      "sha256": "ddc634821a618e9a5e9ffcefbd96005bd02bd1f12573e2fefc4e6e6653d83ebe",
+      "bytes": 5950
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV780/bach-invention-09/bach-invention-09.ly",
+      "id": "bwv780",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV780/bach-invention-09/bach-invention-09.ly",
+      "sha256": "03112c4d080bb0dafe1ec79d7f1729c6f065e9f334dd2468a84d30c84eaede1a",
+      "bytes": 6694
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV781/bach-invention-10/bach-invention-10.ly",
+      "id": "bwv781",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV781/bach-invention-10/bach-invention-10.ly",
+      "sha256": "233799d59551acc87f19d6c999b82e0bfb0c00b4cf04309e07a5ea44b3cb8329",
+      "bytes": 6053
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV782/bach-invention-11/bach-invention-11.ly",
+      "id": "bwv782",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV782/bach-invention-11/bach-invention-11.ly",
+      "sha256": "02689b8760752b9490598de3683c8b7064b6d13d2019561fa0b0ee4c2a569bee",
+      "bytes": 4529
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV783/bach-invention-12/bach-invention-12.ly",
+      "id": "bwv783",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV783/bach-invention-12/bach-invention-12.ly",
+      "sha256": "5a710e0718d8dddef60fdb4419d058c25a3d92173f253418c0aa35d04cf5ebfb",
+      "bytes": 6681
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV784/bach-invention-13/bach-invention-13.ly",
+      "id": "bwv784",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV784/bach-invention-13/bach-invention-13.ly",
+      "sha256": "dabd266006e9dd5ae8584daa1e00ac08460ee8ac90cae6d0472f620d2eaeb7b5",
+      "bytes": 5842
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV785/bach-invention-14/bach-invention-14.ly",
+      "id": "bwv785",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV785/bach-invention-14/bach-invention-14.ly",
+      "sha256": "d3a03a1dafa1998c68c1fe389e92bcf8a5d711639b15e9f777af83551c4ae48e",
+      "bytes": 6404
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV786/bach-invention-15/bach-invention-15.ly",
+      "id": "bwv786",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV786/bach-invention-15/bach-invention-15.ly",
+      "sha256": "7ae422f704d35a84dddec0e567264e310fb2d37b26900dbb68b9808aff971456",
+      "bytes": 4377
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV787/bwv787/bwv787.ly",
+      "id": "bwv787",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV787/bwv787/bwv787.ly",
+      "sha256": "631a3a467bcec353f500e618e5d23deaf9d4806e198327b3a45527c290b5c812",
+      "bytes": 4963
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV788/bwv788/bwv788.ly",
+      "id": "bwv788",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV788/bwv788/bwv788.ly",
+      "sha256": "d851e655b96febdcf056df482901bad0ebd65670f7a832690a2cfb76067aa96f",
+      "bytes": 5428
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV789/bwv789/bwv789.ly",
+      "id": "bwv789",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV789/bwv789/bwv789.ly",
+      "sha256": "a730dacdc1a6528ba604fba150649468ca96165043131d6073396744a1d74ed1",
+      "bytes": 5389
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV790/bwv790/bwv790.ly",
+      "id": "bwv790",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV790/bwv790/bwv790.ly",
+      "sha256": "b5215e2474cb886445d1776948e6472ff04face78760a33c3ce8b7f6ab669b80",
+      "bytes": 5242
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV791/bwv791/bwv791.ly",
+      "id": "bwv791",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV791/bwv791/bwv791.ly",
+      "sha256": "0084e96e29320617468f1643dd78e9eddecccd8ba9d2d4fdb011c4b869db496e",
+      "bytes": 6127
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV792/bwv792/bwv792.ly",
+      "id": "bwv792",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV792/bwv792/bwv792.ly",
+      "sha256": "60b7cdfa30a40dd99d27d8e73c9e96afbb9d23a263f69ea75d27a339bfa297e9",
+      "bytes": 5466
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV793/bwv793/bwv793.ly",
+      "id": "bwv793",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV793/bwv793/bwv793.ly",
+      "sha256": "bd94c7f8a1cb31591a89d8f22c651b1b52765a29e550be92529f41c782a52f9e",
+      "bytes": 6066
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV794/bwv794/bwv794.ly",
+      "id": "bwv794",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV794/bwv794/bwv794.ly",
+      "sha256": "b58740b0e508336d056f60050ab00131d5183b227f1391f5a3ff19ca46686ddf",
+      "bytes": 4740
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV795/bwv795/bwv795.ly",
+      "id": "bwv795",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV795/bwv795/bwv795.ly",
+      "sha256": "165ac68d570a95b49f352d663d615ad2baae3afee4922c6513d0e59e2b23f5c7",
+      "bytes": 5926
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV796/bwv796/bwv796.ly",
+      "id": "bwv796",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV796/bwv796/bwv796.ly",
+      "sha256": "df56fe9bbcdc6c079971070bc9f73a038ff3f25d5b0ac5947d267f4515f66932",
+      "bytes": 5914
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV797/bwv797/bwv797.ly",
+      "id": "bwv797",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV797/bwv797/bwv797.ly",
+      "sha256": "03b6bcf3f948583f68ac41e5dd5983a883725ae7dc459b21437ac53efd597353",
+      "bytes": 6081
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV798/bwv798/bwv798.ly",
+      "id": "bwv798",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV798/bwv798/bwv798.ly",
+      "sha256": "b8e19fe4d70b5f8e7124a6a042465f629b53ed1e3939247ea7ccb5042d680bc3",
+      "bytes": 6650
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV799/bwv799/bwv799.ly",
+      "id": "bwv799",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV799/bwv799/bwv799.ly",
+      "sha256": "40d2857d8729404d4153c1e3c02a8c1d44ae2c5336cbfa9f467ded1fdaa8f3fb",
+      "bytes": 6605
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV800/bwv800/bwv800.ly",
+      "id": "bwv800",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV800/bwv800/bwv800.ly",
+      "sha256": "f4215fcb113873c8c5280924567640e71193d03c888445c311be49b4086e415c",
+      "bytes": 6022
+    },
+    {
+      "composer": "bach",
+      "path": "ftp/BachJS/BWV801/bwv801/bwv801.ly",
+      "id": "bwv801",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV801/bwv801/bwv801.ly",
+      "sha256": "c6bcb65621c5b116435eb87e8f7ff218be5803af232ab66b574ed5d928f76846",
+      "bytes": 6452
+    },
+    {
+      "composer": "scarlatti",
+      "path": "ftp/ScarlattiD/K11/sonatensatz/sonatensatz.ly",
+      "id": "scarlatti11",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/ScarlattiD/K11/sonatensatz/sonatensatz.ly",
+      "sha256": "1f4b3bd87ae975d6ce675ffdf509a240cfab5eec88700c1bd80134c54ecdc0d7",
+      "bytes": 5031
+    },
+    {
+      "composer": "scarlatti",
+      "path": "ftp/ScarlattiD/K455/scarlatti-k455/scarlatti-k455.ly",
+      "id": "scarlatti455",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/ScarlattiD/K455/scarlatti-k455/scarlatti-k455.ly",
+      "sha256": "2032dcf01ce7e28b861f51c40e4b94634c080ef27d8874d0536ea62617eafb73",
+      "bytes": 7776
+    },
+    {
+      "composer": "scarlatti",
+      "path": "ftp/ScarlattiD/K491/scarlatti-k491/scarlatti-k491.ly",
+      "id": "scarlatti491",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/ScarlattiD/K491/scarlatti-k491/scarlatti-k491.ly",
+      "sha256": "4c2c23e0ee1d65ddeefa9fe03ab2c5c6a11e3a84ca40ab6f4f7a2ed46655e4eb",
+      "bytes": 9374
+    },
+    {
+      "composer": "rameau",
+      "path": "ftp/RameauJP/plaintes/plaintes.ly",
+      "id": "rameaujp-plaintes",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/RameauJP/plaintes/plaintes.ly",
+      "sha256": "d8e3bb9c29cae68aa321df5ae0ee940cf77d105f33b0414e7e423d62ec06151e",
+      "bytes": 6489
+    },
+    {
+      "composer": "rameau",
+      "path": "ftp/RameauJP/sauvages/sauvages.ly",
+      "id": "rameaujp-sauvages",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/RameauJP/sauvages/sauvages.ly",
+      "sha256": "6027a024f587e4aa7309d020091af22b0dbf4c8bde5b360661cf10605c212c96",
+      "bytes": 6184
+    },
+    {
+      "composer": "rameau",
+      "path": "ftp/RameauJP/tambourin/tambourin.ly",
+      "id": "rameaujp-tambourin",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/RameauJP/tambourin/tambourin.ly",
+      "sha256": "2596f4b7d95d27be427669df34dc8bd4c54758e2ddec4f8de1a4c4c369c80da3",
+      "bytes": 6116
+    },
+    {
+      "composer": "buxtehude",
+      "path": "ftp/BuxtehudeD/Wv185/BuxWv185/BuxWv185.ly",
+      "id": "buxtehude185",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BuxtehudeD/Wv185/BuxWv185/BuxWv185.ly",
+      "sha256": "c756d2c4e9c6c2896c3fc33e054e8508ec98a70b659f95aca4d77e66f2e8ce9e",
+      "bytes": 7558
+    },
+    {
+      "composer": "buxtehude",
+      "path": "ftp/BuxtehudeD/Wv208/buxtehude_Wv208_nun_bitten_wir/buxtehude_Wv208_nun_bitten_wir.ly",
+      "id": "buxtehude208",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BuxtehudeD/Wv208/buxtehude_Wv208_nun_bitten_wir/buxtehude_Wv208_nun_bitten_wir.ly",
+      "sha256": "a28c44a631ed142e4a5dfc894e2326365b8b82afeea5cc96fe3fdf7cd995d8c8",
+      "bytes": 6190
+    },
+    {
+      "composer": "buxtehude",
+      "path": "ftp/BuxtehudeD/Wv209/buxtehude_Wv209_nun_bitten_wir/buxtehude_Wv209_nun_bitten_wir.ly",
+      "id": "buxtehude209",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BuxtehudeD/Wv209/buxtehude_Wv209_nun_bitten_wir/buxtehude_Wv209_nun_bitten_wir.ly",
+      "sha256": "e4eeb85df64dcef2bbd2dbca3343a4cdd8fd54366b1730f2288fb625404dce68",
+      "bytes": 6036
+    },
+    {
+      "composer": "handel",
+      "path": "ftp/HandelGF/Aylesford/01-overture/01-overture.ly",
+      "id": "handel-01-overture",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/01-overture/01-overture.ly",
+      "sha256": "90db45236e1fe8b9048e39b135995ba0709ce722b0fc12563fbe81d1f5fc33ca",
+      "bytes": 4478
+    },
+    {
+      "composer": "handel",
+      "path": "ftp/HandelGF/Aylesford/02-entree/02-entree.ly",
+      "id": "handel-02-entree",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/02-entree/02-entree.ly",
+      "sha256": "98f74046810edbb5747d86a6b01860a0fc011cf468e2053167be9c11c5ca1fb8",
+      "bytes": 3616
+    },
+    {
+      "composer": "handel",
+      "path": "ftp/HandelGF/Aylesford/03-gavotte/03-gavotte.ly",
+      "id": "handel-03-gavotte",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/03-gavotte/03-gavotte.ly",
+      "sha256": "bb2e0d7934ea0bd933e74935da868e401a5079297002b5d3cad943c0bebe48d7",
+      "bytes": 3232
+    },
+    {
+      "composer": "handel",
+      "path": "ftp/HandelGF/Aylesford/04-toccata/04-toccata.ly",
+      "id": "handel-04-toccata",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/04-toccata/04-toccata.ly",
+      "sha256": "8741d2948c8253528cf099f2c7e3cd1dce9cae8593f781d1baf660e079ca0d98",
+      "bytes": 3241
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/agrements.ily",
+      "id": "agrements",
+      "aux": true,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/agrements.ily",
+      "sha256": "673aba353ecf0a173515820d56655a540fdbf6fe7b24a7785db951543aec801d",
+      "bytes": 17909
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/common.ily",
+      "id": "common",
+      "aux": true,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/common.ily",
+      "sha256": "8e69a5cba443e06f95d9b9a1c8e00366bf2aac567cebba96328dedbd6f6890f7",
+      "bytes": 4752
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/mutopia-header.ly",
+      "id": "mutopia-header",
+      "aux": true,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/mutopia-header.ly",
+      "sha256": "3db08907de44a425b1d5df93ce8fcdeefd4bffc942e6eacbe59a5bd703e4a443",
+      "bytes": 421
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude1.ly",
+      "id": "prelude1",
+      "aux": false,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude1.ly",
+      "sha256": "bcafa20562c991018e3f2d384a27f6bed68e9c14a501cac164cf5eaf87f7bc5d",
+      "bytes": 3163
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude2.ly",
+      "id": "prelude2",
+      "aux": false,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude2.ly",
+      "sha256": "9b25e0678a31bb07dac198988548bd80554e94b9352ee848f194b8364dcf7847",
+      "bytes": 3965
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude3.ly",
+      "id": "prelude3",
+      "aux": false,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude3.ly",
+      "sha256": "65fc1d3dcd9329ce06c281bab91bd9686772b8f0be018353847608cffdd7fcfa",
+      "bytes": 3725
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude4.ly",
+      "id": "prelude4",
+      "aux": false,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/prelude4.ly",
+      "sha256": "fb440d792d1b3d30a48915285393b482360825845e81656f521e0cc499e749f8",
+      "bytes": 5366
+    },
+    {
+      "composer": "couperin",
+      "path": "ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/preludes.ily",
+      "id": "preludes",
+      "aux": true,
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/CouperinF/ArtDeToucherLeClavecin/ArtDeToucherLeClavecin-lys/preludes.ily",
+      "sha256": "d776c05abc80f861038bf0286c181552cfafc0c81518693ac9f30dc1717f0e99",
+      "bytes": 2737
+    },
+    {
+      "composer": "pachelbel",
+      "path": "ftp/PachelbelJ/fugue-3-7/fugue-3-7.ly",
+      "id": "pachelbel-fugue3-7",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/PachelbelJ/fugue-3-7/fugue-3-7.ly",
+      "sha256": "1316b4d64c51905397c8cff65b6f6dd99796bb8230bab6ea5f49176e27787d7b",
+      "bytes": 6101
+    },
+    {
+      "composer": "froberger",
+      "path": "ftp/FrobergerJJ/Suite7/Suite7.ly",
+      "id": "froberger-suite7",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/FrobergerJJ/Suite7/Suite7.ly",
+      "sha256": "f1e37632348fda4bef55777388a8f6988e059f987bd074b3c6978d0792c2a408",
+      "bytes": 12717
+    }
+  ]
+}
