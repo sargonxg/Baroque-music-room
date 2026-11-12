@@ -1,5 +1,5 @@
 /** Browser-independent catalog and source-MIDI operations. */
-export const VOICE_COLORS=['#a55339','#36766e','#7c5d90','#8b6d26','#436f94','#9c4a69'];
+export const VOICE_COLORS=['#b74131','#246a74','#966311','#8b6d26','#436f94','#9c4a69'];
 export function projectCity([longitude,latitude]) {
  const rad=Math.PI/180;
  return [400+(longitude-12)*rad*650,245-650*(Math.log(Math.tan(Math.PI/4+latitude*rad/2))-Math.log(Math.tan(Math.PI/4+50*rad/2)))];

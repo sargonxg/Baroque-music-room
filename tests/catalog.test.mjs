@@ -32,7 +32,7 @@ test('all 45 full movements and the excerpt have valid source note arrays and or
 });
 test('the three-voice Bach study matches source-note highlighting positions',async()=>{
  const map=await json('data/partita-score-map.json');assert.equal(study.tracks.length,3);assert.equal(study.duration,36);assert.equal(study.tracks.reduce((n,t)=>n+t.notes.length,0),169);assert.equal(map.notes.length,176);assert.equal(map.bars.length,6);
- const svg=await readFile('assets/music/partita-voices.svg');assert.equal(createHash('sha256').update(svg).digest('hex'),map.sourceSha256);
+ const svg=await readFile('assets/music/partita-voices.svg');const palette=JSON.parse(svg.toString().match(/<metadata>(.*?)<\/metadata>/s)[1]).palette;assert.deepEqual(VOICE_COLORS.slice(0,3),palette,'controls and note timeline match source-engraving voice colors');assert.equal(createHash('sha256').update(svg).digest('hex'),map.sourceSha256);
  const sound=study.tracks.flatMap((t,track)=>t.notes.map(n=>[track,n[1],n[1]+n[2]]));for(const n of map.notes){const found=sound.find(s=>s[0]===n[0]&&s[1]<=n[2]*map.secondsPerBeat+.005&&s[2]>=n[3]*map.secondsPerBeat-.005);assert(found,'engraved notehead/tied segment must be covered by a sounding source voice');}
  assert.deepEqual(activeNotes(study,0,[true,true,true]).map(n=>n.track).sort(),[1,2]);assert.equal(activeNotes(study,0,[false,false,false]).length,0);assert.equal(activeNotes(study,36,[true,true,true]).length,0);
 });
