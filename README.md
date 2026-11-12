@@ -90,3 +90,15 @@ OSMD licence travels with its pinned local bundle. See ATTRIBUTION.md.
 source-note coverage, timing bounds, catalog filters, audio lifecycle, looping,
 source notation and the emitted CSP. Browser captures and score alignment are
 recorded separately; structural tests do not certify audible fidelity.
+
+## Current browser view
+
+![European composer atlas and a complete source-derived Bach score](docs/screenshots/authored-score-desktop.webp)
+
+[Phone popup using the same score adapter](docs/screenshots/personal-popup-mobile.webp).
+Captured in Chromium CI on November 12, 2026, in the personal-site integration;
+the header's return link belongs to that host. This capture predates a text-only
+correction of the intro count from 45 legacy movements to 50 complete listening
+selections. All 50 authored scores rendered with full source-note alignment in
+that run. Viewport emulation and audio lifecycle tests do not certify physical
+devices, screen-reader use or concert fidelity.
