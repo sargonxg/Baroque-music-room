@@ -20,3 +20,5 @@ button,a{transition:color .12s ease,background-color .12s ease}button:hover{filt
 
 /* CSP-safe fixed voice colors; no inline style attributes are required. */
 .voice-0{--voice:#b74131}.voice-1{--voice:#246a74}.voice-2{--voice:#966311}.voice-3{--voice:#8b6d26}.voice-4{--voice:#436f94}.voice-5{--voice:#9c4a69}
+
+.sound-panel{margin:10px 0 16px;font-size:12px}.sound-panel>summary{cursor:pointer;min-height:36px;display:list-item;padding:8px 0}.sound-panel .sound-options{padding:10px 0 4px}

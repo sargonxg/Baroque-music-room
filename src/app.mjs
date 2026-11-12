@@ -65,7 +65,7 @@ function renderScoreAt(position,{force=false}={}){
  if(transport.playing&&$('score-follow').checked&&$('score').scrollWidth>$('score').clientWidth&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const fraction=(position-scoreState.windowStart)/(scoreState.windowEnd-scoreState.windowStart);$('score').scrollLeft=Math.max(0,fraction*$('score').scrollWidth-$('score').clientWidth*.4);}
 }
 function setupStudy(study,id){
- currentStudy=validateStudy(study);currentId=id;scoreState=null;manualScoreStart=null;$('score-follow').checked=true;
+ currentStudy=validateStudy(study);currentId=id;if(location.protocol.startsWith('http')){try{const url=new URL(location.href);url.searchParams.set('movement',id);history.replaceState({},'',url);}catch{}}scoreState=null;manualScoreStart=null;$('score-follow').checked=true;
  transport.load(currentStudy);setPlaying(false);$('movement').value=id;$('seek').max=study.duration;$('seek').value=0;$('duration').textContent=formatTime(study.duration);
  loopA=null;$('loop-state').textContent='Loop off';
  const special=id==='partita-study',m=movementById.get(id),right=DATA.rights.editions.find(e=>e.id===id),metadata=sourceMetadata();
@@ -132,4 +132,6 @@ $('main-nav').addEventListener('click',()=>{$('menu-toggle').setAttribute('aria-
 document.addEventListener('keydown',event=>{if(event.target.closest('input,select,textarea,button,a,summary,[contenteditable],[data-seek]'))return;if(event.key===' '){event.preventDefault();$('play').click();}else if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();transport.seek(transport.position+(event.key==='ArrowLeft'?-5:5)).catch(reportAudio);}else if(event.key==='Home'){event.preventDefault();transport.seek(0).catch(reportAudio);}else if(/^[1-9]$/.test(event.key)){const i=Number(event.key)-1;if(i<transport.enabled.length){transport.setVoice(i,!transport.enabled[i]);syncVoiceButtons();renderRoll();}}});
 window.addEventListener('pagehide',()=>transport.dispose());
 $('education').innerHTML=DATA.education.sections.map(section=>`<section class="education-section"><h3>${esc(section.title)}</h3><dl>${section.items.map(item=>`<div><dt>${esc(item.term)}</dt><dd>${esc(item.text)}</dd></div>`).join('')}</dl></section>`).join('');
+const initialMovement=new URLSearchParams(location.search).get('movement');
 setupStudy(DATA.study,'partita-study');showComposer(selected,{updateURL:false});
+if(movementById.has(initialMovement))selectStudy(initialMovement);

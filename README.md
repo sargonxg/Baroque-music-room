@@ -4,6 +4,10 @@
 
 [Mobile view](screenshots/mobile.webp)
 
+[100 implemented refinements](docs/REFINEMENTS-100.md) · [Browser review](docs/BROWSER-REVIEW-20261112.json)
+
+[Colored score view](screenshots/score-desktop-20261112.webp) · [Score on mobile](screenshots/score-mobile-20261112.webp)
+
 A browser app for exploring European Baroque music and listening to its structure.
 **102 composers, 510 source-linked works, 45 complete source-MIDI movements and a
 three-voice, six-bar Bach study.** It runs locally without an account or backend.
