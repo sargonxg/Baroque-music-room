@@ -1,14 +1,17 @@
 {
   "name": "baroque-music-room",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "A source-linked European Baroque atlas and browser listening study.",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node tests/catalog.test.mjs && node tests/audio.test.mjs",
+    "test": "node tests/catalog.test.mjs && node tests/audio.test.mjs && node tests/notation.test.mjs",
     "dev": "node scripts/dev.mjs",
-    "preview": "node scripts/dev.mjs --dist"
+    "preview": "node scripts/dev.mjs --dist",
+    "data:notation": "python scripts/notation/metadata.py"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

@@ -1,0 +1,105 @@
+{
+  "format": "listening-education/1",
+  "sections": [
+    {
+      "title": "Forms you can hear",
+      "items": [
+        {
+          "term": "Suite and partita",
+          "text": "A collection of movements, often based on dances. Listen for a shared key and changes of metre, pulse and character between movements."
+        },
+        {
+          "term": "Allemande",
+          "text": "Usually a measured dance in duple metre. Follow its flowing subdivisions and the way a short opening figure passes through the texture."
+        },
+        {
+          "term": "Courante and corrente",
+          "text": "Related dance names with different French and Italian practices. French courantes often play with the grouping of beats; Italian correnti tend toward running motion."
+        },
+        {
+          "term": "Sarabande",
+          "text": "Often a slow triple-metre dance. Listen for weight on the second beat and for dissonances that ask to be held before resolving."
+        },
+        {
+          "term": "Gigue",
+          "text": "A lively closing dance, frequently in compound metre. Imitation may make each hand seem to answer the other."
+        },
+        {
+          "term": "Fugue",
+          "text": "A subject enters in successive voices. Identify its shape first; an answer or later entry can change register, key or surrounding material."
+        },
+        {
+          "term": "Prelude and fantasia",
+          "text": "Opening or exploratory forms. Their freedom does not mean an absence of structure: listen for recurring figures, bass patterns and harmonic arrivals."
+        },
+        {
+          "term": "Ritornello",
+          "text": "Recurring ensemble material separated by contrasting episodes. Returns may be shortened or placed in a new key."
+        },
+        {
+          "term": "Ground bass and chaconne",
+          "text": "Repeated bass or harmonic patterns support changing upper parts. Keep the repetition in mind while listening for what is transformed."
+        },
+        {
+          "term": "Ornament",
+          "text": "A trill, mordent or other sign can belong to the written language of a piece. MIDI does not always expand those signs into performed notes."
+        }
+      ]
+    },
+    {
+      "title": "Styles cross borders",
+      "items": [
+        {
+          "term": "Italian traditions",
+          "text": "Concerto contrast, melodic sequences and clear bass support are useful starting points. Italian composers and their music travelled widely; the label is not a nationality test."
+        },
+        {
+          "term": "French traditions",
+          "text": "Dance types, notes inégales, agréments and the overture are recurring concerns. Their realization depends on the piece and source; this player does not impose a universal French performance rule."
+        },
+        {
+          "term": "German-speaking traditions",
+          "text": "Contrapuntal writing, chorale settings and the organ tradition intersect with French and Italian models. The label covers varied courts, churches and cities."
+        },
+        {
+          "term": "Iberian and British traditions",
+          "text": "Iberian keyboard genres and English virginal, theatre and church music have distinct histories. Compare an actual source piece rather than treating either region as one sound."
+        },
+        {
+          "term": "Early, middle and late",
+          "text": "These period divisions are broad teaching aids. Composers and works can cross them; the catalogue retains overlapping periods."
+        },
+        {
+          "term": "The transition after Baroque",
+          "text": "Bach’s sons and other later figures introduce galant and empfindsam approaches. Their inclusion shows continuity and change rather than extending one style indefinitely."
+        }
+      ]
+    },
+    {
+      "title": "A short listening practice",
+      "items": [
+        {
+          "term": "1. Begin with the bass",
+          "text": "Mute the other tracks. Notice where the bass moves and where it rests. Then bring one upper line back."
+        },
+        {
+          "term": "2. Isolate and rejoin",
+          "text": "Solo a voice, hear its phrase, then use All together. Ask what becomes clearer or harder to follow in the complete texture."
+        },
+        {
+          "term": "3. Use a small loop",
+          "text": "Set A before an entry and B after its answer. Slow the passage without changing pitch. Remove the loop when its shape becomes familiar."
+        },
+        {
+          "term": "4. Compare a recording",
+          "text": "Use the exact-title YouTube search link. Compare timing, articulation and ornaments with the local synthesis. The player is a reading aid, not a historical-performance claim."
+        }
+      ]
+    }
+  ],
+  "references": [
+    "https://www.britannica.com/art/Baroque-music",
+    "https://www.mutopiaproject.org/",
+    "https://imslp.org/"
+  ]
+}

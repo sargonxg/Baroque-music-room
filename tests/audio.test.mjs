@@ -27,3 +27,13 @@ test('a paused pending audio resume cannot restart a stopped transport',async()=
 test('seeking into a sustained note restarts only its remaining duration',async()=>{
  const t=new KeyboardTransport(()=>{},()=>{});t.load({duration:5,tracks:[{notes:[[48,0,4,1]]}]});await t.seek(2);await t.play();assert.equal(t.context.oscillators.length,1);assert.equal(t.context.oscillators[0].frequency.value,440*Math.pow(2,(48-69)/12));t.pause();
 });
+
+test('timbre, tuning, room and source-track gain controls are bounded',async()=>{
+ const t=new KeyboardTransport(()=>{},()=>{});t.load(study);t.setTimbre('organ');assert.equal(t.timbre,'organ');t.setTimbre('not a preset');assert.equal(t.timbre,'organ');t.setTuning(415);t.setReverb(.3);await t.play();assert.equal(t.tuning,415);assert.equal(t.reverb,.3);t.setVoiceLevel(0,.3);assert.equal(t.trackGains[0].gain.value,.3);t.setVoiceLevel(0,99);assert.equal(t.voiceLevels[0],1);t.setVolume(99);assert.equal(t.volume,.7);t.pause();
+});
+test('solo and all-together preserve explicit track selection',()=>{
+ const t=new KeyboardTransport(()=>{},()=>{});t.load({duration:4,tracks:[{notes:[[60,0,1]]},{notes:[[48,0,1]]}]});t.setSolo(1);assert.deepEqual(t.enabled,[false,true]);t.setSolo(null);assert.deepEqual(t.enabled,[true,true]);t.setVoice(-1,false);assert.deepEqual(t.enabled,[true,true]);
+});
+test('loop controls reject invalid boundaries and stop resets position',async()=>{
+ const t=new KeyboardTransport(()=>{},()=>{});t.load(study);assert.throws(()=>t.setLoop(2,2.1));assert.throws(()=>t.setLoop(3,1));t.setLoop(.5,3);assert.deepEqual(t.loop,{start:.5,end:3});t.clearLoop();assert.equal(t.loop,null);await t.seek(2);t.stop();assert.equal(t.position,0);assert.equal(t.playing,false);await t.dispose();assert.equal(t.context,null);
+});

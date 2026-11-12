@@ -1,0 +1,62 @@
+{
+  "bach": {
+    "text": "Bach worked in Weimar, K\u00f6then and Leipzig. His keyboard music draws on dance forms, Italian concerto writing and German contrapuntal practice. In Leipzig he served as Thomaskantor and directed music for the city churches.",
+    "source": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "handel": {
+    "text": "Born in Halle, Handel worked in Italy before settling in London. Opera and English oratorio occupy much of his output; his keyboard suites and fugues reveal the same attention to melody and dramatic pacing.",
+    "source": "https://en.wikipedia.org/wiki/George_Frideric_Handel",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "vivaldi": {
+    "text": "Vivaldi was a violinist and composer associated with Venice and the Ospedale della Piet\u00e0. His concertos often alternate recurring ensemble passages with freer solo episodes. Keyboard transcriptions are distinct from his original scoring.",
+    "source": "https://en.wikipedia.org/wiki/Antonio_Vivaldi",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "rameau": {
+    "text": "Rameau combined work as an organist, composer and theorist. His keyboard collections use dance forms, character pieces and detailed ornament signs; his later stage works made him a central figure in French opera.",
+    "source": "https://en.wikipedia.org/wiki/Jean-Philippe_Rameau",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "purcell": {
+    "text": "Purcell worked in London as an organist and composer for the church, court and theatre. His music joins English vocal traditions to Italian and French influences. The local Fairest Isle study is an arrangement, not a keyboard original.",
+    "source": "https://en.wikipedia.org/wiki/Henry_Purcell",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "couperin": {
+    "text": "Fran\u00e7ois Couperin was organist at Saint-Gervais in Paris and a musician at the French court. His harpsichord ordres group dances and character pieces. Ornament signs and articulation are integral to their notation.",
+    "source": "https://en.wikipedia.org/wiki/Fran\u00e7ois_Couperin",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "corelli": {
+    "text": "Corelli was a violinist and composer active in Rome. His trio sonatas and concerti grossi became influential models. Much of the repertory listed here is chamber or orchestral music rather than original keyboard writing.",
+    "source": "https://en.wikipedia.org/wiki/Arcangelo_Corelli",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "monteverdi": {
+    "text": "Monteverdi worked in Mantua and later directed music at San Marco in Venice. His career connects Renaissance madrigal traditions with early Baroque opera and sacred music. His inclusion explains the wider musical setting of the keyboard repertoire.",
+    "source": "https://en.wikipedia.org/wiki/Claudio_Monteverdi",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "scarlatti": {
+    "text": "Domenico Scarlatti, born in Naples, worked in Portugal and Spain and served Maria Barbara. His keyboard sonatas often explore repeated notes, crossings of the hands and sharp changes of register. Their K. numbers refer to the Kirkpatrick catalogue.",
+    "source": "https://en.wikipedia.org/wiki/Domenico_Scarlatti",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "cpe-bach": {
+    "text": "Carl Philipp Emanuel Bach worked at the Prussian court and later in Hamburg. His keyboard writing belongs partly to the empfindsamer Stil, with rhetorical pauses and rapid changes of mood. He is marked as transitional rather than grouped into a single Baroque style.",
+    "source": "https://imslp.org/wiki/Category:Bach,_Carl_Philipp_Emanuel",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "lully": {
+    "text": "Born in Florence, Jean-Baptiste Lully built his career at the French court. His stage works helped establish French operatic and orchestral conventions. His influence on overtures and dance suites reaches beyond his own keyboard output.",
+    "source": "https://en.wikipedia.org/wiki/Jean-Baptiste_Lully",
+    "scope": "Concise editorial summary; see the linked biography."
+  },
+  "telemann": {
+    "text": "Telemann worked in several German cities before becoming music director in Hamburg. His output encompasses sacred, chamber and theatrical music. French, Italian and Polish influences appear alongside German contrapuntal traditions.",
+    "source": "https://en.wikipedia.org/wiki/Georg_Philipp_Telemann",
+    "scope": "Concise editorial summary; see the linked biography."
+  }
+}

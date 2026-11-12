@@ -24,11 +24,16 @@ Filter by origin, musical tradition, period or name/city. The right panel offers
 five starting points, source scores and recording searches.
 
 At the listening desk, press **Listen**. Isolate the colored voices in the Bach
-study, adjust speed, seek or switch to a full source movement. The note timeline
-follows playback. The six-bar Bach engraving highlights the corresponding notes;
-full movements instead show a static opening-page preview where available.
-Download MIDI or open the source edition to go further. Playback is a local
-keyboard approximation, not a recording.
+study, adjust speed, seek or switch to a full source movement. Every local selection shows colored staff notation that follows playback,
+including during seeks and pauses. Click a note to seek to its onset. The
+notation is derived from MIDI: spelling, clefs, rests and rhythm symbols are
+inferred. A separate disclosure retains the source engraving or opening preview
+where available. The six-bar Bach study has source-defined independent voices;
+full movements retain source tracks, which may combine voices.
+Download MIDI or open the source edition to go further. Choose harpsichord, clavichord, piano-study or organ synthesis; adjust the room,
+tuning, speed and voice controls. Solo a line or set an A-B loop to study a
+passage. Playback is a local keyboard approximation, not a recording. The exact-
+title YouTube link searches for a recording without loading an embedded player.
 
 The initial map, catalog and six-bar study are self-contained in `dist/index.html`.
 They also work when that file is opened directly. Serve `dist/` over HTTP to load
@@ -91,6 +96,10 @@ inlines the initial UI resources; supporting source editions remain separate.
 projection, filters, safe links, source MIDI hashes and the three-voice study's
 note/score correspondence. Browser layout screenshots are evidence of rendered
 layout, not audible synthesis or human screen-reader verification.
+
+See [the notation/audio contract](docs/NOTATION-AND-AUDIO.md) for the reusable
+renderer and transport, and [the 100-point refinement record](docs/REFINEMENTS-100.md)
+for implementation evidence and remaining limits.
 
 Original code is MIT. The historical map is GPL-3.0; music editions retain their
 individual PD or CC BY-SA terms. Read [ATTRIBUTION.md](ATTRIBUTION.md) before reuse.

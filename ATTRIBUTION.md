@@ -75,3 +75,26 @@ Relevant licenses:
 [public-domain mark](https://creativecommons.org/publicdomain/mark/1.0/).
 Check the rights applicable in your jurisdiction before republishing third-party
 editions or making new adaptations.
+
+## Composer images and biographical notes
+
+`data/portraits.json` retains 12 primary Commons source records, creator/date,
+qualified captions, public-domain basis, original/optimized hashes and dimensions.
+Local WebPs are aspect-preserving resizes; no face was invented or generated.
+Vivaldi's image is a Ghezzi caricature. Lully and Scarlatti are posthumous
+engravings. Corelli is an engraving after Howard; Rameau's attribution remains
+qualified. The UI preserves these captions and source links. The remaining
+composers have text/source references; no substitute portrait is fabricated.
+`data/biographies.json` contains concise editorial summaries with source links.
+
+## Playback notation glyphs
+
+`src/glyphs.mjs` contains 23 Bravura outlines rendered with VexFlow 4.2.5.
+VexFlow's MIT notice is retained in `assets/notation/VEXFLOW-LICENSE.txt`;
+Bravura's SIL Open Font License is retained in `assets/notation/BRAVURA-OFL.txt`.
+Bravura source: https://github.com/steinbergmedia/bravura. These notices do not
+change the independent PD or CC BY-SA rights of the MIDI editions.
+
+The playback renderer uses original note timing but infers note spelling,
+clefs, rests and rhythm symbols. It is not the source editor's full engraving.
+Source engraving previews remain unchanged and clearly separated in the UI.

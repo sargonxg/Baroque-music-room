@@ -1,0 +1,9368 @@
+{
+  "format": "source-smf-notation-metadata/1",
+  "records": {
+    "bwv814-01": {
+      "ppq": 384,
+      "secondsPerBeat": 0.75,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.0
+        },
+        {
+          "bar": 3,
+          "seconds": 6.0
+        },
+        {
+          "bar": 4,
+          "seconds": 9.0
+        },
+        {
+          "bar": 5,
+          "seconds": 12.0
+        },
+        {
+          "bar": 6,
+          "seconds": 15.0
+        },
+        {
+          "bar": 7,
+          "seconds": 18.0
+        },
+        {
+          "bar": 8,
+          "seconds": 21.0
+        },
+        {
+          "bar": 9,
+          "seconds": 24.0
+        },
+        {
+          "bar": 10,
+          "seconds": 27.0
+        },
+        {
+          "bar": 11,
+          "seconds": 30.0
+        },
+        {
+          "bar": 12,
+          "seconds": 33.0
+        },
+        {
+          "bar": 13,
+          "seconds": 36.0
+        },
+        {
+          "bar": 14,
+          "seconds": 39.0
+        },
+        {
+          "bar": 15,
+          "seconds": 42.0
+        },
+        {
+          "bar": 16,
+          "seconds": 45.0
+        },
+        {
+          "bar": 17,
+          "seconds": 48.0
+        },
+        {
+          "bar": 18,
+          "seconds": 51.0
+        },
+        {
+          "bar": 19,
+          "seconds": 54.0
+        },
+        {
+          "bar": 20,
+          "seconds": 57.0
+        },
+        {
+          "bar": 21,
+          "seconds": 60.0
+        },
+        {
+          "bar": 22,
+          "seconds": 63.0
+        },
+        {
+          "bar": 23,
+          "seconds": 66.0
+        },
+        {
+          "bar": 24,
+          "seconds": 69.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 750000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": true
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv814-02": {
+      "ppq": 384,
+      "secondsPerBeat": 0.6,
+      "beatsPerBar": 6.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 6,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.6
+        },
+        {
+          "bar": 3,
+          "seconds": 7.2
+        },
+        {
+          "bar": 4,
+          "seconds": 10.8
+        },
+        {
+          "bar": 5,
+          "seconds": 14.4
+        },
+        {
+          "bar": 6,
+          "seconds": 18.0
+        },
+        {
+          "bar": 7,
+          "seconds": 21.6
+        },
+        {
+          "bar": 8,
+          "seconds": 25.2
+        },
+        {
+          "bar": 9,
+          "seconds": 28.8
+        },
+        {
+          "bar": 10,
+          "seconds": 32.4
+        },
+        {
+          "bar": 11,
+          "seconds": 36.0
+        },
+        {
+          "bar": 12,
+          "seconds": 39.6
+        },
+        {
+          "bar": 13,
+          "seconds": 43.2
+        },
+        {
+          "bar": 14,
+          "seconds": 46.8
+        },
+        {
+          "bar": 15,
+          "seconds": 50.4
+        },
+        {
+          "bar": 16,
+          "seconds": 54.0
+        },
+        {
+          "bar": 17,
+          "seconds": 57.6
+        },
+        {
+          "bar": 18,
+          "seconds": 61.2
+        },
+        {
+          "bar": 19,
+          "seconds": 64.8
+        },
+        {
+          "bar": 20,
+          "seconds": 68.4
+        },
+        {
+          "bar": 21,
+          "seconds": 72.0
+        },
+        {
+          "bar": 22,
+          "seconds": 75.6
+        },
+        {
+          "bar": 23,
+          "seconds": 79.2
+        },
+        {
+          "bar": 24,
+          "seconds": 82.8
+        },
+        {
+          "bar": 25,
+          "seconds": 86.4
+        },
+        {
+          "bar": 26,
+          "seconds": 90.0
+        },
+        {
+          "bar": 27,
+          "seconds": 93.6
+        },
+        {
+          "bar": 28,
+          "seconds": 97.2
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 600000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 6,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": true
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv814-03": {
+      "ppq": 384,
+      "secondsPerBeat": 0.833333,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 2.499999
+        },
+        {
+          "bar": 3,
+          "seconds": 4.999998
+        },
+        {
+          "bar": 4,
+          "seconds": 7.499997
+        },
+        {
+          "bar": 5,
+          "seconds": 9.999996
+        },
+        {
+          "bar": 6,
+          "seconds": 12.499995
+        },
+        {
+          "bar": 7,
+          "seconds": 14.999994
+        },
+        {
+          "bar": 8,
+          "seconds": 17.499993
+        },
+        {
+          "bar": 9,
+          "seconds": 19.999992
+        },
+        {
+          "bar": 10,
+          "seconds": 22.499991
+        },
+        {
+          "bar": 11,
+          "seconds": 24.99999
+        },
+        {
+          "bar": 12,
+          "seconds": 27.499989
+        },
+        {
+          "bar": 13,
+          "seconds": 29.999988
+        },
+        {
+          "bar": 14,
+          "seconds": 32.499987
+        },
+        {
+          "bar": 15,
+          "seconds": 34.999986
+        },
+        {
+          "bar": 16,
+          "seconds": 37.499985
+        },
+        {
+          "bar": 17,
+          "seconds": 39.999984
+        },
+        {
+          "bar": 18,
+          "seconds": 42.499983
+        },
+        {
+          "bar": 19,
+          "seconds": 44.999982
+        },
+        {
+          "bar": 20,
+          "seconds": 47.499981
+        },
+        {
+          "bar": 21,
+          "seconds": 49.99998
+        },
+        {
+          "bar": 22,
+          "seconds": 52.499979
+        },
+        {
+          "bar": 23,
+          "seconds": 54.999978
+        },
+        {
+          "bar": 24,
+          "seconds": 57.499977
+        },
+        {
+          "bar": 25,
+          "seconds": 59.999976
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 833333,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": true
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv814-04": {
+      "ppq": 384,
+      "secondsPerBeat": 0.6,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.8
+        },
+        {
+          "bar": 3,
+          "seconds": 3.6
+        },
+        {
+          "bar": 4,
+          "seconds": 5.4
+        },
+        {
+          "bar": 5,
+          "seconds": 7.2
+        },
+        {
+          "bar": 6,
+          "seconds": 9.0
+        },
+        {
+          "bar": 7,
+          "seconds": 10.8
+        },
+        {
+          "bar": 8,
+          "seconds": 12.6
+        },
+        {
+          "bar": 9,
+          "seconds": 14.4
+        },
+        {
+          "bar": 10,
+          "seconds": 16.2
+        },
+        {
+          "bar": 11,
+          "seconds": 18.0
+        },
+        {
+          "bar": 12,
+          "seconds": 19.8
+        },
+        {
+          "bar": 13,
+          "seconds": 21.6
+        },
+        {
+          "bar": 14,
+          "seconds": 23.4
+        },
+        {
+          "bar": 15,
+          "seconds": 25.2
+        },
+        {
+          "bar": 16,
+          "seconds": 27.0
+        },
+        {
+          "bar": 17,
+          "seconds": 28.8
+        },
+        {
+          "bar": 18,
+          "seconds": 30.6
+        },
+        {
+          "bar": 19,
+          "seconds": 32.4
+        },
+        {
+          "bar": 20,
+          "seconds": 34.2
+        },
+        {
+          "bar": 21,
+          "seconds": 36.0
+        },
+        {
+          "bar": 22,
+          "seconds": 37.8
+        },
+        {
+          "bar": 23,
+          "seconds": 39.6
+        },
+        {
+          "bar": 24,
+          "seconds": 41.4
+        },
+        {
+          "bar": 25,
+          "seconds": 43.2
+        },
+        {
+          "bar": 26,
+          "seconds": 45.0
+        },
+        {
+          "bar": 27,
+          "seconds": 46.8
+        },
+        {
+          "bar": 28,
+          "seconds": 48.6
+        },
+        {
+          "bar": 29,
+          "seconds": 50.4
+        },
+        {
+          "bar": 30,
+          "seconds": 52.2
+        },
+        {
+          "bar": 31,
+          "seconds": 54.0
+        },
+        {
+          "bar": 32,
+          "seconds": 55.8
+        },
+        {
+          "bar": 33,
+          "seconds": 57.6
+        },
+        {
+          "bar": 34,
+          "seconds": 59.4
+        },
+        {
+          "bar": 35,
+          "seconds": 61.2
+        },
+        {
+          "bar": 36,
+          "seconds": 63.0
+        },
+        {
+          "bar": 37,
+          "seconds": 64.8
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 600000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": true
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv814-05": {
+      "ppq": 384,
+      "secondsPerBeat": 0.6,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.8
+        },
+        {
+          "bar": 3,
+          "seconds": 3.6
+        },
+        {
+          "bar": 4,
+          "seconds": 5.4
+        },
+        {
+          "bar": 5,
+          "seconds": 7.2
+        },
+        {
+          "bar": 6,
+          "seconds": 9.0
+        },
+        {
+          "bar": 7,
+          "seconds": 10.8
+        },
+        {
+          "bar": 8,
+          "seconds": 12.6
+        },
+        {
+          "bar": 9,
+          "seconds": 14.4
+        },
+        {
+          "bar": 10,
+          "seconds": 16.2
+        },
+        {
+          "bar": 11,
+          "seconds": 18.0
+        },
+        {
+          "bar": 12,
+          "seconds": 19.8
+        },
+        {
+          "bar": 13,
+          "seconds": 21.6
+        },
+        {
+          "bar": 14,
+          "seconds": 23.4
+        },
+        {
+          "bar": 15,
+          "seconds": 25.2
+        },
+        {
+          "bar": 16,
+          "seconds": 27.0
+        },
+        {
+          "bar": 17,
+          "seconds": 28.8
+        },
+        {
+          "bar": 18,
+          "seconds": 30.6
+        },
+        {
+          "bar": 19,
+          "seconds": 32.4
+        },
+        {
+          "bar": 20,
+          "seconds": 34.2
+        },
+        {
+          "bar": 21,
+          "seconds": 36.0
+        },
+        {
+          "bar": 22,
+          "seconds": 37.8
+        },
+        {
+          "bar": 23,
+          "seconds": 39.6
+        },
+        {
+          "bar": 24,
+          "seconds": 41.4
+        },
+        {
+          "bar": 25,
+          "seconds": 43.2
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 600000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": true
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv814-06": {
+      "ppq": 384,
+      "secondsPerBeat": 0.416666,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 2,
+        "denominator": 2
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.666664
+        },
+        {
+          "bar": 3,
+          "seconds": 3.333328
+        },
+        {
+          "bar": 4,
+          "seconds": 4.999992
+        },
+        {
+          "bar": 5,
+          "seconds": 6.666656
+        },
+        {
+          "bar": 6,
+          "seconds": 8.33332
+        },
+        {
+          "bar": 7,
+          "seconds": 9.999984
+        },
+        {
+          "bar": 8,
+          "seconds": 11.666648
+        },
+        {
+          "bar": 9,
+          "seconds": 13.333312
+        },
+        {
+          "bar": 10,
+          "seconds": 14.999976
+        },
+        {
+          "bar": 11,
+          "seconds": 16.66664
+        },
+        {
+          "bar": 12,
+          "seconds": 18.333304
+        },
+        {
+          "bar": 13,
+          "seconds": 19.999968
+        },
+        {
+          "bar": 14,
+          "seconds": 21.666632
+        },
+        {
+          "bar": 15,
+          "seconds": 23.333296
+        },
+        {
+          "bar": 16,
+          "seconds": 24.99996
+        },
+        {
+          "bar": 17,
+          "seconds": 26.666624
+        },
+        {
+          "bar": 18,
+          "seconds": 28.333288
+        },
+        {
+          "bar": 19,
+          "seconds": 29.999952
+        },
+        {
+          "bar": 20,
+          "seconds": 31.666616
+        },
+        {
+          "bar": 21,
+          "seconds": 33.33328
+        },
+        {
+          "bar": 22,
+          "seconds": 34.999944
+        },
+        {
+          "bar": 23,
+          "seconds": 36.666608
+        },
+        {
+          "bar": 24,
+          "seconds": 38.333272
+        },
+        {
+          "bar": 25,
+          "seconds": 39.999936
+        },
+        {
+          "bar": 26,
+          "seconds": 41.6666
+        },
+        {
+          "bar": 27,
+          "seconds": 43.333264
+        },
+        {
+          "bar": 28,
+          "seconds": 44.999928
+        },
+        {
+          "bar": 29,
+          "seconds": 46.666592
+        },
+        {
+          "bar": 30,
+          "seconds": 48.333256
+        },
+        {
+          "bar": 31,
+          "seconds": 49.99992
+        },
+        {
+          "bar": 32,
+          "seconds": 51.666584
+        },
+        {
+          "bar": 33,
+          "seconds": 53.333248
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 416666,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 2,
+          "denominator": 2
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": true
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv814-07": {
+      "ppq": 384,
+      "secondsPerBeat": 0.75,
+      "beatsPerBar": 1.5,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 8
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.125
+        },
+        {
+          "bar": 3,
+          "seconds": 2.25
+        },
+        {
+          "bar": 4,
+          "seconds": 3.375
+        },
+        {
+          "bar": 5,
+          "seconds": 4.5
+        },
+        {
+          "bar": 6,
+          "seconds": 5.625
+        },
+        {
+          "bar": 7,
+          "seconds": 6.75
+        },
+        {
+          "bar": 8,
+          "seconds": 7.875
+        },
+        {
+          "bar": 9,
+          "seconds": 9.0
+        },
+        {
+          "bar": 10,
+          "seconds": 10.125
+        },
+        {
+          "bar": 11,
+          "seconds": 11.25
+        },
+        {
+          "bar": 12,
+          "seconds": 12.375
+        },
+        {
+          "bar": 13,
+          "seconds": 13.5
+        },
+        {
+          "bar": 14,
+          "seconds": 14.625
+        },
+        {
+          "bar": 15,
+          "seconds": 15.75
+        },
+        {
+          "bar": 16,
+          "seconds": 16.875
+        },
+        {
+          "bar": 17,
+          "seconds": 18.0
+        },
+        {
+          "bar": 18,
+          "seconds": 19.125
+        },
+        {
+          "bar": 19,
+          "seconds": 20.25
+        },
+        {
+          "bar": 20,
+          "seconds": 21.375
+        },
+        {
+          "bar": 21,
+          "seconds": 22.5
+        },
+        {
+          "bar": 22,
+          "seconds": 23.625
+        },
+        {
+          "bar": 23,
+          "seconds": 24.75
+        },
+        {
+          "bar": 24,
+          "seconds": 25.875
+        },
+        {
+          "bar": 25,
+          "seconds": 27.0
+        },
+        {
+          "bar": 26,
+          "seconds": 28.125
+        },
+        {
+          "bar": 27,
+          "seconds": 29.25
+        },
+        {
+          "bar": 28,
+          "seconds": 30.375
+        },
+        {
+          "bar": 29,
+          "seconds": 31.5
+        },
+        {
+          "bar": 30,
+          "seconds": 32.625
+        },
+        {
+          "bar": 31,
+          "seconds": 33.75
+        },
+        {
+          "bar": 32,
+          "seconds": 34.875
+        },
+        {
+          "bar": 33,
+          "seconds": 36.0
+        },
+        {
+          "bar": 34,
+          "seconds": 37.125
+        },
+        {
+          "bar": 35,
+          "seconds": 38.25
+        },
+        {
+          "bar": 36,
+          "seconds": 39.375
+        },
+        {
+          "bar": 37,
+          "seconds": 40.5
+        },
+        {
+          "bar": 38,
+          "seconds": 41.625
+        },
+        {
+          "bar": 39,
+          "seconds": 42.75
+        },
+        {
+          "bar": 40,
+          "seconds": 43.875
+        },
+        {
+          "bar": 41,
+          "seconds": 45.0
+        },
+        {
+          "bar": 42,
+          "seconds": 46.125
+        },
+        {
+          "bar": 43,
+          "seconds": 47.25
+        },
+        {
+          "bar": 44,
+          "seconds": 48.375
+        },
+        {
+          "bar": 45,
+          "seconds": 49.5
+        },
+        {
+          "bar": 46,
+          "seconds": 50.625
+        },
+        {
+          "bar": 47,
+          "seconds": 51.75
+        },
+        {
+          "bar": 48,
+          "seconds": 52.875
+        },
+        {
+          "bar": 49,
+          "seconds": 54.0
+        },
+        {
+          "bar": 50,
+          "seconds": 55.125
+        },
+        {
+          "bar": 51,
+          "seconds": 56.25
+        },
+        {
+          "bar": 52,
+          "seconds": 57.375
+        },
+        {
+          "bar": 53,
+          "seconds": 58.5
+        },
+        {
+          "bar": 54,
+          "seconds": 59.625
+        },
+        {
+          "bar": 55,
+          "seconds": 60.75
+        },
+        {
+          "bar": 56,
+          "seconds": 61.875
+        },
+        {
+          "bar": 57,
+          "seconds": 63.0
+        },
+        {
+          "bar": 58,
+          "seconds": 64.125
+        },
+        {
+          "bar": 59,
+          "seconds": 65.25
+        },
+        {
+          "bar": 60,
+          "seconds": 66.375
+        },
+        {
+          "bar": 61,
+          "seconds": 67.5
+        },
+        {
+          "bar": 62,
+          "seconds": 68.625
+        },
+        {
+          "bar": 63,
+          "seconds": 69.75
+        },
+        {
+          "bar": 64,
+          "seconds": 70.875
+        },
+        {
+          "bar": 65,
+          "seconds": 72.0
+        },
+        {
+          "bar": 66,
+          "seconds": 73.125
+        },
+        {
+          "bar": 67,
+          "seconds": 74.25
+        },
+        {
+          "bar": 68,
+          "seconds": 75.375
+        },
+        {
+          "bar": 69,
+          "seconds": 76.5
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 750000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": true
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv816-01": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 4.0
+        },
+        {
+          "bar": 3,
+          "seconds": 8.0
+        },
+        {
+          "bar": 4,
+          "seconds": 12.0
+        },
+        {
+          "bar": 5,
+          "seconds": 16.0
+        },
+        {
+          "bar": 6,
+          "seconds": 20.0
+        },
+        {
+          "bar": 7,
+          "seconds": 24.0
+        },
+        {
+          "bar": 8,
+          "seconds": 28.0
+        },
+        {
+          "bar": 9,
+          "seconds": 32.0
+        },
+        {
+          "bar": 10,
+          "seconds": 36.0
+        },
+        {
+          "bar": 11,
+          "seconds": 40.0
+        },
+        {
+          "bar": 12,
+          "seconds": 44.0
+        },
+        {
+          "bar": 13,
+          "seconds": 48.0
+        },
+        {
+          "bar": 14,
+          "seconds": 52.0
+        },
+        {
+          "bar": 15,
+          "seconds": 56.0
+        },
+        {
+          "bar": 16,
+          "seconds": 60.0
+        },
+        {
+          "bar": 17,
+          "seconds": 64.0
+        },
+        {
+          "bar": 18,
+          "seconds": 68.0
+        },
+        {
+          "bar": 19,
+          "seconds": 72.0
+        },
+        {
+          "bar": 20,
+          "seconds": 76.0
+        },
+        {
+          "bar": 21,
+          "seconds": 80.0
+        },
+        {
+          "bar": 22,
+          "seconds": 84.0
+        },
+        {
+          "bar": 23,
+          "seconds": 88.0
+        },
+        {
+          "bar": 24,
+          "seconds": 92.0
+        },
+        {
+          "bar": 25,
+          "seconds": 96.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv816-02": {
+      "ppq": 384,
+      "secondsPerBeat": 0.454545,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.363635
+        },
+        {
+          "bar": 3,
+          "seconds": 2.72727
+        },
+        {
+          "bar": 4,
+          "seconds": 4.090905
+        },
+        {
+          "bar": 5,
+          "seconds": 5.45454
+        },
+        {
+          "bar": 6,
+          "seconds": 6.818175
+        },
+        {
+          "bar": 7,
+          "seconds": 8.18181
+        },
+        {
+          "bar": 8,
+          "seconds": 9.545445
+        },
+        {
+          "bar": 9,
+          "seconds": 10.90908
+        },
+        {
+          "bar": 10,
+          "seconds": 12.272715
+        },
+        {
+          "bar": 11,
+          "seconds": 13.63635
+        },
+        {
+          "bar": 12,
+          "seconds": 14.999985
+        },
+        {
+          "bar": 13,
+          "seconds": 16.36362
+        },
+        {
+          "bar": 14,
+          "seconds": 17.727255
+        },
+        {
+          "bar": 15,
+          "seconds": 19.09089
+        },
+        {
+          "bar": 16,
+          "seconds": 20.454525
+        },
+        {
+          "bar": 17,
+          "seconds": 21.81816
+        },
+        {
+          "bar": 18,
+          "seconds": 23.181795
+        },
+        {
+          "bar": 19,
+          "seconds": 24.54543
+        },
+        {
+          "bar": 20,
+          "seconds": 25.909065
+        },
+        {
+          "bar": 21,
+          "seconds": 27.2727
+        },
+        {
+          "bar": 22,
+          "seconds": 28.636335
+        },
+        {
+          "bar": 23,
+          "seconds": 29.99997
+        },
+        {
+          "bar": 24,
+          "seconds": 31.363605
+        },
+        {
+          "bar": 25,
+          "seconds": 32.72724
+        },
+        {
+          "bar": 26,
+          "seconds": 34.090875
+        },
+        {
+          "bar": 27,
+          "seconds": 35.45451
+        },
+        {
+          "bar": 28,
+          "seconds": 36.818145
+        },
+        {
+          "bar": 29,
+          "seconds": 38.18178
+        },
+        {
+          "bar": 30,
+          "seconds": 39.545415
+        },
+        {
+          "bar": 31,
+          "seconds": 40.90905
+        },
+        {
+          "bar": 32,
+          "seconds": 42.272685
+        },
+        {
+          "bar": 33,
+          "seconds": 43.63632
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 454545,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv816-03": {
+      "ppq": 384,
+      "secondsPerBeat": 0.714285,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 2.142855
+        },
+        {
+          "bar": 3,
+          "seconds": 4.28571
+        },
+        {
+          "bar": 4,
+          "seconds": 6.428565
+        },
+        {
+          "bar": 5,
+          "seconds": 8.57142
+        },
+        {
+          "bar": 6,
+          "seconds": 10.714275
+        },
+        {
+          "bar": 7,
+          "seconds": 12.85713
+        },
+        {
+          "bar": 8,
+          "seconds": 14.999985
+        },
+        {
+          "bar": 9,
+          "seconds": 17.14284
+        },
+        {
+          "bar": 10,
+          "seconds": 19.285695
+        },
+        {
+          "bar": 11,
+          "seconds": 21.42855
+        },
+        {
+          "bar": 12,
+          "seconds": 23.571405
+        },
+        {
+          "bar": 13,
+          "seconds": 25.71426
+        },
+        {
+          "bar": 14,
+          "seconds": 27.857115
+        },
+        {
+          "bar": 15,
+          "seconds": 29.99997
+        },
+        {
+          "bar": 16,
+          "seconds": 32.142825
+        },
+        {
+          "bar": 17,
+          "seconds": 34.28568
+        },
+        {
+          "bar": 18,
+          "seconds": 36.428535
+        },
+        {
+          "bar": 19,
+          "seconds": 38.57139
+        },
+        {
+          "bar": 20,
+          "seconds": 40.714245
+        },
+        {
+          "bar": 21,
+          "seconds": 42.8571
+        },
+        {
+          "bar": 22,
+          "seconds": 44.999955
+        },
+        {
+          "bar": 23,
+          "seconds": 47.14281
+        },
+        {
+          "bar": 24,
+          "seconds": 49.285665
+        },
+        {
+          "bar": 25,
+          "seconds": 51.42852
+        },
+        {
+          "bar": 26,
+          "seconds": 53.571375
+        },
+        {
+          "bar": 27,
+          "seconds": 55.71423
+        },
+        {
+          "bar": 28,
+          "seconds": 57.857085
+        },
+        {
+          "bar": 29,
+          "seconds": 59.99994
+        },
+        {
+          "bar": 30,
+          "seconds": 62.142795
+        },
+        {
+          "bar": 31,
+          "seconds": 64.28565
+        },
+        {
+          "bar": 32,
+          "seconds": 66.428505
+        },
+        {
+          "bar": 33,
+          "seconds": 68.57136
+        },
+        {
+          "bar": 34,
+          "seconds": 70.714215
+        },
+        {
+          "bar": 35,
+          "seconds": 72.85707
+        },
+        {
+          "bar": 36,
+          "seconds": 74.999925
+        },
+        {
+          "bar": 37,
+          "seconds": 77.14278
+        },
+        {
+          "bar": 38,
+          "seconds": 79.285635
+        },
+        {
+          "bar": 39,
+          "seconds": 81.42849
+        },
+        {
+          "bar": 40,
+          "seconds": 83.571345
+        },
+        {
+          "bar": 41,
+          "seconds": 85.7142
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 714285,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv816-04": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 2,
+        "denominator": 2
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 4.0
+        },
+        {
+          "bar": 3,
+          "seconds": 8.0
+        },
+        {
+          "bar": 4,
+          "seconds": 12.0
+        },
+        {
+          "bar": 5,
+          "seconds": 16.0
+        },
+        {
+          "bar": 6,
+          "seconds": 20.0
+        },
+        {
+          "bar": 7,
+          "seconds": 24.0
+        },
+        {
+          "bar": 8,
+          "seconds": 28.0
+        },
+        {
+          "bar": 9,
+          "seconds": 32.0
+        },
+        {
+          "bar": 10,
+          "seconds": 36.0
+        },
+        {
+          "bar": 11,
+          "seconds": 40.0
+        },
+        {
+          "bar": 12,
+          "seconds": 44.0
+        },
+        {
+          "bar": 13,
+          "seconds": 48.0
+        },
+        {
+          "bar": 14,
+          "seconds": 52.0
+        },
+        {
+          "bar": 15,
+          "seconds": 56.0
+        },
+        {
+          "bar": 16,
+          "seconds": 60.0
+        },
+        {
+          "bar": 17,
+          "seconds": 64.0
+        },
+        {
+          "bar": 18,
+          "seconds": 68.0
+        },
+        {
+          "bar": 19,
+          "seconds": 72.0
+        },
+        {
+          "bar": 20,
+          "seconds": 76.0
+        },
+        {
+          "bar": 21,
+          "seconds": 80.0
+        },
+        {
+          "bar": 22,
+          "seconds": 84.0
+        },
+        {
+          "bar": 23,
+          "seconds": 88.0
+        },
+        {
+          "bar": 24,
+          "seconds": 92.0
+        },
+        {
+          "bar": 25,
+          "seconds": 96.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 2,
+          "denominator": 2
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv816-05": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 2,
+        "denominator": 2
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 4.0
+        },
+        {
+          "bar": 3,
+          "seconds": 8.0
+        },
+        {
+          "bar": 4,
+          "seconds": 12.0
+        },
+        {
+          "bar": 5,
+          "seconds": 16.0
+        },
+        {
+          "bar": 6,
+          "seconds": 20.0
+        },
+        {
+          "bar": 7,
+          "seconds": 24.0
+        },
+        {
+          "bar": 8,
+          "seconds": 28.0
+        },
+        {
+          "bar": 9,
+          "seconds": 32.0
+        },
+        {
+          "bar": 10,
+          "seconds": 36.0
+        },
+        {
+          "bar": 11,
+          "seconds": 40.0
+        },
+        {
+          "bar": 12,
+          "seconds": 44.0
+        },
+        {
+          "bar": 13,
+          "seconds": 48.0
+        },
+        {
+          "bar": 14,
+          "seconds": 52.0
+        },
+        {
+          "bar": 15,
+          "seconds": 56.0
+        },
+        {
+          "bar": 16,
+          "seconds": 60.0
+        },
+        {
+          "bar": 17,
+          "seconds": 64.0
+        },
+        {
+          "bar": 18,
+          "seconds": 68.0
+        },
+        {
+          "bar": 19,
+          "seconds": 72.0
+        },
+        {
+          "bar": 20,
+          "seconds": 76.0
+        },
+        {
+          "bar": 21,
+          "seconds": 80.0
+        },
+        {
+          "bar": 22,
+          "seconds": 84.0
+        },
+        {
+          "bar": 23,
+          "seconds": 88.0
+        },
+        {
+          "bar": 24,
+          "seconds": 92.0
+        },
+        {
+          "bar": 25,
+          "seconds": 96.0
+        },
+        {
+          "bar": 26,
+          "seconds": 100.0
+        },
+        {
+          "bar": 27,
+          "seconds": 104.0
+        },
+        {
+          "bar": 28,
+          "seconds": 108.0
+        },
+        {
+          "bar": 29,
+          "seconds": 112.0
+        },
+        {
+          "bar": 30,
+          "seconds": 116.0
+        },
+        {
+          "bar": 31,
+          "seconds": 120.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 2,
+          "denominator": 2
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv816-06": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 6.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 6,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 6.0
+        },
+        {
+          "bar": 3,
+          "seconds": 12.0
+        },
+        {
+          "bar": 4,
+          "seconds": 18.0
+        },
+        {
+          "bar": 5,
+          "seconds": 24.0
+        },
+        {
+          "bar": 6,
+          "seconds": 30.0
+        },
+        {
+          "bar": 7,
+          "seconds": 36.0
+        },
+        {
+          "bar": 8,
+          "seconds": 42.0
+        },
+        {
+          "bar": 9,
+          "seconds": 48.0
+        },
+        {
+          "bar": 10,
+          "seconds": 54.0
+        },
+        {
+          "bar": 11,
+          "seconds": 60.0
+        },
+        {
+          "bar": 12,
+          "seconds": 66.0
+        },
+        {
+          "bar": 13,
+          "seconds": 72.0
+        },
+        {
+          "bar": 14,
+          "seconds": 78.0
+        },
+        {
+          "bar": 15,
+          "seconds": 84.0
+        },
+        {
+          "bar": 16,
+          "seconds": 90.0
+        },
+        {
+          "bar": 17,
+          "seconds": 96.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 6,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv816-07": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 12,
+        "denominator": 16
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.0
+        },
+        {
+          "bar": 3,
+          "seconds": 6.0
+        },
+        {
+          "bar": 4,
+          "seconds": 9.0
+        },
+        {
+          "bar": 5,
+          "seconds": 12.0
+        },
+        {
+          "bar": 6,
+          "seconds": 15.0
+        },
+        {
+          "bar": 7,
+          "seconds": 18.0
+        },
+        {
+          "bar": 8,
+          "seconds": 21.0
+        },
+        {
+          "bar": 9,
+          "seconds": 24.0
+        },
+        {
+          "bar": 10,
+          "seconds": 27.0
+        },
+        {
+          "bar": 11,
+          "seconds": 30.0
+        },
+        {
+          "bar": 12,
+          "seconds": 33.0
+        },
+        {
+          "bar": 13,
+          "seconds": 36.0
+        },
+        {
+          "bar": 14,
+          "seconds": 39.0
+        },
+        {
+          "bar": 15,
+          "seconds": 42.0
+        },
+        {
+          "bar": 16,
+          "seconds": 45.0
+        },
+        {
+          "bar": 17,
+          "seconds": 48.0
+        },
+        {
+          "bar": 18,
+          "seconds": 51.0
+        },
+        {
+          "bar": 19,
+          "seconds": 54.0
+        },
+        {
+          "bar": 20,
+          "seconds": 57.0
+        },
+        {
+          "bar": 21,
+          "seconds": 60.0
+        },
+        {
+          "bar": 22,
+          "seconds": 63.0
+        },
+        {
+          "bar": 23,
+          "seconds": 66.0
+        },
+        {
+          "bar": 24,
+          "seconds": 69.0
+        },
+        {
+          "bar": 25,
+          "seconds": 72.0
+        },
+        {
+          "bar": 26,
+          "seconds": 75.0
+        },
+        {
+          "bar": 27,
+          "seconds": 78.0
+        },
+        {
+          "bar": 28,
+          "seconds": 81.0
+        },
+        {
+          "bar": 29,
+          "seconds": 84.0
+        },
+        {
+          "bar": 30,
+          "seconds": 87.0
+        },
+        {
+          "bar": 31,
+          "seconds": 90.0
+        },
+        {
+          "bar": 32,
+          "seconds": 93.0
+        },
+        {
+          "bar": 33,
+          "seconds": 96.0
+        },
+        {
+          "bar": 34,
+          "seconds": 99.0
+        },
+        {
+          "bar": 35,
+          "seconds": 102.0
+        },
+        {
+          "bar": 36,
+          "seconds": 105.0
+        },
+        {
+          "bar": 37,
+          "seconds": 108.0
+        },
+        {
+          "bar": 38,
+          "seconds": 111.0
+        },
+        {
+          "bar": 39,
+          "seconds": 114.0
+        },
+        {
+          "bar": 40,
+          "seconds": 117.0
+        },
+        {
+          "bar": 41,
+          "seconds": 120.0
+        },
+        {
+          "bar": 42,
+          "seconds": 123.0
+        },
+        {
+          "bar": 43,
+          "seconds": 126.0
+        },
+        {
+          "bar": 44,
+          "seconds": 129.0
+        },
+        {
+          "bar": 45,
+          "seconds": 132.0
+        },
+        {
+          "bar": 46,
+          "seconds": 135.0
+        },
+        {
+          "bar": 47,
+          "seconds": 138.0
+        },
+        {
+          "bar": 48,
+          "seconds": 141.0
+        },
+        {
+          "bar": 49,
+          "seconds": 144.0
+        },
+        {
+          "bar": 50,
+          "seconds": 147.0
+        },
+        {
+          "bar": 51,
+          "seconds": 150.0
+        },
+        {
+          "bar": 52,
+          "seconds": 153.0
+        },
+        {
+          "bar": 53,
+          "seconds": 156.0
+        },
+        {
+          "bar": 54,
+          "seconds": 159.0
+        },
+        {
+          "bar": 55,
+          "seconds": 162.0
+        },
+        {
+          "bar": 56,
+          "seconds": 165.0
+        },
+        {
+          "bar": 57,
+          "seconds": 168.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 12,
+          "denominator": 16
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-01": {
+      "ppq": 384,
+      "secondsPerBeat": 0.75,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.0
+        },
+        {
+          "bar": 3,
+          "seconds": 6.0
+        },
+        {
+          "bar": 4,
+          "seconds": 9.0
+        },
+        {
+          "bar": 5,
+          "seconds": 12.0
+        },
+        {
+          "bar": 6,
+          "seconds": 15.0
+        },
+        {
+          "bar": 7,
+          "seconds": 18.0
+        },
+        {
+          "bar": 8,
+          "seconds": 21.0
+        },
+        {
+          "bar": 9,
+          "seconds": 24.0
+        },
+        {
+          "bar": 10,
+          "seconds": 27.0
+        },
+        {
+          "bar": 11,
+          "seconds": 30.0
+        },
+        {
+          "bar": 12,
+          "seconds": 33.0
+        },
+        {
+          "bar": 13,
+          "seconds": 36.0
+        },
+        {
+          "bar": 14,
+          "seconds": 39.0
+        },
+        {
+          "bar": 15,
+          "seconds": 42.0
+        },
+        {
+          "bar": 16,
+          "seconds": 45.0
+        },
+        {
+          "bar": 17,
+          "seconds": 48.0
+        },
+        {
+          "bar": 18,
+          "seconds": 51.0
+        },
+        {
+          "bar": 19,
+          "seconds": 54.0
+        },
+        {
+          "bar": 20,
+          "seconds": 57.0
+        },
+        {
+          "bar": 21,
+          "seconds": 60.0
+        },
+        {
+          "bar": 22,
+          "seconds": 63.0
+        },
+        {
+          "bar": 23,
+          "seconds": 66.0
+        },
+        {
+          "bar": 24,
+          "seconds": 69.0
+        },
+        {
+          "bar": 25,
+          "seconds": 72.0
+        },
+        {
+          "bar": 26,
+          "seconds": 75.0
+        },
+        {
+          "bar": 27,
+          "seconds": 78.0
+        },
+        {
+          "bar": 28,
+          "seconds": 81.0
+        },
+        {
+          "bar": 29,
+          "seconds": 84.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 750000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-02": {
+      "ppq": 384,
+      "secondsPerBeat": 0.6,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.8
+        },
+        {
+          "bar": 3,
+          "seconds": 3.6
+        },
+        {
+          "bar": 4,
+          "seconds": 5.4
+        },
+        {
+          "bar": 5,
+          "seconds": 7.2
+        },
+        {
+          "bar": 6,
+          "seconds": 9.0
+        },
+        {
+          "bar": 7,
+          "seconds": 10.8
+        },
+        {
+          "bar": 8,
+          "seconds": 12.6
+        },
+        {
+          "bar": 9,
+          "seconds": 14.4
+        },
+        {
+          "bar": 10,
+          "seconds": 16.2
+        },
+        {
+          "bar": 11,
+          "seconds": 18.0
+        },
+        {
+          "bar": 12,
+          "seconds": 19.8
+        },
+        {
+          "bar": 13,
+          "seconds": 21.6
+        },
+        {
+          "bar": 14,
+          "seconds": 23.4
+        },
+        {
+          "bar": 15,
+          "seconds": 25.2
+        },
+        {
+          "bar": 16,
+          "seconds": 27.0
+        },
+        {
+          "bar": 17,
+          "seconds": 28.8
+        },
+        {
+          "bar": 18,
+          "seconds": 30.6
+        },
+        {
+          "bar": 19,
+          "seconds": 32.4
+        },
+        {
+          "bar": 20,
+          "seconds": 34.2
+        },
+        {
+          "bar": 21,
+          "seconds": 36.0
+        },
+        {
+          "bar": 22,
+          "seconds": 37.8
+        },
+        {
+          "bar": 23,
+          "seconds": 39.6
+        },
+        {
+          "bar": 24,
+          "seconds": 41.4
+        },
+        {
+          "bar": 25,
+          "seconds": 43.2
+        },
+        {
+          "bar": 26,
+          "seconds": 45.0
+        },
+        {
+          "bar": 27,
+          "seconds": 46.8
+        },
+        {
+          "bar": 28,
+          "seconds": 48.6
+        },
+        {
+          "bar": 29,
+          "seconds": 50.4
+        },
+        {
+          "bar": 30,
+          "seconds": 52.2
+        },
+        {
+          "bar": 31,
+          "seconds": 54.0
+        },
+        {
+          "bar": 32,
+          "seconds": 55.8
+        },
+        {
+          "bar": 33,
+          "seconds": 57.6
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 600000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-03": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.0
+        },
+        {
+          "bar": 3,
+          "seconds": 6.0
+        },
+        {
+          "bar": 4,
+          "seconds": 9.0
+        },
+        {
+          "bar": 5,
+          "seconds": 12.0
+        },
+        {
+          "bar": 6,
+          "seconds": 15.0
+        },
+        {
+          "bar": 7,
+          "seconds": 18.0
+        },
+        {
+          "bar": 8,
+          "seconds": 21.0
+        },
+        {
+          "bar": 9,
+          "seconds": 24.0
+        },
+        {
+          "bar": 10,
+          "seconds": 27.0
+        },
+        {
+          "bar": 11,
+          "seconds": 30.0
+        },
+        {
+          "bar": 12,
+          "seconds": 33.0
+        },
+        {
+          "bar": 13,
+          "seconds": 36.0
+        },
+        {
+          "bar": 14,
+          "seconds": 39.0
+        },
+        {
+          "bar": 15,
+          "seconds": 42.0
+        },
+        {
+          "bar": 16,
+          "seconds": 45.0
+        },
+        {
+          "bar": 17,
+          "seconds": 48.0
+        },
+        {
+          "bar": 18,
+          "seconds": 51.0
+        },
+        {
+          "bar": 19,
+          "seconds": 54.0
+        },
+        {
+          "bar": 20,
+          "seconds": 57.0
+        },
+        {
+          "bar": 21,
+          "seconds": 60.0
+        },
+        {
+          "bar": 22,
+          "seconds": 63.0
+        },
+        {
+          "bar": 23,
+          "seconds": 66.0
+        },
+        {
+          "bar": 24,
+          "seconds": 69.0
+        },
+        {
+          "bar": 25,
+          "seconds": 72.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-04": {
+      "ppq": 384,
+      "secondsPerBeat": 0.6,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 2.4
+        },
+        {
+          "bar": 3,
+          "seconds": 4.8
+        },
+        {
+          "bar": 4,
+          "seconds": 7.2
+        },
+        {
+          "bar": 5,
+          "seconds": 9.6
+        },
+        {
+          "bar": 6,
+          "seconds": 12.0
+        },
+        {
+          "bar": 7,
+          "seconds": 14.4
+        },
+        {
+          "bar": 8,
+          "seconds": 16.8
+        },
+        {
+          "bar": 9,
+          "seconds": 19.2
+        },
+        {
+          "bar": 10,
+          "seconds": 21.6
+        },
+        {
+          "bar": 11,
+          "seconds": 24.0
+        },
+        {
+          "bar": 12,
+          "seconds": 26.4
+        },
+        {
+          "bar": 13,
+          "seconds": 28.8
+        },
+        {
+          "bar": 14,
+          "seconds": 31.2
+        },
+        {
+          "bar": 15,
+          "seconds": 33.6
+        },
+        {
+          "bar": 16,
+          "seconds": 36.0
+        },
+        {
+          "bar": 17,
+          "seconds": 38.4
+        },
+        {
+          "bar": 18,
+          "seconds": 40.8
+        },
+        {
+          "bar": 19,
+          "seconds": 43.2
+        },
+        {
+          "bar": 20,
+          "seconds": 45.6
+        },
+        {
+          "bar": 21,
+          "seconds": 48.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 600000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-05": {
+      "ppq": 384,
+      "secondsPerBeat": 0.6,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.8
+        },
+        {
+          "bar": 3,
+          "seconds": 3.6
+        },
+        {
+          "bar": 4,
+          "seconds": 5.4
+        },
+        {
+          "bar": 5,
+          "seconds": 7.2
+        },
+        {
+          "bar": 6,
+          "seconds": 9.0
+        },
+        {
+          "bar": 7,
+          "seconds": 10.8
+        },
+        {
+          "bar": 8,
+          "seconds": 12.6
+        },
+        {
+          "bar": 9,
+          "seconds": 14.4
+        },
+        {
+          "bar": 10,
+          "seconds": 16.2
+        },
+        {
+          "bar": 11,
+          "seconds": 18.0
+        },
+        {
+          "bar": 12,
+          "seconds": 19.8
+        },
+        {
+          "bar": 13,
+          "seconds": 21.6
+        },
+        {
+          "bar": 14,
+          "seconds": 23.4
+        },
+        {
+          "bar": 15,
+          "seconds": 25.2
+        },
+        {
+          "bar": 16,
+          "seconds": 27.0
+        },
+        {
+          "bar": 17,
+          "seconds": 28.8
+        },
+        {
+          "bar": 18,
+          "seconds": 30.6
+        },
+        {
+          "bar": 19,
+          "seconds": 32.4
+        },
+        {
+          "bar": 20,
+          "seconds": 34.2
+        },
+        {
+          "bar": 21,
+          "seconds": 36.0
+        },
+        {
+          "bar": 22,
+          "seconds": 37.8
+        },
+        {
+          "bar": 23,
+          "seconds": 39.6
+        },
+        {
+          "bar": 24,
+          "seconds": 41.4
+        },
+        {
+          "bar": 25,
+          "seconds": 43.2
+        },
+        {
+          "bar": 26,
+          "seconds": 45.0
+        },
+        {
+          "bar": 27,
+          "seconds": 46.8
+        },
+        {
+          "bar": 28,
+          "seconds": 48.6
+        },
+        {
+          "bar": 29,
+          "seconds": 50.4
+        },
+        {
+          "bar": 30,
+          "seconds": 52.2
+        },
+        {
+          "bar": 31,
+          "seconds": 54.0
+        },
+        {
+          "bar": 32,
+          "seconds": 55.8
+        },
+        {
+          "bar": 33,
+          "seconds": 57.6
+        },
+        {
+          "bar": 34,
+          "seconds": 59.4
+        },
+        {
+          "bar": 35,
+          "seconds": 61.2
+        },
+        {
+          "bar": 36,
+          "seconds": 63.0
+        },
+        {
+          "bar": 37,
+          "seconds": 64.8
+        },
+        {
+          "bar": 38,
+          "seconds": 66.6
+        },
+        {
+          "bar": 39,
+          "seconds": 68.4
+        },
+        {
+          "bar": 40,
+          "seconds": 70.2
+        },
+        {
+          "bar": 41,
+          "seconds": 72.0
+        },
+        {
+          "bar": 42,
+          "seconds": 73.8
+        },
+        {
+          "bar": 43,
+          "seconds": 75.6
+        },
+        {
+          "bar": 44,
+          "seconds": 77.4
+        },
+        {
+          "bar": 45,
+          "seconds": 79.2
+        },
+        {
+          "bar": 46,
+          "seconds": 81.0
+        },
+        {
+          "bar": 47,
+          "seconds": 82.8
+        },
+        {
+          "bar": 48,
+          "seconds": 84.6
+        },
+        {
+          "bar": 49,
+          "seconds": 86.4
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 600000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-06": {
+      "ppq": 384,
+      "secondsPerBeat": 0.375,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 2,
+        "denominator": 2
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.5
+        },
+        {
+          "bar": 3,
+          "seconds": 3.0
+        },
+        {
+          "bar": 4,
+          "seconds": 4.5
+        },
+        {
+          "bar": 5,
+          "seconds": 6.0
+        },
+        {
+          "bar": 6,
+          "seconds": 7.5
+        },
+        {
+          "bar": 7,
+          "seconds": 9.0
+        },
+        {
+          "bar": 8,
+          "seconds": 10.5
+        },
+        {
+          "bar": 9,
+          "seconds": 12.0
+        },
+        {
+          "bar": 10,
+          "seconds": 13.5
+        },
+        {
+          "bar": 11,
+          "seconds": 15.0
+        },
+        {
+          "bar": 12,
+          "seconds": 16.5
+        },
+        {
+          "bar": 13,
+          "seconds": 18.0
+        },
+        {
+          "bar": 14,
+          "seconds": 19.5
+        },
+        {
+          "bar": 15,
+          "seconds": 21.0
+        },
+        {
+          "bar": 16,
+          "seconds": 22.5
+        },
+        {
+          "bar": 17,
+          "seconds": 24.0
+        },
+        {
+          "bar": 18,
+          "seconds": 25.5
+        },
+        {
+          "bar": 19,
+          "seconds": 27.0
+        },
+        {
+          "bar": 20,
+          "seconds": 28.5
+        },
+        {
+          "bar": 21,
+          "seconds": 30.0
+        },
+        {
+          "bar": 22,
+          "seconds": 31.5
+        },
+        {
+          "bar": 23,
+          "seconds": 33.0
+        },
+        {
+          "bar": 24,
+          "seconds": 34.5
+        },
+        {
+          "bar": 25,
+          "seconds": 36.0
+        },
+        {
+          "bar": 26,
+          "seconds": 37.5
+        },
+        {
+          "bar": 27,
+          "seconds": 39.0
+        },
+        {
+          "bar": 28,
+          "seconds": 40.5
+        },
+        {
+          "bar": 29,
+          "seconds": 42.0
+        },
+        {
+          "bar": 30,
+          "seconds": 43.5
+        },
+        {
+          "bar": 31,
+          "seconds": 45.0
+        },
+        {
+          "bar": 32,
+          "seconds": 46.5
+        },
+        {
+          "bar": 33,
+          "seconds": 48.0
+        },
+        {
+          "bar": 34,
+          "seconds": 49.5
+        },
+        {
+          "bar": 35,
+          "seconds": 51.0
+        },
+        {
+          "bar": 36,
+          "seconds": 52.5
+        },
+        {
+          "bar": 37,
+          "seconds": 54.0
+        },
+        {
+          "bar": 38,
+          "seconds": 55.5
+        },
+        {
+          "bar": 39,
+          "seconds": 57.0
+        },
+        {
+          "bar": 40,
+          "seconds": 58.5
+        },
+        {
+          "bar": 41,
+          "seconds": 60.0
+        },
+        {
+          "bar": 42,
+          "seconds": 61.5
+        },
+        {
+          "bar": 43,
+          "seconds": 63.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 375000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 2,
+          "denominator": 2
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-07": {
+      "ppq": 384,
+      "secondsPerBeat": 0.517241,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.551723
+        },
+        {
+          "bar": 3,
+          "seconds": 3.103446
+        },
+        {
+          "bar": 4,
+          "seconds": 4.655169
+        },
+        {
+          "bar": 5,
+          "seconds": 6.206892
+        },
+        {
+          "bar": 6,
+          "seconds": 7.758615
+        },
+        {
+          "bar": 7,
+          "seconds": 9.310338
+        },
+        {
+          "bar": 8,
+          "seconds": 10.862061
+        },
+        {
+          "bar": 9,
+          "seconds": 12.413784
+        },
+        {
+          "bar": 10,
+          "seconds": 13.965507
+        },
+        {
+          "bar": 11,
+          "seconds": 15.51723
+        },
+        {
+          "bar": 12,
+          "seconds": 17.068953
+        },
+        {
+          "bar": 13,
+          "seconds": 18.620676
+        },
+        {
+          "bar": 14,
+          "seconds": 20.172399
+        },
+        {
+          "bar": 15,
+          "seconds": 21.724122
+        },
+        {
+          "bar": 16,
+          "seconds": 23.275845
+        },
+        {
+          "bar": 17,
+          "seconds": 24.827568
+        },
+        {
+          "bar": 18,
+          "seconds": 26.379291
+        },
+        {
+          "bar": 19,
+          "seconds": 27.931014
+        },
+        {
+          "bar": 20,
+          "seconds": 29.482737
+        },
+        {
+          "bar": 21,
+          "seconds": 31.03446
+        },
+        {
+          "bar": 22,
+          "seconds": 32.586183
+        },
+        {
+          "bar": 23,
+          "seconds": 34.137906
+        },
+        {
+          "bar": 24,
+          "seconds": 35.689629
+        },
+        {
+          "bar": 25,
+          "seconds": 37.241352
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 517241,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv817-08": {
+      "ppq": 384,
+      "secondsPerBeat": 0.555555,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 6,
+        "denominator": 8
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.666665
+        },
+        {
+          "bar": 3,
+          "seconds": 3.33333
+        },
+        {
+          "bar": 4,
+          "seconds": 4.999995
+        },
+        {
+          "bar": 5,
+          "seconds": 6.66666
+        },
+        {
+          "bar": 6,
+          "seconds": 8.333325
+        },
+        {
+          "bar": 7,
+          "seconds": 9.99999
+        },
+        {
+          "bar": 8,
+          "seconds": 11.666655
+        },
+        {
+          "bar": 9,
+          "seconds": 13.33332
+        },
+        {
+          "bar": 10,
+          "seconds": 14.999985
+        },
+        {
+          "bar": 11,
+          "seconds": 16.66665
+        },
+        {
+          "bar": 12,
+          "seconds": 18.333315
+        },
+        {
+          "bar": 13,
+          "seconds": 19.99998
+        },
+        {
+          "bar": 14,
+          "seconds": 21.666645
+        },
+        {
+          "bar": 15,
+          "seconds": 23.33331
+        },
+        {
+          "bar": 16,
+          "seconds": 24.999975
+        },
+        {
+          "bar": 17,
+          "seconds": 26.66664
+        },
+        {
+          "bar": 18,
+          "seconds": 28.333305
+        },
+        {
+          "bar": 19,
+          "seconds": 29.99997
+        },
+        {
+          "bar": 20,
+          "seconds": 31.666635
+        },
+        {
+          "bar": 21,
+          "seconds": 33.3333
+        },
+        {
+          "bar": 22,
+          "seconds": 34.999965
+        },
+        {
+          "bar": 23,
+          "seconds": 36.66663
+        },
+        {
+          "bar": 24,
+          "seconds": 38.333295
+        },
+        {
+          "bar": 25,
+          "seconds": 39.99996
+        },
+        {
+          "bar": 26,
+          "seconds": 41.666625
+        },
+        {
+          "bar": 27,
+          "seconds": 43.33329
+        },
+        {
+          "bar": 28,
+          "seconds": 44.999955
+        },
+        {
+          "bar": 29,
+          "seconds": 46.66662
+        },
+        {
+          "bar": 30,
+          "seconds": 48.333285
+        },
+        {
+          "bar": 31,
+          "seconds": 49.99995
+        },
+        {
+          "bar": 32,
+          "seconds": 51.666615
+        },
+        {
+          "bar": 33,
+          "seconds": 53.33328
+        },
+        {
+          "bar": 34,
+          "seconds": 54.999945
+        },
+        {
+          "bar": 35,
+          "seconds": 56.66661
+        },
+        {
+          "bar": 36,
+          "seconds": 58.333275
+        },
+        {
+          "bar": 37,
+          "seconds": 59.99994
+        },
+        {
+          "bar": 38,
+          "seconds": 61.666605
+        },
+        {
+          "bar": 39,
+          "seconds": 63.33327
+        },
+        {
+          "bar": 40,
+          "seconds": 64.999935
+        },
+        {
+          "bar": 41,
+          "seconds": 66.6666
+        },
+        {
+          "bar": 42,
+          "seconds": 68.333265
+        },
+        {
+          "bar": 43,
+          "seconds": 69.99993
+        },
+        {
+          "bar": 44,
+          "seconds": 71.666595
+        },
+        {
+          "bar": 45,
+          "seconds": 73.33326
+        },
+        {
+          "bar": 46,
+          "seconds": 74.999925
+        },
+        {
+          "bar": 47,
+          "seconds": 76.66659
+        },
+        {
+          "bar": 48,
+          "seconds": 78.333255
+        },
+        {
+          "bar": 49,
+          "seconds": 79.99992
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 555555,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 6,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 4,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv825-01": {
+      "ppq": 384,
+      "secondsPerBeat": 1.5,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 6.0
+        },
+        {
+          "bar": 3,
+          "seconds": 12.0
+        },
+        {
+          "bar": 4,
+          "seconds": 18.0
+        },
+        {
+          "bar": 5,
+          "seconds": 24.0
+        },
+        {
+          "bar": 6,
+          "seconds": 30.0
+        },
+        {
+          "bar": 7,
+          "seconds": 36.0
+        },
+        {
+          "bar": 8,
+          "seconds": 42.0
+        },
+        {
+          "bar": 9,
+          "seconds": 48.0
+        },
+        {
+          "bar": 10,
+          "seconds": 54.0
+        },
+        {
+          "bar": 11,
+          "seconds": 60.0
+        },
+        {
+          "bar": 12,
+          "seconds": 66.0
+        },
+        {
+          "bar": 13,
+          "seconds": 72.0
+        },
+        {
+          "bar": 14,
+          "seconds": 78.0
+        },
+        {
+          "bar": 15,
+          "seconds": 84.0
+        },
+        {
+          "bar": 16,
+          "seconds": 90.0
+        },
+        {
+          "bar": 17,
+          "seconds": 96.0
+        },
+        {
+          "bar": 18,
+          "seconds": 102.0
+        },
+        {
+          "bar": 19,
+          "seconds": 108.0
+        },
+        {
+          "bar": 20,
+          "seconds": 114.0
+        },
+        {
+          "bar": 21,
+          "seconds": 120.0
+        },
+        {
+          "bar": 22,
+          "seconds": 126.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1500000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": false
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv825-02": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 4.0
+        },
+        {
+          "bar": 3,
+          "seconds": 8.0
+        },
+        {
+          "bar": 4,
+          "seconds": 12.0
+        },
+        {
+          "bar": 5,
+          "seconds": 16.0
+        },
+        {
+          "bar": 6,
+          "seconds": 20.0
+        },
+        {
+          "bar": 7,
+          "seconds": 24.0
+        },
+        {
+          "bar": 8,
+          "seconds": 28.0
+        },
+        {
+          "bar": 9,
+          "seconds": 32.0
+        },
+        {
+          "bar": 10,
+          "seconds": 36.0
+        },
+        {
+          "bar": 11,
+          "seconds": 40.0
+        },
+        {
+          "bar": 12,
+          "seconds": 44.0
+        },
+        {
+          "bar": 13,
+          "seconds": 48.0
+        },
+        {
+          "bar": 14,
+          "seconds": 52.0
+        },
+        {
+          "bar": 15,
+          "seconds": 56.0
+        },
+        {
+          "bar": 16,
+          "seconds": 60.0
+        },
+        {
+          "bar": 17,
+          "seconds": 64.0
+        },
+        {
+          "bar": 18,
+          "seconds": 68.0
+        },
+        {
+          "bar": 19,
+          "seconds": 72.0
+        },
+        {
+          "bar": 20,
+          "seconds": 76.0
+        },
+        {
+          "bar": 21,
+          "seconds": 80.0
+        },
+        {
+          "bar": 22,
+          "seconds": 84.0
+        },
+        {
+          "bar": 23,
+          "seconds": 88.0
+        },
+        {
+          "bar": 24,
+          "seconds": 92.0
+        },
+        {
+          "bar": 25,
+          "seconds": 96.0
+        },
+        {
+          "bar": 26,
+          "seconds": 100.0
+        },
+        {
+          "bar": 27,
+          "seconds": 104.0
+        },
+        {
+          "bar": 28,
+          "seconds": 108.0
+        },
+        {
+          "bar": 29,
+          "seconds": 112.0
+        },
+        {
+          "bar": 30,
+          "seconds": 116.0
+        },
+        {
+          "bar": 31,
+          "seconds": 120.0
+        },
+        {
+          "bar": 32,
+          "seconds": 124.0
+        },
+        {
+          "bar": 33,
+          "seconds": 128.0
+        },
+        {
+          "bar": 34,
+          "seconds": 132.0
+        },
+        {
+          "bar": 35,
+          "seconds": 136.0
+        },
+        {
+          "bar": 36,
+          "seconds": 140.0
+        },
+        {
+          "bar": 37,
+          "seconds": 144.0
+        },
+        {
+          "bar": 38,
+          "seconds": 148.0
+        },
+        {
+          "bar": 39,
+          "seconds": 152.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": false
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv825-03": {
+      "ppq": 384,
+      "secondsPerBeat": 0.560747,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.682241
+        },
+        {
+          "bar": 3,
+          "seconds": 3.364482
+        },
+        {
+          "bar": 4,
+          "seconds": 5.046723
+        },
+        {
+          "bar": 5,
+          "seconds": 6.728964
+        },
+        {
+          "bar": 6,
+          "seconds": 8.411205
+        },
+        {
+          "bar": 7,
+          "seconds": 10.093446
+        },
+        {
+          "bar": 8,
+          "seconds": 11.775687
+        },
+        {
+          "bar": 9,
+          "seconds": 13.457928
+        },
+        {
+          "bar": 10,
+          "seconds": 15.140169
+        },
+        {
+          "bar": 11,
+          "seconds": 16.82241
+        },
+        {
+          "bar": 12,
+          "seconds": 18.504651
+        },
+        {
+          "bar": 13,
+          "seconds": 20.186892
+        },
+        {
+          "bar": 14,
+          "seconds": 21.869133
+        },
+        {
+          "bar": 15,
+          "seconds": 23.551374
+        },
+        {
+          "bar": 16,
+          "seconds": 25.233615
+        },
+        {
+          "bar": 17,
+          "seconds": 26.915856
+        },
+        {
+          "bar": 18,
+          "seconds": 28.598097
+        },
+        {
+          "bar": 19,
+          "seconds": 30.280338
+        },
+        {
+          "bar": 20,
+          "seconds": 31.962579
+        },
+        {
+          "bar": 21,
+          "seconds": 33.64482
+        },
+        {
+          "bar": 22,
+          "seconds": 35.327061
+        },
+        {
+          "bar": 23,
+          "seconds": 37.009302
+        },
+        {
+          "bar": 24,
+          "seconds": 38.691543
+        },
+        {
+          "bar": 25,
+          "seconds": 40.373784
+        },
+        {
+          "bar": 26,
+          "seconds": 42.056025
+        },
+        {
+          "bar": 27,
+          "seconds": 43.738266
+        },
+        {
+          "bar": 28,
+          "seconds": 45.420507
+        },
+        {
+          "bar": 29,
+          "seconds": 47.102748
+        },
+        {
+          "bar": 30,
+          "seconds": 48.784989
+        },
+        {
+          "bar": 31,
+          "seconds": 50.46723
+        },
+        {
+          "bar": 32,
+          "seconds": 52.149471
+        },
+        {
+          "bar": 33,
+          "seconds": 53.831712
+        },
+        {
+          "bar": 34,
+          "seconds": 55.513953
+        },
+        {
+          "bar": 35,
+          "seconds": 57.196194
+        },
+        {
+          "bar": 36,
+          "seconds": 58.878435
+        },
+        {
+          "bar": 37,
+          "seconds": 60.560676
+        },
+        {
+          "bar": 38,
+          "seconds": 62.242917
+        },
+        {
+          "bar": 39,
+          "seconds": 63.925158
+        },
+        {
+          "bar": 40,
+          "seconds": 65.607399
+        },
+        {
+          "bar": 41,
+          "seconds": 67.28964
+        },
+        {
+          "bar": 42,
+          "seconds": 68.971881
+        },
+        {
+          "bar": 43,
+          "seconds": 70.654122
+        },
+        {
+          "bar": 44,
+          "seconds": 72.336363
+        },
+        {
+          "bar": 45,
+          "seconds": 74.018604
+        },
+        {
+          "bar": 46,
+          "seconds": 75.700845
+        },
+        {
+          "bar": 47,
+          "seconds": 77.383086
+        },
+        {
+          "bar": 48,
+          "seconds": 79.065327
+        },
+        {
+          "bar": 49,
+          "seconds": 80.747568
+        },
+        {
+          "bar": 50,
+          "seconds": 82.429809
+        },
+        {
+          "bar": 51,
+          "seconds": 84.11205
+        },
+        {
+          "bar": 52,
+          "seconds": 85.794291
+        },
+        {
+          "bar": 53,
+          "seconds": 87.476532
+        },
+        {
+          "bar": 54,
+          "seconds": 89.158773
+        },
+        {
+          "bar": 55,
+          "seconds": 90.841014
+        },
+        {
+          "bar": 56,
+          "seconds": 92.523255
+        },
+        {
+          "bar": 57,
+          "seconds": 94.205496
+        },
+        {
+          "bar": 58,
+          "seconds": 95.887737
+        },
+        {
+          "bar": 59,
+          "seconds": 97.569978
+        },
+        {
+          "bar": 60,
+          "seconds": 99.252219
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 560747,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": false
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv825-04": {
+      "ppq": 384,
+      "secondsPerBeat": 0.560747,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.682241
+        },
+        {
+          "bar": 3,
+          "seconds": 3.364482
+        },
+        {
+          "bar": 4,
+          "seconds": 5.046723
+        },
+        {
+          "bar": 5,
+          "seconds": 6.728964
+        },
+        {
+          "bar": 6,
+          "seconds": 8.411205
+        },
+        {
+          "bar": 7,
+          "seconds": 10.093446
+        },
+        {
+          "bar": 8,
+          "seconds": 11.775687
+        },
+        {
+          "bar": 9,
+          "seconds": 13.457928
+        },
+        {
+          "bar": 10,
+          "seconds": 15.140169
+        },
+        {
+          "bar": 11,
+          "seconds": 16.82241
+        },
+        {
+          "bar": 12,
+          "seconds": 18.504651
+        },
+        {
+          "bar": 13,
+          "seconds": 20.186892
+        },
+        {
+          "bar": 14,
+          "seconds": 21.869133
+        },
+        {
+          "bar": 15,
+          "seconds": 23.551374
+        },
+        {
+          "bar": 16,
+          "seconds": 25.233615
+        },
+        {
+          "bar": 17,
+          "seconds": 26.915856
+        },
+        {
+          "bar": 18,
+          "seconds": 28.598097
+        },
+        {
+          "bar": 19,
+          "seconds": 30.280338
+        },
+        {
+          "bar": 20,
+          "seconds": 31.962579
+        },
+        {
+          "bar": 21,
+          "seconds": 33.64482
+        },
+        {
+          "bar": 22,
+          "seconds": 35.327061
+        },
+        {
+          "bar": 23,
+          "seconds": 37.009302
+        },
+        {
+          "bar": 24,
+          "seconds": 38.691543
+        },
+        {
+          "bar": 25,
+          "seconds": 40.373784
+        },
+        {
+          "bar": 26,
+          "seconds": 42.056025
+        },
+        {
+          "bar": 27,
+          "seconds": 43.738266
+        },
+        {
+          "bar": 28,
+          "seconds": 45.420507
+        },
+        {
+          "bar": 29,
+          "seconds": 47.102748
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 560747,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": false
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv825-05": {
+      "ppq": 384,
+      "secondsPerBeat": 0.560747,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.682241
+        },
+        {
+          "bar": 3,
+          "seconds": 3.364482
+        },
+        {
+          "bar": 4,
+          "seconds": 5.046723
+        },
+        {
+          "bar": 5,
+          "seconds": 6.728964
+        },
+        {
+          "bar": 6,
+          "seconds": 8.411205
+        },
+        {
+          "bar": 7,
+          "seconds": 10.093446
+        },
+        {
+          "bar": 8,
+          "seconds": 11.775687
+        },
+        {
+          "bar": 9,
+          "seconds": 13.457928
+        },
+        {
+          "bar": 10,
+          "seconds": 15.140169
+        },
+        {
+          "bar": 11,
+          "seconds": 16.82241
+        },
+        {
+          "bar": 12,
+          "seconds": 18.504651
+        },
+        {
+          "bar": 13,
+          "seconds": 20.186892
+        },
+        {
+          "bar": 14,
+          "seconds": 21.869133
+        },
+        {
+          "bar": 15,
+          "seconds": 23.551374
+        },
+        {
+          "bar": 16,
+          "seconds": 25.233615
+        },
+        {
+          "bar": 17,
+          "seconds": 26.915856
+        },
+        {
+          "bar": 18,
+          "seconds": 28.598097
+        },
+        {
+          "bar": 19,
+          "seconds": 30.280338
+        },
+        {
+          "bar": 20,
+          "seconds": 31.962579
+        },
+        {
+          "bar": 21,
+          "seconds": 33.64482
+        },
+        {
+          "bar": 22,
+          "seconds": 35.327061
+        },
+        {
+          "bar": 23,
+          "seconds": 37.009302
+        },
+        {
+          "bar": 24,
+          "seconds": 38.691543
+        },
+        {
+          "bar": 25,
+          "seconds": 40.373784
+        },
+        {
+          "bar": 26,
+          "seconds": 42.056025
+        },
+        {
+          "bar": 27,
+          "seconds": 43.738266
+        },
+        {
+          "bar": 28,
+          "seconds": 45.420507
+        },
+        {
+          "bar": 29,
+          "seconds": 47.102748
+        },
+        {
+          "bar": 30,
+          "seconds": 48.784989
+        },
+        {
+          "bar": 31,
+          "seconds": 50.46723
+        },
+        {
+          "bar": 32,
+          "seconds": 52.149471
+        },
+        {
+          "bar": 33,
+          "seconds": 53.831712
+        },
+        {
+          "bar": 34,
+          "seconds": 55.513953
+        },
+        {
+          "bar": 35,
+          "seconds": 57.196194
+        },
+        {
+          "bar": 36,
+          "seconds": 58.878435
+        },
+        {
+          "bar": 37,
+          "seconds": 60.560676
+        },
+        {
+          "bar": 38,
+          "seconds": 62.242917
+        },
+        {
+          "bar": 39,
+          "seconds": 63.925158
+        },
+        {
+          "bar": 40,
+          "seconds": 65.607399
+        },
+        {
+          "bar": 41,
+          "seconds": 67.28964
+        },
+        {
+          "bar": 42,
+          "seconds": 68.971881
+        },
+        {
+          "bar": 43,
+          "seconds": 70.654122
+        },
+        {
+          "bar": 44,
+          "seconds": 72.336363
+        },
+        {
+          "bar": 45,
+          "seconds": 74.018604
+        },
+        {
+          "bar": 46,
+          "seconds": 75.700845
+        },
+        {
+          "bar": 47,
+          "seconds": 77.383086
+        },
+        {
+          "bar": 48,
+          "seconds": 79.065327
+        },
+        {
+          "bar": 49,
+          "seconds": 80.747568
+        },
+        {
+          "bar": 50,
+          "seconds": 82.429809
+        },
+        {
+          "bar": 51,
+          "seconds": 84.11205
+        },
+        {
+          "bar": 52,
+          "seconds": 85.794291
+        },
+        {
+          "bar": 53,
+          "seconds": 87.476532
+        },
+        {
+          "bar": 54,
+          "seconds": 89.158773
+        },
+        {
+          "bar": 55,
+          "seconds": 90.841014
+        },
+        {
+          "bar": 56,
+          "seconds": 92.523255
+        },
+        {
+          "bar": 57,
+          "seconds": 94.205496
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 560747,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": false
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv825-06": {
+      "ppq": 384,
+      "secondsPerBeat": 0.560747,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 2.242988
+        },
+        {
+          "bar": 3,
+          "seconds": 4.485976
+        },
+        {
+          "bar": 4,
+          "seconds": 6.728964
+        },
+        {
+          "bar": 5,
+          "seconds": 8.971952
+        },
+        {
+          "bar": 6,
+          "seconds": 11.21494
+        },
+        {
+          "bar": 7,
+          "seconds": 13.457928
+        },
+        {
+          "bar": 8,
+          "seconds": 15.700916
+        },
+        {
+          "bar": 9,
+          "seconds": 17.943904
+        },
+        {
+          "bar": 10,
+          "seconds": 20.186892
+        },
+        {
+          "bar": 11,
+          "seconds": 22.42988
+        },
+        {
+          "bar": 12,
+          "seconds": 24.672868
+        },
+        {
+          "bar": 13,
+          "seconds": 26.915856
+        },
+        {
+          "bar": 14,
+          "seconds": 29.158844
+        },
+        {
+          "bar": 15,
+          "seconds": 31.401832
+        },
+        {
+          "bar": 16,
+          "seconds": 33.64482
+        },
+        {
+          "bar": 17,
+          "seconds": 35.887808
+        },
+        {
+          "bar": 18,
+          "seconds": 38.130796
+        },
+        {
+          "bar": 19,
+          "seconds": 40.373784
+        },
+        {
+          "bar": 20,
+          "seconds": 42.616772
+        },
+        {
+          "bar": 21,
+          "seconds": 44.85976
+        },
+        {
+          "bar": 22,
+          "seconds": 47.102748
+        },
+        {
+          "bar": 23,
+          "seconds": 49.345736
+        },
+        {
+          "bar": 24,
+          "seconds": 51.588724
+        },
+        {
+          "bar": 25,
+          "seconds": 53.831712
+        },
+        {
+          "bar": 26,
+          "seconds": 56.0747
+        },
+        {
+          "bar": 27,
+          "seconds": 58.317688
+        },
+        {
+          "bar": 28,
+          "seconds": 60.560676
+        },
+        {
+          "bar": 29,
+          "seconds": 62.803664
+        },
+        {
+          "bar": 30,
+          "seconds": 65.046652
+        },
+        {
+          "bar": 31,
+          "seconds": 67.28964
+        },
+        {
+          "bar": 32,
+          "seconds": 69.532628
+        },
+        {
+          "bar": 33,
+          "seconds": 71.775616
+        },
+        {
+          "bar": 34,
+          "seconds": 74.018604
+        },
+        {
+          "bar": 35,
+          "seconds": 76.261592
+        },
+        {
+          "bar": 36,
+          "seconds": 78.50458
+        },
+        {
+          "bar": 37,
+          "seconds": 80.747568
+        },
+        {
+          "bar": 38,
+          "seconds": 82.990556
+        },
+        {
+          "bar": 39,
+          "seconds": 85.233544
+        },
+        {
+          "bar": 40,
+          "seconds": 87.476532
+        },
+        {
+          "bar": 41,
+          "seconds": 89.71952
+        },
+        {
+          "bar": 42,
+          "seconds": 91.962508
+        },
+        {
+          "bar": 43,
+          "seconds": 94.205496
+        },
+        {
+          "bar": 44,
+          "seconds": 96.448484
+        },
+        {
+          "bar": 45,
+          "seconds": 98.691472
+        },
+        {
+          "bar": 46,
+          "seconds": 100.93446
+        },
+        {
+          "bar": 47,
+          "seconds": 103.177448
+        },
+        {
+          "bar": 48,
+          "seconds": 105.420436
+        },
+        {
+          "bar": 49,
+          "seconds": 107.663424
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 560747,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": false
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv828-01": {
+      "ppq": 384,
+      "secondsPerBeat": 0.833333,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 2,
+        "denominator": 2
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.333332
+        },
+        {
+          "bar": 3,
+          "seconds": 6.666664
+        },
+        {
+          "bar": 4,
+          "seconds": 9.999996
+        },
+        {
+          "bar": 5,
+          "seconds": 13.333328
+        },
+        {
+          "bar": 6,
+          "seconds": 16.66666
+        },
+        {
+          "bar": 7,
+          "seconds": 19.999992
+        },
+        {
+          "bar": 8,
+          "seconds": 23.333324
+        },
+        {
+          "bar": 9,
+          "seconds": 26.666656
+        },
+        {
+          "bar": 10,
+          "seconds": 29.999988
+        },
+        {
+          "bar": 11,
+          "seconds": 33.33332
+        },
+        {
+          "bar": 12,
+          "seconds": 36.666652
+        },
+        {
+          "bar": 13,
+          "seconds": 39.999984
+        },
+        {
+          "bar": 14,
+          "seconds": 43.333316
+        },
+        {
+          "bar": 15,
+          "seconds": 46.666648
+        },
+        {
+          "bar": 16,
+          "seconds": 49.99998
+        },
+        {
+          "bar": 17,
+          "seconds": 53.333312
+        },
+        {
+          "bar": 18,
+          "seconds": 56.666644
+        },
+        {
+          "bar": 19,
+          "seconds": 59.999976
+        },
+        {
+          "bar": 20,
+          "seconds": 62.125956
+        },
+        {
+          "bar": 21,
+          "seconds": 64.251936
+        },
+        {
+          "bar": 22,
+          "seconds": 66.377916
+        },
+        {
+          "bar": 23,
+          "seconds": 68.503896
+        },
+        {
+          "bar": 24,
+          "seconds": 70.629876
+        },
+        {
+          "bar": 25,
+          "seconds": 72.755856
+        },
+        {
+          "bar": 26,
+          "seconds": 74.881836
+        },
+        {
+          "bar": 27,
+          "seconds": 77.007816
+        },
+        {
+          "bar": 28,
+          "seconds": 79.133796
+        },
+        {
+          "bar": 29,
+          "seconds": 81.259776
+        },
+        {
+          "bar": 30,
+          "seconds": 83.385756
+        },
+        {
+          "bar": 31,
+          "seconds": 85.511736
+        },
+        {
+          "bar": 32,
+          "seconds": 87.637716
+        },
+        {
+          "bar": 33,
+          "seconds": 89.763696
+        },
+        {
+          "bar": 34,
+          "seconds": 91.889676
+        },
+        {
+          "bar": 35,
+          "seconds": 94.015656
+        },
+        {
+          "bar": 36,
+          "seconds": 96.141636
+        },
+        {
+          "bar": 37,
+          "seconds": 98.267616
+        },
+        {
+          "bar": 38,
+          "seconds": 100.393596
+        },
+        {
+          "bar": 39,
+          "seconds": 102.519576
+        },
+        {
+          "bar": 40,
+          "seconds": 104.645556
+        },
+        {
+          "bar": 41,
+          "seconds": 106.771536
+        },
+        {
+          "bar": 42,
+          "seconds": 108.897516
+        },
+        {
+          "bar": 43,
+          "seconds": 111.023496
+        },
+        {
+          "bar": 44,
+          "seconds": 113.149476
+        },
+        {
+          "bar": 45,
+          "seconds": 115.275456
+        },
+        {
+          "bar": 46,
+          "seconds": 117.401436
+        },
+        {
+          "bar": 47,
+          "seconds": 119.527416
+        },
+        {
+          "bar": 48,
+          "seconds": 121.653396
+        },
+        {
+          "bar": 49,
+          "seconds": 123.779376
+        },
+        {
+          "bar": 50,
+          "seconds": 125.905356
+        },
+        {
+          "bar": 51,
+          "seconds": 128.031336
+        },
+        {
+          "bar": 52,
+          "seconds": 130.157316
+        },
+        {
+          "bar": 53,
+          "seconds": 132.283296
+        },
+        {
+          "bar": 54,
+          "seconds": 134.409276
+        },
+        {
+          "bar": 55,
+          "seconds": 136.535256
+        },
+        {
+          "bar": 56,
+          "seconds": 138.661236
+        },
+        {
+          "bar": 57,
+          "seconds": 140.787216
+        },
+        {
+          "bar": 58,
+          "seconds": 142.913196
+        },
+        {
+          "bar": 59,
+          "seconds": 145.039176
+        },
+        {
+          "bar": 60,
+          "seconds": 147.165156
+        },
+        {
+          "bar": 61,
+          "seconds": 149.291136
+        },
+        {
+          "bar": 62,
+          "seconds": 151.417116
+        },
+        {
+          "bar": 63,
+          "seconds": 153.543096
+        },
+        {
+          "bar": 64,
+          "seconds": 155.669076
+        },
+        {
+          "bar": 65,
+          "seconds": 157.795056
+        },
+        {
+          "bar": 66,
+          "seconds": 159.921036
+        },
+        {
+          "bar": 67,
+          "seconds": 162.047016
+        },
+        {
+          "bar": 68,
+          "seconds": 164.172996
+        },
+        {
+          "bar": 69,
+          "seconds": 166.298976
+        },
+        {
+          "bar": 70,
+          "seconds": 168.424956
+        },
+        {
+          "bar": 71,
+          "seconds": 170.550936
+        },
+        {
+          "bar": 72,
+          "seconds": 172.676916
+        },
+        {
+          "bar": 73,
+          "seconds": 174.802896
+        },
+        {
+          "bar": 74,
+          "seconds": 176.928876
+        },
+        {
+          "bar": 75,
+          "seconds": 179.054856
+        },
+        {
+          "bar": 76,
+          "seconds": 181.180836
+        },
+        {
+          "bar": 77,
+          "seconds": 183.306816
+        },
+        {
+          "bar": 78,
+          "seconds": 185.432796
+        },
+        {
+          "bar": 79,
+          "seconds": 187.558776
+        },
+        {
+          "bar": 80,
+          "seconds": 189.684756
+        },
+        {
+          "bar": 81,
+          "seconds": 191.810736
+        },
+        {
+          "bar": 82,
+          "seconds": 193.936716
+        },
+        {
+          "bar": 83,
+          "seconds": 196.062696
+        },
+        {
+          "bar": 84,
+          "seconds": 198.188676
+        },
+        {
+          "bar": 85,
+          "seconds": 200.314656
+        },
+        {
+          "bar": 86,
+          "seconds": 202.440636
+        },
+        {
+          "bar": 87,
+          "seconds": 204.566616
+        },
+        {
+          "bar": 88,
+          "seconds": 206.692596
+        },
+        {
+          "bar": 89,
+          "seconds": 208.818576
+        },
+        {
+          "bar": 90,
+          "seconds": 210.944556
+        },
+        {
+          "bar": 91,
+          "seconds": 213.070536
+        },
+        {
+          "bar": 92,
+          "seconds": 215.196516
+        },
+        {
+          "bar": 93,
+          "seconds": 217.322496
+        },
+        {
+          "bar": 94,
+          "seconds": 219.448476
+        },
+        {
+          "bar": 95,
+          "seconds": 221.574456
+        },
+        {
+          "bar": 96,
+          "seconds": 223.700436
+        },
+        {
+          "bar": 97,
+          "seconds": 225.826416
+        },
+        {
+          "bar": 98,
+          "seconds": 227.952396
+        },
+        {
+          "bar": 99,
+          "seconds": 230.078376
+        },
+        {
+          "bar": 100,
+          "seconds": 232.204356
+        },
+        {
+          "bar": 101,
+          "seconds": 234.330336
+        },
+        {
+          "bar": 102,
+          "seconds": 236.456316
+        },
+        {
+          "bar": 103,
+          "seconds": 238.582296
+        },
+        {
+          "bar": 104,
+          "seconds": 240.708276
+        },
+        {
+          "bar": 105,
+          "seconds": 242.834256
+        },
+        {
+          "bar": 106,
+          "seconds": 244.960236
+        },
+        {
+          "bar": 107,
+          "seconds": 247.086216
+        },
+        {
+          "bar": 108,
+          "seconds": 249.212196
+        },
+        {
+          "bar": 109,
+          "seconds": 251.338176
+        },
+        {
+          "bar": 110,
+          "seconds": 253.464156
+        },
+        {
+          "bar": 111,
+          "seconds": 255.590136
+        },
+        {
+          "bar": 112,
+          "seconds": 257.716116
+        },
+        {
+          "bar": 113,
+          "seconds": 259.842096
+        },
+        {
+          "bar": 114,
+          "seconds": 261.968076
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 833333,
+          "seconds": 0.0
+        },
+        {
+          "tick": 27648,
+          "microsecondsPerQuarter": 472440,
+          "seconds": 59.999976
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 2,
+          "denominator": 2
+        },
+        {
+          "tick": 27648,
+          "numerator": 9,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv828-02": {
+      "ppq": 384,
+      "secondsPerBeat": 0.9375,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.75
+        },
+        {
+          "bar": 3,
+          "seconds": 7.5
+        },
+        {
+          "bar": 4,
+          "seconds": 11.25
+        },
+        {
+          "bar": 5,
+          "seconds": 15.0
+        },
+        {
+          "bar": 6,
+          "seconds": 18.75
+        },
+        {
+          "bar": 7,
+          "seconds": 22.5
+        },
+        {
+          "bar": 8,
+          "seconds": 26.25
+        },
+        {
+          "bar": 9,
+          "seconds": 30.0
+        },
+        {
+          "bar": 10,
+          "seconds": 33.75
+        },
+        {
+          "bar": 11,
+          "seconds": 37.5
+        },
+        {
+          "bar": 12,
+          "seconds": 41.25
+        },
+        {
+          "bar": 13,
+          "seconds": 45.0
+        },
+        {
+          "bar": 14,
+          "seconds": 48.75
+        },
+        {
+          "bar": 15,
+          "seconds": 52.5
+        },
+        {
+          "bar": 16,
+          "seconds": 56.25
+        },
+        {
+          "bar": 17,
+          "seconds": 60.0
+        },
+        {
+          "bar": 18,
+          "seconds": 63.75
+        },
+        {
+          "bar": 19,
+          "seconds": 67.5
+        },
+        {
+          "bar": 20,
+          "seconds": 71.25
+        },
+        {
+          "bar": 21,
+          "seconds": 75.0
+        },
+        {
+          "bar": 22,
+          "seconds": 78.75
+        },
+        {
+          "bar": 23,
+          "seconds": 82.5
+        },
+        {
+          "bar": 24,
+          "seconds": 86.25
+        },
+        {
+          "bar": 25,
+          "seconds": 90.0
+        },
+        {
+          "bar": 26,
+          "seconds": 93.75
+        },
+        {
+          "bar": 27,
+          "seconds": 97.5
+        },
+        {
+          "bar": 28,
+          "seconds": 101.25
+        },
+        {
+          "bar": 29,
+          "seconds": 105.0
+        },
+        {
+          "bar": 30,
+          "seconds": 108.75
+        },
+        {
+          "bar": 31,
+          "seconds": 112.5
+        },
+        {
+          "bar": 32,
+          "seconds": 116.25
+        },
+        {
+          "bar": 33,
+          "seconds": 120.0
+        },
+        {
+          "bar": 34,
+          "seconds": 123.75
+        },
+        {
+          "bar": 35,
+          "seconds": 127.5
+        },
+        {
+          "bar": 36,
+          "seconds": 131.25
+        },
+        {
+          "bar": 37,
+          "seconds": 135.0
+        },
+        {
+          "bar": 38,
+          "seconds": 138.75
+        },
+        {
+          "bar": 39,
+          "seconds": 142.5
+        },
+        {
+          "bar": 40,
+          "seconds": 146.25
+        },
+        {
+          "bar": 41,
+          "seconds": 150.0
+        },
+        {
+          "bar": 42,
+          "seconds": 153.75
+        },
+        {
+          "bar": 43,
+          "seconds": 157.5
+        },
+        {
+          "bar": 44,
+          "seconds": 161.25
+        },
+        {
+          "bar": 45,
+          "seconds": 165.0
+        },
+        {
+          "bar": 46,
+          "seconds": 168.75
+        },
+        {
+          "bar": 47,
+          "seconds": 172.5
+        },
+        {
+          "bar": 48,
+          "seconds": 176.25
+        },
+        {
+          "bar": 49,
+          "seconds": 180.0
+        },
+        {
+          "bar": 50,
+          "seconds": 183.75
+        },
+        {
+          "bar": 51,
+          "seconds": 187.5
+        },
+        {
+          "bar": 52,
+          "seconds": 191.25
+        },
+        {
+          "bar": 53,
+          "seconds": 195.0
+        },
+        {
+          "bar": 54,
+          "seconds": 198.75
+        },
+        {
+          "bar": 55,
+          "seconds": 202.5
+        },
+        {
+          "bar": 56,
+          "seconds": 206.25
+        },
+        {
+          "bar": 57,
+          "seconds": 210.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 937500,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv828-03": {
+      "ppq": 384,
+      "secondsPerBeat": 0.5,
+      "beatsPerBar": 6.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 2
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.0
+        },
+        {
+          "bar": 3,
+          "seconds": 6.0
+        },
+        {
+          "bar": 4,
+          "seconds": 9.0
+        },
+        {
+          "bar": 5,
+          "seconds": 12.0
+        },
+        {
+          "bar": 6,
+          "seconds": 15.0
+        },
+        {
+          "bar": 7,
+          "seconds": 18.0
+        },
+        {
+          "bar": 8,
+          "seconds": 21.0
+        },
+        {
+          "bar": 9,
+          "seconds": 24.0
+        },
+        {
+          "bar": 10,
+          "seconds": 27.0
+        },
+        {
+          "bar": 11,
+          "seconds": 30.0
+        },
+        {
+          "bar": 12,
+          "seconds": 33.0
+        },
+        {
+          "bar": 13,
+          "seconds": 36.0
+        },
+        {
+          "bar": 14,
+          "seconds": 39.0
+        },
+        {
+          "bar": 15,
+          "seconds": 42.0
+        },
+        {
+          "bar": 16,
+          "seconds": 45.0
+        },
+        {
+          "bar": 17,
+          "seconds": 48.0
+        },
+        {
+          "bar": 18,
+          "seconds": 51.0
+        },
+        {
+          "bar": 19,
+          "seconds": 54.0
+        },
+        {
+          "bar": 20,
+          "seconds": 57.0
+        },
+        {
+          "bar": 21,
+          "seconds": 60.0
+        },
+        {
+          "bar": 22,
+          "seconds": 63.0
+        },
+        {
+          "bar": 23,
+          "seconds": 66.0
+        },
+        {
+          "bar": 24,
+          "seconds": 69.0
+        },
+        {
+          "bar": 25,
+          "seconds": 72.0
+        },
+        {
+          "bar": 26,
+          "seconds": 75.0
+        },
+        {
+          "bar": 27,
+          "seconds": 78.0
+        },
+        {
+          "bar": 28,
+          "seconds": 81.0
+        },
+        {
+          "bar": 29,
+          "seconds": 84.0
+        },
+        {
+          "bar": 30,
+          "seconds": 87.0
+        },
+        {
+          "bar": 31,
+          "seconds": 90.0
+        },
+        {
+          "bar": 32,
+          "seconds": 93.0
+        },
+        {
+          "bar": 33,
+          "seconds": 96.0
+        },
+        {
+          "bar": 34,
+          "seconds": 99.0
+        },
+        {
+          "bar": 35,
+          "seconds": 102.0
+        },
+        {
+          "bar": 36,
+          "seconds": 105.0
+        },
+        {
+          "bar": 37,
+          "seconds": 108.0
+        },
+        {
+          "bar": 38,
+          "seconds": 111.0
+        },
+        {
+          "bar": 39,
+          "seconds": 114.0
+        },
+        {
+          "bar": 40,
+          "seconds": 117.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 500000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 2
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv828-04": {
+      "ppq": 384,
+      "secondsPerBeat": 0.666666,
+      "beatsPerBar": 2.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 2,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.333332
+        },
+        {
+          "bar": 3,
+          "seconds": 2.666664
+        },
+        {
+          "bar": 4,
+          "seconds": 3.999996
+        },
+        {
+          "bar": 5,
+          "seconds": 5.333328
+        },
+        {
+          "bar": 6,
+          "seconds": 6.66666
+        },
+        {
+          "bar": 7,
+          "seconds": 7.999992
+        },
+        {
+          "bar": 8,
+          "seconds": 9.333324
+        },
+        {
+          "bar": 9,
+          "seconds": 10.666656
+        },
+        {
+          "bar": 10,
+          "seconds": 11.999988
+        },
+        {
+          "bar": 11,
+          "seconds": 13.33332
+        },
+        {
+          "bar": 12,
+          "seconds": 14.666652
+        },
+        {
+          "bar": 13,
+          "seconds": 15.999984
+        },
+        {
+          "bar": 14,
+          "seconds": 17.333316
+        },
+        {
+          "bar": 15,
+          "seconds": 18.666648
+        },
+        {
+          "bar": 16,
+          "seconds": 19.99998
+        },
+        {
+          "bar": 17,
+          "seconds": 21.333312
+        },
+        {
+          "bar": 18,
+          "seconds": 22.666644
+        },
+        {
+          "bar": 19,
+          "seconds": 23.999976
+        },
+        {
+          "bar": 20,
+          "seconds": 25.333308
+        },
+        {
+          "bar": 21,
+          "seconds": 26.66664
+        },
+        {
+          "bar": 22,
+          "seconds": 27.999972
+        },
+        {
+          "bar": 23,
+          "seconds": 29.333304
+        },
+        {
+          "bar": 24,
+          "seconds": 30.666636
+        },
+        {
+          "bar": 25,
+          "seconds": 31.999968
+        },
+        {
+          "bar": 26,
+          "seconds": 33.3333
+        },
+        {
+          "bar": 27,
+          "seconds": 34.666632
+        },
+        {
+          "bar": 28,
+          "seconds": 35.999964
+        },
+        {
+          "bar": 29,
+          "seconds": 37.333296
+        },
+        {
+          "bar": 30,
+          "seconds": 38.666628
+        },
+        {
+          "bar": 31,
+          "seconds": 39.99996
+        },
+        {
+          "bar": 32,
+          "seconds": 41.333292
+        },
+        {
+          "bar": 33,
+          "seconds": 42.666624
+        },
+        {
+          "bar": 34,
+          "seconds": 43.999956
+        },
+        {
+          "bar": 35,
+          "seconds": 45.333288
+        },
+        {
+          "bar": 36,
+          "seconds": 46.66662
+        },
+        {
+          "bar": 37,
+          "seconds": 47.999952
+        },
+        {
+          "bar": 38,
+          "seconds": 49.333284
+        },
+        {
+          "bar": 39,
+          "seconds": 50.666616
+        },
+        {
+          "bar": 40,
+          "seconds": 51.999948
+        },
+        {
+          "bar": 41,
+          "seconds": 53.33328
+        },
+        {
+          "bar": 42,
+          "seconds": 54.666612
+        },
+        {
+          "bar": 43,
+          "seconds": 55.999944
+        },
+        {
+          "bar": 44,
+          "seconds": 57.333276
+        },
+        {
+          "bar": 45,
+          "seconds": 58.666608
+        },
+        {
+          "bar": 46,
+          "seconds": 59.99994
+        },
+        {
+          "bar": 47,
+          "seconds": 61.333272
+        },
+        {
+          "bar": 48,
+          "seconds": 62.666604
+        },
+        {
+          "bar": 49,
+          "seconds": 63.999936
+        },
+        {
+          "bar": 50,
+          "seconds": 65.333268
+        },
+        {
+          "bar": 51,
+          "seconds": 66.6666
+        },
+        {
+          "bar": 52,
+          "seconds": 67.999932
+        },
+        {
+          "bar": 53,
+          "seconds": 69.333264
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 666666,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 2,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv828-05": {
+      "ppq": 384,
+      "secondsPerBeat": 1.2,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.6
+        },
+        {
+          "bar": 3,
+          "seconds": 7.2
+        },
+        {
+          "bar": 4,
+          "seconds": 10.8
+        },
+        {
+          "bar": 5,
+          "seconds": 14.4
+        },
+        {
+          "bar": 6,
+          "seconds": 18.0
+        },
+        {
+          "bar": 7,
+          "seconds": 21.6
+        },
+        {
+          "bar": 8,
+          "seconds": 25.2
+        },
+        {
+          "bar": 9,
+          "seconds": 28.8
+        },
+        {
+          "bar": 10,
+          "seconds": 32.4
+        },
+        {
+          "bar": 11,
+          "seconds": 36.0
+        },
+        {
+          "bar": 12,
+          "seconds": 39.6
+        },
+        {
+          "bar": 13,
+          "seconds": 43.2
+        },
+        {
+          "bar": 14,
+          "seconds": 46.8
+        },
+        {
+          "bar": 15,
+          "seconds": 50.4
+        },
+        {
+          "bar": 16,
+          "seconds": 54.0
+        },
+        {
+          "bar": 17,
+          "seconds": 57.6
+        },
+        {
+          "bar": 18,
+          "seconds": 61.2
+        },
+        {
+          "bar": 19,
+          "seconds": 64.8
+        },
+        {
+          "bar": 20,
+          "seconds": 68.4
+        },
+        {
+          "bar": 21,
+          "seconds": 72.0
+        },
+        {
+          "bar": 22,
+          "seconds": 75.6
+        },
+        {
+          "bar": 23,
+          "seconds": 79.2
+        },
+        {
+          "bar": 24,
+          "seconds": 82.8
+        },
+        {
+          "bar": 25,
+          "seconds": 86.4
+        },
+        {
+          "bar": 26,
+          "seconds": 90.0
+        },
+        {
+          "bar": 27,
+          "seconds": 93.6
+        },
+        {
+          "bar": 28,
+          "seconds": 97.2
+        },
+        {
+          "bar": 29,
+          "seconds": 100.8
+        },
+        {
+          "bar": 30,
+          "seconds": 104.4
+        },
+        {
+          "bar": 31,
+          "seconds": 108.0
+        },
+        {
+          "bar": 32,
+          "seconds": 111.6
+        },
+        {
+          "bar": 33,
+          "seconds": 115.2
+        },
+        {
+          "bar": 34,
+          "seconds": 118.8
+        },
+        {
+          "bar": 35,
+          "seconds": 122.4
+        },
+        {
+          "bar": 36,
+          "seconds": 126.0
+        },
+        {
+          "bar": 37,
+          "seconds": 129.6
+        },
+        {
+          "bar": 38,
+          "seconds": 133.2
+        },
+        {
+          "bar": 39,
+          "seconds": 136.8
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1200000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv828-06": {
+      "ppq": 384,
+      "secondsPerBeat": 0.6,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.8
+        },
+        {
+          "bar": 3,
+          "seconds": 3.6
+        },
+        {
+          "bar": 4,
+          "seconds": 5.4
+        },
+        {
+          "bar": 5,
+          "seconds": 7.2
+        },
+        {
+          "bar": 6,
+          "seconds": 9.0
+        },
+        {
+          "bar": 7,
+          "seconds": 10.8
+        },
+        {
+          "bar": 8,
+          "seconds": 12.6
+        },
+        {
+          "bar": 9,
+          "seconds": 14.4
+        },
+        {
+          "bar": 10,
+          "seconds": 16.2
+        },
+        {
+          "bar": 11,
+          "seconds": 18.0
+        },
+        {
+          "bar": 12,
+          "seconds": 19.8
+        },
+        {
+          "bar": 13,
+          "seconds": 21.6
+        },
+        {
+          "bar": 14,
+          "seconds": 23.4
+        },
+        {
+          "bar": 15,
+          "seconds": 25.2
+        },
+        {
+          "bar": 16,
+          "seconds": 27.0
+        },
+        {
+          "bar": 17,
+          "seconds": 28.8
+        },
+        {
+          "bar": 18,
+          "seconds": 30.6
+        },
+        {
+          "bar": 19,
+          "seconds": 32.4
+        },
+        {
+          "bar": 20,
+          "seconds": 34.2
+        },
+        {
+          "bar": 21,
+          "seconds": 36.0
+        },
+        {
+          "bar": 22,
+          "seconds": 37.8
+        },
+        {
+          "bar": 23,
+          "seconds": 39.6
+        },
+        {
+          "bar": 24,
+          "seconds": 41.4
+        },
+        {
+          "bar": 25,
+          "seconds": 43.2
+        },
+        {
+          "bar": 26,
+          "seconds": 45.0
+        },
+        {
+          "bar": 27,
+          "seconds": 46.8
+        },
+        {
+          "bar": 28,
+          "seconds": 48.6
+        },
+        {
+          "bar": 29,
+          "seconds": 50.4
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 600000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv828-07": {
+      "ppq": 384,
+      "secondsPerBeat": 0.666666,
+      "beatsPerBar": 2.25,
+      "meter": {
+        "tick": 0,
+        "numerator": 9,
+        "denominator": 16
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.4999985
+        },
+        {
+          "bar": 3,
+          "seconds": 2.999997
+        },
+        {
+          "bar": 4,
+          "seconds": 4.4999955
+        },
+        {
+          "bar": 5,
+          "seconds": 5.999994
+        },
+        {
+          "bar": 6,
+          "seconds": 7.4999925
+        },
+        {
+          "bar": 7,
+          "seconds": 8.999991
+        },
+        {
+          "bar": 8,
+          "seconds": 10.4999895
+        },
+        {
+          "bar": 9,
+          "seconds": 11.999988
+        },
+        {
+          "bar": 10,
+          "seconds": 13.4999865
+        },
+        {
+          "bar": 11,
+          "seconds": 14.999985
+        },
+        {
+          "bar": 12,
+          "seconds": 16.4999835
+        },
+        {
+          "bar": 13,
+          "seconds": 17.999982
+        },
+        {
+          "bar": 14,
+          "seconds": 19.4999805
+        },
+        {
+          "bar": 15,
+          "seconds": 20.999979
+        },
+        {
+          "bar": 16,
+          "seconds": 22.4999775
+        },
+        {
+          "bar": 17,
+          "seconds": 23.999976
+        },
+        {
+          "bar": 18,
+          "seconds": 25.4999745
+        },
+        {
+          "bar": 19,
+          "seconds": 26.999973
+        },
+        {
+          "bar": 20,
+          "seconds": 28.4999715
+        },
+        {
+          "bar": 21,
+          "seconds": 29.99997
+        },
+        {
+          "bar": 22,
+          "seconds": 31.4999685
+        },
+        {
+          "bar": 23,
+          "seconds": 32.999967
+        },
+        {
+          "bar": 24,
+          "seconds": 34.4999655
+        },
+        {
+          "bar": 25,
+          "seconds": 35.999964
+        },
+        {
+          "bar": 26,
+          "seconds": 37.4999625
+        },
+        {
+          "bar": 27,
+          "seconds": 38.999961
+        },
+        {
+          "bar": 28,
+          "seconds": 40.4999595
+        },
+        {
+          "bar": 29,
+          "seconds": 41.999958
+        },
+        {
+          "bar": 30,
+          "seconds": 43.4999565
+        },
+        {
+          "bar": 31,
+          "seconds": 44.999955
+        },
+        {
+          "bar": 32,
+          "seconds": 46.4999535
+        },
+        {
+          "bar": 33,
+          "seconds": 47.999952
+        },
+        {
+          "bar": 34,
+          "seconds": 49.4999505
+        },
+        {
+          "bar": 35,
+          "seconds": 50.999949
+        },
+        {
+          "bar": 36,
+          "seconds": 52.4999475
+        },
+        {
+          "bar": 37,
+          "seconds": 53.999946
+        },
+        {
+          "bar": 38,
+          "seconds": 55.4999445
+        },
+        {
+          "bar": 39,
+          "seconds": 56.999943
+        },
+        {
+          "bar": 40,
+          "seconds": 58.4999415
+        },
+        {
+          "bar": 41,
+          "seconds": 59.99994
+        },
+        {
+          "bar": 42,
+          "seconds": 61.4999385
+        },
+        {
+          "bar": 43,
+          "seconds": 62.999937
+        },
+        {
+          "bar": 44,
+          "seconds": 64.4999355
+        },
+        {
+          "bar": 45,
+          "seconds": 65.999934
+        },
+        {
+          "bar": 46,
+          "seconds": 67.4999325
+        },
+        {
+          "bar": 47,
+          "seconds": 68.999931
+        },
+        {
+          "bar": 48,
+          "seconds": 70.4999295
+        },
+        {
+          "bar": 49,
+          "seconds": 71.999928
+        },
+        {
+          "bar": 50,
+          "seconds": 73.4999265
+        },
+        {
+          "bar": 51,
+          "seconds": 74.999925
+        },
+        {
+          "bar": 52,
+          "seconds": 76.4999235
+        },
+        {
+          "bar": 53,
+          "seconds": 77.999922
+        },
+        {
+          "bar": 54,
+          "seconds": 79.4999205
+        },
+        {
+          "bar": 55,
+          "seconds": 80.999919
+        },
+        {
+          "bar": 56,
+          "seconds": 82.4999175
+        },
+        {
+          "bar": 57,
+          "seconds": 83.999916
+        },
+        {
+          "bar": 58,
+          "seconds": 85.4999145
+        },
+        {
+          "bar": 59,
+          "seconds": 86.999913
+        },
+        {
+          "bar": 60,
+          "seconds": 88.4999115
+        },
+        {
+          "bar": 61,
+          "seconds": 89.99991
+        },
+        {
+          "bar": 62,
+          "seconds": 91.4999085
+        },
+        {
+          "bar": 63,
+          "seconds": 92.999907
+        },
+        {
+          "bar": 64,
+          "seconds": 94.4999055
+        },
+        {
+          "bar": 65,
+          "seconds": 95.999904
+        },
+        {
+          "bar": 66,
+          "seconds": 97.4999025
+        },
+        {
+          "bar": 67,
+          "seconds": 98.999901
+        },
+        {
+          "bar": 68,
+          "seconds": 100.4998995
+        },
+        {
+          "bar": 69,
+          "seconds": 101.999898
+        },
+        {
+          "bar": 70,
+          "seconds": 103.4998965
+        },
+        {
+          "bar": 71,
+          "seconds": 104.999895
+        },
+        {
+          "bar": 72,
+          "seconds": 106.4998935
+        },
+        {
+          "bar": 73,
+          "seconds": 107.999892
+        },
+        {
+          "bar": 74,
+          "seconds": 109.4998905
+        },
+        {
+          "bar": 75,
+          "seconds": 110.999889
+        },
+        {
+          "bar": 76,
+          "seconds": 112.4998875
+        },
+        {
+          "bar": 77,
+          "seconds": 113.999886
+        },
+        {
+          "bar": 78,
+          "seconds": 115.4998845
+        },
+        {
+          "bar": 79,
+          "seconds": 116.999883
+        },
+        {
+          "bar": 80,
+          "seconds": 118.4998815
+        },
+        {
+          "bar": 81,
+          "seconds": 119.99988
+        },
+        {
+          "bar": 82,
+          "seconds": 121.4998785
+        },
+        {
+          "bar": 83,
+          "seconds": 122.999877
+        },
+        {
+          "bar": 84,
+          "seconds": 124.4998755
+        },
+        {
+          "bar": 85,
+          "seconds": 125.999874
+        },
+        {
+          "bar": 86,
+          "seconds": 127.4998725
+        },
+        {
+          "bar": 87,
+          "seconds": 128.999871
+        },
+        {
+          "bar": 88,
+          "seconds": 130.4998695
+        },
+        {
+          "bar": 89,
+          "seconds": 131.999868
+        },
+        {
+          "bar": 90,
+          "seconds": 133.4998665
+        },
+        {
+          "bar": 91,
+          "seconds": 134.999865
+        },
+        {
+          "bar": 92,
+          "seconds": 136.4998635
+        },
+        {
+          "bar": 93,
+          "seconds": 137.999862
+        },
+        {
+          "bar": 94,
+          "seconds": 139.4998605
+        },
+        {
+          "bar": 95,
+          "seconds": 140.999859
+        },
+        {
+          "bar": 96,
+          "seconds": 142.4998575
+        },
+        {
+          "bar": 97,
+          "seconds": 143.999856
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 666666,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 9,
+          "denominator": 16
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 2,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv829-01": {
+      "ppq": 384,
+      "secondsPerBeat": 0.5,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.5
+        },
+        {
+          "bar": 3,
+          "seconds": 3.0
+        },
+        {
+          "bar": 4,
+          "seconds": 4.5
+        },
+        {
+          "bar": 5,
+          "seconds": 6.0
+        },
+        {
+          "bar": 6,
+          "seconds": 7.5
+        },
+        {
+          "bar": 7,
+          "seconds": 9.0
+        },
+        {
+          "bar": 8,
+          "seconds": 10.5
+        },
+        {
+          "bar": 9,
+          "seconds": 12.0
+        },
+        {
+          "bar": 10,
+          "seconds": 13.5
+        },
+        {
+          "bar": 11,
+          "seconds": 15.0
+        },
+        {
+          "bar": 12,
+          "seconds": 16.5
+        },
+        {
+          "bar": 13,
+          "seconds": 18.0
+        },
+        {
+          "bar": 14,
+          "seconds": 19.5
+        },
+        {
+          "bar": 15,
+          "seconds": 21.0
+        },
+        {
+          "bar": 16,
+          "seconds": 22.5
+        },
+        {
+          "bar": 17,
+          "seconds": 24.0
+        },
+        {
+          "bar": 18,
+          "seconds": 25.5
+        },
+        {
+          "bar": 19,
+          "seconds": 27.0
+        },
+        {
+          "bar": 20,
+          "seconds": 28.5
+        },
+        {
+          "bar": 21,
+          "seconds": 30.0
+        },
+        {
+          "bar": 22,
+          "seconds": 31.5
+        },
+        {
+          "bar": 23,
+          "seconds": 33.0
+        },
+        {
+          "bar": 24,
+          "seconds": 34.5
+        },
+        {
+          "bar": 25,
+          "seconds": 36.0
+        },
+        {
+          "bar": 26,
+          "seconds": 37.5
+        },
+        {
+          "bar": 27,
+          "seconds": 39.0
+        },
+        {
+          "bar": 28,
+          "seconds": 40.5
+        },
+        {
+          "bar": 29,
+          "seconds": 42.0
+        },
+        {
+          "bar": 30,
+          "seconds": 43.5
+        },
+        {
+          "bar": 31,
+          "seconds": 45.0
+        },
+        {
+          "bar": 32,
+          "seconds": 46.5
+        },
+        {
+          "bar": 33,
+          "seconds": 48.0
+        },
+        {
+          "bar": 34,
+          "seconds": 49.5
+        },
+        {
+          "bar": 35,
+          "seconds": 51.0
+        },
+        {
+          "bar": 36,
+          "seconds": 52.5
+        },
+        {
+          "bar": 37,
+          "seconds": 54.0
+        },
+        {
+          "bar": 38,
+          "seconds": 55.5
+        },
+        {
+          "bar": 39,
+          "seconds": 57.0
+        },
+        {
+          "bar": 40,
+          "seconds": 58.5
+        },
+        {
+          "bar": 41,
+          "seconds": 60.0
+        },
+        {
+          "bar": 42,
+          "seconds": 61.5
+        },
+        {
+          "bar": 43,
+          "seconds": 63.0
+        },
+        {
+          "bar": 44,
+          "seconds": 64.5
+        },
+        {
+          "bar": 45,
+          "seconds": 66.0
+        },
+        {
+          "bar": 46,
+          "seconds": 67.5
+        },
+        {
+          "bar": 47,
+          "seconds": 69.0
+        },
+        {
+          "bar": 48,
+          "seconds": 70.5
+        },
+        {
+          "bar": 49,
+          "seconds": 72.0
+        },
+        {
+          "bar": 50,
+          "seconds": 73.5
+        },
+        {
+          "bar": 51,
+          "seconds": 75.0
+        },
+        {
+          "bar": 52,
+          "seconds": 76.5
+        },
+        {
+          "bar": 53,
+          "seconds": 78.0
+        },
+        {
+          "bar": 54,
+          "seconds": 79.5
+        },
+        {
+          "bar": 55,
+          "seconds": 81.0
+        },
+        {
+          "bar": 56,
+          "seconds": 82.5
+        },
+        {
+          "bar": 57,
+          "seconds": 84.0
+        },
+        {
+          "bar": 58,
+          "seconds": 85.5
+        },
+        {
+          "bar": 59,
+          "seconds": 87.0
+        },
+        {
+          "bar": 60,
+          "seconds": 88.5
+        },
+        {
+          "bar": 61,
+          "seconds": 90.0
+        },
+        {
+          "bar": 62,
+          "seconds": 91.5
+        },
+        {
+          "bar": 63,
+          "seconds": 93.0
+        },
+        {
+          "bar": 64,
+          "seconds": 94.5
+        },
+        {
+          "bar": 65,
+          "seconds": 96.0
+        },
+        {
+          "bar": 66,
+          "seconds": 97.5
+        },
+        {
+          "bar": 67,
+          "seconds": 99.0
+        },
+        {
+          "bar": 68,
+          "seconds": 100.5
+        },
+        {
+          "bar": 69,
+          "seconds": 102.0
+        },
+        {
+          "bar": 70,
+          "seconds": 103.5
+        },
+        {
+          "bar": 71,
+          "seconds": 105.0
+        },
+        {
+          "bar": 72,
+          "seconds": 106.5
+        },
+        {
+          "bar": 73,
+          "seconds": 108.0
+        },
+        {
+          "bar": 74,
+          "seconds": 109.5
+        },
+        {
+          "bar": 75,
+          "seconds": 111.0
+        },
+        {
+          "bar": 76,
+          "seconds": 112.5
+        },
+        {
+          "bar": 77,
+          "seconds": 114.0
+        },
+        {
+          "bar": 78,
+          "seconds": 115.5
+        },
+        {
+          "bar": 79,
+          "seconds": 117.0
+        },
+        {
+          "bar": 80,
+          "seconds": 118.5
+        },
+        {
+          "bar": 81,
+          "seconds": 120.0
+        },
+        {
+          "bar": 82,
+          "seconds": 121.5
+        },
+        {
+          "bar": 83,
+          "seconds": 123.0
+        },
+        {
+          "bar": 84,
+          "seconds": 124.5
+        },
+        {
+          "bar": 85,
+          "seconds": 126.0
+        },
+        {
+          "bar": 86,
+          "seconds": 127.5
+        },
+        {
+          "bar": 87,
+          "seconds": 129.0
+        },
+        {
+          "bar": 88,
+          "seconds": 130.5
+        },
+        {
+          "bar": 89,
+          "seconds": 132.0
+        },
+        {
+          "bar": 90,
+          "seconds": 133.5
+        },
+        {
+          "bar": 91,
+          "seconds": 135.0
+        },
+        {
+          "bar": 92,
+          "seconds": 136.5
+        },
+        {
+          "bar": 93,
+          "seconds": 138.0
+        },
+        {
+          "bar": 94,
+          "seconds": 139.5
+        },
+        {
+          "bar": 95,
+          "seconds": 141.0
+        },
+        {
+          "bar": 96,
+          "seconds": 142.5
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 500000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv829-02": {
+      "ppq": 384,
+      "secondsPerBeat": 1.621621,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 6.486484
+        },
+        {
+          "bar": 3,
+          "seconds": 12.972968
+        },
+        {
+          "bar": 4,
+          "seconds": 19.459452
+        },
+        {
+          "bar": 5,
+          "seconds": 25.945936
+        },
+        {
+          "bar": 6,
+          "seconds": 32.43242
+        },
+        {
+          "bar": 7,
+          "seconds": 38.918904
+        },
+        {
+          "bar": 8,
+          "seconds": 45.405388
+        },
+        {
+          "bar": 9,
+          "seconds": 51.891872
+        },
+        {
+          "bar": 10,
+          "seconds": 58.378356
+        },
+        {
+          "bar": 11,
+          "seconds": 64.86484
+        },
+        {
+          "bar": 12,
+          "seconds": 71.351324
+        },
+        {
+          "bar": 13,
+          "seconds": 77.837808
+        },
+        {
+          "bar": 14,
+          "seconds": 84.324292
+        },
+        {
+          "bar": 15,
+          "seconds": 90.810776
+        },
+        {
+          "bar": 16,
+          "seconds": 97.29726
+        },
+        {
+          "bar": 17,
+          "seconds": 103.783744
+        },
+        {
+          "bar": 18,
+          "seconds": 110.270228
+        },
+        {
+          "bar": 19,
+          "seconds": 116.756712
+        },
+        {
+          "bar": 20,
+          "seconds": 123.243196
+        },
+        {
+          "bar": 21,
+          "seconds": 129.72968
+        },
+        {
+          "bar": 22,
+          "seconds": 136.216164
+        },
+        {
+          "bar": 23,
+          "seconds": 142.702648
+        },
+        {
+          "bar": 24,
+          "seconds": 149.189132
+        },
+        {
+          "bar": 25,
+          "seconds": 155.675616
+        },
+        {
+          "bar": 26,
+          "seconds": 162.1621
+        },
+        {
+          "bar": 27,
+          "seconds": 168.648584
+        },
+        {
+          "bar": 28,
+          "seconds": 175.135068
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1621621,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv829-03": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 1.5,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 8
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.5
+        },
+        {
+          "bar": 3,
+          "seconds": 3.0
+        },
+        {
+          "bar": 4,
+          "seconds": 4.5
+        },
+        {
+          "bar": 5,
+          "seconds": 6.0
+        },
+        {
+          "bar": 6,
+          "seconds": 7.5
+        },
+        {
+          "bar": 7,
+          "seconds": 9.0
+        },
+        {
+          "bar": 8,
+          "seconds": 10.5
+        },
+        {
+          "bar": 9,
+          "seconds": 12.0
+        },
+        {
+          "bar": 10,
+          "seconds": 13.5
+        },
+        {
+          "bar": 11,
+          "seconds": 15.0
+        },
+        {
+          "bar": 12,
+          "seconds": 16.5
+        },
+        {
+          "bar": 13,
+          "seconds": 18.0
+        },
+        {
+          "bar": 14,
+          "seconds": 19.5
+        },
+        {
+          "bar": 15,
+          "seconds": 21.0
+        },
+        {
+          "bar": 16,
+          "seconds": 22.5
+        },
+        {
+          "bar": 17,
+          "seconds": 24.0
+        },
+        {
+          "bar": 18,
+          "seconds": 25.5
+        },
+        {
+          "bar": 19,
+          "seconds": 27.0
+        },
+        {
+          "bar": 20,
+          "seconds": 28.5
+        },
+        {
+          "bar": 21,
+          "seconds": 30.0
+        },
+        {
+          "bar": 22,
+          "seconds": 31.5
+        },
+        {
+          "bar": 23,
+          "seconds": 33.0
+        },
+        {
+          "bar": 24,
+          "seconds": 34.5
+        },
+        {
+          "bar": 25,
+          "seconds": 36.0
+        },
+        {
+          "bar": 26,
+          "seconds": 37.5
+        },
+        {
+          "bar": 27,
+          "seconds": 39.0
+        },
+        {
+          "bar": 28,
+          "seconds": 40.5
+        },
+        {
+          "bar": 29,
+          "seconds": 42.0
+        },
+        {
+          "bar": 30,
+          "seconds": 43.5
+        },
+        {
+          "bar": 31,
+          "seconds": 45.0
+        },
+        {
+          "bar": 32,
+          "seconds": 46.5
+        },
+        {
+          "bar": 33,
+          "seconds": 48.0
+        },
+        {
+          "bar": 34,
+          "seconds": 49.5
+        },
+        {
+          "bar": 35,
+          "seconds": 51.0
+        },
+        {
+          "bar": 36,
+          "seconds": 52.5
+        },
+        {
+          "bar": 37,
+          "seconds": 54.0
+        },
+        {
+          "bar": 38,
+          "seconds": 55.5
+        },
+        {
+          "bar": 39,
+          "seconds": 57.0
+        },
+        {
+          "bar": 40,
+          "seconds": 58.5
+        },
+        {
+          "bar": 41,
+          "seconds": 60.0
+        },
+        {
+          "bar": 42,
+          "seconds": 61.5
+        },
+        {
+          "bar": 43,
+          "seconds": 63.0
+        },
+        {
+          "bar": 44,
+          "seconds": 64.5
+        },
+        {
+          "bar": 45,
+          "seconds": 66.0
+        },
+        {
+          "bar": 46,
+          "seconds": 67.5
+        },
+        {
+          "bar": 47,
+          "seconds": 69.0
+        },
+        {
+          "bar": 48,
+          "seconds": 70.5
+        },
+        {
+          "bar": 49,
+          "seconds": 72.0
+        },
+        {
+          "bar": 50,
+          "seconds": 73.5
+        },
+        {
+          "bar": 51,
+          "seconds": 75.0
+        },
+        {
+          "bar": 52,
+          "seconds": 76.5
+        },
+        {
+          "bar": 53,
+          "seconds": 78.0
+        },
+        {
+          "bar": 54,
+          "seconds": 79.5
+        },
+        {
+          "bar": 55,
+          "seconds": 81.0
+        },
+        {
+          "bar": 56,
+          "seconds": 82.5
+        },
+        {
+          "bar": 57,
+          "seconds": 84.0
+        },
+        {
+          "bar": 58,
+          "seconds": 85.5
+        },
+        {
+          "bar": 59,
+          "seconds": 87.0
+        },
+        {
+          "bar": 60,
+          "seconds": 88.5
+        },
+        {
+          "bar": 61,
+          "seconds": 90.0
+        },
+        {
+          "bar": 62,
+          "seconds": 91.5
+        },
+        {
+          "bar": 63,
+          "seconds": 93.0
+        },
+        {
+          "bar": 64,
+          "seconds": 94.5
+        },
+        {
+          "bar": 65,
+          "seconds": 96.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv829-04": {
+      "ppq": 384,
+      "secondsPerBeat": 1.034482,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.103446
+        },
+        {
+          "bar": 3,
+          "seconds": 6.206892
+        },
+        {
+          "bar": 4,
+          "seconds": 9.310338
+        },
+        {
+          "bar": 5,
+          "seconds": 12.413784
+        },
+        {
+          "bar": 6,
+          "seconds": 15.51723
+        },
+        {
+          "bar": 7,
+          "seconds": 18.620676
+        },
+        {
+          "bar": 8,
+          "seconds": 21.724122
+        },
+        {
+          "bar": 9,
+          "seconds": 24.827568
+        },
+        {
+          "bar": 10,
+          "seconds": 27.931014
+        },
+        {
+          "bar": 11,
+          "seconds": 31.03446
+        },
+        {
+          "bar": 12,
+          "seconds": 34.137906
+        },
+        {
+          "bar": 13,
+          "seconds": 37.241352
+        },
+        {
+          "bar": 14,
+          "seconds": 40.344798
+        },
+        {
+          "bar": 15,
+          "seconds": 43.448244
+        },
+        {
+          "bar": 16,
+          "seconds": 46.55169
+        },
+        {
+          "bar": 17,
+          "seconds": 49.655136
+        },
+        {
+          "bar": 18,
+          "seconds": 52.758582
+        },
+        {
+          "bar": 19,
+          "seconds": 55.862028
+        },
+        {
+          "bar": 20,
+          "seconds": 58.965474
+        },
+        {
+          "bar": 21,
+          "seconds": 62.06892
+        },
+        {
+          "bar": 22,
+          "seconds": 65.172366
+        },
+        {
+          "bar": 23,
+          "seconds": 68.275812
+        },
+        {
+          "bar": 24,
+          "seconds": 71.379258
+        },
+        {
+          "bar": 25,
+          "seconds": 74.482704
+        },
+        {
+          "bar": 26,
+          "seconds": 77.58615
+        },
+        {
+          "bar": 27,
+          "seconds": 80.689596
+        },
+        {
+          "bar": 28,
+          "seconds": 83.793042
+        },
+        {
+          "bar": 29,
+          "seconds": 86.896488
+        },
+        {
+          "bar": 30,
+          "seconds": 89.999934
+        },
+        {
+          "bar": 31,
+          "seconds": 93.10338
+        },
+        {
+          "bar": 32,
+          "seconds": 96.206826
+        },
+        {
+          "bar": 33,
+          "seconds": 99.310272
+        },
+        {
+          "bar": 34,
+          "seconds": 102.413718
+        },
+        {
+          "bar": 35,
+          "seconds": 105.517164
+        },
+        {
+          "bar": 36,
+          "seconds": 108.62061
+        },
+        {
+          "bar": 37,
+          "seconds": 111.724056
+        },
+        {
+          "bar": 38,
+          "seconds": 114.827502
+        },
+        {
+          "bar": 39,
+          "seconds": 117.930948
+        },
+        {
+          "bar": 40,
+          "seconds": 121.034394
+        },
+        {
+          "bar": 41,
+          "seconds": 124.13784
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1034482,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv829-05": {
+      "ppq": 384,
+      "secondsPerBeat": 0.5,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.5
+        },
+        {
+          "bar": 3,
+          "seconds": 3.0
+        },
+        {
+          "bar": 4,
+          "seconds": 4.5
+        },
+        {
+          "bar": 5,
+          "seconds": 6.0
+        },
+        {
+          "bar": 6,
+          "seconds": 7.5
+        },
+        {
+          "bar": 7,
+          "seconds": 9.0
+        },
+        {
+          "bar": 8,
+          "seconds": 10.5
+        },
+        {
+          "bar": 9,
+          "seconds": 12.0
+        },
+        {
+          "bar": 10,
+          "seconds": 13.5
+        },
+        {
+          "bar": 11,
+          "seconds": 15.0
+        },
+        {
+          "bar": 12,
+          "seconds": 16.5
+        },
+        {
+          "bar": 13,
+          "seconds": 18.0
+        },
+        {
+          "bar": 14,
+          "seconds": 19.5
+        },
+        {
+          "bar": 15,
+          "seconds": 21.0
+        },
+        {
+          "bar": 16,
+          "seconds": 22.5
+        },
+        {
+          "bar": 17,
+          "seconds": 24.0
+        },
+        {
+          "bar": 18,
+          "seconds": 25.5
+        },
+        {
+          "bar": 19,
+          "seconds": 27.0
+        },
+        {
+          "bar": 20,
+          "seconds": 28.5
+        },
+        {
+          "bar": 21,
+          "seconds": 30.0
+        },
+        {
+          "bar": 22,
+          "seconds": 31.5
+        },
+        {
+          "bar": 23,
+          "seconds": 33.0
+        },
+        {
+          "bar": 24,
+          "seconds": 34.5
+        },
+        {
+          "bar": 25,
+          "seconds": 36.0
+        },
+        {
+          "bar": 26,
+          "seconds": 37.5
+        },
+        {
+          "bar": 27,
+          "seconds": 39.0
+        },
+        {
+          "bar": 28,
+          "seconds": 40.5
+        },
+        {
+          "bar": 29,
+          "seconds": 42.0
+        },
+        {
+          "bar": 30,
+          "seconds": 43.5
+        },
+        {
+          "bar": 31,
+          "seconds": 45.0
+        },
+        {
+          "bar": 32,
+          "seconds": 46.5
+        },
+        {
+          "bar": 33,
+          "seconds": 48.0
+        },
+        {
+          "bar": 34,
+          "seconds": 49.5
+        },
+        {
+          "bar": 35,
+          "seconds": 51.0
+        },
+        {
+          "bar": 36,
+          "seconds": 52.5
+        },
+        {
+          "bar": 37,
+          "seconds": 54.0
+        },
+        {
+          "bar": 38,
+          "seconds": 55.5
+        },
+        {
+          "bar": 39,
+          "seconds": 57.0
+        },
+        {
+          "bar": 40,
+          "seconds": 58.5
+        },
+        {
+          "bar": 41,
+          "seconds": 60.0
+        },
+        {
+          "bar": 42,
+          "seconds": 61.5
+        },
+        {
+          "bar": 43,
+          "seconds": 63.0
+        },
+        {
+          "bar": 44,
+          "seconds": 64.5
+        },
+        {
+          "bar": 45,
+          "seconds": 66.0
+        },
+        {
+          "bar": 46,
+          "seconds": 67.5
+        },
+        {
+          "bar": 47,
+          "seconds": 69.0
+        },
+        {
+          "bar": 48,
+          "seconds": 70.5
+        },
+        {
+          "bar": 49,
+          "seconds": 72.0
+        },
+        {
+          "bar": 50,
+          "seconds": 73.5
+        },
+        {
+          "bar": 51,
+          "seconds": 75.0
+        },
+        {
+          "bar": 52,
+          "seconds": 76.5
+        },
+        {
+          "bar": 53,
+          "seconds": 78.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 500000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv829-06": {
+      "ppq": 384,
+      "secondsPerBeat": 1.090909,
+      "beatsPerBar": 1.5,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 8
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.6363635
+        },
+        {
+          "bar": 3,
+          "seconds": 3.272727
+        },
+        {
+          "bar": 4,
+          "seconds": 4.9090905
+        },
+        {
+          "bar": 5,
+          "seconds": 6.545454
+        },
+        {
+          "bar": 6,
+          "seconds": 8.1818175
+        },
+        {
+          "bar": 7,
+          "seconds": 9.818181
+        },
+        {
+          "bar": 8,
+          "seconds": 11.4545445
+        },
+        {
+          "bar": 9,
+          "seconds": 13.090908
+        },
+        {
+          "bar": 10,
+          "seconds": 14.7272715
+        },
+        {
+          "bar": 11,
+          "seconds": 16.363635
+        },
+        {
+          "bar": 12,
+          "seconds": 17.9999985
+        },
+        {
+          "bar": 13,
+          "seconds": 19.636362
+        },
+        {
+          "bar": 14,
+          "seconds": 21.2727255
+        },
+        {
+          "bar": 15,
+          "seconds": 22.909089
+        },
+        {
+          "bar": 16,
+          "seconds": 24.5454525
+        },
+        {
+          "bar": 17,
+          "seconds": 26.181816
+        },
+        {
+          "bar": 18,
+          "seconds": 27.8181795
+        },
+        {
+          "bar": 19,
+          "seconds": 29.454543
+        },
+        {
+          "bar": 20,
+          "seconds": 31.0909065
+        },
+        {
+          "bar": 21,
+          "seconds": 32.72727
+        },
+        {
+          "bar": 22,
+          "seconds": 34.3636335
+        },
+        {
+          "bar": 23,
+          "seconds": 35.999997
+        },
+        {
+          "bar": 24,
+          "seconds": 37.6363605
+        },
+        {
+          "bar": 25,
+          "seconds": 39.272724
+        },
+        {
+          "bar": 26,
+          "seconds": 40.9090875
+        },
+        {
+          "bar": 27,
+          "seconds": 42.545451
+        },
+        {
+          "bar": 28,
+          "seconds": 44.1818145
+        },
+        {
+          "bar": 29,
+          "seconds": 45.818178
+        },
+        {
+          "bar": 30,
+          "seconds": 47.4545415
+        },
+        {
+          "bar": 31,
+          "seconds": 49.090905
+        },
+        {
+          "bar": 32,
+          "seconds": 50.7272685
+        },
+        {
+          "bar": 33,
+          "seconds": 52.363632
+        },
+        {
+          "bar": 34,
+          "seconds": 53.9999955
+        },
+        {
+          "bar": 35,
+          "seconds": 55.636359
+        },
+        {
+          "bar": 36,
+          "seconds": 57.2727225
+        },
+        {
+          "bar": 37,
+          "seconds": 58.909086
+        },
+        {
+          "bar": 38,
+          "seconds": 60.5454495
+        },
+        {
+          "bar": 39,
+          "seconds": 62.181813
+        },
+        {
+          "bar": 40,
+          "seconds": 63.8181765
+        },
+        {
+          "bar": 41,
+          "seconds": 65.45454
+        },
+        {
+          "bar": 42,
+          "seconds": 67.0909035
+        },
+        {
+          "bar": 43,
+          "seconds": 68.727267
+        },
+        {
+          "bar": 44,
+          "seconds": 70.3636305
+        },
+        {
+          "bar": 45,
+          "seconds": 71.999994
+        },
+        {
+          "bar": 46,
+          "seconds": 73.6363575
+        },
+        {
+          "bar": 47,
+          "seconds": 75.272721
+        },
+        {
+          "bar": 48,
+          "seconds": 76.9090845
+        },
+        {
+          "bar": 49,
+          "seconds": 78.545448
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1090909,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "bwv829-07": {
+      "ppq": 384,
+      "secondsPerBeat": 1.0,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 6,
+        "denominator": 8
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 3.0
+        },
+        {
+          "bar": 3,
+          "seconds": 6.0
+        },
+        {
+          "bar": 4,
+          "seconds": 9.0
+        },
+        {
+          "bar": 5,
+          "seconds": 12.0
+        },
+        {
+          "bar": 6,
+          "seconds": 15.0
+        },
+        {
+          "bar": 7,
+          "seconds": 18.0
+        },
+        {
+          "bar": 8,
+          "seconds": 21.0
+        },
+        {
+          "bar": 9,
+          "seconds": 24.0
+        },
+        {
+          "bar": 10,
+          "seconds": 27.0
+        },
+        {
+          "bar": 11,
+          "seconds": 30.0
+        },
+        {
+          "bar": 12,
+          "seconds": 33.0
+        },
+        {
+          "bar": 13,
+          "seconds": 36.0
+        },
+        {
+          "bar": 14,
+          "seconds": 39.0
+        },
+        {
+          "bar": 15,
+          "seconds": 42.0
+        },
+        {
+          "bar": 16,
+          "seconds": 45.0
+        },
+        {
+          "bar": 17,
+          "seconds": 48.0
+        },
+        {
+          "bar": 18,
+          "seconds": 51.0
+        },
+        {
+          "bar": 19,
+          "seconds": 54.0
+        },
+        {
+          "bar": 20,
+          "seconds": 57.0
+        },
+        {
+          "bar": 21,
+          "seconds": 60.0
+        },
+        {
+          "bar": 22,
+          "seconds": 63.0
+        },
+        {
+          "bar": 23,
+          "seconds": 66.0
+        },
+        {
+          "bar": 24,
+          "seconds": 69.0
+        },
+        {
+          "bar": 25,
+          "seconds": 72.0
+        },
+        {
+          "bar": 26,
+          "seconds": 75.0
+        },
+        {
+          "bar": 27,
+          "seconds": 78.0
+        },
+        {
+          "bar": 28,
+          "seconds": 81.0
+        },
+        {
+          "bar": 29,
+          "seconds": 84.0
+        },
+        {
+          "bar": 30,
+          "seconds": 87.0
+        },
+        {
+          "bar": 31,
+          "seconds": 90.0
+        },
+        {
+          "bar": 32,
+          "seconds": 93.0
+        },
+        {
+          "bar": 33,
+          "seconds": 96.0
+        },
+        {
+          "bar": 34,
+          "seconds": 99.0
+        },
+        {
+          "bar": 35,
+          "seconds": 102.0
+        },
+        {
+          "bar": 36,
+          "seconds": 105.0
+        },
+        {
+          "bar": 37,
+          "seconds": 108.0
+        },
+        {
+          "bar": 38,
+          "seconds": 111.0
+        },
+        {
+          "bar": 39,
+          "seconds": 114.0
+        },
+        {
+          "bar": 40,
+          "seconds": 117.0
+        },
+        {
+          "bar": 41,
+          "seconds": 120.0
+        },
+        {
+          "bar": 42,
+          "seconds": 123.0
+        },
+        {
+          "bar": 43,
+          "seconds": 126.0
+        },
+        {
+          "bar": 44,
+          "seconds": 129.0
+        },
+        {
+          "bar": 45,
+          "seconds": 132.0
+        },
+        {
+          "bar": 46,
+          "seconds": 135.0
+        },
+        {
+          "bar": 47,
+          "seconds": 138.0
+        },
+        {
+          "bar": 48,
+          "seconds": 141.0
+        },
+        {
+          "bar": 49,
+          "seconds": 144.0
+        },
+        {
+          "bar": 50,
+          "seconds": 147.0
+        },
+        {
+          "bar": 51,
+          "seconds": 150.0
+        },
+        {
+          "bar": 52,
+          "seconds": 153.0
+        },
+        {
+          "bar": 53,
+          "seconds": 156.0
+        },
+        {
+          "bar": 54,
+          "seconds": 159.0
+        },
+        {
+          "bar": 55,
+          "seconds": 162.0
+        },
+        {
+          "bar": 56,
+          "seconds": 165.0
+        },
+        {
+          "bar": 57,
+          "seconds": 168.0
+        },
+        {
+          "bar": 58,
+          "seconds": 171.0
+        },
+        {
+          "bar": 59,
+          "seconds": 174.0
+        },
+        {
+          "bar": 60,
+          "seconds": 177.0
+        },
+        {
+          "bar": 61,
+          "seconds": 180.0
+        },
+        {
+          "bar": 62,
+          "seconds": 183.0
+        },
+        {
+          "bar": 63,
+          "seconds": 186.0
+        },
+        {
+          "bar": 64,
+          "seconds": 189.0
+        },
+        {
+          "bar": 65,
+          "seconds": 192.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1000000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 6,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": 1,
+          "minor": false
+        }
+      ],
+      "preferFlats": false,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "handel-overture": {
+      "ppq": 384,
+      "secondsPerBeat": 0.576923,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 2.307692
+        },
+        {
+          "bar": 3,
+          "seconds": 4.615384
+        },
+        {
+          "bar": 4,
+          "seconds": 6.923076
+        },
+        {
+          "bar": 5,
+          "seconds": 9.230768
+        },
+        {
+          "bar": 6,
+          "seconds": 11.53846
+        },
+        {
+          "bar": 7,
+          "seconds": 13.846152
+        },
+        {
+          "bar": 8,
+          "seconds": 16.153844
+        },
+        {
+          "bar": 9,
+          "seconds": 18.461536
+        },
+        {
+          "bar": 10,
+          "seconds": 20.769228
+        },
+        {
+          "bar": 11,
+          "seconds": 23.07692
+        },
+        {
+          "bar": 12,
+          "seconds": 24.807689
+        },
+        {
+          "bar": 13,
+          "seconds": 26.538458
+        },
+        {
+          "bar": 14,
+          "seconds": 28.269227
+        },
+        {
+          "bar": 15,
+          "seconds": 29.999996
+        },
+        {
+          "bar": 16,
+          "seconds": 31.730765
+        },
+        {
+          "bar": 17,
+          "seconds": 33.461534
+        },
+        {
+          "bar": 18,
+          "seconds": 35.192303
+        },
+        {
+          "bar": 19,
+          "seconds": 36.923072
+        },
+        {
+          "bar": 20,
+          "seconds": 38.653841
+        },
+        {
+          "bar": 21,
+          "seconds": 40.38461
+        },
+        {
+          "bar": 22,
+          "seconds": 42.115379
+        },
+        {
+          "bar": 23,
+          "seconds": 43.846148
+        },
+        {
+          "bar": 24,
+          "seconds": 45.576917
+        },
+        {
+          "bar": 25,
+          "seconds": 47.307686
+        },
+        {
+          "bar": 26,
+          "seconds": 49.038455
+        },
+        {
+          "bar": 27,
+          "seconds": 50.769224
+        },
+        {
+          "bar": 28,
+          "seconds": 52.499993
+        },
+        {
+          "bar": 29,
+          "seconds": 54.230762
+        },
+        {
+          "bar": 30,
+          "seconds": 55.961531
+        },
+        {
+          "bar": 31,
+          "seconds": 57.6923
+        },
+        {
+          "bar": 32,
+          "seconds": 59.423069
+        },
+        {
+          "bar": 33,
+          "seconds": 61.153838
+        },
+        {
+          "bar": 34,
+          "seconds": 62.884607
+        },
+        {
+          "bar": 35,
+          "seconds": 64.615376
+        },
+        {
+          "bar": 36,
+          "seconds": 66.346145
+        },
+        {
+          "bar": 37,
+          "seconds": 68.076914
+        },
+        {
+          "bar": 38,
+          "seconds": 69.807683
+        },
+        {
+          "bar": 39,
+          "seconds": 71.538452
+        },
+        {
+          "bar": 40,
+          "seconds": 73.269221
+        },
+        {
+          "bar": 41,
+          "seconds": 74.99999
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 576923,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        },
+        {
+          "tick": 15360,
+          "numerator": 6,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": true
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "partita-study": {
+      "ppq": 384,
+      "secondsPerBeat": 1.5,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 6.0
+        },
+        {
+          "bar": 3,
+          "seconds": 12.0
+        },
+        {
+          "bar": 4,
+          "seconds": 18.0
+        },
+        {
+          "bar": 5,
+          "seconds": 24.0
+        },
+        {
+          "bar": 6,
+          "seconds": 30.0
+        },
+        {
+          "bar": 7,
+          "seconds": 36.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 1500000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 4,
+          "denominator": 4
+        }
+      ],
+      "keys": [],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "purcell-fairest-isle": {
+      "ppq": 384,
+      "secondsPerBeat": 0.5,
+      "beatsPerBar": 3.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 1.5
+        },
+        {
+          "bar": 3,
+          "seconds": 3.0
+        },
+        {
+          "bar": 4,
+          "seconds": 4.5
+        },
+        {
+          "bar": 5,
+          "seconds": 6.0
+        },
+        {
+          "bar": 6,
+          "seconds": 7.5
+        },
+        {
+          "bar": 7,
+          "seconds": 9.0
+        },
+        {
+          "bar": 8,
+          "seconds": 10.5
+        },
+        {
+          "bar": 9,
+          "seconds": 12.0
+        },
+        {
+          "bar": 10,
+          "seconds": 13.5
+        },
+        {
+          "bar": 11,
+          "seconds": 15.0
+        },
+        {
+          "bar": 12,
+          "seconds": 16.5
+        },
+        {
+          "bar": 13,
+          "seconds": 18.0
+        },
+        {
+          "bar": 14,
+          "seconds": 19.5
+        },
+        {
+          "bar": 15,
+          "seconds": 21.0
+        },
+        {
+          "bar": 16,
+          "seconds": 22.5
+        },
+        {
+          "bar": 17,
+          "seconds": 24.0
+        },
+        {
+          "bar": 18,
+          "seconds": 25.5
+        },
+        {
+          "bar": 19,
+          "seconds": 27.0
+        },
+        {
+          "bar": 20,
+          "seconds": 28.5
+        },
+        {
+          "bar": 21,
+          "seconds": 30.0
+        },
+        {
+          "bar": 22,
+          "seconds": 31.5
+        },
+        {
+          "bar": 23,
+          "seconds": 33.0
+        },
+        {
+          "bar": 24,
+          "seconds": 34.5
+        },
+        {
+          "bar": 25,
+          "seconds": 36.0
+        },
+        {
+          "bar": 26,
+          "seconds": 37.5
+        },
+        {
+          "bar": 27,
+          "seconds": 39.0
+        },
+        {
+          "bar": 28,
+          "seconds": 40.5
+        },
+        {
+          "bar": 29,
+          "seconds": 42.0
+        },
+        {
+          "bar": 30,
+          "seconds": 43.5
+        },
+        {
+          "bar": 31,
+          "seconds": 45.0
+        },
+        {
+          "bar": 32,
+          "seconds": 46.5
+        },
+        {
+          "bar": 33,
+          "seconds": 48.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 500000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -2,
+          "minor": false
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    },
+    "scarlatti-k11": {
+      "ppq": 384,
+      "secondsPerBeat": 0.5,
+      "beatsPerBar": 4.0,
+      "meter": {
+        "tick": 0,
+        "numerator": 8,
+        "denominator": 8
+      },
+      "barTimes": [
+        {
+          "bar": 1,
+          "seconds": 0.0
+        },
+        {
+          "bar": 2,
+          "seconds": 2.0
+        },
+        {
+          "bar": 3,
+          "seconds": 4.0
+        },
+        {
+          "bar": 4,
+          "seconds": 6.0
+        },
+        {
+          "bar": 5,
+          "seconds": 8.0
+        },
+        {
+          "bar": 6,
+          "seconds": 10.0
+        },
+        {
+          "bar": 7,
+          "seconds": 12.0
+        },
+        {
+          "bar": 8,
+          "seconds": 14.0
+        },
+        {
+          "bar": 9,
+          "seconds": 16.0
+        },
+        {
+          "bar": 10,
+          "seconds": 18.0
+        },
+        {
+          "bar": 11,
+          "seconds": 20.0
+        },
+        {
+          "bar": 12,
+          "seconds": 22.0
+        },
+        {
+          "bar": 13,
+          "seconds": 24.0
+        },
+        {
+          "bar": 14,
+          "seconds": 26.0
+        },
+        {
+          "bar": 15,
+          "seconds": 28.0
+        },
+        {
+          "bar": 16,
+          "seconds": 30.0
+        },
+        {
+          "bar": 17,
+          "seconds": 32.0
+        },
+        {
+          "bar": 18,
+          "seconds": 34.0
+        },
+        {
+          "bar": 19,
+          "seconds": 36.0
+        },
+        {
+          "bar": 20,
+          "seconds": 38.0
+        },
+        {
+          "bar": 21,
+          "seconds": 40.0
+        },
+        {
+          "bar": 22,
+          "seconds": 42.0
+        },
+        {
+          "bar": 23,
+          "seconds": 44.0
+        },
+        {
+          "bar": 24,
+          "seconds": 46.0
+        },
+        {
+          "bar": 25,
+          "seconds": 48.0
+        },
+        {
+          "bar": 26,
+          "seconds": 50.0
+        },
+        {
+          "bar": 27,
+          "seconds": 52.0
+        },
+        {
+          "bar": 28,
+          "seconds": 54.0
+        },
+        {
+          "bar": 29,
+          "seconds": 56.0
+        }
+      ],
+      "tempos": [
+        {
+          "tick": 0,
+          "microsecondsPerQuarter": 500000,
+          "seconds": 0.0
+        }
+      ],
+      "meters": [
+        {
+          "tick": 0,
+          "numerator": 8,
+          "denominator": 8
+        }
+      ],
+      "keys": [
+        {
+          "tick": 0,
+          "sharps": -3,
+          "minor": true
+        }
+      ],
+      "preferFlats": true,
+      "inference": "Meter/key/tempo are read from source SMF metadata. Glyph spelling, clef, rests and rhythmic symbols in the playback view are inferred. Tempo changes can make its bar grid approximate; the note timing remains the source timing."
+    }
+  }
+}

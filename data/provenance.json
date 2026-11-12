@@ -441,6 +441,76 @@
     {
       "path": "assets/music/scarlatti-k11.mid",
       "sha256": "c0201d4c677983e21bd9a0904392334ce6bebdc691e30a40d1a5184c0a24ce93"
+    },
+    {
+      "path": "assets/notation/BRAVURA-OFL.txt",
+      "sha256": "bdca252186865f3b2c0e76da4a4e335c14ba1d37f80194fca254ddfa88e84fbf"
+    },
+    {
+      "path": "assets/notation/VEXFLOW-LICENSE.txt",
+      "sha256": "f5b8d8a302220da84066034456fef99821840affcc1fa2d3df94c3c0e81831e5"
+    },
+    {
+      "path": "assets/portraits/bach.webp",
+      "sha256": "fef052c38394e97c0c98f906cc89a5b3e43cda96fefb1a27942b3c5bb66cf8cb"
+    },
+    {
+      "path": "assets/portraits/corelli.webp",
+      "sha256": "8f08ddaac372984fc54776a8ffe4f9a52edce13459cbfc8372192eb05e65c4ad"
+    },
+    {
+      "path": "assets/portraits/couperin.webp",
+      "sha256": "d617097778afd523088ba88d3fa9504546f40aed825067e765b8b3cd7a37466b"
+    },
+    {
+      "path": "assets/portraits/cpe-bach.webp",
+      "sha256": "a310755004a4023da02c039942232ba09a6b3f33924945a55e21b4c6705682b9"
+    },
+    {
+      "path": "assets/portraits/handel.webp",
+      "sha256": "1e38bf4799d96045570b40d7d102f1a63e69be2670c650d54418a3fd37432bac"
+    },
+    {
+      "path": "assets/portraits/lully.webp",
+      "sha256": "91aff4a04ca081c01cfb8ccd0f13833a7a8d8ec02ce7f95fda90a2e2596ab9d0"
+    },
+    {
+      "path": "assets/portraits/monteverdi.webp",
+      "sha256": "58f45a2daf552f6a095bf746bd2732e29408f29f35e37cf66cbb284b1352af59"
+    },
+    {
+      "path": "assets/portraits/purcell.webp",
+      "sha256": "3f197bea84f005104d78d5eff7bcd0a38e7494a73aeff061bc6a8685982059b3"
+    },
+    {
+      "path": "assets/portraits/rameau.webp",
+      "sha256": "dd4745b47ab2b21d0ca40556c750577a53d448266bec85d6dc0df3b3d393dff9"
+    },
+    {
+      "path": "assets/portraits/scarlatti.webp",
+      "sha256": "a2872216058568c854bec1cc009489e31477178a9f32a7d8e4349b53561b1dc6"
+    },
+    {
+      "path": "assets/portraits/telemann.webp",
+      "sha256": "d1455ead3971e58f90ef42a9a82fc5e0f2a11f8167051c8687cdc3d013b6a3ce"
+    },
+    {
+      "path": "assets/portraits/vivaldi.webp",
+      "sha256": "6047ad82bdb23c3be4c0844a9fd0d911cebd87c4ef48f8c6374ec2457cc721f2"
     }
-  ]
+  ],
+  "portraits": {
+    "manifest": "data/portraits.json",
+    "sources": "Primary Wikimedia Commons file records; individual rights, creators, dates, download hashes and qualified captions are retained.",
+    "editorial_biographies": "data/biographies.json; concise summaries with source links."
+  },
+  "notation": {
+    "method": "Playback staff notation from source MIDI time arrays; actual Bravura glyph outlines rendered via VexFlow 4.2.5. No runtime font fetch.",
+    "inference": "Pitch spelling, clefs, rests and rhythmic symbols are inferred; source note timing is preserved. Original engraving comparison remains separate.",
+    "licenses": [
+      "assets/notation/BRAVURA-OFL.txt",
+      "assets/notation/VEXFLOW-LICENSE.txt"
+    ],
+    "metadata": "data/notation-metadata.json is read from the unchanged original SMF files."
+  }
 }
