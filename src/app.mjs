@@ -1,7 +1,7 @@
 import {VOICE_COLORS,projectCity,filterComposers,validateStudy,activeNotes,formatTime,safeURL} from './engine.mjs';
-import {KeyboardTransport} from './audio.mjs';
+import {KeyboardTransport,KEYBOARD_TIMBRES} from './audio.mjs';
 import {renderPlaybackScore,highlightPlaybackScore,moveScoreFocus} from './notation.mjs';
-import {AuthoredScore} from './authored-score.mjs';
+import {AuthoredScore,barAt} from './authored-score.mjs';
 const DATA=JSON.parse(document.getElementById('app-data').textContent);
 const $=id=>document.getElementById(id),esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 const htmlLink=(url,text)=>`<a href="${esc(safeURL(url))}" target="_blank" rel="noopener">${esc(text)}</a>`;
@@ -56,7 +56,15 @@ $('composer').addEventListener('click',e=>{const b=e.target.closest('[data-study
 $('map-help').addEventListener('click',()=>$('map-dialog').showModal());$('close-map').addEventListener('click',()=>$('map-dialog').close());$('map-dialog').addEventListener('click',e=>{if(e.target===$('map-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 function sourceMetadata(){return DATA.notationMetadata?.records?.[currentId]||{};}
 function renderScoreAt(position,{force=false}={}){
- if(curatedById.has(currentId)){authoredScore?.follow(position,transport.enabled,{scroll:transport.playing&&$('score-follow').checked});return;}
+ if(curatedById.has(currentId)){
+  authoredScore?.follow(position,transport.enabled,{scroll:transport.playing&&$('score-follow').checked});
+  const bar=barAt(currentStudy.measureTimes,position);
+  if(bar){
+   if(document.activeElement!==$('jump-bar'))$('jump-bar').value=bar.number;
+   $('score-prev').disabled=bar.index===0;$('score-next').disabled=bar.index===currentStudy.measureTimes.length-1;
+  }
+  return;
+ }
  const metadata=sourceMetadata(),barDuration=(metadata.secondsPerBeat||.5)*(metadata.beatsPerBar||4);
  const windowSeconds=Math.min(60,Math.max(2,barDuration*Number($('score-window').value)));
  const autoStart=Math.floor(Math.max(0,Math.min(position,currentStudy.duration-.0001))/windowSeconds)*windowSeconds;
@@ -89,13 +97,23 @@ async function setupStudy(study,id,signal){
  const query=special?'Johann Sebastian Bach Partita No. 1 BWV 825 Praeludium':`${m?.composerName||''} ${m?.collection==='Selected miniature'?'':m?.collection||''} ${m?.title||id}`;
  $('recording-link').href='https://www.youtube.com/results?search_query='+encodeURIComponent(query);
  $('audio-status').textContent='Local keyboard approximation. Press Listen to start. No recording is streamed.';
- for(const key of ['score-prev','score-next','score-window']){const el=$(key);(key==='score-window'?el.closest('label'):el).hidden=Boolean(authored);}
+ $('score-window').closest('label').hidden=Boolean(authored);
+ $('bar-navigation').hidden=!authored;$('repeat-bar').hidden=!authored;
+ for(const id of ['score-prev','score-next']){
+  $(id).hidden=false;
+  $(id).textContent=(id==='score-prev'?'Previous':'Next')+(authored?' bar':' page');
+  $(id).setAttribute('aria-label',$(id).textContent);
+ }
+ $('jump-bar').min=study.measureTimes?.[0]?.number??1;
+ $('jump-bar').max=study.measureTimes?.at(-1)?.number??1;
+ $('bar-total').textContent='/ '+(study.measureTimes?.at(-1)?.number??1);
+ $('repeat-bar').setAttribute('aria-pressed','false');
  $('edition-preview').hidden=Boolean(authored);
  if(authored){
   $('study-description').textContent=authored.note+(['independent-voices','actual-voice'].includes(authored.voiceKind)?' Colors identify the independent voices defined in the source.':' Colors identify source parts or staves; these are not necessarily independent contrapuntal voices.');
   $('notation-note').textContent='Follow each voice in color. Choose a note to start there, or switch to larger print to read the staff at close range.';
   $('edition-note').textContent=authored.attribution+' · '+authored.license+' · Adapted study edition from the credited Mutopia source.';$('score-link').href=safeURL(authored.source);$('midi-link').href=authored.midi||authored.noteData.replace(/\.json$/,'.mid');
-  $('score-page').textContent='Complete score';$('source-score').replaceChildren();$('score').textContent='Opening the complete score…';authoredScore=new AuthoredScore($('score'),$('score-position'));
+ $('score-page').textContent='Complete score';$('source-score').replaceChildren();$('score').textContent='Opening the complete score…';authoredScore=new AuthoredScore($('score'),$('score-position'));
  }
  rollStart=0;renderRoll();renderScoreAt(0,{force:true});frame(0);
  if(authored){await authoredScore.load(authored,currentStudy,{signal});if(!signal?.aborted){authoredScore.follow(0,transport.enabled);$('audio-status').textContent='Complete local selection. Press Listen to start.';}}
@@ -147,8 +165,34 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden){const acti
 $('score').addEventListener('click',e=>{const note=e.target.closest('[data-seek]');if(note)transport.seek(Number(note.dataset.seek)).catch(reportAudio);});
 $('score').addEventListener('keydown',e=>{const note=e.target.closest('[data-seek]');if(!note)return;if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();e.stopPropagation();moveScoreFocus($('score'),note,e.key==='Home'?'first':e.key==='End'?'last':e.key==='ArrowLeft'?-1:1);}else if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();transport.seek(Number(note.dataset.seek)).catch(reportAudio);}});
 const reportAudio=error=>$('audio-status').textContent=error.message;
-$('score-prev').addEventListener('click',()=>{if(curatedById.has(currentId))return;manualScoreStart=Math.max(0,scoreState.windowStart-(scoreState.windowEnd-scoreState.windowStart));$('score-follow').checked=false;renderScoreAt(transport.position,{force:true});});
-$('score-next').addEventListener('click',()=>{if(curatedById.has(currentId))return;manualScoreStart=Math.min(currentStudy.duration-.001,scoreState.windowEnd);$('score-follow').checked=false;renderScoreAt(transport.position,{force:true});});
+function moveBar(offset){
+ const bar=barAt(currentStudy.measureTimes,transport.position),next=bar&&currentStudy.measureTimes[bar.index+offset];
+ if(next)seekBar(next);
+}
+function seekBar(bar){
+ if(transport.loop){transport.clearLoop();$('repeat-bar').setAttribute('aria-pressed','false');$('loop-state').textContent='Loop off';}
+ transport.seek(bar.start).catch(reportAudio);
+}
+$('score-prev').addEventListener('click',()=>{if(curatedById.has(currentId)){moveBar(-1);return;}manualScoreStart=Math.max(0,scoreState.windowStart-(scoreState.windowEnd-scoreState.windowStart));$('score-follow').checked=false;renderScoreAt(transport.position,{force:true});});
+$('score-next').addEventListener('click',()=>{if(curatedById.has(currentId)){moveBar(1);return;}manualScoreStart=Math.min(currentStudy.duration-.001,scoreState.windowEnd);$('score-follow').checked=false;renderScoreAt(transport.position,{force:true});});
+$('jump-bar').addEventListener('change',()=>{
+ const bar=currentStudy.measureTimes?.find(row=>String(row.number)===$('jump-bar').value);
+ if(bar)seekBar(bar);else renderScoreAt(transport.position);
+});
+$('repeat-bar').addEventListener('click',()=>{
+ if(transport.loop){transport.clearLoop();$('repeat-bar').setAttribute('aria-pressed','false');$('loop-state').textContent='Loop off';renderRoll();return;}
+ const bar=barAt(currentStudy.measureTimes,transport.position);if(!bar)return;
+ transport.setLoop(bar.start,Math.min(bar.end,currentStudy.duration));
+ $('repeat-bar').setAttribute('aria-pressed','true');$('loop-state').textContent='Repeating bar '+bar.number;
+ transport.seek(bar.start).catch(reportAudio);renderRoll();
+});
+function focusScore(focused){
+ document.body.classList.toggle('score-focus',focused);$('focus-score').setAttribute('aria-pressed',String(focused));
+ $('focus-score').textContent=focused?'Exit score view':'Focus on the score';
+ if(focused)$('study').scrollIntoView({block:'start',behavior:'auto'});else $('focus-score').focus();
+}
+$('focus-score').addEventListener('click',()=>focusScore(!document.body.classList.contains('score-focus')));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.classList.contains('score-focus')){event.preventDefault();focusScore(false);}});
 $('score-follow').addEventListener('change',()=>{if(curatedById.has(currentId)){renderScoreAt(transport.position);return;}manualScoreStart=$('score-follow').checked?null:scoreState.windowStart;renderScoreAt(transport.position,{force:true});});
 $('score-window').addEventListener('change',()=>{manualScoreStart=null;$('score-follow').checked=true;renderScoreAt(transport.position,{force:true});});
 $('track-levels').addEventListener('input',e=>{const input=e.target.closest('[data-level]');if(input)transport.setVoiceLevel(Number(input.dataset.level),input.value);});
@@ -159,7 +203,7 @@ $('reverb').addEventListener('input',()=>transport.setReverb($('reverb').value))
 $('tuning').addEventListener('change',()=>transport.setTuning($('tuning').value));
 $('loop-a').addEventListener('click',()=>{loopA=transport.position;$('loop-state').textContent=`A ${formatTime(loopA)}. Choose B.`;});
 $('loop-b').addEventListener('click',()=>{try{transport.setLoop(loopA??0,transport.position);$('loop-state').textContent=`Loop ${formatTime(transport.loop.start)}–${formatTime(transport.loop.end)}`;renderRoll();}catch(error){$('loop-state').textContent=error.message;}});
-$('loop-clear').addEventListener('click',()=>{transport.clearLoop();loopA=null;$('loop-state').textContent='Loop off';renderRoll();});
+$('loop-clear').addEventListener('click',()=>{transport.clearLoop();$('repeat-bar').setAttribute('aria-pressed','false');loopA=null;$('loop-state').textContent='Loop off';renderRoll();});
 $('menu-toggle').addEventListener('click',()=>{const open=$('menu-toggle').getAttribute('aria-expanded')!=='true';$('menu-toggle').setAttribute('aria-expanded',String(open));$('main-nav').classList.toggle('open',open);});
 $('main-nav').addEventListener('click',()=>{$('menu-toggle').setAttribute('aria-expanded','false');$('main-nav').classList.remove('open');});
 document.addEventListener('keydown',event=>{if(event.target.closest('input,select,textarea,button,a,summary,[contenteditable],[data-seek]'))return;if(event.key===' '){event.preventDefault();$('play').click();}else if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();transport.seek(transport.position+(event.key==='ArrowLeft'?-5:5)).catch(reportAudio);}else if(event.key==='Home'){event.preventDefault();transport.seek(0).catch(reportAudio);}else if(/^[1-9]$/.test(event.key)){const i=Number(event.key)-1;if(i<transport.enabled.length){transport.setVoice(i,!transport.enabled[i]);syncVoiceButtons();renderRoll();}}});

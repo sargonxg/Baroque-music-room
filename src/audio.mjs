@@ -12,6 +12,20 @@ export function pianoSampleRoot(pitch) {
  return PIANO_ROOTS[bound(Math.round((pitch - 24) / 6), 0, PIANO_ROOTS.length - 1)];
 }
 
+/** Blend neighbouring recorded keys so a scale does not jump between sample colours. */
+export function pianoLayers(pitch) {
+ const low=PIANO_ROOTS[bound(Math.floor((pitch-24)/6),0,PIANO_ROOTS.length-1)];
+ const high=Math.min(108,low+6), blend=bound((pitch-low)/6,0,1);
+ if(blend===0||low===high)return [[low,1]];
+ if(blend===1)return [[high,1]];
+ return [[low,Math.cos(blend*Math.PI/2)],[high,Math.sin(blend*Math.PI/2)]];
+}
+
+export function phraseVelocity(velocity,length,gap,shaped) {
+ const dynamics=bound(velocity,.12,1);
+ return shaped&&length<1.2&&gap>length+.12 ? dynamics*.94 : dynamics;
+}
+
 /** Lift short, separated notes slightly. Source attacks and sustained overlaps stay on the score clock. */
 export function articulatedLength(length, gap, shaped) {
  if (!shaped || length > .48 || gap < length - .008) return length;
@@ -34,7 +48,7 @@ export class KeyboardTransport {
   const Context=globalThis.AudioContext||globalThis.webkitAudioContext;
   if(!Context)throw Error('Audio is unavailable here. Download the MIDI or open the source score.');
   this.context=activatedContext??new Context();this.master=this.context.createGain();this.master.gain.value=this.volume;
-  const compressor=this.context.createDynamicsCompressor();compressor.threshold.value=-18;compressor.knee.value=18;compressor.ratio.value=8;
+  const compressor=this.context.createDynamicsCompressor();compressor.threshold.value=-14;compressor.knee.value=14;compressor.ratio.value=2.8;
   this.master.connect(compressor);compressor.connect(this.context.destination);
   this.dry=this.context.createGain();this.wet=this.context.createGain();this.dry.connect(this.master);this.wet.connect(this.master);
   if(this.context.createConvolver&&this.context.createBuffer){
@@ -52,7 +66,7 @@ export class KeyboardTransport {
  async preparePiano(){
   if(!this.context?.decodeAudioData || !this.context.createBufferSource || !this.study)return;
   const context=this.context;
-  const pitches = new Set(this.study.tracks.flatMap(track=>track.notes.map(note=>pianoSampleRoot(note[0]))));
+  const pitches = new Set(this.study.tracks.flatMap(track=>track.notes.flatMap(note=>pianoLayers(note[0]).map(([root])=>root))));
   await Promise.all([...pitches].map(root=>{
    if(this.piano.has(root))return;
    if(this.pianoLoads.has(root))return this.pianoLoads.get(root);
@@ -121,11 +135,14 @@ export class KeyboardTransport {
   const when=Math.max(this.context.currentTime,this.anchor+(start-this.origin)/this.rate);
   const sourceDuration=Math.min(duration,(this.loop?.end??Infinity)-start);
   const length=articulatedLength(Math.max(.025,sourceDuration/this.rate),(nextStart-start)/this.rate,this.shaped && this.timbre!=='organ');
-  const dynamics=bound(velocity,.12,1);
-  const root=pianoSampleRoot(pitch);
-  if(this.timbre==='piano'&&this.piano.has(root)){
-   this.pianoNote(root,pitch,when,length,dynamics,track);
-   return;
+  const dynamics=phraseVelocity(velocity,sourceDuration,nextStart-start,this.shaped);
+  if(this.timbre==='piano'){
+   const layers=pianoLayers(pitch).filter(([key])=>this.piano.has(key));
+   if(layers.length){
+    const balance=layers.reduce((sum,[,weight])=>sum+weight,0);
+    for(const [key,weight] of layers)this.pianoNote(key,pitch,when,length,dynamics,track,weight/balance);
+    return;
+   }
   }
   const frequency=this.tuning*Math.pow(2,(pitch-69)/12),oscillator=this.context.createOscillator(),gain=this.context.createGain();
   oscillator.setPeriodicWave(this.waves[this.timbre]);oscillator.frequency.value=frequency;
@@ -138,14 +155,14 @@ export class KeyboardTransport {
   oscillator.connect(gain);gain.connect(this.trackGains[track]);oscillator.start(when);oscillator.stop(holdEnd+release+.02);
   this.nodes.add(oscillator);oscillator.onended=()=>{this.nodes.delete(oscillator);oscillator.disconnect();gain.disconnect();};
  }
- pianoNote(root,pitch,when,length,dynamics,track){
+ pianoNote(root,pitch,when,length,dynamics,track,weight=1){
   const source=this.context.createBufferSource(), envelope=this.context.createGain();
   const touch=this.context.createBiquadFilter();
   source.buffer=this.piano.get(root);
   source.playbackRate.value=Math.pow(2,(pitch-root)/12)*(this.tuning/440);
-  touch.type='lowpass';touch.Q.value=.62;touch.frequency.value=2300+10100*Math.pow(dynamics,1.25);
-  const peak=.34*Math.pow(dynamics,1.35), end=when+Math.max(.018,length);
-  const release=bound(.14+(60-pitch)*.0015,.075,.22);
+  touch.type='lowpass';touch.Q.value=.45;touch.frequency.value=1900+11100*Math.pow(dynamics,1.25);
+  const peak=.34*weight*Math.pow(dynamics,1.2), end=when+Math.max(.018,length);
+  const release=bound(.18+(60-pitch)*.002,.09,.28);
   envelope.gain.setValueAtTime(.0001,when);
   envelope.gain.exponentialRampToValueAtTime(peak,when+.004);
   envelope.gain.setValueAtTime(peak,end);

@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {articulatedLength, KeyboardTransport, pianoSampleRoot} from '../src/audio.mjs';
+import {articulatedLength, KeyboardTransport, pianoLayers, pianoSampleRoot, phraseVelocity} from '../src/audio.mjs';
 const parameter=()=>({value:0,setValueAtTime(){},exponentialRampToValueAtTime(){},setTargetAtTime(v){this.value=v;}});
 class FakeContext {
  constructor(){this.currentTime=0;this.destination={};this.oscillators=[];}
@@ -53,8 +53,8 @@ test('a sampled piano fetches only its required roots after Play and reuses them
  await transport.play();
  assert.deepEqual(requests,['assets/instruments/piano/60.mp3','assets/instruments/piano/66.mp3']);
  assert.equal(transport.sampledPiano,true);assert.equal(sources[0].attack,.03);
- await transport.seek(2);assert.equal(requests.length,2);assert.equal(sources.length,2);
- assert(sources[1].playbackRate.value<1);
+ await transport.seek(2);assert.equal(requests.length,2);assert.equal(sources.length,3);
+ assert(sources[1].playbackRate.value>1);assert(sources[2].playbackRate.value<1);
  await transport.dispose();
 });
 
@@ -64,4 +64,10 @@ test('short-note shaping preserves overlapping or sustained notes and bounds sam
  assert.equal(articulatedLength(.65,.65,true),.65);
  assert.equal(articulatedLength(.24,.24,false),.24);
  assert.equal(pianoSampleRoot(21),24);assert.equal(pianoSampleRoot(108),108);
+});
+
+test('piano neighbours keep an exact root stable and phrase shaping leaves source velocities bounded',()=>{
+ assert.deepEqual(pianoLayers(60),[[60,1]]);
+ const middle=pianoLayers(63);assert.equal(middle.length,2);assert.equal(middle[0][0],60);assert.equal(middle[1][0],66);assert(Math.abs(middle[0][1]-middle[1][1])<.00001);
+ assert.equal(phraseVelocity(.8,.3,.3,true),.8);assert(phraseVelocity(.8,.3,.9,true)<.8);assert.equal(phraseVelocity(.8,.3,.9,false),.8);
 });

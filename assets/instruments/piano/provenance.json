@@ -3,7 +3,7 @@
   "original": "https://archive.org/details/SalamanderGrandPianoV3",
   "license": "https://creativecommons.org/licenses/by/3.0/",
   "distribution": "https://github.com/Tonejs/audio/tree/efd8296360f9526e379bfbe5c1698ff54d6a1d34/salamander",
-  "adaptation": "One sampled root every six semitones. Down-selected, re-encoded and faded to bound each file. Keyboard velocity and release are rendered by the app.",
+  "adaptation": "Recorded roots every six semitones, extended to up to 6.25 seconds in the bass and middle range. Subsonic filtering, 0.4-second end fade and 48 kbps encoding. Neighbouring keys are blended during playback. Source timing is preserved.",
   "samples": [
     {
       "key": "24",
@@ -12,8 +12,9 @@
       "upstreamBytes": 110199,
       "midiRoot": 24,
       "file": "24.mp3",
-      "bytes": 29509,
-      "sha256": "c04695781f86f174dd1d66605d8a27dbff76098d96f72d1409f14f296e502328"
+      "bytes": 38025,
+      "sha256": "cb55230d2b74ff801758a699377008684d9a64a8518c07241a5e04b8d830fabe",
+      "durationSeconds": 6.25
     },
     {
       "key": "30",
@@ -22,8 +23,9 @@
       "upstreamBytes": 115010,
       "midiRoot": 30,
       "file": "30.mp3",
-      "bytes": 29509,
-      "sha256": "8697dc3bed8522f5284b16a198dd209b7413658fb30852fd8e3b50e98813962a"
+      "bytes": 38025,
+      "sha256": "a13fbacd8c37061391c8c8bda0106238f7f47ffd2db20ba92573f74b2a5df8ab",
+      "durationSeconds": 6.25
     },
     {
       "key": "36",
@@ -32,8 +34,9 @@
       "upstreamBytes": 110357,
       "midiRoot": 36,
       "file": "36.mp3",
-      "bytes": 29509,
-      "sha256": "aa6153e83701ba9ed9f2c650a04694cc4c55032b242298341bc320f6d0578fd0"
+      "bytes": 38025,
+      "sha256": "f34692d0586eebf1bc46391c102802cd7998016046f75a598f006eccfdd088f6",
+      "durationSeconds": 6.25
     },
     {
       "key": "42",
@@ -42,8 +45,9 @@
       "upstreamBytes": 102320,
       "midiRoot": 42,
       "file": "42.mp3",
-      "bytes": 29509,
-      "sha256": "34fcc2b6a9aedb23b3bb5a55ca24948df34ae6d7c907531ca336e9c8da4624ec"
+      "bytes": 38025,
+      "sha256": "222d06e5d71bec8b467e842ba9105e87d7e26fcda5af328ef23dcc9095af6099",
+      "durationSeconds": 6.25
     },
     {
       "key": "48",
@@ -52,8 +56,9 @@
       "upstreamBytes": 78036,
       "midiRoot": 48,
       "file": "48.mp3",
-      "bytes": 29509,
-      "sha256": "a691512f72cccbb55b6e8d004521fa6aabcdeb7cb8f417a17d79ee23b694f716"
+      "bytes": 38025,
+      "sha256": "2fcc3086cf4e768c5da48f74beff79d2d6f9dd0284634b68ebe498b8e063882e",
+      "durationSeconds": 6.25
     },
     {
       "key": "54",
@@ -62,8 +67,9 @@
       "upstreamBytes": 77933,
       "midiRoot": 54,
       "file": "54.mp3",
-      "bytes": 29509,
-      "sha256": "dabfecd7120c3a026541dbc036081cb76e2f5ba75b24f2c3a5494363d6e6e479"
+      "bytes": 38025,
+      "sha256": "ae7286dd88323b422476bb2b73f71f96d615a4f13a4d2dce6c3e7a50edc68c73",
+      "durationSeconds": 6.25
     },
     {
       "key": "60",
@@ -72,8 +78,9 @@
       "upstreamBytes": 78718,
       "midiRoot": 60,
       "file": "60.mp3",
-      "bytes": 29509,
-      "sha256": "3ecd5c107f15f54f93d04ec98750a2997ca1d6e9492a2ab90e0748087f9d6353"
+      "bytes": 38025,
+      "sha256": "f82987fddd5c7b1b8f8e3026965c9f385d48712347845141a157374a3b94c288",
+      "durationSeconds": 6.25
     },
     {
       "key": "66",
@@ -82,8 +89,9 @@
       "upstreamBytes": 68219,
       "midiRoot": 66,
       "file": "66.mp3",
-      "bytes": 29509,
-      "sha256": "af2531a9dfc8643debdd61500589b37bd3e79024cc54b31e57e987ac11cbf6f5"
+      "bytes": 38025,
+      "sha256": "0a34a1f778c9f25be76dcd43d5629308d98d1d3cffc5ba7441e0e9aaeafc5606",
+      "durationSeconds": 6.25
     },
     {
       "key": "72",
@@ -92,8 +100,9 @@
       "upstreamBytes": 68920,
       "midiRoot": 72,
       "file": "72.mp3",
-      "bytes": 29509,
-      "sha256": "c027ad989f89e402d41e64b95dcc9668b973edf3acaeac3583e4cfbd6e27eb4e"
+      "bytes": 38025,
+      "sha256": "db89ddba0f9691e236511c3dc838687fc32349363f1c69de7975130c66fc790a",
+      "durationSeconds": 6.25
     },
     {
       "key": "78",
@@ -102,8 +111,9 @@
       "upstreamBytes": 51597,
       "midiRoot": 78,
       "file": "78.mp3",
-      "bytes": 29509,
-      "sha256": "36a65650e1f1818f78f51e506f59e3ba80ab24b081dffe523fc242c37adb6143"
+      "bytes": 28151,
+      "sha256": "4370d182ad9b863da5640d710f7161c2063fbf7f9e66576c2711023b6e4729dc",
+      "durationSeconds": 4.6
     },
     {
       "key": "84",
@@ -112,8 +122,9 @@
       "upstreamBytes": 28065,
       "midiRoot": 84,
       "file": "84.mp3",
-      "bytes": 29509,
-      "sha256": "eb10ffb3692b88795208056f2cc6931c053c90066a2880f94e3691dfbab0960a"
+      "bytes": 28151,
+      "sha256": "721efcee507afe210705151a3ae9b48c55d74c617141aa95033bdaf21ef6c6b2",
+      "durationSeconds": 4.6
     },
     {
       "key": "90",
@@ -122,8 +133,9 @@
       "upstreamBytes": 26478,
       "midiRoot": 90,
       "file": "90.mp3",
-      "bytes": 29509,
-      "sha256": "72c50b9fea404c9d9c2de0571df665b42866f4895babce801c36c82034046edf"
+      "bytes": 28151,
+      "sha256": "12131e43844f6ab2e48704f6553843c3c4a69043dc1258e4b38de1d16bb2712f",
+      "durationSeconds": 4.6
     },
     {
       "key": "96",
@@ -132,8 +144,9 @@
       "upstreamBytes": 18963,
       "midiRoot": 96,
       "file": "96.mp3",
-      "bytes": 29143,
-      "sha256": "a472dd788114d965b9a0c152dba35d19c784d3b47c528e1cd1f0c01c09aaad13"
+      "bytes": 25016,
+      "sha256": "5a9fd6bfc48a64a03bfb152f89e7c1cd8e3e66bead47ae3d71430d700c418b34",
+      "durationSeconds": 4.127
     },
     {
       "key": "102",
@@ -142,8 +155,9 @@
       "upstreamBytes": 22709,
       "midiRoot": 102,
       "file": "102.mp3",
-      "bytes": 29509,
-      "sha256": "15eec4d35d3cdbe4c84862dc447bc4685afaefa9bad2ad131c5cc4d6acd84c38"
+      "bytes": 28151,
+      "sha256": "0fb0cccf7a5b0eb7c8870d113025a42ee7692b28f08236310bc6bf6d34d5f2c2",
+      "durationSeconds": 4.6
     },
     {
       "key": "108",
@@ -152,8 +166,9 @@
       "upstreamBytes": 18914,
       "midiRoot": 108,
       "file": "108.mp3",
-      "bytes": 27680,
-      "sha256": "2303de949055cbb3e717e2a7d9e8f779b541c0cfe715c7aeb057b4ee8242001f"
+      "bytes": 23762,
+      "sha256": "050660554c5d3bd8227994447c2d3be3347555f9161b8096c44a0d5267ace87b",
+      "durationSeconds": 3.918
     }
   ]
 }

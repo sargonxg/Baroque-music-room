@@ -9,6 +9,16 @@ export function loadScoreRenderer(){
  });return rendererPromise;
 }
 export function timingQuarter(row,study){return Number.isFinite(row.quarter)?row.quarter:row.start/(study.secondsPerQuarter||.5);}
+export function barAt(bars,position){
+ if(!bars?.length)return null;
+ let index=0, high=bars.length;
+ while(high-index>1){const middle=(high+index)>>1;if(bars[middle].start<=position)index=middle;else high=middle;}
+ return {...bars[index],index};
+}
+export function pitchName(pitch){
+ const names=['C','C♯','D','E♭','E','F','F♯','G','A♭','A','B♭','B'];
+ return names[((pitch%12)+12)%12]+(Math.floor(pitch/12)-1);
+}
 export function sourceTiming(study){
  if(Array.isArray(study.timing))return study.timing;
  const allowed=['id','part','voice','track','quarter','start','duration','quarterDuration','measure','beat','pitch','voiceColor','color','grace','ties'];
@@ -52,7 +62,10 @@ export class AuthoredScore{
   for(const group of this.groups){
    const first=group.rows.reduce((a,b)=>a.start<b.start?a:b),track=this.trackFor(first,study,piece);
    group.track=track;group.start=first.start;group.end=Math.max(...group.rows.map(row=>row.start+row.duration));
-   const node=group.element;node.classList.add('authored-note','voice-'+track%6);node.setAttribute('data-score-note',String(first.id));node.setAttribute('data-seek',String(first.start));node.setAttribute('data-track',String(track));if(first.measure!=null)node.setAttribute('data-bar',String(first.measure));node.setAttribute('role','button');node.setAttribute('tabindex','-1');node.setAttribute('aria-label',(study.tracks[track]?.label||'Source voice')+', '+first.start.toFixed(2)+' seconds. Seek to this note.');
+   const node=group.element;node.classList.add('authored-note','voice-'+track%6);node.setAttribute('data-score-note',String(first.id));node.setAttribute('data-seek',String(first.start));node.setAttribute('data-track',String(track));if(first.measure!=null)node.setAttribute('data-bar',String(first.measure));node.setAttribute('role','button');node.setAttribute('tabindex','-1');
+   const label=(study.tracks[track]?.label||'Source voice')+', '+pitchName(first.pitch)+(first.measure!=null?', bar '+first.measure:'')+', '+first.start.toFixed(2)+' seconds. Seek to this note.';
+   node.setAttribute('aria-label',label);
+   const title=document.createElementNS('http://www.w3.org/2000/svg','title');title.textContent=label;node.append(title);
   }
   this.groups.sort((a,b)=>a.start-b.start||a.track-b.track);this.groups[0]?.element.setAttribute('tabindex','0');
   this.host.dataset.notes=String(matched);this.host.dataset.sourceNotes=String(visited);this.host.dataset.mapping=String(visited?matched/visited:0);this.host.dataset.state='ready';
@@ -95,15 +108,12 @@ export class AuthoredScore{
   }
  }
  showBar(position){
-  if(!this.barLabel||!this.bars.length)return;
-  let index=0, high=this.bars.length;
-  while(high-index>1){
-   const middle=(high+index)>>1;
-   if(this.bars[middle].start<=position)index=middle;else high=middle;
-  }
-  const number=String(this.bars[index].number);
+  const bar=barAt(this.bars,position);if(!bar)return;
+  const number=String(bar.number);
   if(number===this.lastBar)return;
-  this.lastBar=number;this.barLabel.textContent='Bar '+number;
+  this.lastBar=number;
+  for(const group of this.groups)group.element.classList.toggle('authored-current-bar',String(group.rows[0].measure)===number);
+  if(this.barLabel)this.barLabel.textContent='Bar '+number;
  }
 
  dispose(){this.epoch++;this.osmd?.clear();this.osmd=null;this.groups=[];this.active.clear();this.host.classList.remove('authored-score');this.host.removeAttribute('data-state');if(this.barLabel)this.barLabel.textContent='';}

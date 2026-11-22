@@ -20,8 +20,8 @@ npm run dev
 
 Open http://127.0.0.1:8000. `npm run build` creates `dist/` for any static host.
 No account, API key, database, model service or recording subscription is needed.
-Normal builds and playback are offline; external edition and recording links
-require an internet connection. Serve over HTTP for separately loaded scores.
+Builds use only local assets. Serve over HTTP for the separately loaded scores
+and samples. External editions and recording searches need the internet.
 
 ## Try a listening study
 
@@ -104,3 +104,21 @@ that run. Viewport emulation and audio lifecycle tests do not certify physical
 devices, screen-reader use or concert fidelity.
 
 The listening desk offers a sampled grand piano and synthesized period keyboards. Playback follows the authored score with a bar indicator and optional larger print. Shape short notes by adjusting their release. The attacks remain aligned with the notation. [Piano sources and license](assets/instruments/piano/provenance.json).
+
+## Practice with a score
+
+Choose **Focus on the score** to fold away the atlas. The transport stays at the
+top of the practice view. **Previous bar**, **Next bar** and **Go to bar** use
+the measure numbers in the source, including a pickup labelled 0. **Repeat bar**
+loops the current measure. Turning the page or choosing another bar clears a
+loop. Escape returns to the atlas controls.
+
+The score gives each note a pitch, source part, bar and time in its accessible
+label. Hover for the same information. The current bar has a light emphasis.
+Use **Larger print** for closer reading or print the score from a focused view.
+
+The piano now retains up to 6.25 seconds of recorded bass and middle-register
+decay. Neighbouring sampled keys blend through the gaps. A lighter compressor
+preserves differences in touch. **Gentle phrasing** adjusts release and eases
+short notes before a rest. This is an adjustable listening interpretation.
+The source attacks, measure times and downloaded MIDI remain the reference.
