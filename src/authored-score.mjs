@@ -41,7 +41,10 @@ export class AuthoredScore{
   const xml=piece.score.endsWith('.mxl')?new Blob([content],{type:'application/vnd.recordare.musicxml'}):new TextDecoder().decode(content);
   const container=document.createElement('div');container.className='authored-engraving';this.host.append(container);
   this.osmd=new library.OpenSheetMusicDisplay(container,{backend:'svg',autoResize:false,autoBeam:true,autoBeamOptions:{beam_rests:false,maintain_stem_directions:false},drawTitle:false,drawSubtitle:false,drawComposer:false,drawPartNames:false,drawMeasureNumbers:true,coloringEnabled:true,coloringMode:0,disableCursor:false,drawingParameters:'compacttight'});
-  await this.osmd.load(xml);if(signal?.aborted||epoch!==this.epoch){this.osmd.clear();return;}this.osmd.Zoom=1.05;this.osmd.render();
+  await this.osmd.load(xml);if(signal?.aborted||epoch!==this.epoch){this.osmd.clear();return;}
+  const beats=(this.osmd.Sheet?.SourceMeasures||[]).map(measure=>measure.ActiveTimeSignature).filter(Boolean).map(meter=>[(meter.Numerator>=3&&meter.Numerator%3===0&&meter.Denominator>=8)?3:1,meter.Denominator]);
+  if(beats.length&&beats.every(beat=>beat[0]===beats[0][0]&&beat[1]===beats[0][1])&&Number.isInteger(beats[0][1])&&beats[0][1]>0)this.osmd.EngravingRules.AutoBeamOptions.groups=[beats[0]];
+  this.osmd.Zoom=1.05;this.osmd.render();
   this.cleanPresentation(container);
   const rows=sourceTiming(study).filter(row=>Number.isFinite(row.start)&&Number.isFinite(row.pitch)).map(row=>({...row,quarter:timingQuarter(row,study)}));
   this.bars=(Array.isArray(study.measureTimes)?study.measureTimes:[]).filter(bar=>Number.isFinite(bar.start)).sort((a,b)=>a.start-b.start);
