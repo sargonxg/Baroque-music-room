@@ -28,4 +28,4 @@ button,a{transition:color .12s ease,background-color .12s ease}button:hover{filt
 @media(max-width:600px){.score.authored-score{height:450px;max-height:65vh;padding:5px}.authored-engraving{min-width:0}.study-header{gap:18px}.score-controls{gap:12px}.source-row a{min-height:44px}}
 @media(forced-colors:active){.authored-note.authored-playing{outline:2px solid Highlight;filter:none}.score.authored-score{background:Canvas}}
 
-.score .authored-engraving{min-width:0}.score.large-notation .authored-engraving{min-width:700px}.measure-position{font-weight:650;color:#245646;min-width:3.5em}.measure-position:empty{display:none}.phrase-option{display:flex;align-items:center;gap:6px}.phrase-option input,.larger-score input{accent-color:#285646}
+.score .authored-engraving{min-width:0}.score.large-notation .authored-engraving{min-width:700px}.score.large-notation .authored-engraving svg{width:100%}.measure-position{font-weight:650;color:#245646;min-width:3.5em}.measure-position:empty{display:none}.phrase-option{display:flex;align-items:center;gap:6px}.phrase-option input,.larger-score input{accent-color:#285646}
