@@ -34,7 +34,7 @@ export class AuthoredScore{
  constructor(host,barLabel=null){this.barLabel=barLabel;this.bars=[];this.lastBar='';this.host=host;this.osmd=null;this.groups=[];this.active=new Set();this.epoch=0;this.enabledKey='';this.lastScroll=0;}
  async load(piece,study,{signal}={}){
   const epoch=++this.epoch;this.host.replaceChildren();this.host.classList.add('authored-score');this.host.dataset.state='loading';
-  const [library,response]=await Promise.all([loadScoreRenderer(),fetch(piece.score,{signal,credentials:'omit'})]);
+  const [library,response]=await Promise.all([loadScoreRenderer(),fetch(piece.score,{signal,credentials:'same-origin'})]);
   if(!response.ok)throw Error('The complete MusicXML score could not load.');const content=await response.arrayBuffer();if(content.byteLength>2_000_000)throw Error('Score exceeds its size limit.');
   if(signal?.aborted||epoch!==this.epoch)return;
   // Score files are pinned, build-validated compressed MusicXML, never a visitor-provided URL.

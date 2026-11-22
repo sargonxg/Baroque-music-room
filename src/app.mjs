@@ -120,7 +120,7 @@ async function setupStudy(study,id,signal){
 }
 async function selectStudy(id){
  const epoch=++loadEpoch;studyAbort?.abort();studyAbort=new AbortController();const signal=studyAbort.signal;transport.pause();setPlaying(false);$('play').disabled=true;$('study').classList.add('is-loading');
- try{let study;if(id==='partita-study')study=DATA.study;else{if(!movementById.has(id))throw Error('Unknown study');const response=await fetch(curatedById.get(id)?.noteData||`assets/music/${id}.json`,{credentials:'omit',signal});if(!response.ok)throw Error('The study file could not be loaded. Run npm run build and serve dist/.');const text=await response.text();if(text.length>2_000_000)throw Error('Unexpected study size');study=JSON.parse(text);}if(epoch!==loadEpoch)return;await setupStudy(study,id,signal);}
+ try{let study;if(id==='partita-study')study=DATA.study;else{if(!movementById.has(id))throw Error('Unknown study');const response=await fetch(curatedById.get(id)?.noteData||`assets/music/${id}.json`,{credentials:'same-origin',signal});if(!response.ok)throw Error('The study file could not be loaded. Run npm run build and serve dist/.');const text=await response.text();if(text.length>2_000_000)throw Error('Unexpected study size');study=JSON.parse(text);}if(epoch!==loadEpoch)return;await setupStudy(study,id,signal);}
  catch(error){if(epoch===loadEpoch){$('audio-status').textContent=error.message;$('movement').value=currentId;}}
  finally{if(epoch===loadEpoch){$('play').disabled=false;$('study').classList.remove('is-loading');}}
 }

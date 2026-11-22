@@ -70,7 +70,7 @@ export class KeyboardTransport {
   await Promise.all([...pitches].map(root=>{
    if(this.piano.has(root))return;
    if(this.pianoLoads.has(root))return this.pianoLoads.get(root);
-   const request=fetch('assets/instruments/piano/'+root+'.mp3',{credentials:'omit',signal:AbortSignal.timeout(6500)})
+   const request=fetch('assets/instruments/piano/'+root+'.mp3',{credentials:'same-origin',signal:AbortSignal.timeout(6500)})
     .then(response=>{
      if(!response.ok)throw Error('Piano sample unavailable.');
      return response.arrayBuffer();
