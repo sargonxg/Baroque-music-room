@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {KeyboardTransport} from '../src/audio.mjs';
+import {articulatedLength, KeyboardTransport, pianoSampleRoot} from '../src/audio.mjs';
 const parameter=()=>({value:0,setValueAtTime(){},exponentialRampToValueAtTime(){},setTargetAtTime(v){this.value=v;}});
 class FakeContext {
  constructor(){this.currentTime=0;this.destination={};this.oscillators=[];}
@@ -36,4 +36,32 @@ test('solo and all-together preserve explicit track selection',()=>{
 });
 test('loop controls reject invalid boundaries and stop resets position',async()=>{
  const t=new KeyboardTransport(()=>{},()=>{});t.load(study);assert.throws(()=>t.setLoop(2,2.1));assert.throws(()=>t.setLoop(3,1));t.setLoop(.5,3);assert.deepEqual(t.loop,{start:.5,end:3});t.clearLoop();assert.equal(t.loop,null);await t.seek(2);t.stop();assert.equal(t.position,0);assert.equal(t.playing,false);await t.dispose();assert.equal(t.context,null);
+});
+
+test('a sampled piano fetches only its required roots after Play and reuses them on a seek',async(t)=>{
+ const transport=new KeyboardTransport(),context=new FakeContext();
+ const requests=[],sources=[];
+ t.mock.method(globalThis,'fetch',async url=>{requests.push(url);return {ok:true,arrayBuffer:async()=>new ArrayBuffer(50)};});
+ context.decodeAudioData=async()=>({duration:4});
+ context.createBiquadFilter=()=>({Q:parameter(),frequency:parameter(),connect(){},disconnect(){}});
+ context.createBufferSource=()=>{
+  const source={playbackRate:parameter(),connect(){},disconnect(){},start(time){this.attack=time;},stop(){}};
+  sources.push(source);return source;
+ };
+ transport.load(study);transport.setTimbre('piano');transport.initialize(context);
+ assert.deepEqual(requests,[]);
+ await transport.play();
+ assert.deepEqual(requests,['assets/instruments/piano/60.mp3','assets/instruments/piano/66.mp3']);
+ assert.equal(transport.sampledPiano,true);assert.equal(sources[0].attack,.03);
+ await transport.seek(2);assert.equal(requests.length,2);assert.equal(sources.length,2);
+ assert(sources[1].playbackRate.value<1);
+ await transport.dispose();
+});
+
+test('short-note shaping preserves overlapping or sustained notes and bounds sample roots',()=>{
+ assert(articulatedLength(.24,.24,true)<.24);
+ assert.equal(articulatedLength(.24,.20,true),.24);
+ assert.equal(articulatedLength(.65,.65,true),.65);
+ assert.equal(articulatedLength(.24,.24,false),.24);
+ assert.equal(pianoSampleRoot(21),24);assert.equal(pianoSampleRoot(108),108);
 });

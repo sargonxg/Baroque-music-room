@@ -102,3 +102,5 @@ correction of the intro count from 45 legacy movements to 50 complete listening
 selections. All 50 authored scores rendered with full source-note alignment in
 that run. Viewport emulation and audio lifecycle tests do not certify physical
 devices, screen-reader use or concert fidelity.
+
+The listening desk offers a sampled grand piano and synthesized period keyboards. Playback follows the authored score with a bar indicator and optional larger print. Shape short notes by adjusting their release. The attacks remain aligned with the notation. [Piano sources and license](assets/instruments/piano/provenance.json).

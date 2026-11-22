@@ -1,26 +1,39 @@
-/** Local keyboard approximation. No recording, samples, model or network call. */
+/** Local score transport with a sampled piano and synthesized period keyboards. */
 export const KEYBOARD_TIMBRES={
  harpsichord:{label:'Harpsichord',harmonicDecay:1.25,even:.55,attack:.003,release:.09,decay:1.9,sustain:.015},
  clavichord:{label:'Clavichord',harmonicDecay:2.1,even:.7,attack:.009,release:.14,decay:1.25,sustain:.025},
- piano:{label:'Piano study',harmonicDecay:1.9,even:.9,attack:.012,release:.2,decay:2.8,sustain:.025},
+ piano:{label:'Grand piano',harmonicDecay:1.9,even:.9,attack:.012,release:.2,decay:2.8,sustain:.025},
  organ:{label:'Small organ',harmonicDecay:2.6,even:.7,attack:.025,release:.12,decay:0,sustain:.8},
 };
 const bound=(v,a,b)=>Math.min(b,Math.max(a,Number.isFinite(Number(v))?Number(v):a));
+const PIANO_ROOTS = Array.from({length:15}, (_, index) => 24 + index * 6);
+
+export function pianoSampleRoot(pitch) {
+ return PIANO_ROOTS[bound(Math.round((pitch - 24) / 6), 0, PIANO_ROOTS.length - 1)];
+}
+
+/** Lift short, separated notes slightly. Source attacks and sustained overlaps stay on the score clock. */
+export function articulatedLength(length, gap, shaped) {
+ if (!shaped || length > .48 || gap < length - .008) return length;
+ return Math.max(.021, length - Math.min(.032, length * .085));
+}
+
 export class KeyboardTransport {
  constructor(onFrame=()=>{},onEnd=()=>{}){
   this.onFrame=onFrame;this.onEnd=onEnd;this.position=0;this.rate=1;this.playing=false;
   this.volume=.42;this.nodes=new Set();this.enabled=[];this.voiceLevels=[];this.timer=null;
-  this.timbre='harpsichord';this.tuning=440;this.reverb=.12;this.loop=null;this.generation=0;
+  this.timbre='harpsichord';this.tuning=440;this.reverb=.08;this.loop=null;this.generation=0;
+  this.shaped=true;this.piano=new Map();this.pianoLoads=new Map();this.tailTimer=null;
  }
  load(study){
   this.pause();this.study=study;this.position=0;this.enabled=study.tracks.map(()=>true);
   this.voiceLevels=study.tracks.map(()=>1);this.loop=null;this.soloTrack=null;this.onFrame(0);return this;
  }
- initialize(){
+ initialize(activatedContext){
   if(this.context)return;
   const Context=globalThis.AudioContext||globalThis.webkitAudioContext;
   if(!Context)throw Error('Audio is unavailable here. Download the MIDI or open the source score.');
-  this.context=new Context();this.master=this.context.createGain();this.master.gain.value=this.volume;
+  this.context=activatedContext??new Context();this.master=this.context.createGain();this.master.gain.value=this.volume;
   const compressor=this.context.createDynamicsCompressor();compressor.threshold.value=-18;compressor.knee.value=18;compressor.ratio.value=8;
   this.master.connect(compressor);compressor.connect(this.context.destination);
   this.dry=this.context.createGain();this.wet=this.context.createGain();this.dry.connect(this.master);this.wet.connect(this.master);
@@ -36,12 +49,47 @@ export class KeyboardTransport {
   }
   this.setReverb(this.reverb);
  }
+ async preparePiano(){
+  if(!this.context?.decodeAudioData || !this.context.createBufferSource || !this.study)return;
+  const context=this.context;
+  const pitches = new Set(this.study.tracks.flatMap(track=>track.notes.map(note=>pianoSampleRoot(note[0]))));
+  await Promise.all([...pitches].map(root=>{
+   if(this.piano.has(root))return;
+   if(this.pianoLoads.has(root))return this.pianoLoads.get(root);
+   const request=fetch('assets/instruments/piano/'+root+'.mp3',{credentials:'omit',signal:AbortSignal.timeout(6500)})
+    .then(response=>{
+     if(!response.ok)throw Error('Piano sample unavailable.');
+     return response.arrayBuffer();
+    }).then(bytes=>{
+     if(bytes.byteLength>90_000 || context!==this.context)return null;
+     return context.decodeAudioData(bytes);
+    }).then(buffer=>{
+     if(buffer && context===this.context)this.piano.set(root,buffer);
+    }).catch(()=>{ /* A missing sample falls back to the local keyboard. */ }).finally(()=>{
+     if(this.pianoLoads.get(root)===request)this.pianoLoads.delete(root);
+    });
+   this.pianoLoads.set(root,request);
+   return request;
+  }));
+ }
+ get sampledPiano(){return this.timbre==='piano' && this.piano.size>0;}
  async play(){
   if(!this.study||this.playing)return;
+  if(this.tailTimer)this.pause();
   const generation=this.generation;this.initialize();await this.context.resume();
+  if(this.timbre==='piano' && generation===this.generation)await this.preparePiano();
   if(generation!==this.generation||this.playing)return;
   if(this.position>=this.study.duration)this.position=this.loop?.start||0;
   this.setReverb(this.reverb);this.playing=true;this.anchor=this.context.currentTime+.03;this.origin=this.position;
+  this.nextAttacks = this.study.tracks.map(({notes})=>{
+   const following=new Array(notes.length);
+   let next=Infinity, start=Infinity;
+   for(let i=notes.length-1;i>=0;i--){
+    if(notes[i][1] < start){next=start;start=notes[i][1];}
+    following[i]=next;
+   }
+   return following;
+  });
   this.indices=this.study.tracks.map(t=>{const i=t.notes.findIndex(n=>n[1]>=this.position);return i<0?t.notes.length:i;});
   this.trackGains=this.study.tracks.map((_,i)=>{
    const gain=this.context.createGain();gain.gain.value=this.enabled[i]?this.voiceLevels[i]:0;
@@ -59,17 +107,29 @@ export class KeyboardTransport {
   if(this.loop&&p>=this.loop.end){const a=this.loop.start;this.pause();this.position=a;this.onFrame(a);this.play().catch(()=>this.onEnd());return;}
   this.position=Math.min(p,this.study.duration);
   const horizon=Math.min(this.loop?.end??Infinity,p+.18*this.rate);
-  this.study.tracks.forEach((t,i)=>{let index=this.indices[i];while(index<t.notes.length&&t.notes[index][1]<horizon){const note=t.notes[index++];if(note[1]>=p-.06*this.rate)this.note(note,i);}this.indices[i]=index;});
-  this.onFrame(this.position);if(this.position>=this.study.duration){this.pause();this.onEnd();}
+  this.study.tracks.forEach((t,i)=>{let index=this.indices[i];while(index<t.notes.length&&t.notes[index][1]<horizon){const note=t.notes[index++];if(note[1]>=p-.06*this.rate)this.note(note,i,this.nextAttacks[i][index-1]);}this.indices[i]=index;});
+  this.onFrame(this.position);
+  if(this.position>=this.study.duration){
+   this.playing=false;clearInterval(this.timer);this.timer=null;
+   this.tailTimer=setTimeout(()=>this.pause(),280);
+   this.onEnd();
+  }
  }
- note([pitch,start,duration,velocity=1],track){
+ note([pitch,start,duration,velocity=1],track,nextStart=Infinity){
   if(!this.trackGains[track])return;
   const preset=KEYBOARD_TIMBRES[this.timbre];
   const when=Math.max(this.context.currentTime,this.anchor+(start-this.origin)/this.rate);
-  const sourceDuration=Math.min(duration,(this.loop?.end??Infinity)-start),length=Math.max(.025,sourceDuration/this.rate);
+  const sourceDuration=Math.min(duration,(this.loop?.end??Infinity)-start);
+  const length=articulatedLength(Math.max(.025,sourceDuration/this.rate),(nextStart-start)/this.rate,this.shaped && this.timbre!=='organ');
+  const dynamics=bound(velocity,.12,1);
+  const root=pianoSampleRoot(pitch);
+  if(this.timbre==='piano'&&this.piano.has(root)){
+   this.pianoNote(root,pitch,when,length,dynamics,track);
+   return;
+  }
   const frequency=this.tuning*Math.pow(2,(pitch-69)/12),oscillator=this.context.createOscillator(),gain=this.context.createGain();
   oscillator.setPeriodicWave(this.waves[this.timbre]);oscillator.frequency.value=frequency;
-  const dynamics=bound(velocity,.12,1),register=Math.pow(440/Math.max(130,frequency),.12),peak=.035*Math.pow(dynamics,1.15)*register;
+  const register=Math.pow(440/Math.max(130,frequency),.12),peak=.035*Math.pow(dynamics,1.15)*register;
   const release=preset.release,holdEnd=when+Math.max(preset.attack+.01,length);
   gain.gain.setValueAtTime(.0001,when);gain.gain.exponentialRampToValueAtTime(peak,when+preset.attack);
   if(preset.decay){const decay=Math.max(.08,preset.decay*Math.pow(440/frequency,.17)),level=Math.max(.00012,peak*Math.exp(-Math.max(0,length-preset.attack)/decay));gain.gain.exponentialRampToValueAtTime(level,holdEnd);}
@@ -78,8 +138,25 @@ export class KeyboardTransport {
   oscillator.connect(gain);gain.connect(this.trackGains[track]);oscillator.start(when);oscillator.stop(holdEnd+release+.02);
   this.nodes.add(oscillator);oscillator.onended=()=>{this.nodes.delete(oscillator);oscillator.disconnect();gain.disconnect();};
  }
+ pianoNote(root,pitch,when,length,dynamics,track){
+  const source=this.context.createBufferSource(), envelope=this.context.createGain();
+  const touch=this.context.createBiquadFilter();
+  source.buffer=this.piano.get(root);
+  source.playbackRate.value=Math.pow(2,(pitch-root)/12)*(this.tuning/440);
+  touch.type='lowpass';touch.Q.value=.62;touch.frequency.value=2300+10100*Math.pow(dynamics,1.25);
+  const peak=.34*Math.pow(dynamics,1.35), end=when+Math.max(.018,length);
+  const release=bound(.14+(60-pitch)*.0015,.075,.22);
+  envelope.gain.setValueAtTime(.0001,when);
+  envelope.gain.exponentialRampToValueAtTime(peak,when+.004);
+  envelope.gain.setValueAtTime(peak,end);
+  envelope.gain.exponentialRampToValueAtTime(.0001,end+release);
+  source.connect(touch);touch.connect(envelope);envelope.connect(this.trackGains[track]);
+  source.start(when);source.stop(end+release+.012);
+  this.nodes.add(source);
+  source.onended=()=>{this.nodes.delete(source);source.disconnect();touch.disconnect();envelope.disconnect();};
+ }
  pause(){
-  this.generation++;
+  this.generation++;clearTimeout(this.tailTimer);this.tailTimer=null;
   if(this.playing&&this.context)this.position=Math.min(this.study.duration,this.origin+Math.max(0,this.context.currentTime-this.anchor)*this.rate);
   this.playing=false;clearInterval(this.timer);this.timer=null;
   for(const node of this.nodes){try{node.stop();}catch{/* Already ended. */}}this.nodes.clear();
@@ -100,7 +177,12 @@ export class KeyboardTransport {
  }
  async setRate(value){const wasPlaying=this.playing;this.pause();this.rate=bound(value,.25,1.5);if(wasPlaying)await this.play();}
  setVolume(value){this.volume=bound(value,0,.7);if(this.master)this.master.gain.setTargetAtTime(this.volume,this.context.currentTime,.02);}
- setTimbre(value){if(Object.hasOwn(KEYBOARD_TIMBRES,value))this.timbre=value;}
+ setTimbre(value){
+  if(!Object.hasOwn(KEYBOARD_TIMBRES,value))return;
+  this.timbre=value;
+  if(value==='piano'&&this.playing)void this.preparePiano();
+ }
+ setPhrasing(enabled){this.shaped=Boolean(enabled);}
  setTuning(value){this.tuning=bound(value,392,466);}
  setReverb(value){this.reverb=bound(value,0,.35);if(this.dry){this.dry.gain.value=1-this.reverb*.3;this.wet.gain.value=this.convolver?this.reverb:0;}}
  setLoop(start,end){
@@ -108,5 +190,5 @@ export class KeyboardTransport {
   if(b-a<.2)throw Error('Choose a loop at least 0.2 seconds long.');this.loop={start:a,end:b};
  }
  clearLoop(){this.loop=null;}
- async dispose(){this.pause();if(this.context?.close)await this.context.close();this.context=null;}
+ async dispose(){this.pause();if(this.context?.close&&this.context.state!=='closed')await this.context.close();this.context=null;this.piano.clear();this.pianoLoads.clear();}
 }

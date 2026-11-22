@@ -15,6 +15,7 @@ allMovements.push(...curated.map(piece=>({...piece,composerName:byId.get(piece.c
 const movementById=new Map(allMovements.map(m=>[m.id,m]));
 let scoreState=null,manualScoreStart=null,loopA=null,authoredScore=null,studyAbort=null;
 const transport=new KeyboardTransport(frame,()=>setPlaying(false));
+transport.setTimbre($('timbre').value);
 function setPlaying(playing){$('play').innerHTML=playing?'Ⅱ <span>Pause</span>':'▶ <span>Listen</span>';$('play').setAttribute('aria-label',playing?'Pause the selected study':'Play the selected study');}
 for(const origin of [...new Set(composers.map(c=>c.origin))].sort())$('origin').insertAdjacentHTML('beforeend',`<option>${esc(origin)}</option>`);
 for(const tradition of [...new Set(composers.flatMap(c=>c.traditions))].sort())$('tradition').insertAdjacentHTML('beforeend',`<option value="${esc(tradition)}">${esc(tradition==='german'?'German-speaking':tradition[0].toUpperCase()+tradition.slice(1))}</option>`);
@@ -92,9 +93,9 @@ async function setupStudy(study,id,signal){
  $('edition-preview').hidden=Boolean(authored);
  if(authored){
   $('study-description').textContent=authored.note+(['independent-voices','actual-voice'].includes(authored.voiceKind)?' Colors identify the independent voices defined in the source.':' Colors identify source parts or staves; these are not necessarily independent contrapuntal voices.');
-  $('notation-note').textContent='Complete source-derived study score, engraved from MusicXML. Colors and playback share the same note and voice identifiers. Select a note to seek.';
+  $('notation-note').textContent='Follow each voice in color. Choose a note to start there, or switch to larger print to read the staff at close range.';
   $('edition-note').textContent=authored.attribution+' · '+authored.license+' · Adapted study edition from the credited Mutopia source.';$('score-link').href=safeURL(authored.source);$('midi-link').href=authored.midi||authored.noteData.replace(/\.json$/,'.mid');
-  $('score-page').textContent='Complete score';$('source-score').replaceChildren();$('score').textContent='Opening the complete score…';authoredScore=new AuthoredScore($('score'));
+  $('score-page').textContent='Complete score';$('source-score').replaceChildren();$('score').textContent='Opening the complete score…';authoredScore=new AuthoredScore($('score'),$('score-position'));
  }
  rollStart=0;renderRoll();renderScoreAt(0,{force:true});frame(0);
  if(authored){await authoredScore.load(authored,currentStudy,{signal});if(!signal?.aborted){authoredScore.follow(0,transport.enabled);$('audio-status').textContent='Complete local selection. Press Listen to start.';}}
@@ -119,7 +120,22 @@ function frame(position){
  const x=22+(position-rollStart)/rollWidth*766;$('playhead')?.setAttribute('d',`M${x},7V181`);
  if(performance.now()-lastFrame>65||!transport.playing){for(const r of rollNotes){const active=transport.enabled[r.track]&&r.n[1]<=position&&r.n[1]+r.n[2]>position;r.element?.setAttribute('opacity',transport.enabled[r.track]?(active?'1':'.7'):'.12');r.element?.setAttribute('class',active?'now':'');}for(const r of scoreDots)r.dot.setAttribute('display',transport.enabled[r.track]&&r.start<=position&&r.end>position?'inline':'none');lastFrame=performance.now();}
 }
-$('play').addEventListener('click',async()=>{try{if(transport.playing){transport.pause();setPlaying(false);}else{await transport.play();setPlaying(transport.playing);if(transport.playing)$('audio-status').textContent='Playing a local synthesized keyboard; use the colored controls to isolate tracks.';}}catch(e){$('audio-status').textContent=e.message;setPlaying(false);}});
+$('play').addEventListener('click',async()=>{
+ if(transport.playing){transport.pause();setPlaying(false);return;}
+ const requested=loadEpoch;
+ $('play').disabled=true;
+ if(transport.timbre==='piano')$('audio-status').textContent='Preparing grand piano…';
+ try{
+  await transport.play();
+  if(requested!==loadEpoch)return;
+  setPlaying(transport.playing);
+  if(transport.playing){
+   const sound=transport.sampledPiano?'Sampled grand piano':KEYBOARD_TIMBRES[transport.timbre].label;
+   $('audio-status').textContent=sound+' · Use the voice controls to listen to one part.';
+  }
+ }catch(error){if(requested===loadEpoch)reportAudio(error);}
+ finally{if(requested===loadEpoch)$('play').disabled=false;}
+});
 $('restart').addEventListener('click',()=>transport.seek(0).catch(e=>$('audio-status').textContent=e.message));
 $('seek').addEventListener('input',()=>transport.seek($('seek').value).catch(e=>$('audio-status').textContent=e.message));
 $('speed').addEventListener('change',()=>transport.setRate(Number($('speed').value)).catch(e=>$('audio-status').textContent=e.message));
@@ -127,7 +143,7 @@ $('volume').addEventListener('input',()=>transport.setVolume(Number($('volume').
 $('voices').addEventListener('click',e=>{const solo=e.target.closest('[data-solo]');if(solo){const index=Number(solo.dataset.solo);transport.setSolo(transport.soloTrack===index?null:index);syncVoiceButtons();renderRoll();return;}const b=e.target.closest('[data-track]');if(b){const index=Number(b.dataset.track);transport.setVoice(index,!transport.enabled[index]);b.setAttribute('aria-pressed',String(transport.enabled[index]));renderRoll();}else if(e.target.id==='all-voices'){transport.setSolo(null);for(const b of $('voices').querySelectorAll('[data-track]'))b.setAttribute('aria-pressed','true');renderRoll();}});
 function syncVoiceButtons(){for(const b of $('voices').querySelectorAll('[data-track]'))b.setAttribute('aria-pressed',String(transport.enabled[Number(b.dataset.track)]));for(const b of $('voices').querySelectorAll('[data-solo]'))b.setAttribute('aria-pressed',String(transport.soloTrack===Number(b.dataset.solo)));}
 $('movement').addEventListener('change',()=>selectStudy($('movement').value));$('bach-study').addEventListener('click',()=>selectStudy('partita-study'));
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&transport.playing){transport.pause();setPlaying(false);$('audio-status').textContent='Paused while the page is in the background.';}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){const active=transport.playing;transport.pause();setPlaying(false);if(active)$('audio-status').textContent='Paused while the page is in the background.';}});
 $('score').addEventListener('click',e=>{const note=e.target.closest('[data-seek]');if(note)transport.seek(Number(note.dataset.seek)).catch(reportAudio);});
 $('score').addEventListener('keydown',e=>{const note=e.target.closest('[data-seek]');if(!note)return;if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();e.stopPropagation();moveScoreFocus($('score'),note,e.key==='Home'?'first':e.key==='End'?'last':e.key==='ArrowLeft'?-1:1);}else if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();transport.seek(Number(note.dataset.seek)).catch(reportAudio);}});
 const reportAudio=error=>$('audio-status').textContent=error.message;
@@ -136,6 +152,8 @@ $('score-next').addEventListener('click',()=>{if(curatedById.has(currentId))retu
 $('score-follow').addEventListener('change',()=>{if(curatedById.has(currentId)){renderScoreAt(transport.position);return;}manualScoreStart=$('score-follow').checked?null:scoreState.windowStart;renderScoreAt(transport.position,{force:true});});
 $('score-window').addEventListener('change',()=>{manualScoreStart=null;$('score-follow').checked=true;renderScoreAt(transport.position,{force:true});});
 $('track-levels').addEventListener('input',e=>{const input=e.target.closest('[data-level]');if(input)transport.setVoiceLevel(Number(input.dataset.level),input.value);});
+$('score-large').addEventListener('change',()=>$('score').classList.toggle('large-notation',$('score-large').checked));
+$('phrase-shaping').addEventListener('change',()=>transport.setPhrasing($('phrase-shaping').checked));
 $('timbre').addEventListener('change',()=>transport.setTimbre($('timbre').value));
 $('reverb').addEventListener('input',()=>transport.setReverb($('reverb').value));
 $('tuning').addEventListener('change',()=>transport.setTuning($('tuning').value));

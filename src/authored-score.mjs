@@ -21,7 +21,7 @@ export function matchScoreTiming(rows,quarter,pitch,color=''){
  return candidates.find(row=>row.pitch===pitch)||candidates.find(row=>row.pitch===pitch+12)||candidates.find(row=>row.pitch%12===((pitch%12)+12)%12)||null;
 }
 export class AuthoredScore{
- constructor(host){this.host=host;this.osmd=null;this.groups=[];this.active=new Set();this.epoch=0;this.enabledKey='';this.lastScroll=0;}
+ constructor(host,barLabel=null){this.barLabel=barLabel;this.bars=[];this.lastBar='';this.host=host;this.osmd=null;this.groups=[];this.active=new Set();this.epoch=0;this.enabledKey='';this.lastScroll=0;}
  async load(piece,study,{signal}={}){
   const epoch=++this.epoch;this.host.replaceChildren();this.host.classList.add('authored-score');this.host.dataset.state='loading';
   const [library,response]=await Promise.all([loadScoreRenderer(),fetch(piece.score,{signal,credentials:'omit'})]);
@@ -34,6 +34,8 @@ export class AuthoredScore{
   await this.osmd.load(xml);if(signal?.aborted||epoch!==this.epoch){this.osmd.clear();return;}this.osmd.Zoom=.8;this.osmd.render();
   this.cleanPresentation(container);
   const rows=sourceTiming(study).filter(row=>Number.isFinite(row.start)&&Number.isFinite(row.pitch)).map(row=>({...row,quarter:timingQuarter(row,study)}));
+  this.bars=(Array.isArray(study.measureTimes)?study.measureTimes:[]).filter(bar=>Number.isFinite(bar.start)).sort((a,b)=>a.start-b.start);
+  this.lastBar='';
   if(!rows.length)throw Error('The authored score has no matched note timing.');
   this.osmd.cursor.reset();const iterator=this.osmd.cursor.Iterator;const byElement=new Map();let visited=0,matched=0;
   while(!iterator.EndReached&&visited<100000){
@@ -50,7 +52,7 @@ export class AuthoredScore{
   for(const group of this.groups){
    const first=group.rows.reduce((a,b)=>a.start<b.start?a:b),track=this.trackFor(first,study,piece);
    group.track=track;group.start=first.start;group.end=Math.max(...group.rows.map(row=>row.start+row.duration));
-   const node=group.element;node.classList.add('authored-note','voice-'+track%6);node.setAttribute('data-score-note',String(first.id));node.setAttribute('data-seek',String(first.start));node.setAttribute('data-track',String(track));node.setAttribute('role','button');node.setAttribute('tabindex','-1');node.setAttribute('aria-label',(study.tracks[track]?.label||'Source voice')+', '+first.start.toFixed(2)+' seconds. Seek to this note.');
+   const node=group.element;node.classList.add('authored-note','voice-'+track%6);node.setAttribute('data-score-note',String(first.id));node.setAttribute('data-seek',String(first.start));node.setAttribute('data-track',String(track));if(first.measure!=null)node.setAttribute('data-bar',String(first.measure));node.setAttribute('role','button');node.setAttribute('tabindex','-1');node.setAttribute('aria-label',(study.tracks[track]?.label||'Source voice')+', '+first.start.toFixed(2)+' seconds. Seek to this note.');
   }
   this.groups.sort((a,b)=>a.start-b.start||a.track-b.track);this.groups[0]?.element.setAttribute('tabindex','0');
   this.host.dataset.notes=String(matched);this.host.dataset.sourceNotes=String(visited);this.host.dataset.mapping=String(visited?matched/visited:0);this.host.dataset.state='ready';
@@ -73,10 +75,36 @@ export class AuthoredScore{
  follow(position,enabled,{scroll=false}={}){
   const next=new Set(),enabledKey=enabled.join('');
   if(enabledKey!==this.enabledKey){for(const g of this.groups)g.element.classList.toggle('authored-muted',enabled[g.track]===false);this.enabledKey=enabledKey;}
-  for(const group of this.groups)if(enabled[group.track]!==false&&group.start<=position&&group.end>position)next.add(group);
+  for(const group of this.groups){
+   if(group.start>position)break;
+   if(enabled[group.track]!==false&&group.end>position)next.add(group);
+  }
   for(const group of this.active)if(!next.has(group))group.element.classList.remove('authored-playing');
-  for(const group of next)if(!this.active.has(group))group.element.classList.add('authored-playing');this.active=next;
-  if(scroll&&next.size&&performance.now()-this.lastScroll>500){const first=[...next][0],view=this.host.getBoundingClientRect(),box=first.element.getBoundingClientRect();if(box.top<view.top+30||box.bottom>view.bottom-30){this.host.scrollTop+=box.top-view.top-this.host.clientHeight*.3;this.lastScroll=performance.now();}}
+  for(const group of next)if(!this.active.has(group))group.element.classList.add('authored-playing');
+  this.active=next;
+  this.showBar(position);
+  if(scroll&&next.size&&performance.now()-this.lastScroll>225){
+   const first=next.values().next().value, view=this.host.getBoundingClientRect(), note=first.element.getBoundingClientRect();
+   if(note.top<view.top+25||note.bottom>view.bottom-25){
+    this.host.scrollTop+=note.top-view.top-this.host.clientHeight*.28;
+   }
+   if(note.left<view.left+18||note.right>view.right-18){
+    this.host.scrollLeft+=note.left-view.left-this.host.clientWidth*.22;
+   }
+   this.lastScroll=performance.now();
+  }
  }
- dispose(){this.epoch++;this.osmd?.clear();this.osmd=null;this.groups=[];this.active.clear();this.host.classList.remove('authored-score');this.host.removeAttribute('data-state');}
+ showBar(position){
+  if(!this.barLabel||!this.bars.length)return;
+  let index=0, high=this.bars.length;
+  while(high-index>1){
+   const middle=(high+index)>>1;
+   if(this.bars[middle].start<=position)index=middle;else high=middle;
+  }
+  const number=String(this.bars[index].number);
+  if(number===this.lastBar)return;
+  this.lastBar=number;this.barLabel.textContent='Bar '+number;
+ }
+
+ dispose(){this.epoch++;this.osmd?.clear();this.osmd=null;this.groups=[];this.active.clear();this.host.classList.remove('authored-score');this.host.removeAttribute('data-state');if(this.barLabel)this.barLabel.textContent='';}
 }

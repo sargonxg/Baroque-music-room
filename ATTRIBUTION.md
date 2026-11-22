@@ -111,3 +111,7 @@ OpenSheetMusicDisplay 2.3.0 is the lazy, local BSD-3-Clause score renderer;
 its retained licence ships in `assets/score-renderer/OSMD-LICENSE.txt`.
 The optional source importer uses python-ly and music21 and is supplied under
 GPL-3.0-or-later. It is not part of the browser runtime.
+
+## Grand piano sounds
+
+The piano uses Alexander Holm’s Salamander Grand Piano v3, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The room uses 15 re-encoded, shortened samples drawn from the [Tone.js distribution](https://github.com/Tonejs/audio/tree/master/salamander). The rendered notes preserve the score’s onset times. See the [asset provenance](assets/instruments/piano/provenance.json) for the pinned upstream revision, file hashes and edits.
