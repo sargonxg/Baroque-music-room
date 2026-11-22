@@ -43,3 +43,4 @@ button,a{transition:color .12s ease,background-color .12s ease}button:hover{filt
 @media print{.authored-engraving svg[hidden]{display:block!important;}}
 .authored-engraving .authored-away{display:none}
 @media print{.authored-engraving .authored-away{display:inline}}
+@media print{.score.authored-score[data-score-view]{overflow:visible!important;height:auto!important;max-height:none!important}}
