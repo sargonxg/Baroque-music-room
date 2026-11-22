@@ -31,7 +31,7 @@ export function matchScoreTiming(rows,quarter,pitch,color=''){
  return candidates.find(row=>row.pitch===pitch)||candidates.find(row=>row.pitch===pitch+12)||candidates.find(row=>row.pitch%12===((pitch%12)+12)%12)||null;
 }
 export class AuthoredScore{
- constructor(host,barLabel=null){this.barLabel=barLabel;this.bars=[];this.lastBar='';this.host=host;this.osmd=null;this.groups=[];this.active=new Set();this.epoch=0;this.enabledKey='';this.lastScroll=0;}
+ constructor(host,barLabel=null){this.barLabel=barLabel;this.bars=[];this.lastBar='';this.host=host;this.osmd=null;this.groups=[];this.active=new Set();this.epoch=0;this.enabledKey='';this.lastScroll=0;this.view='passage';this.systems=[];this.pages=[];this.currentSystem=null;this.printStart=()=>{this.printView=this.view;this.setView('full');};this.printEnd=()=>this.setView(this.printView||'passage');window.addEventListener('beforeprint',this.printStart);window.addEventListener('afterprint',this.printEnd);}
  async load(piece,study,{signal}={}){
   const epoch=++this.epoch;this.host.replaceChildren();this.host.classList.add('authored-score');this.host.dataset.state='loading';
   const [library,response]=await Promise.all([loadScoreRenderer(),fetch(piece.score,{signal,credentials:'same-origin'})]);
@@ -40,8 +40,8 @@ export class AuthoredScore{
   // Score files are pinned, build-validated compressed MusicXML, never a visitor-provided URL.
   const xml=piece.score.endsWith('.mxl')?new Blob([content],{type:'application/vnd.recordare.musicxml'}):new TextDecoder().decode(content);
   const container=document.createElement('div');container.className='authored-engraving';this.host.append(container);
-  this.osmd=new library.OpenSheetMusicDisplay(container,{backend:'svg',autoResize:false,drawTitle:false,drawSubtitle:false,drawComposer:false,drawPartNames:false,drawMeasureNumbers:true,coloringEnabled:true,coloringMode:0,disableCursor:false,drawingParameters:'compacttight'});
-  await this.osmd.load(xml);if(signal?.aborted||epoch!==this.epoch){this.osmd.clear();return;}this.osmd.Zoom=.8;this.osmd.render();
+  this.osmd=new library.OpenSheetMusicDisplay(container,{backend:'svg',autoResize:false,autoBeam:true,autoBeamOptions:{beam_rests:false,maintain_stem_directions:false},drawTitle:false,drawSubtitle:false,drawComposer:false,drawPartNames:false,drawMeasureNumbers:true,coloringEnabled:true,coloringMode:0,disableCursor:false,drawingParameters:'compacttight'});
+  await this.osmd.load(xml);if(signal?.aborted||epoch!==this.epoch){this.osmd.clear();return;}this.osmd.Zoom=1.05;this.osmd.render();
   this.cleanPresentation(container);
   const rows=sourceTiming(study).filter(row=>Number.isFinite(row.start)&&Number.isFinite(row.pitch)).map(row=>({...row,quarter:timingQuarter(row,study)}));
   this.bars=(Array.isArray(study.measureTimes)?study.measureTimes:[]).filter(bar=>Number.isFinite(bar.start)).sort((a,b)=>a.start-b.start);
@@ -68,9 +68,57 @@ export class AuthoredScore{
    const title=document.createElementNS('http://www.w3.org/2000/svg','title');title.textContent=label;node.append(title);
   }
   this.groups.sort((a,b)=>a.start-b.start||a.track-b.track);this.groups[0]?.element.setAttribute('tabindex','0');
+  this.indexSystems(container);
   this.host.dataset.notes=String(matched);this.host.dataset.sourceNotes=String(visited);this.host.dataset.mapping=String(visited?matched/visited:0);this.host.dataset.state='ready';
   if(!matched||matched/Math.max(1,visited)<.95)throw Error('The source engraving and playback could not be fully aligned. Open the source edition.');
   this.follow(0,study.tracks.map(()=>true));
+ }
+ indexSystems(container){
+  this.pages=[...container.querySelectorAll('svg')].map(svg=>({svg,viewBox:svg.getAttribute('viewBox')}));
+  this.systems=[];
+  for(const page of this.pages){
+   const systems=new Map();
+   for(const staff of page.svg.querySelectorAll('.osmd-staffline')){
+    const key=/^osmd-staffline(\d+)-\d+$/.exec(staff.id)?.[1];if(key==null)continue;
+    let system=systems.get(key);if(!system){system={page,staves:[],nodes:[],bars:new Set()};systems.set(key,system);}
+    system.staves.push(staff);
+    for(const note of staff.querySelectorAll('[data-bar]'))system.bars.add(note.getAttribute('data-bar'));
+   }
+   let current=null;
+   for(const node of page.svg.children){
+    const key=/^osmd-staffline(\d+)-\d+$/.exec(node.id)?.[1];
+    if(key!=null)current=systems.get(key);
+    if(current&&node.tagName.toLowerCase()==='g')current.nodes.push(node);
+   }
+   for(const system of systems.values()){
+    const bounds=system.staves.map(staff=>staff.getBBox());
+    const top=Math.min(...bounds.map(b=>b.y)),bottom=Math.max(...bounds.map(b=>b.y+b.height));
+    const width=Number(page.viewBox.split(/\s+/)[2]);
+    system.viewBox=`0 ${Math.max(0,top-4)} ${width} ${bottom-top+8}`;
+    this.systems.push(system);
+   }
+  }
+  this.host.dataset.systems=String(this.systems.length);
+  this.setView(this.view);
+ }
+ setView(view){
+  this.view=view==='full'?'full':'passage';this.currentSystem=null;this.host.dataset.scoreView=this.view;
+  for(const system of this.systems)for(const node of system.nodes)node.classList.remove('authored-away');
+  for(const page of this.pages){page.svg.removeAttribute('hidden');page.svg.setAttribute('viewBox',page.viewBox);}
+  if(this.view==='passage')this.showSystem(this.lastBar||String(this.bars[0]?.number??1));
+  this.host.scrollTop=0;this.host.scrollLeft=0;
+ }
+ showSystem(number){
+  if(this.view!=='passage')return;
+  const system=this.systems.find(row=>row.bars.has(String(number)));if(!system||system===this.currentSystem)return;
+  this.currentSystem=system;
+  for(const row of this.systems)for(const node of row.nodes)node.classList.toggle('authored-away',row!==system);
+  for(const page of this.pages){page.svg.toggleAttribute('hidden',page!==system.page);page.svg.setAttribute('viewBox',page===system.page?system.viewBox:page.viewBox);}
+  this.host.dataset.passage=[...system.bars].join(',');
+  // Keep the native source engraving intact, including beams, rests, ties and both staves.
+  for(const group of this.groups)group.element.setAttribute('tabindex','-1');
+  this.groups.find(group=>system.bars.has(String(group.rows[0].measure)))?.element.setAttribute('tabindex','0');
+  this.host.scrollTop=0;
  }
  trackFor(row,study,piece){
   if(Number.isInteger(row.track)&&row.track>=0&&row.track<study.tracks.length)return row.track;
@@ -98,7 +146,7 @@ export class AuthoredScore{
   this.showBar(position);
   if(scroll&&next.size&&performance.now()-this.lastScroll>225){
    const first=next.values().next().value, view=this.host.getBoundingClientRect(), note=first.element.getBoundingClientRect();
-   if(note.top<view.top+25||note.bottom>view.bottom-25){
+   if(this.view==='full'&&(note.top<view.top+25||note.bottom>view.bottom-25)){
     this.host.scrollTop+=note.top-view.top-this.host.clientHeight*.28;
    }
    if(note.left<view.left+18||note.right>view.right-18){
@@ -112,9 +160,10 @@ export class AuthoredScore{
   const number=String(bar.number);
   if(number===this.lastBar)return;
   this.lastBar=number;
+  this.showSystem(number);
   for(const group of this.groups)group.element.classList.toggle('authored-current-bar',String(group.rows[0].measure)===number);
   if(this.barLabel)this.barLabel.textContent='Bar '+number;
  }
 
- dispose(){this.epoch++;this.osmd?.clear();this.osmd=null;this.groups=[];this.active.clear();this.host.classList.remove('authored-score');this.host.removeAttribute('data-state');if(this.barLabel)this.barLabel.textContent='';}
+ dispose(){this.epoch++;window.removeEventListener('beforeprint',this.printStart);window.removeEventListener('afterprint',this.printEnd);this.osmd?.clear();this.osmd=null;this.groups=[];this.pages=[];this.systems=[];this.currentSystem=null;this.active.clear();this.host.classList.remove('authored-score');for(const key of ['state','scoreView','systems','passage'])delete this.host.dataset[key];if(this.barLabel)this.barLabel.textContent='';}
 }

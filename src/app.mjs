@@ -97,7 +97,7 @@ async function setupStudy(study,id,signal){
  const query=special?'Johann Sebastian Bach Partita No. 1 BWV 825 Praeludium':`${m?.composerName||''} ${m?.collection==='Selected miniature'?'':m?.collection||''} ${m?.title||id}`;
  $('recording-link').href='https://www.youtube.com/results?search_query='+encodeURIComponent(query);
  $('audio-status').textContent='Local keyboard approximation. Press Listen to start. No recording is streamed.';
- $('score-window').closest('label').hidden=Boolean(authored);
+ $('score-window').closest('label').hidden=Boolean(authored);$('score-view').closest('label').hidden=!authored;
  $('bar-navigation').hidden=!authored;$('repeat-bar').hidden=!authored;
  for(const id of ['score-prev','score-next']){
   $(id).hidden=false;
@@ -111,12 +111,12 @@ async function setupStudy(study,id,signal){
  $('edition-preview').hidden=Boolean(authored);
  if(authored){
   $('study-description').textContent=authored.note+(['independent-voices','actual-voice'].includes(authored.voiceKind)?' Colors identify the independent voices defined in the source.':' Colors identify source parts or staves; these are not necessarily independent contrapuntal voices.');
-  $('notation-note').textContent='Follow each voice in color. Choose a note to start there, or switch to larger print to read the staff at close range.';
+  $('notation-note').textContent='One musical line at a time, with both staves together. Colors follow the source voices or parts. Beam groups are supplied for reading. Choose a note to start there, or open the full score.';
   $('edition-note').textContent=authored.attribution+' · '+authored.license+' · Adapted study edition from the credited Mutopia source.';$('score-link').href=safeURL(authored.source);$('midi-link').href=authored.midi||authored.noteData.replace(/\.json$/,'.mid');
  $('score-page').textContent='Complete score';$('source-score').replaceChildren();$('score').textContent='Opening the complete score…';authoredScore=new AuthoredScore($('score'),$('score-position'));
  }
  rollStart=0;renderRoll();renderScoreAt(0,{force:true});frame(0);
- if(authored){await authoredScore.load(authored,currentStudy,{signal});if(!signal?.aborted){authoredScore.follow(0,transport.enabled);$('audio-status').textContent='Complete local selection. Press Listen to start.';}}
+ if(authored){await authoredScore.load(authored,currentStudy,{signal});if(!signal?.aborted){authoredScore.setView($('score-view').value);authoredScore.follow(0,transport.enabled);$('audio-status').textContent='Complete local selection. Press Listen to start.';}}
 }
 async function selectStudy(id){
  const epoch=++loadEpoch;studyAbort?.abort();studyAbort=new AbortController();const signal=studyAbort.signal;transport.pause();setPlaying(false);$('play').disabled=true;$('study').classList.add('is-loading');
@@ -194,6 +194,7 @@ function focusScore(focused){
 $('focus-score').addEventListener('click',()=>focusScore(!document.body.classList.contains('score-focus')));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.classList.contains('score-focus')){event.preventDefault();focusScore(false);}});
 $('score-follow').addEventListener('change',()=>{if(curatedById.has(currentId)){renderScoreAt(transport.position);return;}manualScoreStart=$('score-follow').checked?null:scoreState.windowStart;renderScoreAt(transport.position,{force:true});});
+$('score-view').addEventListener('change',()=>authoredScore?.setView($('score-view').value));
 $('score-window').addEventListener('change',()=>{manualScoreStart=null;$('score-follow').checked=true;renderScoreAt(transport.position,{force:true});});
 $('track-levels').addEventListener('input',e=>{const input=e.target.closest('[data-level]');if(input)transport.setVoiceLevel(Number(input.dataset.level),input.value);});
 $('score-large').addEventListener('change',()=>$('score').classList.toggle('large-notation',$('score-large').checked));

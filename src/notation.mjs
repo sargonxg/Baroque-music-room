@@ -125,7 +125,7 @@ export function highlightPlaybackScore(root,position,enabled){
 
 /** Roving focus keeps a score to one Tab stop; arrows move chronologically. */
 export function moveScoreFocus(root,current,direction){
- const elements=[...root.querySelectorAll('[data-score-note]')].sort((a,b)=>Number(a.dataset.noteStart)-Number(b.dataset.noteStart)||Number(a.dataset.track)-Number(b.dataset.track));
+ const elements=[...root.querySelectorAll('[data-score-note]')].filter(el=>!el.closest?.('.authored-away,svg[hidden]')).sort((a,b)=>Number(a.dataset.noteStart??a.dataset.seek)-Number(b.dataset.noteStart??b.dataset.seek)||Number(a.dataset.track)-Number(b.dataset.track));
  if(!elements.length)return false;
  const index=Math.max(0,elements.indexOf(current));
  const target=direction==='first'?elements[0]:direction==='last'?elements.at(-1):elements[clamp(index+Number(direction),0,elements.length-1)];

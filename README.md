@@ -134,3 +134,16 @@ Physical-device and perceptual audio checks are outside that verification.
 ![Score practice with coloured voices and bar controls](docs/screenshots/practice-desktop.webp)
 
 [Phone notation at larger print](docs/screenshots/practice-phone.webp)
+
+### Reading one line at a time
+
+**Current line** keeps an entire engraved system together, including both
+keyboard staves. Playback and bar navigation advance that line. **Full score**
+restores all systems. Larger print remains available in either view. This uses
+the same complete MusicXML and note-to-playback mappings as the full score.
+Where the exported MusicXML omits beams, OSMD supplies rhythmic beam groups
+without beaming across rests. These are a reading aid, not a claim about an
+original manuscript’s editorial beaming. Source editions remain linked.
+
+The sampled piano is unchanged in this update. No new audio service or paid
+player is used. The page starts sound only after a visitor chooses playback.
