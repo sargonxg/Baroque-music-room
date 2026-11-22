@@ -93,15 +93,16 @@ recorded separately; structural tests do not certify audible fidelity.
 
 ## Current browser view
 
-![European composer atlas and a complete source-derived Bach score](docs/screenshots/authored-score-desktop.webp)
+![Current-line score with both staves and connected rhythmic beams](docs/screenshots/practice-desktop.webp)
 
-[Phone popup using the same score adapter](docs/screenshots/personal-popup-mobile.webp).
-Captured in Chromium CI on November 12, 2026, in the personal-site integration;
-the header's return link belongs to that host. This capture predates a text-only
-correction of the intro count from 45 legacy movements to 50 complete listening
-selections. All 50 authored scores rendered with full source-note alignment in
-that run. Viewport emulation and audio lifecycle tests do not certify physical
-devices, screen-reader use or concert fidelity.
+[Phone score at larger print](docs/screenshots/practice-phone.webp).
+These November 22, 2026 captures show the public personal-site integration.
+The score, source colours, bar controls and transport use this repository’s
+implementation. The host supplies its return link and shared reading shelf.
+All 50 authored scores passed source-note alignment in the integrated CI run.
+Desktop and phone flows passed against the published files. Phone checks use
+browser emulation. Physical devices, screen readers and concert fidelity were
+outside that verification.
 
 The listening desk offers a sampled grand piano and synthesized period keyboards. Playback follows the authored score with a bar indicator and optional larger print. Shape short notes by adjusting their release. The attacks remain aligned with the notation. [Piano sources and license](assets/instruments/piano/provenance.json).
 
