@@ -11,7 +11,7 @@ MIDI movements, including Bach's six Partitas.
 Node.js 20 or later:
 
 ```sh
-git clone https://github.com/sargonxg/Baroque-music-room.git
+git clone --branch codex/sampled-piano-and-score-follow https://github.com/sargonxg/Baroque-music-room.git
 cd Baroque-music-room
 npm ci
 npm test
@@ -122,3 +122,15 @@ decay. Neighbouring sampled keys blend through the gaps. A lighter compressor
 preserves differences in touch. **Gentle phrasing** adjusts release and eases
 short notes before a rest. This is an adjustable listening interpretation.
 The source attacks, measure times and downloaded MIDI remain the reference.
+
+## Current practice view
+
+These November 22, 2026 captures show the pinned app in the personal website.
+The focused view, score, transport and bar controls use this repository’s
+implementation. Chromium desktop and phone emulation passed, together with
+all 50 source-score mappings and a simulated authenticated-media request.
+Physical-device and perceptual audio checks are outside that verification.
+
+![Score practice with coloured voices and bar controls](docs/screenshots/practice-desktop.webp)
+
+[Phone notation at larger print](docs/screenshots/practice-phone.webp)
