@@ -102,7 +102,7 @@ Desktop and phone flows passed against the published files. Phone checks use
 browser emulation. Physical devices, screen readers and concert fidelity were
 outside that verification.
 
-The listening desk offers a sampled grand piano and synthesized period keyboards. Playback follows the authored score with a bar indicator and optional larger print. Shape short notes by adjusting their release. The attacks remain aligned with the notation. [Piano sources and license](assets/instruments/piano/provenance.json).
+The listening desk offers a sampled grand piano and synthesized period keyboards. Playback follows the authored score with a bar indicator and optional larger print. [Piano sources and license](assets/instruments/piano/provenance.json).
 
 ## Practice with a score
 
@@ -116,11 +116,10 @@ The score gives each note a pitch, source part, bar and time in its accessible
 label. Hover for the same information. The current bar has a light emphasis.
 Use **Larger print** for closer reading or print the score from a focused view.
 
-The piano now retains up to 6.25 seconds of recorded bass and middle-register
-decay. Neighbouring sampled keys blend through the gaps. A lighter compressor
-preserves differences in touch. **Gentle phrasing** adjusts release and eases
-short notes before a rest. This is an adjustable listening interpretation.
-The source attacks, measure times and downloaded MIDI remain the reference.
+The piano retains up to 6.25 seconds of recorded bass and middle-register decay.
+Neighbouring sampled keys blend through the gaps. A lighter compressor preserves
+differences in touch. The source attacks, measure times and downloaded MIDI
+remain the reference.
 
 The supplemental scores rebuild through `python scripts/import-curated.py
 --supplement` using the dependencies and options in the source notes. The

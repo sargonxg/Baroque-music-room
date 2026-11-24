@@ -47,8 +47,8 @@ export function connectWorkArchive(record) {
       meta.textContent = [author, subtitle, data.genres[genreIndex]].filter(Boolean).join(' · ');
       const links = document.createElement('div');
       const query = encodeURIComponent(author + ' ' + title);
-      links.append(link('https://imslp.org/index.php?title=Special%3ASearch&search=' + query, 'Find a score ↗'),
-        link('https://www.youtube.com/results?search_query=' + query, 'Find a recording ↗'));
+      links.append(link('https://imslp.org/index.php?title=Special%3ASearch&search=' + query, 'Find a score'),
+        link('https://www.youtube.com/results?search_query=' + query, 'Find a recording'));
       row.append(heading, meta, links);
       rows.append(row);
     }
