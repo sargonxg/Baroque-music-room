@@ -1,5 +1,5 @@
 import {VOICE_COLORS,projectCity,filterComposers,validateStudy,activeNotes,formatTime,safeURL} from './engine.mjs';
-import {KeyboardTransport,KEYBOARD_TIMBRES} from './audio.mjs';
+import {KeyboardTransport} from './audio.mjs';
 import {renderPlaybackScore,highlightPlaybackScore,moveScoreFocus} from './notation.mjs';
 import {AuthoredScore,barAt} from './authored-score.mjs';
 import {connectWorkArchive} from './work-archive.mjs';
@@ -34,7 +34,6 @@ const listeningNotes = {
  'handel-aylesford-allemande': 'Follow the small opening notes in each strain and listen to where the lines come to rest.',
 };
 const transport=new KeyboardTransport(frame,()=>setPlaying(false));
-transport.setTimbre($('timbre').value);
 function setPlaying(playing){
  const play = $('play');
  play.textContent = playing ? 'Pause' : 'Listen';
@@ -130,7 +129,7 @@ async function setupStudy(study,id,signal){
  $('edition-note').textContent=right?right.attribution:'Source: Mutopia Project.';$('score-link').href=safeURL(right?.currentScoreSource||m?.source||'https://www.mutopiaproject.org/');$('midi-link').href=`assets/music/${id}.mid`;
  const query=special?'Johann Sebastian Bach Partita No. 1 BWV 825 Praeludium':`${m?.composerName||''} ${m?.collection==='Selected miniature'?'':m?.collection||''} ${m?.title||id}`;
  $('recording-link').href='https://www.youtube.com/results?search_query='+encodeURIComponent(query);
- $('audio-status').textContent='Local keyboard approximation. Press Listen to start. No recording is streamed.';
+ $('audio-status').textContent='Piano playback from MIDI. Press Listen to start.';
  $('score-window').closest('label').hidden=Boolean(authored);$('score-view').closest('label').hidden=!authored;
  $('bar-navigation').hidden=!authored;$('repeat-bar').hidden=!authored;
  for(const id of ['score-prev','score-next']){
@@ -182,14 +181,13 @@ $('play').addEventListener('click',async()=>{
  if(transport.playing){transport.pause();setPlaying(false);return;}
  const requested=loadEpoch;
  $('play').disabled=true;
- if(transport.timbre==='piano')$('audio-status').textContent='Preparing grand piano…';
+ $('audio-status').textContent='Preparing grand piano…';
  try{
   await transport.play();
   if(requested!==loadEpoch)return;
   setPlaying(transport.playing);
   if(transport.playing){
-   const sound=transport.sampledPiano?'Sampled grand piano':KEYBOARD_TIMBRES[transport.timbre].label;
-   $('audio-status').textContent=sound+' · Use the voice controls to listen to one part.';
+   $('audio-status').textContent='Sampled grand piano · Use the voice controls to listen to one part.';
   }
  }catch(error){if(requested===loadEpoch)reportAudio(error);}
  finally{if(requested===loadEpoch)$('play').disabled=false;}
@@ -237,7 +235,6 @@ $('score-follow').addEventListener('change',()=>{if(curatedById.has(currentId)){
 $('score-view').addEventListener('change',()=>authoredScore?.setView($('score-view').value));
 $('score-window').addEventListener('change',()=>{manualScoreStart=null;$('score-follow').checked=true;renderScoreAt(transport.position,{force:true});});
 $('score-large').addEventListener('change',()=>$('score').classList.toggle('large-notation',$('score-large').checked));
-$('timbre').addEventListener('change',()=>transport.setTimbre($('timbre').value));
 $('loop-a').addEventListener('click',()=>{loopA=transport.position;$('loop-state').textContent=`A ${formatTime(loopA)}. Choose B.`;});
 $('loop-b').addEventListener('click',()=>{try{transport.setLoop(loopA??0,transport.position);$('loop-state').textContent=`Loop ${formatTime(transport.loop.start)}–${formatTime(transport.loop.end)}`;renderRoll();}catch(error){$('loop-state').textContent=error.message;}});
 $('loop-clear').addEventListener('click',()=>{transport.clearLoop();$('repeat-bar').setAttribute('aria-pressed','false');loopA=null;$('loop-state').textContent='Loop off';renderRoll();});

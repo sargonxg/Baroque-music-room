@@ -114,7 +114,7 @@ GPL-3.0-or-later. It is not part of the browser runtime.
 
 ## Grand piano sounds
 
-The piano uses Alexander Holm’s Salamander Grand Piano v3, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The room uses 15 re-encoded, shortened samples drawn from the [Tone.js distribution](https://github.com/Tonejs/audio/tree/master/salamander). The rendered notes preserve the score’s onset times. See the [asset provenance](assets/instruments/piano/provenance.json) for the pinned upstream revision, file hashes and edits.
+The piano uses Alexander Holm’s Salamander Grand Piano v3, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The room uses 60 stereo samples drawn from the [SFZ Instruments lossless distribution](https://github.com/sfzinstruments/SalamanderGrandPiano/tree/3382bf9496bba2486f5ab0de55a264d1dfc38404). The soft and medium takes retain the source score’s onset times in playback. See the [asset provenance](assets/instruments/piano/provenance.json) for the edits, source names and file hashes.
 
 The works archive is derived from Open Opus’s public-domain work dump, filtered
 to its Baroque epoch and deduplicated by composer, title and subtitle.

@@ -1,24 +1,16 @@
-/** Local score transport with a sampled piano and synthesized period keyboards. */
-export const KEYBOARD_TIMBRES={
- harpsichord:{label:'Harpsichord',harmonicDecay:1.25,even:.55,attack:.003,release:.09,decay:1.9,sustain:.015},
- clavichord:{label:'Clavichord',harmonicDecay:2.1,even:.7,attack:.009,release:.14,decay:1.25,sustain:.025},
- piano:{label:'Grand piano',harmonicDecay:1.9,even:.9,attack:.012,release:.2,decay:2.8,sustain:.025},
- organ:{label:'Small organ',harmonicDecay:2.6,even:.7,attack:.025,release:.12,decay:0,sustain:.8},
-};
+/** Schedule the score against a local stereo grand piano. */
 const bound=(v,a,b)=>Math.min(b,Math.max(a,Number.isFinite(Number(v))?Number(v):a));
-const PIANO_ROOTS = Array.from({length:15}, (_, index) => 24 + index * 6);
+const MAX_SAMPLE_BYTES = 280_000;
+const PIANO_BASE = 'assets/instruments/piano/';
 
 export function pianoSampleRoot(pitch) {
- return PIANO_ROOTS[bound(Math.round((pitch - 24) / 6), 0, PIANO_ROOTS.length - 1)];
+ return bound(21 + Math.round((pitch - 21) / 3) * 3, 21, 108);
 }
 
-/** Blend neighbouring recorded keys so a scale does not jump between sample colours. */
-export function pianoLayers(pitch) {
- const low=PIANO_ROOTS[bound(Math.floor((pitch-24)/6),0,PIANO_ROOTS.length-1)];
- const high=Math.min(108,low+6), blend=bound((pitch-low)/6,0,1);
- if(blend===0||low===high)return [[low,1]];
- if(blend===1)return [[high,1]];
- return [[low,Math.cos(blend*Math.PI/2)],[high,Math.sin(blend*Math.PI/2)]];
+export function pianoSampleName(pitch, velocity = .72, length = 1) {
+ // Give short notes a lighter touch while retaining the relative source velocities.
+ const touch = bound(velocity,.12,1) * (1 - .1 * (1 - bound(length / .45,0,1)));
+ return pianoSampleRoot(pitch) + (touch < .69 ? '-soft.mp3' : '.mp3');
 }
 
 export function phraseVelocity(velocity,length,gap,shaped) {
@@ -36,11 +28,13 @@ export class KeyboardTransport {
  constructor(onFrame=()=>{},onEnd=()=>{}){
   this.onFrame=onFrame;this.onEnd=onEnd;this.position=0;this.rate=1;this.playing=false;
   this.volume=.42;this.nodes=new Set();this.enabled=[];this.voiceLevels=[];this.timer=null;
-  this.timbre='harpsichord';this.tuning=440;this.reverb=.08;this.loop=null;this.generation=0;
+  this.reverb=.08;this.loop=null;this.generation=0;
   this.shaped=true;this.piano=new Map();this.pianoLoads=new Map();this.tailTimer=null;
  }
  load(study){
   this.pause();this.study=study;this.position=0;this.enabled=study.tracks.map(()=>true);
+  this.sampleNames = new Set(study.tracks.flatMap(({notes}) => notes.map(([pitch,,length,velocity]) => pianoSampleName(pitch,velocity,length))));
+  for (const name of this.piano.keys()) if (!this.sampleNames.has(name)) this.piano.delete(name);
   this.voiceLevels=study.tracks.map(()=>1);this.loop=null;this.soloTrack=null;this.onFrame(0);return this;
  }
  initialize(activatedContext){
@@ -48,7 +42,8 @@ export class KeyboardTransport {
   const Context=globalThis.AudioContext||globalThis.webkitAudioContext;
   if(!Context)throw Error('Audio is unavailable here. Download the MIDI or open the source score.');
   this.context=activatedContext??new Context();this.master=this.context.createGain();this.master.gain.value=this.volume;
-  const compressor=this.context.createDynamicsCompressor();compressor.threshold.value=-14;compressor.knee.value=14;compressor.ratio.value=2.8;
+  this.sampleAbort = new AbortController();
+  const compressor=this.context.createDynamicsCompressor();compressor.threshold.value=-12;compressor.knee.value=12;compressor.ratio.value=2.2;
   this.master.connect(compressor);compressor.connect(this.context.destination);
   this.dry=this.context.createGain();this.wet=this.context.createGain();this.dry.connect(this.master);this.wet.connect(this.master);
   if(this.context.createConvolver&&this.context.createBuffer){
@@ -57,41 +52,42 @@ export class KeyboardTransport {
    let seed=21937;for(let channel=0;channel<2;channel++){const d=buffer.getChannelData(channel);for(let i=0;i<length;i++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;d[i]=((seed/4294967296)*2-1)*Math.pow(1-i/length,3.4)*.22;}}
    this.convolver.buffer=buffer;this.convolver.connect(this.wet);
   }
-  this.waves={};for(const [key,preset] of Object.entries(KEYBOARD_TIMBRES)){
-   const real=new Float32Array(32),imag=new Float32Array(32);for(let i=1;i<32;i++)imag[i]=Math.pow(i,-preset.harmonicDecay)*(i%2?1:preset.even);
-   this.waves[key]=this.context.createPeriodicWave(real,imag);
-  }
   this.setReverb(this.reverb);
  }
  async preparePiano(){
-  if(!this.context?.decodeAudioData || !this.context.createBufferSource || !this.study)return;
-  const context=this.context;
-  const pitches = new Set(this.study.tracks.flatMap(track=>track.notes.flatMap(note=>pianoLayers(note[0]).map(([root])=>root))));
-  await Promise.all([...pitches].map(root=>{
-   if(this.piano.has(root))return;
-   if(this.pianoLoads.has(root))return this.pianoLoads.get(root);
-   const request=fetch('assets/instruments/piano/'+root+'.mp3',{credentials:'same-origin',signal:AbortSignal.timeout(6500)})
-    .then(response=>{
-     if(!response.ok)throw Error('Piano sample unavailable.');
-     return response.arrayBuffer();
-    }).then(bytes=>{
-     if(bytes.byteLength>90_000 || context!==this.context)return null;
-     return context.decodeAudioData(bytes);
-    }).then(buffer=>{
-     if(buffer && context===this.context)this.piano.set(root,buffer);
-    }).catch(()=>{ /* A missing sample falls back to the local keyboard. */ }).finally(()=>{
-     if(this.pianoLoads.get(root)===request)this.pianoLoads.delete(root);
+  const context = this.context;
+  if (!context?.decodeAudioData || !context.createBufferSource) throw Error('This browser cannot play the piano samples.');
+  const signal = AbortSignal.any([this.sampleAbort.signal, AbortSignal.timeout(10_000)]);
+  await Promise.all([...this.sampleNames].map(name=>{
+   if (this.piano.has(name)) return;
+   if (this.pianoLoads.has(name)) return this.pianoLoads.get(name);
+   const request = fetch(PIANO_BASE + name, {credentials:'same-origin',signal})
+    .then(async response => {
+     if (!response.ok || Number(response.headers.get('Content-Length')) > MAX_SAMPLE_BYTES) throw Error('Invalid piano sample');
+     const bytes = await response.arrayBuffer();
+     if (context !== this.context) return;
+     if (!bytes.byteLength || bytes.byteLength > MAX_SAMPLE_BYTES) throw Error('Invalid piano sample');
+     const buffer = await context.decodeAudioData(bytes);
+     if (context === this.context && this.sampleNames.has(name)) this.piano.set(name,buffer);
+    }).finally(() => {
+     if (this.pianoLoads.get(name) === request) this.pianoLoads.delete(name);
     });
-   this.pianoLoads.set(root,request);
+   this.pianoLoads.set(name,request);
    return request;
   }));
  }
- get sampledPiano(){return this.timbre==='piano' && this.piano.size>0;}
  async play(){
   if(!this.study||this.playing)return;
   if(this.tailTimer)this.pause();
-  const generation=this.generation;this.initialize();await this.context.resume();
-  if(this.timbre==='piano' && generation===this.generation)await this.preparePiano();
+  const generation=this.generation;
+  this.initialize();
+  try {
+   await this.context.resume();
+   if (generation === this.generation) await this.preparePiano();
+  } catch {
+   if (generation !== this.generation) return;
+   throw Error('The piano samples could not load. Try again.');
+  }
   if(generation!==this.generation||this.playing)return;
   if(this.position>=this.study.duration)this.position=this.loop?.start||0;
   this.setReverb(this.reverb);this.playing=true;this.anchor=this.context.currentTime+.03;this.origin=this.position;
@@ -108,11 +104,11 @@ export class KeyboardTransport {
   this.trackGains=this.study.tracks.map((_,i)=>{
    const gain=this.context.createGain();gain.gain.value=this.enabled[i]?this.voiceLevels[i]:0;
    let output=gain;
-   if(this.context.createStereoPanner){const pan=this.context.createStereoPanner();pan.pan.value=this.study.tracks.length===1?0:(i/(this.study.tracks.length-1)-.5)*.34;gain.connect(pan);output=pan;gain._panner=pan;}
+   if(this.context.createStereoPanner){const pan=this.context.createStereoPanner();pan.pan.value=this.study.tracks.length===1?0:(i/(this.study.tracks.length-1)-.5)*.18;gain.connect(pan);output=pan;gain._panner=pan;}
    output.connect(this.dry);if(this.convolver)output.connect(this.convolver);return gain;
   });
   // Rearticulate a held note after a seek, using only its remaining source duration.
-  if(this.position>0)this.study.tracks.forEach((t,i)=>{for(const n of t.notes)if(n[1]<this.position&&n[1]+n[2]>this.position)this.note([n[0],this.position,n[1]+n[2]-this.position,n[3]],i);});
+  if(this.position>0)this.study.tracks.forEach((t,i)=>{for(const n of t.notes)if(n[1]<this.position&&n[1]+n[2]>this.position)this.note([n[0],this.position,n[1]+n[2]-this.position,n[3]],i,Infinity,n[2]);});
   this.tick();this.timer=setInterval(()=>this.tick(),25);
  }
  tick(){
@@ -125,52 +121,31 @@ export class KeyboardTransport {
   this.onFrame(this.position);
   if(this.position>=this.study.duration){
    this.playing=false;clearInterval(this.timer);this.timer=null;
-   this.tailTimer=setTimeout(()=>this.pause(),280);
+   this.tailTimer=setTimeout(()=>this.pause(),420);
    this.onEnd();
   }
  }
- note([pitch,start,duration,velocity=1],track,nextStart=Infinity){
+ note([pitch,start,duration,velocity=.72],track,nextStart=Infinity,recordedLength=duration){
   if(!this.trackGains[track])return;
-  const preset=KEYBOARD_TIMBRES[this.timbre];
   const when=Math.max(this.context.currentTime,this.anchor+(start-this.origin)/this.rate);
   const sourceDuration=Math.min(duration,(this.loop?.end??Infinity)-start);
-  const length=articulatedLength(Math.max(.025,sourceDuration/this.rate),(nextStart-start)/this.rate,this.shaped && this.timbre!=='organ');
+  const length=articulatedLength(Math.max(.025,sourceDuration/this.rate),(nextStart-start)/this.rate,this.shaped);
   const dynamics=phraseVelocity(velocity,sourceDuration,nextStart-start,this.shaped);
-  if(this.timbre==='piano'){
-   const layers=pianoLayers(pitch).filter(([key])=>this.piano.has(key));
-   if(layers.length){
-    const balance=layers.reduce((sum,[,weight])=>sum+weight,0);
-    for(const [key,weight] of layers)this.pianoNote(key,pitch,when,length,dynamics,track,weight/balance);
-    return;
-   }
-  }
-  const frequency=this.tuning*Math.pow(2,(pitch-69)/12),oscillator=this.context.createOscillator(),gain=this.context.createGain();
-  oscillator.setPeriodicWave(this.waves[this.timbre]);oscillator.frequency.value=frequency;
-  const register=Math.pow(440/Math.max(130,frequency),.12),peak=.035*Math.pow(dynamics,1.15)*register;
-  const release=preset.release,holdEnd=when+Math.max(preset.attack+.01,length);
-  gain.gain.setValueAtTime(.0001,when);gain.gain.exponentialRampToValueAtTime(peak,when+preset.attack);
-  if(preset.decay){const decay=Math.max(.08,preset.decay*Math.pow(440/frequency,.17)),level=Math.max(.00012,peak*Math.exp(-Math.max(0,length-preset.attack)/decay));gain.gain.exponentialRampToValueAtTime(level,holdEnd);}
-  else gain.gain.setValueAtTime(peak*preset.sustain,holdEnd);
-  gain.gain.exponentialRampToValueAtTime(.0001,holdEnd+release);
-  oscillator.connect(gain);gain.connect(this.trackGains[track]);oscillator.start(when);oscillator.stop(holdEnd+release+.02);
-  this.nodes.add(oscillator);oscillator.onended=()=>{this.nodes.delete(oscillator);oscillator.disconnect();gain.disconnect();};
- }
- pianoNote(root,pitch,when,length,dynamics,track,weight=1){
+  const buffer = this.piano.get(pianoSampleName(pitch,velocity,recordedLength));
+  if (!buffer) return;
   const source=this.context.createBufferSource(), envelope=this.context.createGain();
-  const touch=this.context.createBiquadFilter();
-  source.buffer=this.piano.get(root);
-  source.playbackRate.value=Math.pow(2,(pitch-root)/12)*(this.tuning/440);
-  touch.type='lowpass';touch.Q.value=.45;touch.frequency.value=1900+11100*Math.pow(dynamics,1.25);
-  const peak=.34*weight*Math.pow(dynamics,1.2), end=when+Math.max(.018,length);
-  const release=bound(.18+(60-pitch)*.002,.09,.28);
+  source.buffer=buffer;
+  source.playbackRate.value=2**((pitch-pianoSampleRoot(pitch))/12);
+  const peak=.49*Math.pow(dynamics,.8), end=when+Math.max(.018,length);
+  const release=bound(.25+(60-pitch)*.0024,.14,.34);
   envelope.gain.setValueAtTime(.0001,when);
-  envelope.gain.exponentialRampToValueAtTime(peak,when+.004);
+  envelope.gain.exponentialRampToValueAtTime(peak,when+.002);
   envelope.gain.setValueAtTime(peak,end);
-  envelope.gain.exponentialRampToValueAtTime(.0001,end+release);
-  source.connect(touch);touch.connect(envelope);envelope.connect(this.trackGains[track]);
+  envelope.gain.setTargetAtTime(.0001,end,release*.16);
+  source.connect(envelope);envelope.connect(this.trackGains[track]);
   source.start(when);source.stop(end+release+.012);
   this.nodes.add(source);
-  source.onended=()=>{this.nodes.delete(source);source.disconnect();touch.disconnect();envelope.disconnect();};
+  source.onended=()=>{this.nodes.delete(source);source.disconnect();envelope.disconnect();};
  }
  pause(){
   this.generation++;clearTimeout(this.tailTimer);this.tailTimer=null;
@@ -194,18 +169,18 @@ export class KeyboardTransport {
  }
  async setRate(value){const wasPlaying=this.playing;this.pause();this.rate=bound(value,.25,1.5);if(wasPlaying)await this.play();}
  setVolume(value){this.volume=bound(value,0,.7);if(this.master)this.master.gain.setTargetAtTime(this.volume,this.context.currentTime,.02);}
- setTimbre(value){
-  if(!Object.hasOwn(KEYBOARD_TIMBRES,value))return;
-  this.timbre=value;
-  if(value==='piano'&&this.playing)void this.preparePiano();
- }
  setPhrasing(enabled){this.shaped=Boolean(enabled);}
- setTuning(value){this.tuning=bound(value,392,466);}
  setReverb(value){this.reverb=bound(value,0,.35);if(this.dry){this.dry.gain.value=1-this.reverb*.3;this.wet.gain.value=this.convolver?this.reverb:0;}}
  setLoop(start,end){
   const a=bound(start,0,this.study?.duration||0),b=bound(end,0,this.study?.duration||0);
   if(b-a<.2)throw Error('Choose a loop at least 0.2 seconds long.');this.loop={start:a,end:b};
  }
  clearLoop(){this.loop=null;}
- async dispose(){this.pause();if(this.context?.close&&this.context.state!=='closed')await this.context.close();this.context=null;this.piano.clear();this.pianoLoads.clear();}
+ async dispose(){
+  this.pause();
+  this.sampleAbort?.abort();
+  const context=this.context;
+  this.context=null;this.piano.clear();this.pianoLoads.clear();
+  if(context?.close&&context.state!=='closed')await context.close();
+ }
 }
