@@ -1,0 +1,15 @@
+{
+  "format": "open-opus-baroque-archive/1",
+  "file": "open-opus-baroque.json.gz",
+  "entries": 5017,
+  "composers": 22,
+  "source": "https://api.openopus.org/work/dump.json",
+  "licence": "Public domain (Open Opus)",
+  "project": "https://www.openopus.org/",
+  "checkedOn": "2026-11-24",
+  "sourceSha256": "c9f5c84604f67f4de59eb0045417f1b4bc1acb3b7cceba447a8f4b39a819792f",
+  "sha256": "9a9e15f81fa6874c1d5c2c657f7d9008783614bb920bcbb3bc3de8a0dd0a6088",
+  "bytes": 63564,
+  "expandedBytes": 288413,
+  "derivation": "Baroque epoch only. Composer, title, subtitle and genre from the source. Exact duplicate titles and subtitles within a composer are removed."
+}

@@ -115,3 +115,12 @@ GPL-3.0-or-later. It is not part of the browser runtime.
 ## Grand piano sounds
 
 The piano uses Alexander Holm’s Salamander Grand Piano v3, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The room uses 15 re-encoded, shortened samples drawn from the [Tone.js distribution](https://github.com/Tonejs/audio/tree/master/salamander). The rendered notes preserve the score’s onset times. See the [asset provenance](assets/instruments/piano/provenance.json) for the pinned upstream revision, file hashes and edits.
+
+The works archive is derived from Open Opus’s public-domain work dump, filtered
+to its Baroque epoch and deduplicated by composer, title and subtitle.
+The source and hashes are in `data/archive/manifest.json`. Score and recording
+searches send visitors to IMSLP and YouTube.
+
+The twelve supplemental keyboard editions retain their Mutopia typesetter
+credits and licences in `data/curated-supplement.json`. The pixel portraits are
+original illustrations. Historical portrait attribution remains listed above.

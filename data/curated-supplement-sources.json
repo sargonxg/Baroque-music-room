@@ -1,0 +1,114 @@
+{
+  "format": "baroque-authored-supplement-inputs/1",
+  "sourceCommit": "2144afd6f52d56c5b6995b8b589ef1268b3139f0",
+  "files": [
+    {
+      "composer": "bach",
+      "id": "bwv846-prelude",
+      "title": "Prelude in C major \u00b7 BWV 846",
+      "path": "ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly",
+      "sha256": "9e4540143b5c5a9884f215428837fe91d1b471b02669f3a07ce50560736078e9",
+      "bytes": 6432
+    },
+    {
+      "composer": "bach",
+      "id": "bwv846-fugue",
+      "title": "Fugue in C major \u00b7 BWV 846",
+      "path": "ftp/BachJS/BWV846/wtk1-fugue1/wtk1-fugue1.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV846/wtk1-fugue1/wtk1-fugue1.ly",
+      "sha256": "10d51eabac0fdfeddcbb7d76ad3bf361d4c095feec3ce7aa61d034d5b836c708",
+      "bytes": 5659
+    },
+    {
+      "composer": "bach",
+      "id": "bwv847-prelude",
+      "title": "Prelude in C minor \u00b7 BWV 847",
+      "path": "ftp/BachJS/BWV847/bwv847a/bwv847a.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV847/bwv847a/bwv847a.ly",
+      "sha256": "2923478f3436ddc12525fab5514e354025a9715205424944fd0e5f7f24ba70d9",
+      "bytes": 7617
+    },
+    {
+      "composer": "bach",
+      "id": "bwv848-prelude",
+      "title": "Prelude in C-sharp major \u00b7 BWV 848",
+      "path": "ftp/BachJS/BWV848/bwv848a/bwv848a.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV848/bwv848a/bwv848a.ly",
+      "sha256": "407836354aaf412593af98d7b49019423afcbb75e30e7a7b6129dd0d00e44f7f",
+      "bytes": 7446
+    },
+    {
+      "composer": "bach",
+      "id": "bwv924-prelude",
+      "title": "Little Prelude in C major \u00b7 BWV 924",
+      "path": "ftp/BachJS/BWV924/bwv924_prelude_c_major_mutopia/bwv924_prelude_c_major_mutopia.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV924/bwv924_prelude_c_major_mutopia/bwv924_prelude_c_major_mutopia.ly",
+      "sha256": "e4343d0b60d9e2be8a591c5cf0ac6023abe192c0d6be768db31a5f40fda38472",
+      "bytes": 5403
+    },
+    {
+      "composer": "bach",
+      "id": "bwv926-prelude",
+      "title": "Little Prelude in D minor \u00b7 BWV 926",
+      "path": "ftp/BachJS/BWV926/bach-praeludium-02/bach-praeludium-02.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV926/bach-praeludium-02/bach-praeludium-02.ly",
+      "sha256": "e4371ade864be1965b608f450a1f200a0be79f68415a6128b08547d44fea599d",
+      "bytes": 5827
+    },
+    {
+      "composer": "bach",
+      "id": "bwv928-prelude",
+      "title": "Little Prelude in F major \u00b7 BWV 928",
+      "path": "ftp/BachJS/BWV928/bach-praeludium-10/bach-praeludium-10.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/BachJS/BWV928/bach-praeludium-10/bach-praeludium-10.ly",
+      "sha256": "c01976cf16d4a6f7bf219836c924cbc0f5238ae9bba6f8a5ea3b7f7a5b813e4f",
+      "bytes": 5585
+    },
+    {
+      "composer": "handel",
+      "id": "handel-impertinence",
+      "title": "Impertinence \u00b7 HWV 494",
+      "path": "ftp/HandelGF/Aylesford/06-impertinence/06-impertinence.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/06-impertinence/06-impertinence.ly",
+      "sha256": "9c08b514641dfc0ae566fdf01819473634aae1afc3feabc63a730752919bb62d",
+      "bytes": 2905
+    },
+    {
+      "composer": "handel",
+      "id": "handel-aylesford-prelude",
+      "title": "Preludio \u00b7 Aylesford Collection No. 8",
+      "path": "ftp/HandelGF/Aylesford/08-preludio/08-preludio.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/08-preludio/08-preludio.ly",
+      "sha256": "932d7d0866751e18b623646134181c9a96a03ead9a9df16bd65c86afe2dc6994",
+      "bytes": 3679
+    },
+    {
+      "composer": "handel",
+      "id": "handel-aylesford-menuet",
+      "title": "Menuet \u00b7 Aylesford Collection No. 12",
+      "path": "ftp/HandelGF/Aylesford/12-menuet/12-menuet.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/12-menuet/12-menuet.ly",
+      "sha256": "67b26a82ec6420d309304016640c7a7a54be9a181258931a1f8524f5d43b9c7c",
+      "bytes": 3336
+    },
+    {
+      "composer": "handel",
+      "id": "handel-aylesford-air",
+      "title": "Air \u00b7 Aylesford Collection No. 13",
+      "path": "ftp/HandelGF/Aylesford/13-air/13-air.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/13-air/13-air.ly",
+      "sha256": "e57487330db69d1d39f16693e642707a937df71c866e57b7d0ac2bd4296d1f11",
+      "bytes": 2930
+    },
+    {
+      "composer": "handel",
+      "id": "handel-aylesford-allemande",
+      "title": "Allemande \u00b7 Aylesford Collection No. 17",
+      "path": "ftp/HandelGF/Aylesford/17-allemande/17-allemande.ly",
+      "url": "https://raw.githubusercontent.com/MutopiaProject/MutopiaProject/2144afd6f52d56c5b6995b8b589ef1268b3139f0/ftp/HandelGF/Aylesford/17-allemande/17-allemande.ly",
+      "sha256": "47509eecfafabc54a4672ca00db96ce99b184160def7fdfd3829ba68dd598165",
+      "bytes": 3614
+    }
+  ]
+}

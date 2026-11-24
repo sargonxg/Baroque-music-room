@@ -10,15 +10,20 @@ from fractions import Fraction as F
 import xml.etree.ElementTree as ET
 import ly.document,ly.pitch.rel2abs,ly.music
 from ly.music import items,event
+from ly.pitch.transpose import Transposer
 from music21 import stream,note,chord,pitch,duration,meter,key,clef,tempo,metadata,tie
 
 import argparse,tempfile,urllib.request,concurrent.futures
-PARSER=argparse.ArgumentParser(description='Rebuild 50 credited source-derived Baroque study scores and playback assets.')
+PARSER=argparse.ArgumentParser(description='Rebuild credited source-derived Baroque study scores and playback assets.')
 PARSER.add_argument('--cache',type=pathlib.Path,default=pathlib.Path(tempfile.gettempdir())/'baroque-source-score-cache')
 PARSER.add_argument('--offline',action='store_true',help='Use only already downloaded, hash-verified source files.')
+PARSER.add_argument('--supplement',action='store_true',help='Build the preludes and Handel keyboard pieces.')
 ARGS=PARSER.parse_args()
 ROOT=ARGS.cache.resolve();ROOT.mkdir(parents=True,exist_ok=True)
 OUT=pathlib.Path(__file__).resolve().parents[1]
+INPUTS='curated-supplement-sources.json' if ARGS.supplement else 'curated-sources.json'
+MANIFEST='curated-supplement.json' if ARGS.supplement else 'curated-fifty.json'
+REPORT='curated-supplement-validation.json' if ARGS.supplement else 'curated-source-validation.json'
 
 def remove_blocks(text,commands):
  for command in commands:
@@ -51,12 +56,22 @@ COMPOSERS={'bach':'Johann Sebastian Bach','scarlatti':'Domenico Scarlatti','rame
 class SourceEvents(event.Events):
  unfold_repeats=True
  def __init__(self,source):
-  self.source=source;self.staff='staff1';self.group='staff1';self.staff_ids={};self.rows=[];self.meters=[];self.keys=[];self.pickups=[];self.tempos=[];self.last={}
+  self.source=source;self.staff='staff1';self.group='staff1';self.staff_ids={};self.rows=[];self.meters=[];self.keys=[];self.pickups=[];self.tempos=[];self.last={};self.transposers=[]
+ def sounding_pitch(self,raw):
+  rendered=copy.copy(raw)
+  for operation in reversed(self.transposers):operation.transpose(rendered)
+  return rendered
  def traverse(self,node,time,scaling):
   if isinstance(node,items.Score):
    for child in node:
     if isinstance(child,items.Music):time=super().traverse(child,time,scaling)
    return time
+  if isinstance(node,items.Transpose):
+   if len(node)!=3 or not isinstance(node[0],items.Note) or not isinstance(node[1],items.Note):
+    raise ValueError('Unsupported source transposition')
+   self.transposers.append(Transposer(node[0].pitch,node[1].pitch))
+   try:return self.traverse(node[2],time,scaling)
+   finally:self.transposers.pop()
   if isinstance(node,items.Context):
    ctx=node.context();old_staff,old_group=self.staff,self.group
    if ctx in ['Staff','RhythmicStaff']:
@@ -73,7 +88,7 @@ class SourceEvents(event.Events):
   if isinstance(node,items.TimeSignature):
    self.meters.append((time*4,node.numerator(),node.fraction().denominator));return time
   if isinstance(node,items.KeySignature):
-   p=node.pitch();self.keys.append((time*4,p.note,p.alter,p.octave,node.mode()));return time
+   p=self.sounding_pitch(node.pitch());self.keys.append((time*4,p.note,p.alter,p.octave,node.mode()));return time
   if isinstance(node,items.Partial):self.pickups.append((time*4,node.partial_length()*4));return time
   if isinstance(node,items.Tempo):
    values=node.tempo()
@@ -89,8 +104,8 @@ class SourceEvents(event.Events):
    if isinstance(nxt,items.Command) and nxt.token=='\\rest':return time+dur
    rows=[]
    for n in notes:
-    p=n.pitch
-    if p is None:continue
+    if n.pitch is None:continue
+    p=self.sounding_pitch(n.pitch)
     rows.append({'q':time*4,'d':dur*4,'step':'CDEFGAB'[p.note],'alter':int(p.alter*2),'octave':p.octave+3,'staff':self.staff,'group':self.group,'position':n.position,'grace':not bool(scaling),'tieForward':False})
    self.rows.extend(rows);self.last[self.group]=rows
    return time+dur
@@ -112,7 +127,9 @@ def build_piece(row,score,doc,source,section=0):
  if not events.rows:raise ValueError('No authored notes extracted')
  pieceid=row['id'];composer=row['composer']
  if composer=='froberger':pieceid+='-'+['allemande','gigue','courante','sarabande'][section]
- if composer=='bach':
+ if row.get('title'):
+  title=row['title']
+ elif composer=='bach':
   bwv=int(re.search(r'\d+',pieceid)[0]);title=('Invention No. '+str(bwv-771) if bwv<787 else 'Sinfonia No. '+str(bwv-786))+' · BWV '+str(bwv)
  elif composer=='froberger':title='Suite VII in E minor · '+['Allemande','Gigue','Courante','Sarabande'][section]
  elif composer=='couperin':title='L’Art de toucher le clavecin · Prelude '+re.search(r'\d+',pieceid)[0]
@@ -144,17 +161,18 @@ def build_piece(row,score,doc,source,section=0):
   nextchanges=[x for x in meters if q<x<end]
   if nextchanges:end=min(nextchanges)
   bounds.append(end);q=end
- if composer=='bach':group=lambda r:r['group']
+ independent=composer=='bach' and not row.get('title')
+ if independent:group=lambda r:r['group']
  else:group=lambda r:r['staff']
  groups=collections.defaultdict(list)
  for r in events.rows:groups[group(r)].append(r)
  ordered=sorted(groups,key=lambda k:sum(pitch_number(r) for r in groups[k])/len(groups[k]),reverse=True)
- if composer=='bach' and len(ordered)!=(2 if int(re.search(r'\d+',pieceid)[0])<787 else 3):raise ValueError('Unexpected Bach source voice count '+str(len(ordered)))
+ if independent and len(ordered)!=(2 if int(re.search(r'\d+',pieceid)[0])<787 else 3):raise ValueError('Unexpected Bach source voice count '+str(len(ordered)))
  voices=[];s=stream.Score(id=pieceid)
  s.metadata=metadata.Metadata();s.metadata.title=title;s.metadata.composer=COMPOSERS[composer]
  for vi,g in enumerate(ordered):
-  label=(['Upper voice','Lower voice'] if len(ordered)==2 else ['Upper voice','Middle voice','Lower voice'])[vi] if composer=='bach' else ('Upper staff' if vi==0 else 'Lower staff' if vi==len(ordered)-1 else 'Middle staff '+str(vi))
-  voices.append({'id':'V'+str(vi+1),'label':label,'color':COLORS[vi%len(COLORS)],'actualVoice':composer=='bach','sourceGroup':g})
+  label=(['Upper voice','Lower voice'] if len(ordered)==2 else ['Upper voice','Middle voice','Lower voice'])[vi] if independent else ('Upper staff' if vi==0 else 'Lower staff' if vi==len(ordered)-1 else 'Middle staff '+str(vi))
+  voices.append({'id':'V'+str(vi+1),'label':label,'color':COLORS[vi%len(COLORS)],'actualVoice':independent,'sourceGroup':g})
   p=stream.Part(id='V'+str(vi+1));p.partName=label;p.partAbbreviation=str(vi+1)
   rows=groups[g]
   for mi,(a,b) in enumerate(zip(bounds,bounds[1:])):
@@ -338,7 +356,7 @@ def parse_xml(root,row):
    else:active.pop(k,None)
   tracks.append({'id':voice['id'],'label':voice['label'],'actualVoice':voice['actualVoice'],'color':voice['color'],'notes':notes})
  if any(abs(x-row['durationQuarters'])>.00001 for x in part_durations):raise ValueError('XML/source duration mismatch '+str(part_durations)+' expected '+str(row['durationQuarters']))
- return {'duration':round(to_seconds(row['durationQuarters'],tempos),7),'tracks':tracks,'timing':timing,'measureTimes':measures,'secondsPerQuarter':60/tempos[0][1],'bpm':tempos[0][1],'tempoMap':[{'quarter':q,'seconds':round(to_seconds(q,tempos),7),'bpm':b} for q,b in tempos],'notationBasis':'Authored LilyPond source converted to a modern MusicXML study score; repeats written out. Grace notes are displayed but not realized in synthesized playback; ornament signs are not performed.','voiceKind':'actual-voice' if row['composer']=='bach' else 'source-staff'}
+ return {'duration':round(to_seconds(row['durationQuarters'],tempos),7),'tracks':tracks,'timing':timing,'measureTimes':measures,'secondsPerQuarter':60/tempos[0][1],'bpm':tempos[0][1],'tempoMap':[{'quarter':q,'seconds':round(to_seconds(q,tempos),7),'bpm':b} for q,b in tempos],'notationBasis':'Authored LilyPond source converted to a modern MusicXML study score; repeats written out. Grace notes are displayed but not realized in synthesized playback; ornament signs are not performed.','voiceKind':'actual-voice' if all(v['actualVoice'] for v in row['voices']) else 'source-staff'}
 
 def normalized_coverage(rows):
  by=collections.defaultdict(list)
@@ -379,7 +397,7 @@ def finalise():
   for vi,track in enumerate(study['tracks']):
    first=min((t for t in study['timing'] if t['track']==vi and not t['grace']),key=lambda t:t['start'])
    firsts.append({'label':track['label'],'seconds':first['start'],'measure':first['measure'],'quarter':first['quarter']})
-  description=('Two independent score voices.' if len(firsts)==2 else 'Three independent score voices.') if row['composer']=='bach' else 'Colours identify the source staffs, which may each combine musical voices.'
+  description=('Two independent score voices.' if len(firsts)==2 else 'Three independent score voices.') if study['voiceKind']=='actual-voice' else 'Colours identify the source staffs, which may each combine musical voices.'
   description+=' '+ '; '.join(f"{x['label']} enters in bar {x['measure']} ({x['seconds']:.1f}s)" for x in firsts)+'.'
   license_url='https://creativecommons.org/publicdomain/mark/1.0/'
   if 'ShareAlike 3.0' in row['license']:license_url='https://creativecommons.org/licenses/by-sa/3.0/'
@@ -391,14 +409,16 @@ def finalise():
   checks.append({'id':ident,'sourceNoteRows':row['sourceRows'],'displayedNoteheads':len(study['timing']),'parsedDurationQuarters':float(parsed.highestTime),'sourceDurationQuarters':row['durationQuarters'],'parts':len(parsed.parts),'zippedBytes':score_path.stat().st_size,'xmlBytes':len(xml),'xmlSafeZipEntries':True,'stableNoteIDs':len({t['id'] for t in study['timing']})==len(study['timing']),'matchingTimingNoteheads':len(root.findall('.//pitch'))==len(study['timing'])})
   print('FINAL',ident,len(study['timing']),score_path.stat().st_size)
  manifest={'format':'baroque-curated-source-scores/1','captured':'2026-11-12','sourceCommit':'2144afd6f52d56c5b6995b8b589ef1268b3139f0','policy':'50 complete pieces or named movements. Study editions derived from authored LilyPond, not reconstructed from MIDI. Repeats written out; layout and beams are modern. Bach colours identify source voices; other colours identify source staffs. Source ornament signs are not synthesized.','pieces':pieces}
- compact(OUT/'data/curated-fifty.json',manifest)
- compact(OUT/'data/curated-validation.json',{'format':'baroque-curated-validation/1','captured':'2026-11-12','pieces':checks})
+ if ARGS.supplement:
+  manifest.update(captured='2026-11-24',policy='Supplemental preludes and keyboard pieces transcribed from credited Mutopia editions. Colors identify source staves. Repeats are written out.')
+ compact(OUT/'data'/MANIFEST,manifest)
+ if not ARGS.supplement:compact(OUT/'data/curated-validation.json',{'format':'baroque-curated-validation/1','captured':'2026-11-12','pieces':checks})
  print('TOTAL',len(pieces),'BACH',sum(p['composer']=='bach' for p in pieces),'NONBACH',len(set(p['composer'] for p in pieces if p['composer']!='bach')),'BYTES',sum(p.stat().st_size for p in ASSETS.iterdir()))
 
 
 def validate_sources():
  import json,pathlib,sys,collections,xml.etree.ElementTree as E,zipfile,hashlib
- manifest=json.loads((OUT/'data/curated-fifty.json').read_text())
+ manifest=json.loads((OUT/'data'/MANIFEST).read_text())
  sources=json.loads((ROOT/'download-receipt.json').read_text())
  reports=[]
  for piece in manifest['pieces']:
@@ -409,7 +429,7 @@ def validate_sources():
   path=ROOT/'sources'/source['path'];raw=path.read_text()
   if piece['composer']=='couperin':raw=(path.parent/'mutopia-header.ly').read_text()+'\n'+raw
   doc,scores=score_nodes(raw,path);e=SourceEvents(raw);e.read(scores[section])
-  grouping=(lambda r:r['group']) if piece['composer']=='bach' else (lambda r:r['staff'])
+  grouping=(lambda r:r['group']) if piece['voiceKind']=='actual-voice' else (lambda r:r['staff'])
   groups=collections.defaultdict(list)
   for row in e.rows:groups[grouping(row)].append(row)
   ordered=sorted(groups,key=lambda k:sum(pitch_number(r) for r in groups[k])/len(groups[k]),reverse=True)
@@ -435,11 +455,11 @@ def validate_sources():
   assert coverage_equal and duration_equal and grace_equal and safe and id_equal and hash_equal,(ident,coverage_equal,duration_equal,grace_equal,safe,id_equal,hash_equal)
   reports.append({'id':ident,'sourceToXmlPitchIntervalCoverage':coverage_equal,'sourceToXmlTotalPitchDurations':duration_equal,'sourceToXmlGraceNotes':grace_equal,'safeZipEntries':safe,'timingMatchesAllDisplayedNoteIDs':id_equal,'xmlHashMatches':hash_equal,'sourceNoteheads':len(expected),'displayedNoteheads':len(actual)})
   print('PASS',ident,len(expected),len(actual))
- (OUT/'data/curated-source-validation.json').write_text(json.dumps({'format':'baroque-authored-source-validation/1','captured':'2026-11-12','passed':len(reports),'pieces':reports},separators=(',',':'))+'\n')
+ (OUT/'data'/REPORT).write_text(json.dumps({'format':'baroque-authored-source-validation/1','captured':manifest['captured'],'passed':len(reports),'pieces':reports},separators=(',',':'))+'\n')
  print('All',len(reports),'pieces independently match source spelled pitches, timing coverage, total durations and grace-note locations.')
 
 def download_inputs():
- sources=json.loads((OUT/'data/curated-sources.json').read_text())['files']
+ sources=json.loads((OUT/'data'/INPUTS).read_text())['files']
  def load_source(row):
   target=ROOT/'sources'/row['path']
   if target.exists() and digest(target.read_bytes())==row['sha256']:return

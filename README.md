@@ -1,10 +1,11 @@
 # Baroque · A listening atlas
 
-Explore 102 composers on a historical European map, then listen to a complete
-keyboard selection with its score. The curated desk has **50 pieces or named
-movements: 30 Bach Inventions/Sinfonias and 20 selections across seven other
-composers**. The catalog also keeps 510 linked works and 45 additional local
-MIDI movements, including Bach's six Partitas.
+Listen to 62 complete keyboard pieces or named movements with a synchronized
+MusicXML score. The collection includes Bach’s Inventions, Sinfonias and
+Well-Tempered Clavier preludes, alongside Handel, Scarlatti, Rameau and other
+composers. Explore 102 composers on the map and search 5,017 Open Opus
+catalogue entries for editions and recordings. The 45 earlier MIDI movements
+and the six-bar Bach study remain in the piece selector.
 
 ## Run locally
 
@@ -25,22 +26,17 @@ and samples. External editions and recording searches need the internet.
 
 ## Try a listening study
 
-Choose a composer on the map or in the directory. Filter by origin, musical
-tradition or period. At the listening desk, choose a complete piece, press
-Listen, and follow its coloured source-derived score. Click a note to seek;
-mute or solo a line, slow a passage or set an A–B loop. Try harpsichord or piano.
-The exact-title YouTube search link opens recorded performances separately.
+Choose a piece, press **Listen** and follow its current line in colour.
+Select a note to seek. Change the view to **Full score** or choose larger print.
+Mute or solo a part. Speed, instrument and looping live in **Practice
+settings**. The map and works catalogue sit below the score.
 
-The 50 curated selections use complete MusicXML study editions from pinned
-Mutopia authored sources. OpenSheetMusicDisplay 2.3.0 engraves the score locally
-and loads only at the listening desk. The free renderer is used with this
-project's own local Web Audio transport, not its sponsored audio service.
-
-Bach colours identify two or three **source-defined independent voices**.
-Other selections distinguish source staves, which may contain multiple voices.
-The additional 45 MIDI movements keep explicitly labelled MIDI-derived notation;
-source tracks are not silently promoted to musical voices. The six-bar BWV 825
-study remains available as a separate short example.
+Thirty Bach Inventions and Sinfonias retain their source-defined independent
+voices. The new preludes and fugue, Handel pieces and other authored scores
+use colours for source staves. OpenSheetMusicDisplay 2.3.0 engraves the
+MusicXML. The app plays it through local Web Audio and licensed piano samples.
+The 45 earlier MIDI studies continue to show labelled playback notation.
+The map and listening desk use original 32 × 34 pixel illustrations.
 
 Source spelling, meter, rests, pickups and written-out repeats are retained in
 the curated study scores. Layout and automatic beaming are modern. Editorial
@@ -55,11 +51,13 @@ not a concert recording or a historically authentic instrument simulation.
 - `data/curated-source-validation.json`: independent authored-source coverage checks.
 - `data/composers.json` and `data/works.json`: the 102-composer/510-work atlas.
 - `data/catalogue.json`: the 45 earlier source-MIDI movements.
+- `data/curated-supplement.json`: twelve Bach and Handel additions with independent checks.
+- `data/archive/manifest.json`: Open Opus snapshot, licence, count and hash.
+  The works archive loads on request and links to score and recording searches.
 
-The new assets contain 31,293 source score noteheads. Compact timing rows retain
+The core scores contain 31,293 source score noteheads. The twelve supplemental editions add 6,711 displayed noteheads. Compact timing rows retain
 stable note IDs, quarter offsets, measure boundaries and voice attribution;
-only the selected piece is expanded in the browser. All 150 generated assets
-rebuild byte-for-byte from the pinned authored sources. An ordinary build makes
+only the selected piece is expanded in the browser. The held source snapshots and checked hashes describe the exact shipped assets. An ordinary build makes
 no source downloads. See [data/curated-README.md](data/curated-README.md) for the
 optional Python importer's reproduction commands and exact limitations.
 
@@ -86,7 +84,7 @@ Python importer is GPL-3.0-or-later. Each converted music asset retains its
 edition's PD, CC BY or CC BY-SA terms and named typesetter credit. The retained
 OSMD licence travels with its pinned local bundle. See ATTRIBUTION.md.
 
-`npm test` checks all 50 source/score/MIDI hashes, safe compressed-score entries,
+`npm test` checks all 62 score and MIDI groups, safe compressed-score entries,
 source-note coverage, timing bounds, catalog filters, audio lifecycle, looping,
 source notation and the emitted CSP. Browser captures and score alignment are
 recorded separately; structural tests do not certify audible fidelity.
@@ -124,27 +122,8 @@ preserves differences in touch. **Gentle phrasing** adjusts release and eases
 short notes before a rest. This is an adjustable listening interpretation.
 The source attacks, measure times and downloaded MIDI remain the reference.
 
-## Current practice view
-
-These November 22, 2026 captures show the pinned app in the personal website.
-The focused view, score, transport and bar controls use this repository’s
-implementation. Chromium desktop and phone emulation passed, together with
-all 50 source-score mappings and a simulated authenticated-media request.
-Physical-device and perceptual audio checks are outside that verification.
-
-![Score practice with coloured voices and bar controls](docs/screenshots/practice-desktop.webp)
-
-[Phone notation at larger print](docs/screenshots/practice-phone.webp)
-
-### Reading one line at a time
-
-**Current line** keeps an entire engraved system together, including both
-keyboard staves. Playback and bar navigation advance that line. **Full score**
-restores all systems. Larger print remains available in either view. This uses
-the same complete MusicXML and note-to-playback mappings as the full score.
-Where the exported MusicXML omits beams, OSMD supplies rhythmic beam groups
-without beaming across rests. These are a reading aid, not a claim about an
-original manuscript’s editorial beaming. Source editions remain linked.
-
-The sampled piano is unchanged in this update. No new audio service or paid
-player is used. The page starts sound only after a visitor chooses playback.
+The supplemental scores rebuild through `python scripts/import-curated.py
+--supplement` using the dependencies and options in the source notes. The
+importer now applies LilyPond transposition before emitting the study notes.
+The catalogue rebuilds from a saved Open Opus dump using
+`node scripts/import-work-archive.mjs /path/to/work-dump.json`.
