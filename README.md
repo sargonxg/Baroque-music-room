@@ -91,16 +91,13 @@ recorded separately; structural tests do not certify audible fidelity.
 
 ## Current browser view
 
-![Current-line score with both staves and connected rhythmic beams](docs/screenshots/practice-desktop.webp)
+![Bach's C major prelude with the score, part colours and playback controls](docs/screenshots/nov24-desktop.webp)
 
-[Phone score at larger print](docs/screenshots/practice-phone.webp).
-These November 22, 2026 captures show the public personal-site integration.
-The score, source colours, bar controls and transport use this repository’s
-implementation. The host supplies its return link and shared reading shelf.
-All 50 authored scores passed source-note alignment in the integrated CI run.
-Desktop and phone flows passed against the published files. Phone checks use
-browser emulation. Physical devices, screen readers and concert fidelity were
-outside that verification.
+[Phone listening view](docs/screenshots/nov24-phone.webp) · [Open the listening room](https://giulio-catanzariti.giuliocatanzariti.workers.dev/music).
+The November 24 captures show the public portfolio integration. All 62 authored
+scores passed source-note alignment in the integrated browser check. Playback
+and catalogue searches passed on the live site on desktop and in Android Chrome
+emulation. These checks cover alignment and interaction.
 
 The listening desk offers a sampled grand piano and synthesized period keyboards. Playback follows the authored score with a bar indicator and optional larger print. [Piano sources and license](assets/instruments/piano/provenance.json).
 
