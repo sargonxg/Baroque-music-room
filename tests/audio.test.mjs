@@ -4,13 +4,13 @@ import {createHash} from 'node:crypto';
 import {readFile, readdir} from 'node:fs/promises';
 import {articulatedLength, KeyboardTransport, pianoSampleName, pianoSampleRoot, phraseVelocity} from '../src/audio.mjs';
 
-const parameter=()=>({value:0,setValueAtTime(){},exponentialRampToValueAtTime(){},setTargetAtTime(v){this.value=v;}});
+const parameter=()=>({value:0,setValueAtTime(){},exponentialRampToValueAtTime(){},setTargetAtTime(v,time,constant){this.value=v;this.target={v,time,constant};}});
 class FakeContext {
  constructor(){this.currentTime=0;this.destination={};this.sources=[];}
  createGain(){return {gain:parameter(),connect(){},disconnect(){}};}
  createDynamicsCompressor(){return {threshold:parameter(),knee:parameter(),ratio:parameter(),connect(){}};}
  createBufferSource(){
-  const source={playbackRate:parameter(),connect(){},disconnect(){},start(time){this.attack=time;},stop(){this.stopped=true;}};
+  const source={playbackRate:parameter(),connect(){},disconnect(){},start(time,offset){this.attack=time;this.offset=offset;},stop(time){this.stopped=true;this.stopTime=time;}};
   this.sources.push(source);return source;
  }
  async decodeAudioData(){return {numberOfChannels:2,duration:6};}
@@ -65,7 +65,52 @@ test('a seek into a long note uses the same recording even just before release',
  await t.seek(3.9);await t.play();
  assert.equal(t.context.sources.length,1);
  assert.equal(t.context.sources[0].playbackRate.value,1);
+ assert.equal(t.context.sources[0].offset,3.9);
  assert.deepEqual([...t.piano.keys()],['48.mp3']);t.pause();
+});
+
+test('seeking into a transposed note uses its sounding age at the chosen tempo',async()=>{
+ const t=new KeyboardTransport();t.load({duration:7,tracks:[{notes:[[61,0,4,.72]]}]});
+ await t.seek(1);await t.setRate(.5);await t.play();
+ assert.equal(t.context.sources[0].offset,2*2**(1/12));
+ // This recording has already decayed at the later seek, even though the score is sustaining.
+ await t.seek(3.8);
+ assert.equal(t.context.sources.length,1);
+ await t.dispose();
+});
+
+test('rapid scrubbing while resuming ends at the last requested position',async()=>{
+ const t=new KeyboardTransport(),context=new FakeContext();
+ let resume;const resumed=new Promise(done=>{resume=done;});context.resume=()=>resumed;
+ t.load(study);t.initialize(context);
+ const pending=[t.play(),t.seek(.2),t.seek(2.25),t.setRate(.75)];
+ resume();await Promise.all(pending);
+ assert.equal(t.playing,true);assert.equal(t.origin,2.25);assert.equal(t.rate,.75);
+ assert.equal(context.sources.length,1);
+ assert(Math.abs(context.sources[0].offset-(.25/.75)*2**(1/12))<1e-8);
+ await t.dispose();
+});
+
+test('a repeated piano key damps the previous strike without shortening other voices',async()=>{
+ const t=new KeyboardTransport();t.load({duration:2,tracks:[
+  {notes:[[72,0,.4,.8],[72,.1,.3,.8]]},{notes:[[60,0,1,.8]]},
+ ]});await t.play();
+ const [oldStrike,repeat,bass]=t.context.sources;
+ assert.equal(repeat.attack,.13);
+ assert(oldStrike.stopTime>=repeat.attack && oldStrike.stopTime<=repeat.attack+.065);
+ assert(bass.stopTime>1);
+ await t.seek(.2);assert.equal(t.nodes.size,2,'only the second strike and independent bass are still sounding');
+ await t.dispose();
+});
+
+test('pause fades the old signal path and a new entrance gets a separate room',async()=>{
+ const t=new KeyboardTransport();t.load(study);await t.play();
+ t.context.currentTime=.1;const previous=t.mix,voice=t.context.sources[0];
+ t.pause();assert.equal(t.mix,null);
+ assert.deepEqual(previous.output.gain.target,{v:0,time:.1,constant:.0025});
+ assert(voice.stopTime>.1 && voice.stopTime<.13);
+ await t.play();assert.notEqual(t.mix.output,previous.output);
+ await t.dispose();
 });
 
 test('room, master and source-track levels are bounded, and solo retains explicit source tracks',async()=>{
@@ -122,6 +167,7 @@ test('playing touch is drawn from source length and dynamics without moving atta
  assert.equal(articulatedLength(.24,.20,true),.24);
  assert.equal(articulatedLength(.65,.65,true),.65);
  assert.equal(articulatedLength(.24,.24,false),.24);
+ assert(articulatedLength(.01,.02,true)<=.01);
  assert.equal(phraseVelocity(.8,.3,.3,true),.8);
  assert(phraseVelocity(.8,.3,.9,true)<.8);
 });
@@ -143,7 +189,7 @@ test('the licensed piano bank covers every note and layer in the shipped pieces'
   return (await readdir(folder)).filter(file=>file.endsWith('.json')).map(path=>new URL(path,folder));
  }));
  const files=[new URL('../data/study.json',import.meta.url),...groups.flat()];
- assert.equal(files.length,108);
+ assert(files.length>=108);
  for(const file of files){
   const item=JSON.parse(await readFile(file,'utf8'));
   for(const track of item.tracks)for(const [pitch,,length,velocity] of track.notes){

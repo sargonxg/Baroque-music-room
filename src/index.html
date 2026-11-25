@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Follow playable Baroque keyboard scores, explore composers and search the Open Opus catalogue."><meta name="theme-color" content="#ffffff"><title>Baroque · A listening atlas</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%231b3b37'/%3E%3Ctext x='9' y='31' fill='%23f5f1e8' font-size='32' font-family='Georgia'%3Eb%3C/text%3E%3C/svg%3E"><style>/*STYLE*/</style></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Listen to Baroque music on sampled piano, follow each part in the score and discover composers through an atlas of Europe."><meta name="theme-color" content="#302a23"><title>Baroque listening room</title><link rel="icon" href="assets/baroque-mark.svg" type="image/svg+xml"><style>/*STYLE*/</style></head>
 <body>
 <a class="skip" href="#study">Skip to the player</a>
 <header class="masthead">
- <a class="brand" href="#top"><span>Baroque room</span></a>
- <nav id="main-nav" aria-label="Main"><a href="#study">Listen</a><a href="#atlas">Composers</a><a href="#catalogue">Catalogue</a></nav>
+ <a class="brand" href="#top" aria-label="Baroque listening room"><img src="assets/baroque-mark.svg" width="27" height="27" alt=""><span>Listening room</span></a>
+ <nav id="main-nav" aria-label="Main"><a href="#study">Score</a><a href="#repertoire">Repertoire</a><a href="#atlas">Composers</a></nav>
 </header>
 <main id="top">
- <section class="intro">
-  <div><h1>Baroque listening room</h1><p class="period-note">Follow the score as you listen to the grand piano.</p></div>
-  <p class="counts"><b>/*__SCORE_COUNT__*/</b> scored selections <span>·</span> <b>102</b> composers on the map <span>·</span> <b>/*__ARCHIVE_COUNT__*/</b> works in the catalogue</p>
+ <noscript><p>To play a score here, enable JavaScript. You can also <a href="https://www.mutopiaproject.org/">read the published editions at Mutopia</a>.</p></noscript>
+ <section class="intro" aria-labelledby="room-title">
+  <div class="room-cover-copy"><h1 id="room-title">Baroque listening room</h1><p class="period-note">Follow the score as the piano plays. Choose a piece or let the room choose one for you.</p>
+   <button type="button" class="another-piece" id="another-piece" aria-controls="study"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h3c4 0 6.6 11 11 11H21m-4-4 4 4-4 4m-14.5-4h3c1.6 0 3.2-1.9 4.8-4.4m2.7-4.2c1.3-1.6 2.6-2.4 4-2.4h4m-4-4 4 4-4 4"/></svg>Another piece</button><span id="discovery-status" class="sr-only" role="status"></span>
+  </div>
+  <!--ROOM_PAINTING-->
  </section>
  <section id="study" class="study-section" aria-labelledby="study-title">
   <span id="player" aria-hidden="true"></span>
@@ -55,16 +58,27 @@
    <a id="recording-link" href="https://www.youtube.com/results?search_query=Johann+Sebastian+Bach+BWV+825+Praeludium" target="_blank" rel="noopener">Find a recording</a>
   </div>
   <details class="explainer score-edition"><summary>About this score</summary>
-   <p id="notation-note" class="notation-note"></p><p id="edition-note"></p>
+   <p id="notation-note" class="notation-note"></p><p id="edition-note"></p><p id="edition-credit" hidden><a href="#" target="_blank" rel="noopener noreferrer">Publisher’s edition and licence</a></p>
    <a id="midi-link" href="assets/music/partita-study.mid" download>Download MIDI ↓</a> · <a href="assets/instruments/piano/provenance.json">Piano sample credits</a>
    <details class="edition-preview" id="edition-preview"><summary>Compare with the source engraving</summary><div id="source-score"></div><p id="source-score-note"></p></details>
   </details>
   <details class="roll-disclosure"><summary>Note timeline</summary><div class="roll-wrap"><svg id="roll" viewBox="0 0 800 200" role="img" aria-label="Colored note timeline. Horizontal position is time and height is pitch."></svg></div></details>
  </section>
+ <details id="repertoire" class="repertoire-section"><summary><span>Browse playable pieces</span><small>/*__PLAYABLE_COUNT__*/ selections</small></summary>
+  <div class="bach-collections"><h3>Bach collections</h3><div id="bach-collections" aria-label="Bach collections"></div></div>
+  <div class="repertoire-filters">
+   <label>Search the repertoire<input id="piece-search" type="search" placeholder="Title, composer or catalogue number" autocomplete="off" maxlength="120"></label>
+   <label>Composer<select id="piece-composer"><option value="">All composers</option></select></label>
+   <label>Collection<select id="piece-family"><option value="">All collections</option></select></label>
+  </div>
+  <p id="family-guide" hidden></p><p id="piece-count" role="status"></p><ul id="piece-results" aria-label="Playable selections"></ul>
+  <button class="outline" id="more-pieces" type="button" hidden>More pieces</button>
+  <details id="edition-shelf" hidden><summary id="edition-count"></summary><ul id="edition-results"></ul></details>
+ </details>
  <section id="atlas" aria-labelledby="atlas-title">
-<h2 id="atlas-title">Explore composers</h2>
+<h2 id="atlas-title">The composers</h2>
 <div class="filters"><label class="search"><span class="sr-only">Search composers and cities</span><input id="search" type="search" placeholder="Find a composer or city" autocomplete="off"></label><label><span>Origin</span><select id="origin"><option value="">All origins</option></select></label><label><span>Tradition</span><select id="tradition"><option value="">All traditions</option></select></label><label><span>Period</span><select id="period"><option value="">All periods</option><option value="early">Early Baroque</option><option value="middle">Middle Baroque</option><option value="late">Late Baroque</option><option value="transition">Transition</option></select></label><button class="quiet" id="clear">Reset</button></div>
-<div class="atlas-layout"><div class="map-column"><div class="map-wrap"><svg id="map" viewBox="0 0 800 530" role="group" aria-label="Composers at one associated working city"><g id="map-base"><!--MAP--></g><g id="routes" aria-hidden="true"></g><g id="map-labels" aria-hidden="true"></g><g id="markers"></g></svg><div class="map-caption"><span>European territories, c. 1700</span><button class="map-help" id="map-help" aria-label="About the map">i</button></div></div><p class="map-note"><span class="map-dot"></span> Choose a working city or a composer.</p><div class="directory-head"><span id="result-count" aria-live="polite">102 composers</span><button id="random" class="text-button">Take me somewhere</button></div><div id="directory" class="directory" aria-label="Composer directory"></div></div><aside id="composer" class="composer" aria-label="Selected composer"></aside></div>
+<div class="atlas-layout"><div class="map-column"><div class="map-wrap"><svg id="map" viewBox="0 0 800 530" role="group" aria-label="Working cities. Use the arrow keys to move between cities and Enter to choose one."><g id="map-base"><!--MAP--></g><g id="map-labels" aria-hidden="true"></g><g id="markers"></g></svg><div class="map-caption"><span>European territories, c. 1700</span><button class="map-help" id="map-help" aria-label="About the map">i</button></div></div><p class="map-note"><span class="map-dot"></span> Larger dots mark cities with several composers.</p><div class="directory-head"><span id="result-count" aria-live="polite">/*__COMPOSER_COUNT__*/ composers</span><button id="random" class="text-button">Random composer</button></div><div id="directory" class="directory" aria-label="Composer directory"></div></div><aside id="composer" class="composer" aria-label="Selected composer"></aside></div>
 </section>
 
  <section id="catalogue" aria-labelledby="catalogue-title">
@@ -82,9 +96,9 @@
    <div class="archive-paging"><button id="archive-prev" class="outline" disabled>Previous results</button><button id="archive-next" class="outline" disabled>More results</button></div>
   </details>
  </section>
- <details class="explainer music-guide"><summary>Baroque forms and listening exercises</summary><div id="education"></div></details>
+ <details class="explainer music-guide"><summary>Styles, forms and what to listen for</summary><div id="education"></div></details>
 </main>
-<footer><span>Collected by Giulio Catanzariti</span><div><a href="ATTRIBUTION.md">Sources &amp; rights</a><a href="https://github.com/sargonxg/Baroque-music-room">GitHub</a></div></footer>
-<dialog id="map-dialog"><button id="close-map" class="close" aria-label="Close map notes">×</button><p class="eyebrow">Reading the atlas</p><h2>Styles travel. Borders change.</h2><p>The shaded regions are a schematic of territories around 1700, from A. Ourednik and contributors' historical-basemaps. Borders and adjacent snapshot dates are simplified. These colors do not represent musical styles.</p><p>Dots identify one city associated with a composer's work. An origin label is a modern description, not an assertion of historical citizenship. Several composers share a city: use the name directory to reach each one.</p><a href="assets/map/historical-license.txt">Map license (GPL-3.0)</a></dialog>
+<footer><span>Collected by Giulio Catanzariti</span><div><a href="ATTRIBUTION.md">Sources &amp; rights</a><a href="assets/gallery/works.json">Painting credits</a><a href="https://github.com/sargonxg/Baroque-music-room">GitHub</a></div></footer>
+<dialog id="map-dialog"><button id="close-map" class="close" aria-label="Close map notes">×</button><p class="eyebrow">Reading the atlas</p><h2>Styles travel. Borders change.</h2><p>The shaded regions are a schematic of territories around 1700, from A. Ourednik and contributors' historical-basemaps. Borders and adjacent snapshot dates are simplified. These colors do not represent musical styles.</p><p>Dots identify one city associated with a composer's work. An origin label is a modern description, not an assertion of historical citizenship. Choose a city to see its composers, or search for a name in the directory.</p><a href="assets/map/historical-license.txt">Map license (GPL-3.0)</a></dialog>
 <script id="app-data" type="application/json">/*DATA*/</script><script type="module">/*SCRIPT*/</script>
 </body></html>

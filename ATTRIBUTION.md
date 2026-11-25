@@ -67,8 +67,7 @@ digital edition has its own rights.
   movements, clipped at the excerpt boundary, with each source license retained.
   It is a curated listening selection, not a claim about recording popularity.
 
-No licensed instrumental sample, synthesized voice, AI service or remote audio
-recording is used. Browser WebAudio supplies a local keyboard approximation.
+Source MIDI is rendered on a locally sampled stereo grand piano. Sample credits appear below.
 
 Relevant licenses:
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/),
@@ -124,3 +123,22 @@ searches send visitors to IMSLP and YouTube.
 The twelve supplemental keyboard editions retain their Mutopia typesetter
 credits and licences in `data/curated-supplement.json`. The pixel portraits are
 original illustrations. Historical portrait attribution remains listed above.
+
+## Paintings in the listening room
+
+The Concert (Gerrit van Honthorst, 1623), The Lute Player (Orazio Gentileschi,
+c. 1612/1620) and The Music Lesson (Studio of Gerard ter Borch the Younger,
+c. 1670) come from the National Gallery of Art’s open-access collection. Each
+caption links to the museum record. The [painting credits](assets/gallery/works.json)
+retain the museum’s licence, catalogue identifier, original image endpoint and
+dimensions. The distributed WebP copies use restrained crops in the page layout.
+
+## Additional source-MIDI editions
+
+The [edition index](data/edition-library.json) identifies the original
+publication, credited edition and publisher, scoring, licence, score download
+and source-MIDI digest for every additional selection. Each family pack carries
+the original MIDI, encoded without changing its bytes, alongside a derived
+stream of timestamped note events. The derived data retain the source edition’s
+licence. Reproduction uses the [pinned source lock](scripts/editions/sources.json).
+Linked external scores and recordings open on their publishers’ sites.

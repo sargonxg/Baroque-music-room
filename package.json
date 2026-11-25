@@ -6,7 +6,7 @@
   "description": "A source-linked European Baroque atlas and browser listening study.",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node scripts/import-curated-check.mjs && node --test tests/authored-score.test.mjs && node tests/catalog.test.mjs && node tests/audio.test.mjs && node tests/notation.test.mjs && npm run test:security",
+    "test": "node scripts/import-curated-check.mjs && node --test tests/authored-score.test.mjs tests/repertoire.test.mjs tests/edition-library.test.mjs && node tests/catalog.test.mjs && node tests/audio.test.mjs && node tests/notation.test.mjs && npm run test:security",
     "dev": "node scripts/dev.mjs",
     "preview": "node scripts/dev.mjs --dist",
     "data:notation": "python scripts/notation/metadata.py",

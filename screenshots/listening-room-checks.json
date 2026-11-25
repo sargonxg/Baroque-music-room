@@ -1,0 +1,69 @@
+{
+  "verificationDate": "2026-11-25",
+  "browser": "Chromium 156.0.8078.79, Debian 13",
+  "buildSha256": "b3a7004fefbfd4cea39851c0bb1b59d030d96ad393bbf571f4e10ae8ea7e95ef",
+  "playable": 402,
+  "added": 296,
+  "sourceFamilies": 18,
+  "authoredScoresRead": 63,
+  "sourceScoresRead": 341,
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 980,
+      "missingLocalAssets": 0,
+      "runtimeErrors": 0
+    },
+    {
+      "width": 393,
+      "height": 852,
+      "isMobile": true,
+      "hasTouch": true,
+      "colorScheme": "dark",
+      "reducedMotion": "reduce",
+      "missingLocalAssets": 0,
+      "runtimeErrors": 0
+    },
+    {
+      "width": 320,
+      "height": 700,
+      "hasTouch": true,
+      "forcedColors": "active",
+      "reducedMotion": "reduce",
+      "missingLocalAssets": 0,
+      "runtimeErrors": 0
+    }
+  ],
+  "localEditions": 404,
+  "exercised": [
+    "Selected all 404 local editions and sought to their midpoint",
+    "Rendered a following score for each selection",
+    "Verified piano play, pause and new selection during playback",
+    "Compared a downloaded MIDI with its published SHA-256",
+    "Checked source/score links, bar seeking and looping",
+    "Checked the three museum paintings, repertoire searches and non-repeating shuffle",
+    "Used keyboard note traversal, shared-city selection and map focus",
+    "Checked viewport overflow, missing local assets and JavaScript errors at three sizes"
+  ],
+  "screenshots": [
+    {
+      "file": "listening-room-desktop.webp",
+      "width": 1440,
+      "height": 980,
+      "sha256": "c3e40458c71fc537f8c3fde4ffac8722de01ba7bc40c41b08893b481c30f7a1c"
+    },
+    {
+      "file": "listening-room-phone.webp",
+      "width": 393,
+      "height": 852,
+      "sha256": "52bbbec8f8944e3eaf0f836bdf8852a7f51b63283faaf68e20d89e40fdfc0717"
+    },
+    {
+      "file": "listening-room-repertoire.webp",
+      "width": 1440,
+      "height": 980,
+      "sha256": "db3548caa0c89565b3ea427d05067a989f521def34f5bb9cad1bf88dead5fe06"
+    }
+  ],
+  "coverage": "Interaction and layout used browser emulation. MIDI provenance, end-time coverage, note mapping and piano samples have independent local tests."
+}

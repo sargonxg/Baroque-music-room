@@ -44,12 +44,66 @@ function restGaps(notes,start,end){
  for(const [a,b] of intervals){if(a>cursor+.01)gaps.push([cursor,a]);cursor=Math.max(cursor,b);}
  if(cursor<end-.01)gaps.push([cursor,end]);return gaps;
 }
+
+/** Use the actual downbeats, including tempo changes, to turn a reading page. */
+export function playbackMeasures(barTimes,duration){
+ if(!Array.isArray(barTimes))return [];
+ const bars=barTimes.filter(bar=>Number.isInteger(bar.bar)&&Number.isFinite(bar.seconds)&&bar.seconds>=0&&bar.seconds<duration-.0001);
+ return bars.map((bar,index)=>({number:bar.bar,start:bar.seconds,end:bars[index+1]?.seconds??duration}));
+}
+export function playbackPage(bars,position,barCount){
+ if(!bars.length)return null;
+ let low=0,high=bars.length;
+ while(high-low>1){
+  const mid=(low+high)>>1;
+  if(bars[mid].start<=position)low=mid;else high=mid;
+ }
+ const first=Math.floor(low/barCount)*barCount,last=Math.min(first+barCount-1,bars.length-1);
+ return {start:bars[first].start,end:bars[last].end,firstBar:bars[first].number,lastBar:bars[last].number,previousStart:bars[Math.max(0,first-barCount)].start};
+}
+
+/** Group a single moving line within a beat. Chords, silences and carried notes start a new group. */
+function playbackBeamPlan(notes,{start,end,secondsPerBeat,meter,bars,xAt,yAt,middle}){
+ const marked=new Map(),beams=[];
+ const beatLength=secondsPerBeat*(4/(meter?.denominator||4))*(meter?.numerator>=6&&meter.numerator%3===0?3:1);
+ const events=notes.map((note,index)=>({note,index})).filter(e=>e.note[1]<end&&e.note[1]>=start).sort((a,b)=>a.note[1]-b.note[1]);
+ let group=[],beatStart=0,barIndex=0;
+ function finish(){
+  if(group.length>1){
+   const first=group[0],last=group.at(-1),span=last.x-first.x;
+   const down=group.reduce((sum,e)=>sum+e.y,0)/group.length<middle;
+   const direction=down?1:-1,slope=clamp((last.y-first.y)/span,-.1,.1);
+   const intercept=(down?Math.max:Math.min)(...group.map(e=>e.y-slope*(e.x-first.x)))+direction*30;
+   for(const e of group)marked.set(e.index,{down,endY:intercept+slope*(e.x-first.x)});
+   const stemShift=down?.5:9;
+   for(let level=0;level<first.flags;level++){
+    const x1=first.x+stemShift,x2=last.x+stemShift;
+    const y1=intercept-direction*level*5.3,y2=y1+slope*span;
+    beams.push(`<path data-beam d="M${n(x1)} ${n(y1)}L${n(x2)} ${n(y2)}v${n(-direction*3.5)}L${n(x1)} ${n(y1-direction*3.5)}Z"/>`);
+   }
+  }
+  group=[];
+ }
+ for(let i=0;i<events.length;i++){
+  const {note,index}=events[i],[pitch,onset,duration]=note;
+  while(barIndex<bars.length&&bars[barIndex].seconds<=onset+.0001)beatStart=bars[barIndex++].seconds;
+  const beat=beatStart+Math.floor((onset-beatStart+.0001)/beatLength)*beatLength;
+  const flags=rhythmicValue(duration,secondsPerBeat).flags;
+  const chord=[events[i-1],events[i+1]].some(e=>e&&Math.abs(e.note[1]-onset)<.005);
+  if(!flags||chord){finish();continue;}
+  const previous=group.at(-1),gap=previous?onset-previous.onset-previous.duration:0;
+  if(previous&&(Math.abs(beat-previous.beat)>.002||previous.flags!==flags||Math.abs(gap)>secondsPerBeat*.16))finish();
+  group.push({index,flags,beat,onset,duration,x:xAt(onset),y:yAt(pitch)});
+ }
+ finish();
+ return {marked,beams};
+}
 /** Pure HTML-safe SVG generation. No browser, external font or runtime dependency. */
 export function renderPlaybackScore(study,options={}){
  validateInput(study);
  const width=clamp(finite(options.width,960),320,1800),staffHeight=clamp(finite(options.staffHeight,122),100,180);
  const secondsPerBeat=clamp(finite(options.secondsPerBeat,.5),.125,3),beatsPerBar=clamp(finite(options.beatsPerBar,4),.5,16);
- const requested=clamp(finite(options.windowSeconds,secondsPerBeat*beatsPerBar*2),2,60),position=clamp(finite(options.position,0),0,study.duration);
+ const requested=clamp(finite(options.windowSeconds,secondsPerBeat*beatsPerBar*2),.05,180),position=clamp(finite(options.position,0),0,study.duration);
  const autoStart=Math.floor(Math.max(0,Math.min(position,study.duration-.0001))/requested)*requested;
  const start=clamp(finite(options.windowStart,autoStart),0,Math.max(0,study.duration-.001)),end=Math.min(study.duration,start+requested),span=Math.max(.001,end-start);
  const left=82,right=22,plotWidth=width-left-right;
@@ -70,6 +124,8 @@ export function renderPlaybackScore(study,options={}){
  study.tracks.forEach((track,trackIndex)=>{
   const {top,bottom,clef,labelY}=layouts[trackIndex];
   const label=String(track.label||`Source track ${trackIndex+1}`).slice(0,70),color=colors[trackIndex];
+  const beamPlan=playbackBeamPlan(track.notes,{start,end,secondsPerBeat,meter:options.meter,
+   bars:Array.isArray(options.barTimes)?options.barTimes:[],xAt,yAt:pitch=>pitchY(pitch,clef,bottom,preferFlats),middle:top+20});
   body+=`<g data-score-track="${trackIndex}" fill="${color}" stroke="none"><text x="12" y="${labelY}" font-family="Arial,sans-serif" font-size="10">${ESCAPE(label)}</text>`;
   for(let line=0;line<5;line++)body+=`<path d="M12 ${top+line*10}H${width-right}" stroke="#b8bcb3" stroke-width=".65"/>`;
   body+=GLYPH(clef==='bass'?'fClef':'gClef',22,clef==='bass'?top+10:top+30,.8);
@@ -85,7 +141,7 @@ export function renderPlaybackScore(study,options={}){
   }
   track.notes.forEach((note,noteIndex)=>{
    const [pitch,onset,duration]=note;if(onset>=end||onset+duration<=start)return;
-   const carried=onset<start,x=xAt(Math.max(start,onset)),spelling=noteSpelling(pitch,preferFlats),y=pitchY(pitch,clef,bottom,preferFlats),rhythm=rhythmicValue(duration,secondsPerBeat),stemDown=y<top+20;
+   const carried=onset<start,x=xAt(Math.max(start,onset)),spelling=noteSpelling(pitch,preferFlats),y=pitchY(pitch,clef,bottom,preferFlats),rhythm=rhythmicValue(duration,secondsPerBeat),beamed=beamPlan.marked.get(noteIndex),stemDown=beamed?.down??y<top+20;
    const noteId=`${trackIndex}-${noteIndex}`;
    notes.push({id:noteId,track:trackIndex,index:noteIndex,pitch,start:onset,end:onset+duration,x:n(x),y:n(y),spelling:spelling.name,carried,approximateRhythm:rhythm.approximate});
    body+=`<g data-score-note="${noteId}" data-note-start="${onset}" data-note-end="${n(onset+duration)}" data-track="${trackIndex}" data-seek="${onset}" role="button" tabindex="${notes.length===1?0:-1}" aria-label="${ESCAPE(label)}, ${ESCAPE(spelling.name)}, ${n(onset)} seconds${carried?', held from previous window':''}"><title>${ESCAPE(spelling.name)} · ${n(onset)}s · ${n(duration)}s${rhythm.approximate?' · approximate rhythm symbol':''}</title>`;
@@ -95,19 +151,19 @@ export function renderPlaybackScore(study,options={}){
    if(spelling.accidental)body+=GLYPH(spelling.accidental<0?'accidentalFlat':'accidentalSharp',x-12,y,.55);
    body+=GLYPH(rhythm.base>=4?'noteheadWhole':rhythm.base>=2?'noteheadHalf':'noteheadBlack',x,y,.8);
    if(rhythm.base<4){
-    const stemX=stemDown?x+.5:x+9,stemEnd=stemDown?y+29:y-29;
+    const stemX=stemDown?x+.5:x+9,stemEnd=beamed?.endY??(stemDown?y+29:y-29);
     body+=`<path d="M${n(stemX)} ${n(y)}V${n(stemEnd)}" stroke="${color}" stroke-width="1"/>`;
-    if(rhythm.flags)body+=GLYPH(`flag${rhythm.flags===1?'8th':rhythm.flags===2?'16th':rhythm.flags===3?'32nd':'64th'}${stemDown?'Down':'Up'}`,stemX,stemEnd,.8);
+    if(rhythm.flags&&!beamed)body+=GLYPH(`flag${rhythm.flags===1?'8th':rhythm.flags===2?'16th':rhythm.flags===3?'32nd':'64th'}${stemDown?'Down':'Up'}`,stemX,stemEnd,.8);
    }
    if(rhythm.dotted)body+=`<circle cx="${n(x+15)}" cy="${n(y-2.5)}" r="1.4"/>`;
    if(carried)body+=`<path d="M${n(x-3)} ${n(y+8)}q6 4 12 0" fill="none" stroke="${color}" stroke-width=".8" stroke-dasharray="2 1"/>`;
    body+='</g>';
   });
-  body+='</g>';
+  body+=`<g aria-hidden="true" pointer-events="none">${beamPlan.beams.join('')}</g></g>`;
  });
  const playX=xAt(clamp(position,start,end));
  body+=`<path class="score-playhead" d="M${n(playX)} 28V${height-20}" fill="none" stroke="#20251f" stroke-width="1" opacity=".65"/>`;
- const caption='MIDI-derived playback notation. Enharmonic spelling, clefs, rests and rhythmic symbols are inferred. Note onsets and durations follow the source timing; colors identify source tracks, not necessarily independent voices.';
+ const caption='Playback notation from MIDI. Pitches and note lengths follow the source timing. Spelling, rests, clefs and rhythm symbols are inferred. Colours identify source tracks.';
  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="group" aria-label="${ESCAPE(caption)}" data-window-start="${start}" data-window-end="${end}" data-plot-left="${left}" data-plot-width="${plotWidth}"><style>${PLAYBACK_SCORE_STYLE}</style>${body}</svg>`;
  return {svg,notes,windowStart:start,windowEnd:end,inferred:true,caption};
 }

@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {renderPlaybackScore,noteSpelling,rhythmicValue} from '../src/notation.mjs';
+import {renderPlaybackScore,noteSpelling,rhythmicValue,playbackMeasures,playbackPage} from '../src/notation.mjs';
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 const metadata=await json('data/notation-metadata.json');
 const catalog=await json('data/catalogue.json');
@@ -32,4 +32,20 @@ test('Bravura outlines and required rights travel with the renderer',async()=>{
 
 test('a generated score has one note Tab stop rather than a stop per note',()=>{
  const r=renderPlaybackScore({duration:4,tracks:[{notes:[[60,0,1],[62,1,1],[64,2,1]]}]});assert.equal((r.svg.match(/tabindex="0"/g)||[]).length,1);assert.equal((r.svg.match(/tabindex="-1"/g)||[]).length,2);
+});
+
+test('playback notation groups a run within each beat and leaves chords and separated attacks unjoined',()=>{
+ const run=renderPlaybackScore({duration:1,tracks:[{notes:Array.from({length:8},(_,i)=>[60+i,i/8,.125])}]},{secondsPerBeat:.5});
+ assert.equal((run.svg.match(/data-beam /g)||[]).length,4);
+ assert.equal(run.notes.length,8);
+ const broken=renderPlaybackScore({duration:1,tracks:[{notes:[[60,0,.125],[64,0,.125],[62,.25,.0625],[64,.43,.0625]]}]},{secondsPerBeat:.5});
+ assert.equal((broken.svg.match(/data-beam /g)||[]).length,0);
+});
+
+test('reading pages turn on the source downbeat through changes of tempo and an incomplete last measure',()=>{
+ const bars=playbackMeasures([{bar:0,seconds:0},{bar:1,seconds:.5},{bar:2,seconds:3},{bar:3,seconds:8},{bar:4,seconds:9.2},{bar:5,seconds:9.8}],9.8);
+ assert.equal(bars.length,5);
+ assert.deepEqual(playbackPage(bars,.4,2),{start:0,end:3,firstBar:0,lastBar:1,previousStart:0});
+ assert.deepEqual(playbackPage(bars,8.1,2),{start:3,end:9.2,firstBar:2,lastBar:3,previousStart:0});
+ assert.deepEqual(playbackPage(bars,9.79,2),{start:9.2,end:9.8,firstBar:4,lastBar:4,previousStart:3});
 });

@@ -100,3 +100,19 @@ The optional Python importer uses python-ly and music21. It is supplied under
 GPL-3.0-or-later (the full license is in `assets/map/historical-license.txt`);
 runtime application licensing is unchanged. No converter or
 source cache is included in the deployed browser assets.
+
+### Bach’s E-minor Toccata
+
+The additional MusicXML selection is the complete 72-bar **final fugue** from
+BWV 914. Samuel Ricke’s published piano engraving carries the Public Domain
+Mark. The pinned Piano Soloist / PDMX copy retains his original score identifier.
+The local edition adds two staff colours and stable note IDs. It retains the
+original beams, ties, mordent signs and tempo change at the closing cadence.
+The sampled piano sustains the arpeggiated final chord across its written ties.
+The score, piano MIDI and timing data share one source. [Samuel Ricke’s engraving](https://musescore.com/user/6725176/scores/2698796)
+and [Piano Soloist’s downloadable edition](https://pianosoloist.app/songs/bach-toccata-e-minor-bwv914-fugue).
+
+The source file is in `scripts/source-scores/bwv914-fugue.mxl`. After installing
+`scripts/editions/requirements.txt`, run `python scripts/import-musicxml-additions.py --check`
+for an offline, byte-for-byte rebuild check. Run the same command without
+`--check` to regenerate the edition.
